@@ -1,7 +1,3 @@
-/* global $, _, React, ReactDom*/
-
-var ReactDom = require('./lib/react-dom.min');
-
 // components
 var CommentBox = require('./components/comment-box/CommentBox.jsx');
 var LikeButton = require('./components/like-button/LikeButton.jsx');
@@ -14,7 +10,7 @@ import {Circle} from './experiments/js2015-classes';
 // 	document.getElementById('content')
 // );
 
-ReactDom.render(
+ReactDOM.render(
 	<LikeButton />,
 	document.getElementById('content')
 );

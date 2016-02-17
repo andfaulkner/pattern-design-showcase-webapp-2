@@ -37,11 +37,12 @@ module.exports = {
 	},
 	externals: {
 		// require("jquery") react-dom.min is external, available externally, etc.
-		"ReactDom": "react-dom.min",
-		"React": "react-with-addons.min",
-		"_": "lodash",
-		"$": "jQuery",
-		"jquery": "jQuery",
-		"marked": "marked"
+		"./lib/react-boostrap.min": "ReactBootstrap",
+		"./lib/react-dom.min": "ReactDom",
+		"./lib/react-with-addons.min": "React",
+		"./client/lib/lodash": "_",
+		"./lib/jquery.min": "$",
+		"./lib/jquery.min": "jquery",
+		"./lib/marked.min": "marked"
 	}
 };

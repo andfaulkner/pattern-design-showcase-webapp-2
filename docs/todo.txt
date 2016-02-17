@@ -3,6 +3,8 @@
 ! eslint running
 ! basic webpack build & gulp with targeted watch
 ! ECMA6 classes - basics
+! fast Webpack builds (by splitting out the globals)
+- split auth page out
 - react classes
 - react decorators
 - react decorator-based non-inline styles

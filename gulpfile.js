@@ -45,6 +45,7 @@ var runSequence = require('run-sequence');
 var SRC = {
 	root: ['!./node_modules/**', './**'],
 	client: 'client/**',
+	clientRootHtml: 'client/*.html',
 	clientJS: 'client/**/*.js',
 	clientStaticNoLib: 'index.html',
 	// [
@@ -61,16 +62,18 @@ var SRC = {
 	],
 	nodeLibs: [
 		'node_modules/marked/marked.min.js',
-		'node_modules/react/dist/react.min.js',
+		'node_modules/react/dist/react-with-addons.min.js',
 		'node_modules/react-dom/dist/react-dom.min.js',		
 		'node_modules/react-bootstrap/dist/react-bootstrap.min.js',
 		'node_modules/lodash/dist/lodash.js',
-		'node_modules/jquery/dist/jquery.min.js'
+		'node_modules/jquery/dist/jquery.min.js',
+		'node_modules/lodash/lodash.js'
 	]
 };
 
 var DEST = {
 	root: '.build',
+	clientLibs: 'client/lib',
 	libs: '.build/lib'
 };
 //------------------------------------------------------------------------//
@@ -138,6 +141,14 @@ gulp.task('get-tasks', function() {
 });
 //#################################################################################
 
+// copy new libs from node_modules to client/lib. Runs once on re-run
+gulp.task('node-client-libs', function nodeLibsTask() {
+	return gulp.src(SRC.nodeLibs)
+		.pipe(newerThanRootIfNotProduction())
+		.pipe(consoleTaskReport())
+		.pipe(gulp.dest(DEST.clientLibs));
+});
+
 gulp.task('webpack', function webpackTask() {
 	return gulp.src(SRC.clientJS)
 		.pipe(consoleTaskReport())
@@ -147,7 +158,7 @@ gulp.task('webpack', function webpackTask() {
 });
 
 gulp.task('copy-static', function copyStaticTask(){
-	return gulp.src(SRC.clientStaticNoLib)
+	return gulp.src(SRC.clientRootHtml)
 		.pipe(consoleTaskReport())
 		.pipe(newerThanRootIfNotProduction())
 		.pipe(gulp.dest(DEST.root));
@@ -160,22 +171,15 @@ gulp.task('node-libs', function nodeLibsTask() {
 		.pipe(gulp.dest(DEST.libs));
 });
 
-gulp.task('new-lib', function copyStaticTask(){
-	return gulp.src(SRC.clientStatic)
-		.pipe(consoleTaskReport())
-		.pipe(newerThanRootIfNotProduction())
-		.pipe(gulp.dest(DEST.root));
-});
-
 var rerunOnChange = function rerunOnChange() {
 	gulp.watch(SRC.client, ['build']);
 };
 
-gulp.task('build', function(){ return runSequence('webpack', 'node-libs', 'copy-static'); });
+gulp.task('build', ['node-libs', 'webpack', 'copy-static']);
 
 /**
  * Build the app
  */
-gulp.task('default', ['build'], function(){
+gulp.task('default', ['node-client-libs', 'build'], function(){
 	return rerunOnChange();
 });
