@@ -1,0 +1,30 @@
+FRONTEND
+- frontend framework view: react
+- frontend framework controller: redux
+- templating: dustjs
+- styling: scss
+
+DATA PERSISTENCE
+- backend ORM: bookshelf
+- database: postgres
+- image storage: done in filesystem
+
+BACKEND
+- server: Koa
+- backend logging: winston
+
+ASYNC HANDLING MECHANISM
+- generators
+
+BUILD
+- build tool / task runner: Broccoli
+- frontend asset builder: Webpack
+- linting: eslint
+- language: babel
+
+MISC
+- utilties: lodash, jquery
+		- also, under consideration: Ramda
+
+DEPLOYMENT
+- to Heroku

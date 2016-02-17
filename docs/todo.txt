@@ -1,0 +1,75 @@
+
+! express running - static
+! eslint running
+! basic webpack build & gulp with targeted watch
+! ECMA6 classes - basics
+- react classes
+- react decorators
+- react decorator-based non-inline styles
+- react routes
+- login box (auth page)
+- webpack splitting
+	- split auth page
+- hook rest API up to login box
+- look into Bootstrap-React
+
+- auth with redis etc.
+		! auth page - basic form
+		- style auth page
+		- post-login page - basic image
+		- redis config
+		- passport?
+		- 
+
+
+
+Advanced (later)
+- browser livereload
+- decorators
+	- enable decorators
+	- learn decorators
+	- get a class working
+	- decorators basic example
+
+
+________________________________________________________
+! favicon
+! base route
+- get koa serving a static asset
+- login package - with Koa
+- admin page - with login
+- frontend templating? (react starter?)
+- logging setup (winston)
+- folder structure
+- state management (redux)
+- build each web-component (React)
+- form handling (body parser)
+- react starter
+- koa starter
+- config module setup
+- config setup
+
+routing
+- Koa routing
+	! get route module to work
+	! work out routes
+	- create route for each ?
+
+db
+! work out table schema
+! postgres setup (including scripts)
+- ORM setup - bookshelf
+	- initialize bookshelf
+	- koa bookshelf?
+
+testing
+! install unit testing modules (mocha, request)
+- build unit tests?
+
+
+build
+- webpack setup
+- build tool setup (Broccoli)
+- base brocfile ?
+- base gulpfile
+- base webpack file

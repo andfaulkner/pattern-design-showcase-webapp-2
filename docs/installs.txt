@@ -1,0 +1,12 @@
+npm install --save rootpath trace clarify colors yargs
+npm install --save-dev shelljs gulp-debug gulp-packages
+npm install --save-dev gulp-dev gulp-display-help gulp-dust gulp-exist
+npm install --save-dev gulp-filter gulp-if-else gulp-newer gulp-plumber gulp-print
+npm install --save-dev gulp-rename gulp-replace gulp-rimraf gulp-sass
+npm install --save-dev gulp-shell gulp-size gulp-stats gulp-tap gulp-webpack
+npm install --save-dev gulp-util lazypipe run-sequence
+npm i babel-loader babel-preset-es2015 babel-preset-react -S
+npm i react react-dom -S
+npm install --save react-redux
+npm install --save-dev redux-devtools
+npm install --save redux

@@ -1,0 +1,2 @@
+- each piece of the UI will be a web-component
+- 
