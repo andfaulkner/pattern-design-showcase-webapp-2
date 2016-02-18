@@ -7,6 +7,9 @@ app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+// routes
+var imageRoutes = require('./server/img-route');
+
 // attach Bookshelf ORM (database abstraction) to the app
 // app.set('Bookshelf', require('./server/db/init-db'));
 // var Bookshelf = app.get('Bookshelf')
@@ -48,6 +51,11 @@ app.post('/api/comments', function(req, res, next) {
 	});
 
 });
+
+
+app.use('/api/image', imageRoutes);
+
+
 
 app.use(express.static('./.build'));
 

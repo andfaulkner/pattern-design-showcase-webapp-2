@@ -3,6 +3,8 @@ require('rootpath')();
 require('trace');
 require('clarify');
 require('colors');
+var path = require('path');
+var buildConfig = require('./config/config-build-paths');
 
 var gulp = require('gulp');
 
@@ -18,6 +20,7 @@ var p = require('gulp-packages')(gulp, [
 	'dust',                     // Compile Dust templates
 	'exit',                     // Force quit Gulp process
 	'filter',                   // Filter out unwanted files from stream
+	'flatten',									// Copy without relative paths
 	'if-else',                  // if-else statements mid-stream
 	'newer',                    // Only push item through pipe if newer
 	'plumber',                  // keep running if error occurs
@@ -42,40 +45,8 @@ var runSequence = require('run-sequence');
 // var wait = require('gulp-wait');
 
 //------------------------------ CONSTANTS -------------------------------//
-var SRC = {
-	root: ['!./node_modules/**', './**'],
-	client: 'client/**',
-	clientRootHtml: 'client/*.html',
-	clientJS: 'client/**/*.js',
-	clientStaticNoLib: 'index.html',
-	// [
-	// 	'!*.js', '!client/lib/**/*.js',
-	// 	'!client/**/*.dust', '!client/**/*.jsx',
-	// 	'!./**/.eslintrc.js', 'client/**'
-	// ],
-	clientStatic: [
-		'client/**', 
-		'!client/lib/*.js',
-		'!client/**/*.dust',
-		'!client/**/*.jsx',
-		'!./**/.eslintrc.js'
-	],
-	nodeLibs: [
-		'node_modules/marked/marked.min.js',
-		'node_modules/react/dist/react-with-addons.min.js',
-		'node_modules/react-dom/dist/react-dom.min.js',		
-		'node_modules/react-bootstrap/dist/react-bootstrap.min.js',
-		'node_modules/lodash/dist/lodash.js',
-		'node_modules/jquery/dist/jquery.min.js',
-		'node_modules/lodash/lodash.js'
-	]
-};
-
-var DEST = {
-	root: '.build',
-	clientLibs: 'client/lib',
-	libs: '.build/lib'
-};
+var SRC = buildConfig.SRC;
+var DEST = buildConfig.DEST;
 //------------------------------------------------------------------------//
 
 //------------------ COMMAND LINE PARAMETER HANDLING ---------------------//
@@ -141,14 +112,19 @@ gulp.task('get-tasks', function() {
 });
 //#################################################################################
 
-// copy new libs from node_modules to client/lib. Runs once on re-run
-gulp.task('node-client-libs', function nodeLibsTask() {
-	return gulp.src(SRC.nodeLibs)
+/**
+ * Copy new libs from node_modules to client/lib. Runs once on re-run.
+ */
+gulp.task('node-client-libs', function staticLibsTask() {
+	return gulp.src(SRC.staticLibs)
 		.pipe(newerThanRootIfNotProduction())
 		.pipe(consoleTaskReport())
 		.pipe(gulp.dest(DEST.clientLibs));
 });
 
+/**
+ * Main frontend build step
+ */
 gulp.task('webpack', function webpackTask() {
 	return gulp.src(SRC.clientJS)
 		.pipe(consoleTaskReport())
@@ -157,6 +133,20 @@ gulp.task('webpack', function webpackTask() {
 		.pipe(gulp.dest(DEST.root));
 });
 
+/*
+ * move images into .build (from client)
+ */
+gulp.task('copy-img', function copyStaticTask(){
+	return gulp.src(SRC.clientImg)
+		.pipe(consoleTaskReport())
+		.pipe(newerThanRootIfNotProduction())
+		.pipe(p.flatten())
+		.pipe(gulp.dest(DEST.img));
+});
+
+/*
+ * move root html files from client to .build
+ */
 gulp.task('copy-static', function copyStaticTask(){
 	return gulp.src(SRC.clientRootHtml)
 		.pipe(consoleTaskReport())
@@ -164,8 +154,11 @@ gulp.task('copy-static', function copyStaticTask(){
 		.pipe(gulp.dest(DEST.root));
 });
 
-gulp.task('node-libs', function nodeLibsTask() {
-	return gulp.src(SRC.nodeLibs)
+/*
+ * copy from client/libs --> ./build/libs [[todo: may be redundant, look into it]]
+ */
+gulp.task('node-libs', function staticLibsTask() {
+	return gulp.src(path.join('./', SRC.clientLibs))
 		.pipe(newerThanRootIfNotProduction())
 		.pipe(consoleTaskReport())
 		.pipe(gulp.dest(DEST.libs));
@@ -175,7 +168,7 @@ var rerunOnChange = function rerunOnChange() {
 	gulp.watch(SRC.client, ['build']);
 };
 
-gulp.task('build', ['node-libs', 'webpack', 'copy-static']);
+gulp.task('build', ['node-libs', 'webpack', 'copy-img', 'copy-static']);
 
 /**
  * Build the app

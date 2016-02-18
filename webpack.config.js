@@ -1,5 +1,7 @@
+var _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
+var buildConfig = require('./config/config-build-paths');
 
 const OUTPUT_DIR = path.resolve(__dirname, '.build');
 const CLIENT_SRC_DIR = path.resolve(__dirname, './client');
@@ -22,27 +24,34 @@ module.exports = {
 			},
 			{
 				test: /\.jsx?$/,
-				loader: 'babel-loader',
+				loader: 'babel',
 				query: {
-					presets: ['es2015', 'react']
+					presets: ['es2015', 'react'],
+					cacheDirectory: '.cache'
 				}
 			}
 		]
 	},
+	cache: true,
 	resolve: {
 		root: __dirname,
 		modulesDirectories: ['node_modules'],
 		// you can now require('file') instead of require('file.jsx')
 		extensions: ['', '.js', '.json', 'jsx']
 	},
-	externals: {
-		// require("jquery") react-dom.min is external, available externally, etc.
-		"./lib/react-boostrap.min": "ReactBootstrap",
-		"./lib/react-dom.min": "ReactDom",
-		"./lib/react-with-addons.min": "React",
-		"./client/lib/lodash": "_",
-		"./lib/jquery.min": "$",
-		"./lib/jquery.min": "jquery",
-		"./lib/marked.min": "marked"
-	}
+	externals: buildConfig.webpackExternalModules,
+	plugins: [
+		new webpack.DefinePlugin({
+			'process.env.NODE_ENV': '"production"'
+		})
+	]
+
+	// 	 {
+	// 	'./lib/react-dom': 'ReactDom',
+	// 	'./lib/react-with-addons': 'React',
+	// 	'./lib/lodash': '_',
+	// 	'./lib/jquery': '$',
+	// 	'./lib/jquery': 'jquery',
+	// 	'./lib/marked': 'marked'
+	// }
 };

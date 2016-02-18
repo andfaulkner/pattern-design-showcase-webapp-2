@@ -4,8 +4,16 @@
 ! basic webpack build & gulp with targeted watch
 ! ECMA6 classes - basics
 ! fast Webpack builds (by splitting out the globals)
+! look into Bootstrap-React
+! install Bootstrap-React
+! add Bootstrap-React css & fonts
+	- webpack css
+		XXX NO BOOTSTRAP-REACT, IT SUCKS
+! pull gulpfile config out
+! getOptions.js helper to compute and grab all options (to remove logic from config files)
+! react classes  <<< not that useful
+- react-router (too much crap in index.jsx)
 - split auth page out
-- react classes
 - react decorators
 - react decorator-based non-inline styles
 - react routes
@@ -13,7 +21,6 @@
 - webpack splitting
 	- split auth page
 - hook rest API up to login box
-- look into Bootstrap-React
 
 - auth with redis etc.
 		! auth page - basic form
@@ -22,7 +29,7 @@
 		- redis config
 		- passport?
 		- 
-
+- dry up gulpfile, webpack, *.html
 
 
 Advanced (later)

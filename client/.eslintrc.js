@@ -9,7 +9,6 @@ module.exports = {
 	},
 	globals: {
 		ReactDom: true,
-		ReactBootstrap: true,
 		$: true,
 		jquery: true,
 		React: true,
