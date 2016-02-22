@@ -26,10 +26,12 @@ export default React.createClass({
 			);
 		}, {});
 		return (
-			<div style={styles.barLayout}>
-				<ul style={styles.navbarTestulStyle}>
-					{navbarItems}
-				</ul>
+			<div>
+				<div style={styles.barLayout}>
+					<ul style={styles.navbarTestulStyle}>
+						{navbarItems}
+					</ul>
+				</div>
 			</div>
 		);
 	}

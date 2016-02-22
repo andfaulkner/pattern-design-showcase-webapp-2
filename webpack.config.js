@@ -28,10 +28,11 @@ module.exports = {
 			},
 			{
 				test: /\.jsx?$/,
+        include: [path.join(__dirname, 'client'), path.join(__dirname, 'node_modules')],
 				loader: 'babel',
 				query: {
 					plugins: ['transform-decorators-legacy'],
-					presets: ['es2015', 'react', 'stage-0'],
+					presets: ['es2015', 'stage-0', 'react'],
 					cacheDirectory: '.cache'
 				}
 			}
@@ -39,10 +40,12 @@ module.exports = {
 	},
 	cache: true,
 	resolve: {
-		root: __dirname,
-		modulesDirectories: ['node_modules'],
+    extensions: ["", ".js", ".jsx", ".json"],
+		modules: ['node_modules', path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'client')],
+    descriptionFiles: ['package.json', 'bower.json'],
+		mainFields: ['dependencies', 'devDependencies']
+		// modulesDirectories: [path.join(__dirname, 'node_modules')],
 		// you can now require('file') instead of require('file.jsx')
-		extensions: ['', '.js', '.json', 'jsx']
 	},
 	externals: buildConfig.webpackExternalModules,
 	plugins: [
