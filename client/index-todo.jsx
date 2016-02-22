@@ -32,11 +32,3 @@ ReactDOM.render(
 	</Provider>,
 	document.getElementById('content')
 );
-
-	// <Router history={hashHistory}>
-	// 	<Route path="/" component={NavbarTest} />
-	// 	<Route path="/comment" component={CommentBox} />
-	// 	<Route path="/like" component={LikeButton} />
-	// 	<Route path="/affinity" component={AffinityButton} />
-	// 	<Route path="/upload_images" component={ImageUploader} />
-	// </Router>,

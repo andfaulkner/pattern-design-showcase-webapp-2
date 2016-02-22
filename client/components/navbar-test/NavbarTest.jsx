@@ -1,3 +1,9 @@
+/**************************************************************************************************
+*
+*			Navigation bar at top of screen
+*
+*/
+
 import { Link } from 'react-router';
 
 var styles = {
