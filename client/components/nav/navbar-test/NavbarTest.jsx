@@ -7,25 +7,21 @@
 import { Link } from 'react-router';
 import { styles } from './navbar-test-styles.jsx';
 
-var routes = [
-	{ text: 'Comments', route: '/comment' },
-	{ text: 'Like', route: '/like' },
-	{ text: 'Affinity', route: '/affinity' },
-	{ text: 'Login', route: '/login' },
-	{ text: 'Carousel', route: '/carousel' }
-];
+import routes from '../../../routes/routes.jsx';
 
 export default React.createClass({
 	render: function() {
-		var navbarItems = _.map(routes, function(routeTags, routeIndex) {
-			return (
-				<li style={styles.navbarliStyles} key={routeIndex}>
-					<Link to={routeTags.route} style={styles.navbarLinkStyles}>
-						{routeTags.text}
-					</Link>
-				</li>
-			);
-		}, {});
+		var navbarItems = _.compact(_.map(routes, function(routeTags, routeIndex) {
+			// if topbar text isn't defined, this route isn't for the topbar
+			return (routeTags.topbarText)
+				? (
+					<li style={styles.navbarliStyles} key={routeIndex}>
+						<Link to={routeTags.route} style={styles.navbarLinkStyles}>
+							{routeTags.topbarText}
+						</Link>
+					</li>
+				) : undefined;
+		}, {}));
 		return (
 			<div>
 				<div style={styles.barLayout}>

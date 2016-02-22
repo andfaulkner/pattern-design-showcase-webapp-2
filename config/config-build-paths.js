@@ -19,7 +19,6 @@ var libs = [
 	{ lib: 'jquery', childPath: 'dist', varName: '$' },
 	{ lib: 'lodash', childPath: '', varName: '_' },
 	{ lib: 'react-router', varName: 'ReactRouter', noNode: true }
-	// { lib: 'react-dropzone-component', childPath: 'dist', file: 'dropzone', varName: 'DropzoneComponent'}
 ];
 
 module.exports = {

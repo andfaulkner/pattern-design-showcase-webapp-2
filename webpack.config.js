@@ -5,6 +5,7 @@ var buildConfig = require('./config/config-build-paths');
 
 const OUTPUT_DIR = path.resolve(__dirname, '.build');
 const CLIENT_SRC_DIR = path.resolve(__dirname, './client');
+const NODE_MODULES_ABS_DIR = path.join(__dirname, 'node_modules');
 
 module.exports = {
 	entry: {
@@ -28,7 +29,7 @@ module.exports = {
 			},
 			{
 				test: /\.jsx?$/,
-        include: [path.join(__dirname, 'client'), path.join(__dirname, 'node_modules')],
+        include: [CLIENT_SRC_DIR, NODE_MODULES_ABS_DIR],
 				loader: 'babel',
 				query: {
 					plugins: ['transform-decorators-legacy'],
@@ -41,7 +42,7 @@ module.exports = {
 	cache: true,
 	resolve: {
     extensions: ["", ".js", ".jsx", ".json"],
-		modules: ['node_modules', path.resolve(__dirname, 'node_modules'), path.resolve(__dirname, 'client')],
+		modules: ['node_modules', NODE_MODULES_ABS_DIR, CLIENT_SRC_DIR],
     descriptionFiles: ['package.json', 'bower.json'],
 		mainFields: ['dependencies', 'devDependencies']
 		// modulesDirectories: [path.join(__dirname, 'node_modules')],
@@ -51,15 +52,7 @@ module.exports = {
 	plugins: [
 		new webpack.DefinePlugin({
 			'process.env.NODE_ENV': '"production"'
-		})
+		}),
+		new webpack.optimize.DedupePlugin()
 	]
-
-	// 	 {
-	// 	'./lib/react-dom': 'ReactDom',
-	// 	'./lib/react-with-addons': 'React',
-	// 	'./lib/lodash': '_',
-	// 	'./lib/jquery': '$',
-	// 	'./lib/jquery': 'jquery',
-	// 	'./lib/marked': 'marked'
-	// }
 };
