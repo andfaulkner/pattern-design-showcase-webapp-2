@@ -18,7 +18,12 @@
 ! redux debug tools - get it working!
 ! mini client-side log
 ! react-redux mvc todo
-- react grids
+
+- material design
+	- install
+	- implement one feature
+
+?X react grids
 
 - react css
 	! react standard css? <<< it fucking sucks
