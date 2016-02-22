@@ -18,9 +18,10 @@
 ! redux debug tools - get it working!
 ! mini client-side log
 ! react-redux mvc todo
+- react grids
 
 - react css
-	- react standard css?
+	! react standard css? <<< it fucking sucks
 	- react decorator-based non-inline styles
 	- webpack css ?
 - Radium

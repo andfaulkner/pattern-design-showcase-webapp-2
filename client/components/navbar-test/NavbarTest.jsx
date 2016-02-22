@@ -36,7 +36,8 @@ var styles = {
 var routes = [
 	{ text: 'Comments', route: '/comment' },
 	{ text: 'Like', route: '/like' },
-	{ text: 'Affinity', route: '/affinity' }
+	{ text: 'Affinity', route: '/affinity' },
+	{ text: 'Login', route: '/login' }
 ];
 
 export default React.createClass({

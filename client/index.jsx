@@ -6,6 +6,7 @@ import NavbarTest from './components/navbar-test/NavbarTest.jsx';
 import ImageUploader from './components/image-uploader/ImageUploader.jsx';
 import { Router, Route, hashHistory, Link } from 'react-router';
 import { FormBox } from './components/sample-class-components/TestClassBasedComponent.jsx';
+import LoginBox from './components/login-box/LoginBoxVanilla.jsx';
 
 // var FilterableProductTable = require('./components/like-button/FilterableProductTable.jsx');
 
@@ -22,6 +23,7 @@ ReactDOM.render(
 		<Route path="/comment" component={CommentBox} />
 		<Route path="/like" component={LikeButton} />
 		<Route path="/affinity" component={AffinityButton} />
+		<Route path="/login" component={LoginBox} />
 	</Router>,
 	document.getElementById('content')
 );
