@@ -5,7 +5,8 @@
 *			lets you look at an object, but also shows its name & a tag revealing its location: 
 *			//=>     module --> function:: objectName:
 *			//=>     // ... object contents here ... //
-*			
+*
+*			TODO a bit weird.
 *
 */
 
