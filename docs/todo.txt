@@ -7,15 +7,32 @@
 ! look into Bootstrap-React
 ! install Bootstrap-React
 ! add Bootstrap-React css & fonts
-	- webpack css
 		XXX NO BOOTSTRAP-REACT, IT SUCKS
 ! pull gulpfile config out
 ! getOptions.js helper to compute and grab all options (to remove logic from config files)
 ! react classes  <<< not that useful
-- react-router (too much crap in index.jsx)
+! react-router (too much crap in index.jsx)	
+! decorators
+! react property validation (PropTypes.*.{isRequired?})
+
+! redux debug tools - get it working!
+! mini client-side log
+! react-redux mvc todo
+
+- react css
+	- react standard css?
+	- react decorator-based non-inline styles
+	- webpack css ?
+- Radium
+- react forms
+- react-router-redux - replace react-router with it
+- wire in a cool component (POC)
+
+- wire in redux
+- DRY your paths again (e.g. to the html entries)
+
 - split auth page out
 - react decorators
-- react decorator-based non-inline styles
 - react routes
 - login box (auth page)
 - webpack splitting

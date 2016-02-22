@@ -1,10 +1,10 @@
 // MAIN REACT EXAMPLE - NUMEROUS CORE CONCEPTS HERE
 
-var CommentList = require('./CommentList.jsx');
-var CommentForm = require('./CommentForm.jsx');
+import CommentList from './CommentList.jsx';
+import CommentForm from './CommentForm.jsx';
 
-module.exports = React.createClass({
-	getInitialState: function getInitialStateCommentBox() {
+export default React.createClass({
+	getInitialState: () => {
 		console.log('init state!');
 		return {data: []};
 	},

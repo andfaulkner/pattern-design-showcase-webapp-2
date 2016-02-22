@@ -1,9 +1,7 @@
-var ReactDom = require('./lib/react-dom.min');
-
 // components
-var LoginBox = require('./components/comment-box/LoginBox.jsx');
+var LoginBox = require('./components/comment-box/CommentBox.jsx');
 
 ReactDom.render(
-	<LoginBox />,
+	<CommentBox />,
 	document.getElementById('content')
 );

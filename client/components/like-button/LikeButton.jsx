@@ -1,10 +1,8 @@
 // TUTORIAL: handling events
 
-module.exports = React.createClass({
+const LikeButton = React.createClass({
 	// is it liked or disliked to start?
-	getInitialState: function() {
-		return {liked: false};
-	},
+	getInitialState: () => ({liked: false}),
 	// what to do on click?
 	handleClick: function(event) {
 		this.setState({ liked: !this.state.liked });
@@ -21,3 +19,5 @@ module.exports = React.createClass({
 		)
 	}
 });
+
+export { LikeButton as LikeButton };

@@ -7,10 +7,14 @@ const OUTPUT_DIR = path.resolve(__dirname, '.build');
 const CLIENT_SRC_DIR = path.resolve(__dirname, './client');
 
 module.exports = {
-	entry: path.join(CLIENT_SRC_DIR, 'index.jsx'),
+	entry: {
+		'admin': path.join(CLIENT_SRC_DIR, 'admin.jsx'),
+		'index-todo': path.join(CLIENT_SRC_DIR, 'index-todo.jsx'),
+		'index': path.join(CLIENT_SRC_DIR, 'index.jsx'),
+	},
 	output: {
 		path: OUTPUT_DIR,
-		filename: 'index.js'
+    filename: '[name].js'
 	},
 	module: {
 		loaders: [
@@ -26,7 +30,8 @@ module.exports = {
 				test: /\.jsx?$/,
 				loader: 'babel',
 				query: {
-					presets: ['es2015', 'react'],
+					plugins: ['transform-decorators-legacy'],
+					presets: ['es2015', 'react', 'stage-0'],
 					cacheDirectory: '.cache'
 				}
 			}

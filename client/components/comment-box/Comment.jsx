@@ -1,4 +1,4 @@
-module.exports = React.createClass({
+export default React.createClass({
 	// evil - allows XSS attacks when you do this
   rawMarkup: function() {
     var rawMarkup = marked(this.props.children.toString(), {sanitize: true});

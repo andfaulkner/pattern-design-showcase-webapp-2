@@ -1,6 +1,6 @@
-var Comment = require('./Comment.jsx');
+import Comment from './Comment.jsx';
 
-module.exports = React.createClass({
+export default React.createClass({
 	render: function() {
 		var commentNodes = this.props.data.map(function(comment) {
 			return (

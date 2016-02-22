@@ -1,4 +1,4 @@
-module.exports = React.createClass({
+export default React.createClass({
 	getInitialState: function() {
 		return {author: '', text: ''};
 	},

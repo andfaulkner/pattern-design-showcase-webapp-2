@@ -1,16 +1,13 @@
 // components
-var CommentBox = require('./components/comment-box/CommentBox.jsx');
-var LikeButton = require('./components/like-button/LikeButton.jsx');
-var AffinityButton = require('./components/like-button/AffinityButton.jsx')
-var NavbarTest = require('./components/navbar-test/NavbarTest.jsx')
-var ImageUploader = require('./components/image-uploader/ImageUploader.jsx');
-
+import CommentBox from './components/comment-box/CommentBox.jsx';
+import { LikeButton } from './components/like-button/LikeButton.jsx';
+import { AffinityButton } from './components/like-button/AffinityButton.jsx';
+import NavbarTest from './components/navbar-test/NavbarTest.jsx';
+import ImageUploader from './components/image-uploader/ImageUploader.jsx';
 import { Router, Route, hashHistory, Link } from 'react-router';
-
-var TestClassBasedComponent = require('./components/sample-class-components/TestClassBasedComponent.jsx');
+import { FormBox } from './components/sample-class-components/TestClassBasedComponent.jsx';
 
 // var FilterableProductTable = require('./components/like-button/FilterableProductTable.jsx');
-
 
 // var NavTopbar = require('./components/nav-topbar/NavTopbar.jsx');
 
@@ -29,27 +26,3 @@ ReactDOM.render(
 	</Router>,
 	document.getElementById('content')
 );
-
-// ReactDom.render(
-// 	<FilterableProductTable />,
-// 	document.getElementById('content')
-// );
-	// <LikeButton />,
-
-// ReactDOM.render(
-// 	<TestClassBasedComponent />,
-// 	document.getElementById('content')
-// );
-
-
-// ReactDOM.render(
-// 	<AffinityButton />,
-// 	document.getElementById('content')
-// );
-
-// ReactDom.render(
-// 	<div>
-// 		<CommentBox url="/api/comments" pollInterval={2000} />
-// 	</div>,
-// 	document.getElementById('content')
-// );

@@ -1,4 +1,4 @@
-var DropzoneComponent = require('react-dropzone-component');
+import {DropzoneComponent} from 'react-dropzone-component';
 
 var ImageUploader = React.createClass({
 	componentConfig: {

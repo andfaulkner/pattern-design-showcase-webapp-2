@@ -1,7 +1,5 @@
-module.exports = React.createClass({
-	getInitialState: function() {
-		return { affinity: 0 };
-	},
+export const AffinityButton = React.createClass({
+	getInitialState: () => ({ affinity: 0 }),
 	// runs when element with onClick={this.handleHateClick} prop is clicked
 	handleLoveClick: function(event) {
 		var affinity = (this.state.affinity > -3)

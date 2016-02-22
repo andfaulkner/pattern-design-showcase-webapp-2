@@ -26,7 +26,14 @@ var navbarLinkStyles = {
 	textDecoration: 'none'
 };
 
-var NavbarTest = React.createClass({
+var routes = [
+	{ text: 'Comments', route: '/comment' },
+	{ text: 'Like', route: '/like' },
+	{ text: 'Affinity', route: '/affinity' },
+	{ text: 'Upload Images', route: '/upload_images' }
+];
+
+export default React.createClass({
 	render: function() {
 		var navbarItems = _.map(routes, function(routeTags, routeIndex) {
 			return (
@@ -46,12 +53,3 @@ var NavbarTest = React.createClass({
 		);
 	}
 });
-
-var routes = [
-	{ text: 'Comments', route: '/comment' },
-	{ text: 'Like', route: '/like' },
-	{ text: 'Affinity', route: '/affinity' },
-	{ text: 'Upload Images', route: '/upload_images' }
-];
-
-module.exports = NavbarTest;

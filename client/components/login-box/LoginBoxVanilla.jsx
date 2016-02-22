@@ -1,4 +1,4 @@
-module.exports = React.createClass({
+export default React.createClass({
 	render: function() {
 		return (
 			<form method="POST">
