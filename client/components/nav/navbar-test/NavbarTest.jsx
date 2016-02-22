@@ -11,7 +11,8 @@ var routes = [
 	{ text: 'Comments', route: '/comment' },
 	{ text: 'Like', route: '/like' },
 	{ text: 'Affinity', route: '/affinity' },
-	{ text: 'Login', route: '/login' }
+	{ text: 'Login', route: '/login' },
+	{ text: 'Carousel', route: '/carousel' }
 ];
 
 export default React.createClass({

@@ -6,6 +6,7 @@ import NavbarTest from './components/nav/navbar-test/NavbarTest.jsx';
 import { Router, Route, hashHistory, Link } from 'react-router';
 import { FormBox } from './components/sample-class-components/TestClassBasedComponent.jsx';
 import LoginBox from './components/forms/login-box/LoginBoxVanilla.jsx';
+import CarouselTest from './components/img-display/carousel-test/CarouselTest.jsx';
 
 ReactDOM.render(
 	<Router history={hashHistory}>
@@ -14,6 +15,7 @@ ReactDOM.render(
 		<Route path="/like" component={LikeButton} />
 		<Route path="/affinity" component={AffinityButton} />
 		<Route path="/login" component={LoginBox} />
+		<Route path="/carousel" component={CarouselTest} />
 	</Router>,
 	document.getElementById('content')
 );
