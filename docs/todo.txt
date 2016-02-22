@@ -15,6 +15,8 @@
 ! decorators
 ! react property validation (PropTypes.*.{isRequired?})
 
+- sane library import
+
 ! redux debug tools - get it working!
 ! mini client-side log
 ! react-redux mvc todo

@@ -1,5 +1,5 @@
 // components
-var LoginBox = require('./components/comment-box/CommentBox.jsx');
+var LoginBox = require('./components/forms/comment-box/CommentBox.jsx');
 
 ReactDom.render(
 	<CommentBox />,

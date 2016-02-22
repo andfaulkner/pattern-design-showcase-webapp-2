@@ -1,5 +1,5 @@
 // components
-import CommentBox from './components/comment-box/CommentBox.jsx';
+import CommentBox from './components/forms/comment-box/CommentBox.jsx';
 import { LikeButton } from './components/like-button/LikeButton.jsx';
 import { AffinityButton } from './components/like-button/AffinityButton.jsx';
 import NavbarTest from './components/navbar-test/NavbarTest.jsx';
