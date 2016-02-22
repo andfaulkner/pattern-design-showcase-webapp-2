@@ -98,6 +98,7 @@
     "react-form": "0.0.2",
     "react-form-inputs": "0.0.1",
     "react-forms-ui": "0.3.2",
+    "react-grid-layout": "0.10.8",
     "react-redux": "4.4.0",
     "react-router": "^2.0.0",
     "react-router-redux": "3.0.0",
