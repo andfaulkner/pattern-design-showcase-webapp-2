@@ -8,15 +8,6 @@ import { Router, Route, hashHistory, Link } from 'react-router';
 import { FormBox } from './components/sample-class-components/TestClassBasedComponent.jsx';
 import LoginBox from './components/login-box/LoginBoxVanilla.jsx';
 
-// var FilterableProductTable = require('./components/like-button/FilterableProductTable.jsx');
-
-// var NavTopbar = require('./components/nav-topbar/NavTopbar.jsx');
-
-// var LoginBox = require('./components/login-box/LoginBox.jsx');
-
-// import {Circle} from './experiments/js2015-classes';
-
-
 ReactDOM.render(
 	<Router history={hashHistory}>
 		<Route path="/" component={NavbarTest} />

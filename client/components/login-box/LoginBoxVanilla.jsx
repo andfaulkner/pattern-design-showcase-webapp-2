@@ -1,5 +1,15 @@
 var ReactGridLayout = require('react-grid-layout');
 
+var loginGrid = React.createClass({
+	render: function() {
+		return (
+			<div />
+		);
+	}
+});
+
+
+
 export default React.createClass({
 	render: function() {
 		return (

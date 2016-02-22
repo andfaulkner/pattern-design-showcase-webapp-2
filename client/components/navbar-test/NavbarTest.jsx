@@ -5,33 +5,7 @@
 */
 
 import { Link } from 'react-router';
-
-var styles = {
-	navbarliStyles: {
-		float: 'left',
-		boxSizing: 'border-box',
-		display: 'list-item',
-		listStyleType: 'none',
-	},
-	navbarTestulStyle: {
-		listStyleType: 'none',
-		marginTop: '0px',
-		paddingTop: '0px',
-		overflow: 'hidden',
-		backgroundColor: '#333',
-	  display: 'block',
-		cursor: 'auto'
-	},
-	navbarLinkStyles: {
-		backgroundColor: '#4CAF50',
-		display: 'inline-block',
-		color: 'white',
-		textAlign: 'center',
-		padding: '14px 16px',
-		textDecoration: 'none'
-	}
-}
-
+import { styles } from './navbar-test-styles.jsx';
 
 var routes = [
 	{ text: 'Comments', route: '/comment' },
@@ -52,7 +26,7 @@ export default React.createClass({
 			);
 		}, {});
 		return (
-			<div style={{'display': 'block'}}>
+			<div style={styles.barLayout}>
 				<ul style={styles.navbarTestulStyle}>
 					{navbarItems}
 				</ul>
