@@ -22,7 +22,6 @@ ReactDOM.render(
 		<Route path="/comment" component={CommentBox} />
 		<Route path="/like" component={LikeButton} />
 		<Route path="/affinity" component={AffinityButton} />
-		<Route path="/upload_images" component={ImageUploader} />
 	</Router>,
 	document.getElementById('content')
 );

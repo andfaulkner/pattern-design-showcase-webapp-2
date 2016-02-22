@@ -29,8 +29,7 @@ var navbarLinkStyles = {
 var routes = [
 	{ text: 'Comments', route: '/comment' },
 	{ text: 'Like', route: '/like' },
-	{ text: 'Affinity', route: '/affinity' },
-	{ text: 'Upload Images', route: '/upload_images' }
+	{ text: 'Affinity', route: '/affinity' }
 ];
 
 export default React.createClass({
