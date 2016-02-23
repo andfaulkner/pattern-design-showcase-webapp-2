@@ -1,9 +1,4 @@
-var ReactGridLayout = require('react-grid-layout');
-var Formsy = require('formsy-react');
-console.log(Formsy);
-
 import {styles} from './login-box-styles.jsx';
-console.log(styles);
 
 import NavbarTest from '../../nav/navbar-test/NavbarTest.jsx';
 
@@ -14,7 +9,6 @@ var loginGrid = React.createClass({
 		);
 	}
 });
-
 
 export default React.createClass({
 	render: function() {

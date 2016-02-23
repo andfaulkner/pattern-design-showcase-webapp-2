@@ -1,7 +1,7 @@
 // components
-var LoginBox = require('./components/forms/comment-box/CommentBox.jsx');
+import AdminHome from './components/admin/AdminHome.jsx';
 
-ReactDom.render(
-	<CommentBox />,
+ReactDOM.render(
+	<AdminHome />,
 	document.getElementById('content')
 );

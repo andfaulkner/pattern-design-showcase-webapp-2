@@ -1,3 +1,5 @@
+'use strict';
+
  /* global require, module, process */
 
 /***************************************************************************************************
@@ -11,7 +13,7 @@
 */
 
 var winston = require('winston');
-var _ = '../../lib/lodash';
+var _ = require('../../lib/lodash');
 var config = require('config');
 var logConfig = config.get('logging').levelConfig;
 
@@ -59,10 +61,18 @@ function createFileLogger() {
 function createFunctionLogger(prefix) {
 	return function(fnName, args) {
 		var fnData = prefix + ' ' + stringifyFunction(fnName, args);
-		var logger = prefixedLogger(fnData);
-		logger.trace(fnData);
-		return logger;
+		return prefixedLogger(fnData);
 	};
+}
+
+// All other prefixed loggers are build off this one
+// @prefix: comes after preprefix & timestamp but before rest of message
+// @message: main item to log
+// @level: 'silly', 'debug', 'trace', etc.
+// @preprefix: comes before everything else - mainly for spacing purposes
+function basePrefixedLogger(prefix, message, level, preprefix='') {
+	message =  preprefix + (new Date()).toISOString() + ' ' + prefix + ' ' + message;
+	winstonLogger[level].apply(this, arguments);
 }
 
 /***
@@ -77,30 +87,29 @@ function createFunctionLogger(prefix) {
 function prefixedLogger(prefix) {
 	return {
 		silly: function(message) {
-			message = (new Date()).toISOString() + ' ' + prefix + ' ' + message;
-			winstonLogger.silly.apply(this, arguments);
+			basePrefixedLogger(prefix, message, 'silly');
+			return this;
 		},
-		trace: function(message) {
-			message = (new Date()).toISOString() + ' ' + prefix + ' ' + message;
-			winstonLogger.trace.apply(this, arguments);
+		trace: function (message) {
+			basePrefixedLogger(prefix, message, 'trace');
+			return this;
 		},
 		debug: function(message) {
-			message = (new Date()).toISOString() + ' ' + prefix + ' ' + message;
-			winstonLogger.debug.apply(this, arguments);
+			basePrefixedLogger(prefix, message, 'debug');
+			return this;
 		},
 		info: function(message) {
 			// Space in front for evening the logs with error & trace
-			message = ' ' + (new Date()).toISOString() + ' ' + prefix + ' ' + message;
-			winstonLogger.info.apply(this, arguments);
+			basePrefixedLogger(prefix, message, 'info', ' ');
+			return this;
 		},
 		warn: function(message) {
-			// Space in front for evening the logs with error & trace
-			message = ' ' + (new Date()).toISOString() + ' ' + prefix + ' ' + message;
-			winstonLogger.warn.apply(this, arguments);
+			basePrefixedLogger(prefix, message, 'warn', ' ');
+			return this;
 		},
 		error: function(message) {
-			message = (new Date()).toISOString() + ' ' + prefix + ' ' + message;
-			winstonLogger.error.apply(this, arguments);
+			basePrefixedLogger(prefix, message, 'error');
+			return this;
 		}
 	};
 }
@@ -112,7 +121,7 @@ function stringifyFunction(fnName, args) {
 	var argsAsStrings = _.isString(args)
 		? args
 		: _.map(args, 
-						(arg) => JSON.stringify(arg, null, 2))
+						(arg) => JSON.stringify(arg, null, 1))
 			 .join(', ');
 	return fnName + '(' + argsAsStrings + ')';
 }

@@ -1,3 +1,5 @@
+'use strict';
+
 var config = require('config');
 
 // get the db

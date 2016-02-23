@@ -15,15 +15,29 @@
 ! decorators
 ! react property validation (PropTypes.*.{isRequired?})
 
-- sane library import
-
 ! redux debug tools - get it working!
 ! mini client-side log
 ! react-redux mvc todo
+! sane, DRY (basic) topbar routing
+! get google auth wired in
+! get redis session wired in
+! pretty logs	
+! actually get real authentication to occur
+	- some sort of comparison against data in Redis
+	- select auth items from google returns
+- req filter
 
-- material design
-	- install
-	- implement one feature
+- simple place to route to on auth
+- login box, backend
+
+- top logo
+
+- sane library import
+
+
+XXXX material design
+	XXX install
+	XXX implement one feature
 
 ?X react grids
 

@@ -4,11 +4,9 @@
 *
 */
 
-// components
-
 import { Router, Route, hashHistory, Link } from 'react-router';
-
 import routes from './routes/routes.jsx';
+var logger = require('./helpers/logger.js')('client/index.js');
 
 /**
  * Routes are rendered in from here
@@ -16,15 +14,12 @@ import routes from './routes/routes.jsx';
 var RootNode = React.createClass({
 
 	render: function() {
-		var allRoutes = _.map(routes, function(routes, routeIndex) {
-			return (
-				<Route 
-					path={routes.route}
-					key={routeIndex}
-					component={routes.component}
-				/>
-			);
+		logger.fn('render').log('getting routes...');
+		const allRoutes = _.map(routes, function(route, index) {
+			return (<Route path={route.path} key={index} component={route.component} />);
 		});
+
+		logger.fn('render').log('about to render page...');
 		return (
 			<Router history={hashHistory}>
 				{allRoutes}
@@ -33,8 +28,4 @@ var RootNode = React.createClass({
 	}
 });
 
-
-ReactDOM.render(
-	<RootNode />,
-	document.getElementById('content')
-);
+ReactDOM.render(<RootNode />, document.getElementById('content'));

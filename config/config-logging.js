@@ -1,3 +1,5 @@
+'use strict';
+
 var envVars = require('./environment-vars');
 
 module.exports = {

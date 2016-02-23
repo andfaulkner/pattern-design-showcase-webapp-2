@@ -1,62 +1,89 @@
-var util = require('util');
-var bodyParser = require('body-parser');
+'use strict';
 
+var util = require('util');
+var logger = require('./server/core/logger').file('./app.js');
+
+// basic middleware
+var bodyParser = require('body-parser');
+var cookieParser = require('cookie-parser');
+
+var config = require('config');
+console.log(config);
+
+var auth = require('./server/core/passport-setup');
+var { passport, appSession: session } = auth;
+
+// start server
 var express = require('express');
-var app = express();
+var app 		= express();
+
+// consume & initialize basic middleware
 app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-// routes
-var imageRoutes = require('./server/img-route');
+// routes & apis
+app.use('/api/comments',	require('./server/routes/comment-route'));
+app.use('/api/image', 		require('./server/img-route'));
 
-// attach Bookshelf ORM (database abstraction) to the app
-// app.set('Bookshelf', require('./server/db/init-db'));
-// var Bookshelf = app.get('Bookshelf')
-
-var Bookshelf = require('./server/db/init-db');
-
-// to save to
-var TestComment = Bookshelf.Model.extend({
-	tableName: 'test_table1',
-	idAttribute: 'id'
+app.use((req, res, next) => {
+	// logger.trace(req);
+	next();
 });
 
-// to fetch from
-var TestComments = Bookshelf.Collection.extend({
-	model: TestComment
+// serve public portion of site
+app.use('/index',			express.static('./.build/index.html'));
+app.use('/index.js',	express.static('./.build/index.js'));
+app.use('/lib',				express.static('./.build/lib'));
+app.use('/img',				express.static('./.build/img'));
+app.use('/img',				express.static('./data/img/public'));
+
+// 
+// AUTH
+// 
+
+// set up Redis session for storing auth session
+app.use(session);
+
+// authentication middleware
+app.use(passport.initialize());
+app.use(passport.session());
+
+app.use((req, res, next) => {
+	logger.trace('request received');
+	next();
 });
 
-var testCommentsCollection = new TestComments();
-var testComment = new TestComment();
-
-app.get('/api/comments', function(req, res) {
-	//extract comments from the db
-	testCommentsCollection.fetch()
-		.then(function(comments) {
-			console.log('comments successfully fetched!');
-			res.send(comments);
-		});
+app.get('/admin', ensureAuthenticated, (req, res) => { 
+	console.log('at admin!');
+	res.send('in admin');
 });
 
-app.post('/api/comments', function(req, res, next) {
-	TestComment.forge({
-		author: req.body.author,
-		text: req.body.text
-	})
-	.save()
-	.then(function(){
-		console.log('new data save success!');
-		res.send(JSON.stringify('success!'));
-	});
+// GET /auth/google
+//   Use passport.authenticate() as route middleware to authenticate the request.  The 1st step
+//   in Google authentication involves redirecting the user to google.com. After authorization,
+//   Google redirects the user back to this app at /auth/google/callback
+app.get('/auth/google', passport.authenticate('google', { scope: [
+       'https://www.googleapis.com/auth/plus.login'] 
+}));
 
-});
-
-
-app.use('/api/image', imageRoutes);
-
-
-
-app.use(express.static('./.build'));
+// GET /auth/google/callback
+//   Use passport.authenticate() as route middleware to authenticate request.  If authentication
+//   fails, user is redirected back to login page. Otherwise, the primary route function
+//   is called, which, in this example, redirects the user to the home page.
+app.get('/auth/google/callback',
+    	passport.authenticate( 'google', {
+    		successRedirect: '/admin',
+    		failureRedirect: '/index#login'
+}));
 
 app.listen(3000);
+
+// Simple route middleware to ensure user is authenticated.
+//   Use this route middleware on any resource that needs to be protected.  If the
+//   request is authenticated (typically via a persistent login session), the request
+//   request will proceed.  Otherwise, the user will be redirected to the login page.
+function ensureAuthenticated(req, res, next) {
+  if (req.isAuthenticated()) { return next(); }
+  res.redirect('/index#login');
+}

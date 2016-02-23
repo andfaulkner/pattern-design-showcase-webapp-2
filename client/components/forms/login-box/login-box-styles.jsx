@@ -5,7 +5,7 @@ export const styles = {
 		}
 	},
 	formContainer: {
-		'textAlign': 'center',
+		textAlign: 'center',
 		width: '800px',
 		margin: '0 auto'
 	},

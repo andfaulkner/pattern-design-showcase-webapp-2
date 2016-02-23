@@ -17,14 +17,20 @@ function logger (moduleName, curFn) {
 		fn = curFn;
 	}
 	return {
+		log: function log(msg) {
+			console.log(
+				modName + 
+				((fn) ? (' --> ' + fn + ':: ') : ':: ') +
+				((msg) ? (msg) : ''));
+		},
 		inspect: function inspect(obj, msg) {
 			var objName;
 			if (obj.name) {
-				objName = obj.name
+				objName = obj.name;
 			} else if (_.isFunction(obj)) {
-				objName = 'λ'
+				objName = 'λ';
 			} else {
-				objName = 'anonymous object'
+				objName = 'anonymous object';
 			}
 			console.log(
 				modName + 
@@ -41,4 +47,4 @@ function logger (moduleName, curFn) {
 	}	
 }
 
-export default logger;
+module.exports = logger;
