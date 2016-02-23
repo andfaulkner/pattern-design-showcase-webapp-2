@@ -23,10 +23,11 @@
 ! get redis session wired in
 ! pretty logs	
 ! actually get real authentication to occur
-	- some sort of comparison against data in Redis
-	- select auth items from google returns
-- req filter
+! some sort of comparison against data in Redis
+! select auth items from google returns
+- on route change alter selected menu item
 
+- req filter
 - simple place to route to on auth
 - login box, backend
 

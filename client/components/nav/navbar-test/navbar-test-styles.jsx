@@ -19,8 +19,9 @@ export const styles = {
 		display: 'inline-block',
 		color: 'white',
 		textAlign: 'center',
-		padding: '14px 16px',
-		textDecoration: 'none'
+		padding: '10px 10px',
+		textDecoration: 'none',
+		fontSize: '11px'
 	},
 	barLayout: {
 		'display': 'block'

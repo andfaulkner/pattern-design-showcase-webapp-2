@@ -16,7 +16,13 @@ var RootNode = React.createClass({
 	render: function() {
 		logger.fn('render').log('getting routes...');
 		const allRoutes = _.map(routes, function(route, index) {
-			return (<Route path={route.path} key={index} component={route.component} />);
+			return (
+				<Route
+					path={route.path}
+					key={index} 
+					component={route.component}
+				/>
+			);
 		});
 
 		logger.fn('render').log('about to render page...');
