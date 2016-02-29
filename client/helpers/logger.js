@@ -22,6 +22,7 @@ function logger (moduleName, curFn) {
 				modName + 
 				((fn) ? (' --> ' + fn + ':: ') : ':: ') +
 				((msg) ? (msg) : ''));
+			return this;
 		},
 		inspect: function inspect(obj, msg) {
 			var objName;
@@ -30,7 +31,7 @@ function logger (moduleName, curFn) {
 			} else if (_.isFunction(obj)) {
 				objName = 'λ';
 			} else {
-				objName = 'anonymous object';
+				objName = 'object: ';
 			}
 			console.log(
 				modName + 
@@ -40,10 +41,22 @@ function logger (moduleName, curFn) {
 				':'
 			);
 			console.log(obj);
+			return this;
+		},
+		/**
+		 * Special sugar logging function for logging when a component in about to render
+		 *
+		 * @param  {String} componentName
+		 * @return {Object} instance of logger with fnName set to the componentName provided
+		 */
+		logRendering: function logRendering(componentName) {
+			console.log('\n**** -----> RENDERING ' + componentName + ' -- ' + modName + '...');
+			return this.fn(componentName);
 		},
 		fn: function fn(fnName) {
+			// console.log(fnName);
 			return logger(modName, fnName);
-		}
+		},
 	}	
 }
 

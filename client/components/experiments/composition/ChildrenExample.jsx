@@ -59,6 +59,7 @@ class Card extends React.Component {
 	}
 };
 
+
 function buildDeck(suits, faceValues) {
 	// compute a full deck from suits & face values
 	return _.reduce(suits, (cards, suit) => 

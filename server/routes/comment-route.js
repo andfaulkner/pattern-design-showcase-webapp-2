@@ -5,7 +5,7 @@ var express = require('express');
 var router = express.Router();
 
 
-var Bookshelf = require('../db/init-db');
+var Bookshelf = require('../models/init-db');
 
 // attach Bookshelf ORM (database abstraction) to the app
 // app.set('Bookshelf', require('./server/db/init-db'));

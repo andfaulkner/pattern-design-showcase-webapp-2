@@ -1,5 +1,5 @@
 // TUTORIAL: handling events
-import NavbarTest from '../../nav/navbar-test/NavbarTest.jsx';
+import Common from '../../aRefactor/Common/Common.jsx';
 
 const LikeButton = React.createClass({
 	// is it liked or disliked to start?
@@ -14,12 +14,11 @@ const LikeButton = React.createClass({
 			? 'like'
 			: 'haven\'t liked';
 		return (
-			<div>
-				<NavbarTest />
+			<Common>
 				<p onClick={this.handleClick}>
 					You {text} this. Click to toggle.
 				</p>
-			</div>
+			</Common>
 		)
 	}
 });

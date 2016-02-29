@@ -3,7 +3,7 @@ var Radium = require('radium');
 import {styles} from './login-box-styles.jsx';
 console.log(styles);
 
-import NavbarTest from '../../nav/navbar-test/NavbarTest.jsx';
+import NavMenu from '../../aRefactor/Common/NavMenu.jsx';
 
 class LoginGrid extends React.Component {
 	render() {
@@ -38,7 +38,7 @@ class LoginComponent extends React.Component {
 	render() {
 		return (
 			<div>
-				<NavbarTest />
+				<NavMenu />
 				<div style={styles.formContainer}>
 					<form method="POST" style={styles.form}>
 						<div>Username:</div>

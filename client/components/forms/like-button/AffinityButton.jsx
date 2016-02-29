@@ -1,4 +1,4 @@
-import NavbarTest from '../../nav/navbar-test/NavbarTest.jsx';
+import Common from '../../aRefactor/Common/Common.jsx';
 
 const data = {
 	affinities: {
@@ -39,24 +39,21 @@ export const AffinityButton = React.createClass({
 	render: function() {
 		var currentAffinity = _.find(data.affinities, (v, k) => (+k === this.state.affinity));
 		return (
-			<div>
-				<NavbarTest />
-				<div>
-					You {currentAffinity} this.
-					<div style={{display: 'block'}}>
-						<img
-							src="./img/dislike.svg" 
-							style={data.affinityImgStyle} 
-							onClick={this.handleHateClick}
-						/>
-						<img 
-							src="./img/like.svg"
-							style={data.affinityImgStyle}
-							onClick={this.handleLoveClick}
-						/>
-					</div>
+			<Common>
+				You {currentAffinity} this.
+				<div style={{display: 'block'}}>
+					<img
+						src="./img/dislike.svg" 
+						style={data.affinityImgStyle} 
+						onClick={this.handleHateClick}
+					/>
+					<img 
+						src="./img/like.svg"
+						style={data.affinityImgStyle}
+						onClick={this.handleLoveClick}
+					/>
 				</div>
-			</div>
+			</Common>
 		);
 	}
 });

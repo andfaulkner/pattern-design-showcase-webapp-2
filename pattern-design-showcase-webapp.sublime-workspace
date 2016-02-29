@@ -4,6 +4,58 @@
 		"selected_items":
 		[
 			[
+				"i",
+				"impors	import function from module, identically to require, w es6 syntax."
+			],
+			[
+				"map",
+				"map(callback)	Array"
+			],
+			[
+				"_reduce",
+				"_reduceObject	lodash--reduce_object"
+			],
+			[
+				"react_cmp",
+				"react_cmpcls	Simple class-based react component, with export"
+			],
+			[
+				"req",
+				"req	nodejs--require"
+			],
+			[
+				"default",
+				"preventDefault()	Event"
+			],
+			[
+				"eex",
+				"eexpdcl	export es6 class default"
+			],
+			[
+				"react_l",
+				"react_fullupdatelifecycle	react--component--full-update-lifecycle"
+			],
+			[
+				"ee",
+				"eexpdfn	es6 constant"
+			],
+			[
+				"react_c",
+				"react_cmpsimple	react-component-simple"
+			],
+			[
+				"react_m",
+				"react_mountable	react--component-mountable"
+			],
+			[
+				"scss",
+				"style.left	Style CSS"
+			],
+			[
+				"comment_",
+				"comment_moduleheading	Main module heading - explain what module does etc."
+			],
+			[
 				"res",
 				"response.end"
 			],
@@ -30,10 +82,6 @@
 			[
 				"console",
 				"console.info"
-			],
-			[
-				"req",
-				"require"
 			],
 			[
 				"write",
@@ -129,9 +177,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -139,17 +184,25 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "Snippet: ",
+		"height": 75.0,
+		"last_filter": "beautif",
 		"selected_items":
 		[
 			[
-				"Snippet: ",
-				"Snippet: htmlboiler"
+				"beautif",
+				"HTMLBeautify"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"console",
+				"Snippet: console.log"
+			],
+			[
+				"Snippet: ",
+				"Snippet: htmlboiler"
 			],
 			[
 				"Install",
@@ -232,7 +285,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 575.0
+		"width": 854.0
 	},
 	"console":
 	{
@@ -253,12 +306,91 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp"
-	],
 	"file_history":
 	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/AffinityButton.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/LikeButton.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/TopLogo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxGooglePlus.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanilla.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanillaClass.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/ChildrenExample.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/CompositionExample.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/layout/Header.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/Comment.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentBox.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Header.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavbarTest.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/ContentArea.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Footer.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Common.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/TransferringProps.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/TopLogo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/NavbarTest.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/navbar-test-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/admin/AdminHome.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.babelrc",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/Children.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/common/Common.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/common/Header.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/todo.txt",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/wire-up.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-build-paths.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/gulpfile.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/passport-setup.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/logger.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-logging.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-database.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/db/init-db.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/comment-route.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/package.json",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/web.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/api-comment.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/api-comment.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/helpers/logger.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/login-box-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/load-img-from-server/LoadFromServer.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/img-display/carousel-test/CarouselTest.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxMaterialUi.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/material-ui-test-1/RaisedButton.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/.eslintrc.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/sample-class-components/TestClassBasedComponent.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/index.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/navbar-test/navbar-test-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/navbar-test/navbar-test-styles.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/image-uploader/ImageUploader.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/login-box-2/LoginBox2.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/routes.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/containers/FilterLink.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/containers/VisibleTodoList.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/containers/AddTodo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/reducers/visibilityFilter.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/configureStore.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/000-DEFINITIONS.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/018-redux.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/020-react-redux-bindings.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/005-proptypes__prop-validation.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/Todo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/TodoListRoot.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/reducers/index.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/Footer.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/Link.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/TodoList.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/actions.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/reducers/todos.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/lib/lodash.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/index-todo.html",
 		"/home/andrew/projects/testbeds/TESTBED2--express-dust-seneca-redis-requirejs-gulp/gulpfile.babel.js",
 		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/base.dust",
 		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/prelogin.js",
@@ -303,90 +435,7 @@
 		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/accept-data-frontend_view.dust",
 		"/home/andfaulkner/Projects/testbed/express-testbed/.node-inspectorrc",
 		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/iife-tpl_tpldata.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/iife-tpl_tpldata.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/login_tpldata.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/users2_tpldata.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/users2_view.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/config/default_frontend_js_file.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/obj-lit-ret_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/login_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/users_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/users2_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/img-load-async-view.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/img-load-async_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/dust_obj-lit-ret_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/helpers/stdout.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/doc/stack.txt",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/snippets/keepers/html--textFormSubmit.sublime-snippet",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/iife-tpl_view.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/bin/launcher.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/thing.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/asdf.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/build/app.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/config/default_view_template.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/node_modules/rootpath/pathSetup.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/package.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/zzOLD/2015-08-13-bks/app.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/dust_obj-lit-ret_tpldata.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/iife-tpl_route.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/build/routes/iife-tpl_route.js",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/JsFormat/Default (Linux).sublime-keymap",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/JsFormat/JsFormat.sublime-settings",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/Javascript Beautify/JavascriptBeautify.sublime-settings",
-		"/home/andfaulkner/Projects/testbed/express-testbed/zzOLD/gulpfile.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/img-load-async_route.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/index_route.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/login_route.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/stylesheets/style.sass",
-		"/home/andfaulkner/Projects/testbed/express-testbed/zzOLD/style.css",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/snippets/keepers/nodejs--new_route.sublime-snippet",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/models/redis.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/layout.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/config/project-paths-old.json",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/JSHint Gutter/.jshintrc",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/helpers/handle-errors.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/middlewares/register_middlewares.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/gulpfile.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/img-load-async_tpldata.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/users_route.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/data/img-load-async-data.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/helpers/globals.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/users-template-data.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/users_view.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/fn-data-tpls_data.js",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/snippets/keepers/js--new_dust_template_view.sublime-snippet",
-		"/home/andfaulkner/Projects/testbed/express-testbed/build/middlewares/register_middlewares.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/public/javascripts/index_frontend.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/login_view.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/build/public/html/error.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/build/middlewares/live-reload.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/data/index-data.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/img-load-async.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/index_route.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/data/layout-data.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/data/layout_data.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/index.dust",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/snippets/keepers/nodejs--iife-lite.sublime-snippet",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/login.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/input_test.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/services/math-plugin.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/build/bin/launcher.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/nodemon.json",
-		"/home/andfaulkner/Projects/express/express-test-3/app_require_tree.js",
-		"/home/andfaulkner/Projects/express/express-test-3/src/bin/launcher.js",
-		"/home/andfaulkner/Projects/express/express-test-3/src/helpers/experiments/node_util.js",
-		"/home/andfaulkner/Projects/express/express-test-3/.deprc",
-		"/home/andfaulkner/Projects/express/express-test-3/routes/img-load-async.js",
-		"/home/andfaulkner/Projects/express/express-test-3/nodemon.json",
-		"/home/andfaulkner/Projects/express/express-test-3/gulpfile.js",
-		"/home/andfaulkner/Projects/express/express-test-3/views/index.dust",
-		"/home/andfaulkner/Projects/express/express-test-3/views/img-load-async.dust",
-		"/home/andfaulkner/Projects/express/express-test-3/views/layout.dust",
-		"/home/andfaulkner/Projects/express/express-test-3/data/img-load-async-data.json",
-		"/home/andfaulkner/Projects/express/express-test-3/data/index-data.json",
-		"/home/andfaulkner/Projects/express/express-test-3/app.js",
-		"/home/andfaulkner/Projects/express/express-test-3/helpers/handle-errors.js"
+		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/iife-tpl_tpldata.json"
 	],
 	"find":
 	{
@@ -397,6 +446,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"<project>,-**/node_modules/**,-**/.build/**",
 			"<project>",
 			"/home/andfaulkner/Projects/testbed/express-testbed/src",
 			"<project>",
@@ -417,134 +467,134 @@
 		"case_sensitive": true,
 		"find_history":
 		[
-			"scss",
-			"sass",
-			"scss",
-			"sass",
-			"redis",
-			"buffer",
-			"l\\.",
-			"l.",
-			"str",
-			"cdir",
-			"ce",
-			"cl",
-			"c",
-			"console",
-			"console.log",
-			"usrData",
-			"registerReqEvents",
-			"dbPass",
-			"pwdStored",
-			"usrnm",
-			"redirectOnLoginSuccess",
-			"redirectBasedOnLogin",
-			"usrAndPwdObj",
-			"usrPassHashtable",
-			"getUsrnmPwFromPost",
-			"f",
-			"attemptLogin",
-			"\"",
-			"keyValArr",
-			"keyValPairArr",
-			"dataHashTable",
-			"express",
-			"context",
-			"tplViewPath",
-			"function",
-			"file",
-			"openOrMake",
-			"dustTmplData",
-			"\"",
-			"jsOrJSONExists",
-			"doesJsOrJSONExist",
-			"checkStats",
-			"tryToOpenJSON",
-			"tryToOpenJson",
-			"tryToOpenJSON",
-			"tryToOpenJson",
-			"defJSON",
-			"pathNoExt",
-			"tplDataPathBase",
-			"routeConfig",
-			"stdout",
-			"file",
-			"topLevelRoutes",
-			"testRoute",
-			"topLevelRoutes",
-			"routeDir",
-			"routeSuffix",
-			"tplData",
-			"tplData.dir",
-			"tplData",
-			"filenmSuffix",
-			"routes.tplData.filenmSuffix",
-			"routeOpts",
-			"routeOptions",
-			"\n         ",
-			"},\n",
-			"nameOfModule",
-			"mn",
-			"format",
-			"beautif",
-			"routes.",
-			"routes.tpl",
-			"filename",
-			"iife-tpl",
-			"clean",
-			"gutil",
-			"debug",
-			"notify",
-			"gutil",
-			"magenta",
-			"gutil",
-			"gulp-util",
-			"gutils",
-			"utils",
-			"dirOrFile",
-			"SRC",
-			"srcFiles",
-			"path.join",
-			"jsBuild",
-			"let",
-			"dest",
-			"src",
-			"project-",
-			"redis",
+			"db",
+			"miscProps",
+			"Common",
+			" ** ",
+			"NavMenu",
+			"data",
+			"NavMenu",
+			"gallery",
+			"submenu",
+			"Submenu",
+			"//",
+			"Item",
+			"navbarItems",
 			"routeObj",
+			"topBarText",
+			"label",
+			"menuLabel",
+			"topbarText",
+			"routeObj",
+			"routeIndex",
+			"NavItem",
+			"navbarliStyles",
+			"navbarli",
+			"navbarTestulStyle",
+			"routePath",
+			"index",
+			"routeTags",
+			"topbarText",
+			"    ",
+			"patterns",
+			"</p>",
+			"(?<=\")>(?=[^<\\s\\n]+<)",
+			"(?<=\")>(?=[a-z0-9A-Z\\-\\s]+<)",
+			".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.1.1.$DrpDwnMn0-g7m",
+			"DrpDwnMn0-g7m",
+			"Title",
+			"#",
+			"color",
+			"(?<=\")\\s(?=[a-z0-9A-Z\\-]+?=)",
+			"><",
+			"data-dropalign",
+			"data-drophposition",
+			"target=\"",
+			"href=\"",
+			"data-listposition=\"",
+			"data-state=\"",
+			"\">",
+			" id=\"",
+			"data-reactid=\"",
+			"data-menubtn-border=",
+			"id=\"",
+			"id",
+			"style",
+			"class",
+			"data-originalgapbetweentextandbtn",
+			">",
+			"data-dropmode",
+			"data-reactid",
+			"><",
+			"form-data",
+			"NavbarTest",
+			";",
+			"            ",
+			";",
+			"TopBar",
+			"cardColl",
+			"cardAccumulator",
+			"cards",
+			"cardColl",
+			"CompositionExample",
+			"composition",
+			"card",
+			"TransferringProps",
+			"  ",
+			"TransferringProps",
+			"Dir",
+			"clientImg",
+			"Img",
+			"img",
+			"var",
+			"request",
+			"err",
+			"hasher",
+			"			'",
 			"'",
-			"dust",
-			"kleiDust",
-			".",
-			"rimraf",
-			"clean",
-			"imgURL",
-			"imgURLs",
-			"app.engine",
-			"html",
-			"emmet",
-			"switch",
-			"((\\/home\\/andfaulkner\\/)((?!node_modules).)*)$",
-			"((\\/home\\/andfaulkner\\/)((?!node_modules).)*)",
-			"(^((?!node_modules).)[\\s\\S]*?)(?=\\/home).",
-			"^((?!node_modules).)[\\s\\S]*?(?=\\/home).",
-			"^((?!node_modules).)[\\s\\S]*?",
-			"^((?!node_modules).)[\\s\\S]*?(?=\\/home)",
-			"^((?!node_modules).)[\\s\\S]*(?=\\/home)",
-			"^((?!node_modules).)[\\s\\S]*\\/home",
-			"^((?!node_modules).).*\\/home",
-			"^((?!node_modules).)*\\n.*\\/home",
-			"^((?!node_modules).)*\\n.*\\/",
-			"^((?!node_modules).)*\\n.*",
-			"^((?!node_modules).)*\\n",
-			"^((?!node_modules).)*$",
-			"^.*(?!node_modules).*$",
-			"body",
-			"html",
-			"error",
-			"layout",
-			"var port =",
-			"debug"
+			"console.log",
+			"console.log(",
+			"return ",
+			"var",
+			"objectType",
+			"isPlusUser",
+			", ",
+			"ensureAuthenticated",
+			"req",
+			"logger",
+			"beautify(stringify(inspect(message, { depth: 5, color: true }))",
+			"stringify",
+			"message",
+			"this, message",
+			"[message]",
+			"apply",
+			"[message]",
+			"inspect(",
+			"JSON.stringify",
+			"logger",
+			"if (!_.isString)",
+			"// if (!_.isString) message = beautify(message);",
+			", depth = 5",
+			"if (!_.isString) message = beautify(message);",
+			"message",
+			"\n			if (!_.isString) message = beautify(message);\n			",
+			"			if (!_.isString) message = beautify(message);\n",
+			"beautify",
+			"prettyPrintObject",
+			"inspect(message, { color: true, depth: depth })",
+			"this, message",
+			"message",
+			", depth = 5",
+			"[message]",
+			"if (!_.isString) message = inspect(message, { color: true, depth: depth });",
+			"inspect",
+			"arguments",
+			"function",
+			"depth: 5",
+			"function(message)",
+			"message",
+			"logger.info",
+			"session"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -552,6 +602,10 @@
 		"regex": true,
 		"replace_history":
 		[
+			">\n",
+			"\n",
+			">\n<",
+			"	",
 			"'",
 			"base_name",
 			"proto-route",
@@ -585,14 +639,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -610,16 +656,36 @@
 				0,
 				1,
 				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			],
+			[
+				0,
+				1,
+				1,
+				2
+			],
+			[
+				1,
+				1,
+				2,
+				2
 			]
 		],
 		"cols":
 		[
 			0.0,
+			0.700773013306,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
+			0.591737114969,
 			1.0
 		]
 	},
@@ -637,10 +703,9 @@
 		"height": 23.0
 	},
 	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
-	"project": "pattern-design-showcase-webapp.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 78.0
 	},
 	"save_all_on_build": true,
 	"select_file":
@@ -649,6 +714,26 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"routes",
+				"client/routes/routes.jsx"
+			],
+			[
+				"todo",
+				"docs/todo.txt"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"packa",
+				"package.json"
+			]
 		],
 		"width": 0.0
 	},
@@ -670,7 +755,6 @@
 		],
 		"width": 570.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -678,7 +762,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 214.0,
+	"side_bar_width": 227.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

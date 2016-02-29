@@ -1,6 +1,6 @@
 import {styles} from './login-box-styles.jsx';
 
-import NavbarTest from '../../nav/navbar-test/NavbarTest.jsx';
+import NavMenu from '../../aRefactor/Common/NavMenu.jsx';
 
 var loginGrid = React.createClass({
 	render: function() {
@@ -14,7 +14,7 @@ export default React.createClass({
 	render: function() {
 		return (
 			<div>
-				<NavbarTest />
+				<NavMenu />
 				<div style={styles.formContainer}>
 					<form method="POST" style={styles.form}>
 						<div>Username:</div>

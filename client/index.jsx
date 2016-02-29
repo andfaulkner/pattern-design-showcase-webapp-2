@@ -7,31 +7,35 @@
 import { Router, Route, hashHistory, Link } from 'react-router';
 import routes from './routes/routes.jsx';
 var logger = require('./helpers/logger.js')('client/index.js');
+import Radium from 'radium';
 
 /**
  * Routes are rendered in from here
  */
-var RootNode = React.createClass({
+@Radium
+class RootNode extends React.Component{
 
-	render: function() {
-		logger.fn('render').log('getting routes...');
-		const allRoutes = _.map(routes, function(route, index) {
+	render() {
+		var allRoutes = _.map(routes, function(route, index) {
+			let {path, component, ...miscProps} = route;
 			return (
 				<Route
-					path={route.path}
+					{...miscProps}
+					path={path}
 					key={index} 
-					component={route.component}
+					component={component}
 				/>
 			);
 		});
 
-		logger.fn('render').log('about to render page...');
+		var fnLog = logger.logRendering('RootNode').inspect(this.props);
+		fnLog.inspect(allRoutes);
 		return (
 			<Router history={hashHistory}>
 				{allRoutes}
 			</Router>
 		);
 	}
-});
+};
 
 ReactDOM.render(<RootNode />, document.getElementById('content'));

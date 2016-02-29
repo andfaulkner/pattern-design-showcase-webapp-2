@@ -32,7 +32,7 @@ module.exports = {
         include: [CLIENT_SRC_DIR, NODE_MODULES_ABS_DIR],
 				loader: 'babel',
 				query: {
-					plugins: ['transform-decorators-legacy'],
+					plugins: ['transform-decorators-legacy', 'transform-es2015-destructuring'],
 					presets: ['es2015', 'stage-0', 'react'],
 					cacheDirectory: '.cache'
 				}
