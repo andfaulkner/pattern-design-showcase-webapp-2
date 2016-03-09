@@ -32,6 +32,8 @@ var Carousel = React.createClass({
       prevArrow: CarouselArrowButtonLeft,
       nextArrow: CarouselArrowButtonRight,
       style: {
+      	// position: 'absolute',
+      	// display: 'inline-block',
       }
     };
     return (

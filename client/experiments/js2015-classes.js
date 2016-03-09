@@ -1,6 +1,7 @@
 var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+console.log('js2015-classes.js:: TOP');
 
 class Shape {
 	constructor(height, width, sides) {

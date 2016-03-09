@@ -1,6 +1,7 @@
 var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+console.log('CommentForm.jsx:: TOP');
 
 export default React.createClass({
 	getInitialState: function() {

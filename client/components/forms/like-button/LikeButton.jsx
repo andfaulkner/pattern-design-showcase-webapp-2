@@ -5,6 +5,8 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 // TUTORIAL: handling events
 import Common from '../../aRefactor/Common/Common.jsx';
 
+console.log('LikeButton.jsx:: TOP');
+
 const LikeButton = React.createClass({
 	// is it liked or disliked to start?
 	getInitialState: () => ({liked: false}),

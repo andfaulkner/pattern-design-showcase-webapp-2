@@ -4,6 +4,8 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 import Comment from './Comment.jsx';
 
+console.log('CommentList.jsx:: TOP');
+
 export default React.createClass({
 	render: function() {
 		var commentNodes = this.props.data.map(function(comment) {

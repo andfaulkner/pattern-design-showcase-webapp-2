@@ -4,6 +4,8 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 import Common from '../../aRefactor/Common/Common.jsx';
 
+console.log('AffinityButton.jsx:: TOP');
+
 const data = {
 	affinities: {
 		'-3': 'are madly in love with',

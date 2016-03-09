@@ -4,6 +4,8 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 import {autobind, deprecate} from 'core-decorators';
 
+console.log('TestClassBasedComponent.jsx:: TOP');
+
 function Testable (target) { target.isTestable = true; }
 
 class Dog {

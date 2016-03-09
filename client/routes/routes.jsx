@@ -18,6 +18,8 @@ import TransferringProps from '../components/experiments/TransferringProps.jsx';
 import CompositionExample from '../components/experiments/composition/CompositionExample.jsx';
 // import ChildrenExample from '../components/experiments/composition/ChildrenExample.jsx';
 
+console.log('routes.jsx:: TOP');
+
 const routes = [
 	{ path: '/',
 		component: Home,

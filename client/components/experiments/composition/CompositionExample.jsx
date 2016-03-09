@@ -3,6 +3,7 @@ var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 import ChildrenExample from './ChildrenExample.jsx';
+console.log('CompositionExample.jsx:: TOP');
 
 export default class CompositionExample extends React.Component {
 	render() {

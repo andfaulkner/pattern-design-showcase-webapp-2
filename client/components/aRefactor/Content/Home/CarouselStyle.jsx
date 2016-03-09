@@ -6,20 +6,17 @@ const carouselStyle = {
   },
   carouselImgContainer: {
     display: 'inline-block',
-    position: 'absolute',
-    height: '100px',
-    width: '100px'
-    // height: '10%',
-    // width: '10%'
+    float: 'left',
+    height: '10%',
+    width: '10%'
   },
  carouselImg: {
-    position: 'absolute',
-    height: '100px',
-    width: '100px',
+    height: '100%',
+    width: '100%',
     maxHeight: '300px'
   }
 };
-// style={{position: 'absolute', display: 'block', verticalAlign: 'top'}
+
 carouselStyle.arrowLeft = _.defaultsDeep({}, carouselStyle.arrow, {
 	background: 'url("/img/icons/carousel-left-arrow.png") no-repeat scroll 0 0 transparent',
 });

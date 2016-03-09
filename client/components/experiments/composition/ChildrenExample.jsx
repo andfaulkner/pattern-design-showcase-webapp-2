@@ -1,6 +1,7 @@
 var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+console.log('ChildrenExample.jsx:: TOP!');
 
 export default class ChildrenExample extends React.Component {
 	render() {

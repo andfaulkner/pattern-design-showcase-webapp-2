@@ -2,6 +2,8 @@ var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
+console.log('FilterableProductTable.jsx:: TOP');
+
 var FilterableProductTable = React.createClass({
 	render: function() {
 		return (
