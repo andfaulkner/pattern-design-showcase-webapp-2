@@ -17,7 +17,10 @@ const imgs = [
   { filename: '/img/patterns/diamond-mine.jpg' },
   { filename: '/img/patterns/lsd-butterflies.jpg' },
   { filename: '/img/patterns/red-zygote-flowers.jpg' },
-  { filename: '/img/patterns/rock-eyes.jpg' },
+  { filename: '/img/patterns/mayan-hexhexhexium-decay-sponge-tea.jpg' },
+  { filename: '/img/patterns/orchid-eating-phoenix-army.jpg' },
+  { filename: '/img/patterns/ermagerd-a-big-rock.jpg' },
+  { filename: '/img/patterns/chinese-umbrella-mushrooms.jpg' }
 ];
 
 
@@ -56,22 +59,21 @@ export default class Carousel extends React.Component {
       nextArrow: CarouselArrowButtonRight,
       // adjust number of images shown based on screen size
       responsive: [
-        { breakpoint: 100000, settings: { slidesToShow: 5 } },
+        { breakpoint: 100000, settings: { slidesToShow: 6 } },
+        { breakpoint: 1560, settings: { slidesToShow: 5 }},
         { breakpoint: 1300, settings: { slidesToShow: 4 }},
         { breakpoint: 1000, settings: { slidesToShow: 3 }},
         { breakpoint: 580, settings: { slidesToShow: 2 }},
         { breakpoint: 390, settings: { slidesToShow: 1 }}
       ]
     };
+    var imgStyle = { height: '220px' };
     return (
       <div className='carousel'>
         <Slider {...settings}>
-          <CarouselImage src='/img/patterns/aboriginal-fungus.jpg' style={{height: '220px'}} />
-          <CarouselImage src='/img/patterns/berry-flowers.jpg' style={{height: '220px'}} />
-          <CarouselImage src='/img/patterns/diamond-mine.jpg' style={{height: '220px'}} />
-          <CarouselImage src='/img/patterns/lsd-butterflies.jpg' style={{height: '220px'}} />
-          <CarouselImage src='/img/patterns/red-zygote-flowers.jpg' style={{height: '220px'}} />
-          <CarouselImage src='/img/patterns/rock-eyes.jpg' style={{height: '220px'}} />
+          {_.map(imgs, (imgObj) =>
+            <CarouselImage src={imgObj.filename} style={imgStyle} />
+          )}
         </Slider>
       </div>
     );
