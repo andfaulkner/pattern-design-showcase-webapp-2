@@ -4,6 +4,14 @@
 		"selected_items":
 		[
 			[
+				"_red",
+				"_reduceArray	lodash--reduce_array"
+			],
+			[
+				"eex",
+				"eexpdcl	export es6 class default"
+			],
+			[
 				"react_c",
 				"react_cmpcls	Simple class-based react component, with export"
 			],
@@ -18,10 +26,6 @@
 			[
 				"eexp",
 				"eexpc	es6 constant"
-			],
-			[
-				"eex",
-				"eexpfn	es6 constant"
 			],
 			[
 				"react_st",
@@ -232,17 +236,25 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 75.0,
-		"last_filter": "beautif",
+		"height": 313.0,
+		"last_filter": "insta",
 		"selected_items":
 		[
 			[
-				"beautif",
-				"HTMLBeautify"
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"ins",
+				"Package Control: Install Package"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
+			],
+			[
+				"beautif",
+				"HTMLBeautify"
 			],
 			[
 				"console",
@@ -305,10 +317,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"insta",
-				"Package Control: Install Package"
-			],
-			[
 				"terminal",
 				"Preferences: Terminal Key Bindings – Default"
 			],
@@ -333,7 +341,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 854.0
+		"width": 491.0
 	},
 	"console":
 	{
@@ -356,8 +364,49 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.eslintrc.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/secret.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.eslintignore",
+		"/home/andrew/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.babelrc",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/carousel.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/main.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/public/patterns/rock-eyes.jpg",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/carousel.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Common.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Header.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/ContentArea.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/experiments/TransferringProps.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/navbar-test-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/TopLogo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/SiteTitle.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Footer.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanillaClass.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanilla.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxGooglePlus.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/LikeButton.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/AffinityButton.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/helpers/logger.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/experiments/js2015-classes.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/ProductCategoryRow.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/FilterableProductTable.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/admin/AdminHome.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/sample-class-components/TestClassBasedComponent.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/layout/Header.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentList.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentBox.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentForm.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/Comment.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/TransferringProps.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/CompositionExample.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/ChildrenExample.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/CarouselStyle.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/store.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
@@ -371,42 +420,21 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/switchPage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/fonts.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavMenu-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/SiteTitle.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Common.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/TopLogo.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/ContentArea.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/styles/fonts.css",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/fonts/din-light.eot",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/public/patterns/10549746_345127515676491_917848030_n.jpg",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10549746_345127515676491_917848030_n.jpg",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/TransferringProps.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/ChildrenExample.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/CompositionExample.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/Comment.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentBox.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentForm.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentList.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/AffinityButton.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/LikeButton.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxGooglePlus.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanilla.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanillaClass.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/login-box-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/layout/Header.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/sample-class-components/TestClassBasedComponent.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/FilterableProductTable.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/ProductCategoryRow.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/ProductRow.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/experiments/js2015-classes.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/node_modules/react-slick/dist/react-slick.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/navbar-test-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.babelrc",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Header.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavbarTest.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Footer.jsx",
@@ -430,7 +458,6 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/api-comment.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/helpers/logger.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/load-img-from-server/LoadFromServer.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/img-display/carousel-test/CarouselTest.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxMaterialUi.jsx",
@@ -464,26 +491,7 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/index-todo.html",
 		"/home/andrew/projects/testbeds/TESTBED2--express-dust-seneca-redis-requirejs-gulp/gulpfile.babel.js",
 		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/base.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/prelogin.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/base.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/node_modules/require-fu/lib/index.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/dashboard/index.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/login/index.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/package.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/config/nodemon.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/web_components.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/config/default.json5",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/middlewares/checkSession.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/dashboard/router.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/helpers/basicLog.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/bin/redis-server.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/db/redis.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/login/router.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/index/router.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/config/default.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/index.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/middleware/middleware.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/src/app.js"
+		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/prelogin.js"
 	],
 	"find":
 	{
@@ -515,6 +523,26 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"transform-decorators-legacy",
+			"plugins",
+			"ignore",
+			"files",
+			"\"",
+			"consoleTaskReport",
+			"sass",
+			"consoleTaskReport",
+			"sass",
+			"200px",
+			"inner",
+			"carouselImgContainer",
+			"' />",
+			"\"",
+			"arefactor",
+			"refactor",
+			"aaRefactor",
+			"transferring",
+			"Slider",
+			"style",
 			"1",
 			"  ",
 			"counter",
@@ -622,27 +650,7 @@
 			"label",
 			"menuLabel",
 			"topbarText",
-			"routeObj",
-			"routeIndex",
-			"NavItem",
-			"navbarliStyles",
-			"navbarli",
-			"navbarTestulStyle",
-			"routePath",
-			"index",
-			"routeTags",
-			"topbarText",
-			"    ",
-			"patterns",
-			"</p>",
-			"(?<=\")>(?=[^<\\s\\n]+<)",
-			"(?<=\")>(?=[a-z0-9A-Z\\-\\s]+<)",
-			".0.$SITE_ROOT.$desktop_siteRoot.$SITE_HEADER.1.1.$DrpDwnMn0-g7m",
-			"DrpDwnMn0-g7m",
-			"Title",
-			"#",
-			"color",
-			"(?<=\")\\s(?=[a-z0-9A-Z\\-]+?=)"
+			"routeObj"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -730,13 +738,13 @@
 		"cols":
 		[
 			0.0,
-			0.896402356978,
+			0.872842147554,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.588206144698,
+			0.491696904452,
 			1.0
 		]
 	},
@@ -817,7 +825,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 210.0,
+	"side_bar_width": 322.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -23,7 +23,7 @@ module.exports = {
 		'no-with': 2,
 		'no-shadow': 2,
 		'no-undef-init': 2,
-		'no-undefined': 2,
+		// 'no-undefined': 2,
 		'new-cap': [2, {capIsNew: false, newIsCap: true}],
 		'key-spacing': [2, {beforeColon: false, afterColon: true}],
 		'consistent-this': [2, 'self'],
@@ -104,8 +104,8 @@ module.exports = {
 	},
 
 	plugins: [
-		'transform-decorators-legacy',
-		'react'
+		'react',
+		// 'transform-decorators-legacy'
 	]
 
 };

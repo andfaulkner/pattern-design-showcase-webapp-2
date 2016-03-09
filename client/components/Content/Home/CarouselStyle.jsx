@@ -2,26 +2,45 @@ const carouselStyle = {
   arrow: {
     height: '45px',
     width: '45px',
-    border: '0px'
+    border: '0px',
+    position: 'relative',
+    top: '-133px',
+    zIndex: '2'
   },
-  carouselImgContainer: {
-    display: 'inline-block',
-    float: 'left',
-    height: '10%',
-    width: '10%'
-  },
- carouselImg: {
-    height: '100%',
-    width: '100%',
-    maxHeight: '300px'
-  }
 };
 
 carouselStyle.arrowLeft = _.defaultsDeep({}, carouselStyle.arrow, {
 	background: 'url("/img/icons/carousel-left-arrow.png") no-repeat scroll 0 0 transparent',
+  float: 'left'
+  // left: '-10px'
 });
 carouselStyle.arrowRight = _.defaultsDeep({}, carouselStyle.arrow, {
-	background: 'url("/img/icons/carousel-right-arrow.png") no-repeat scroll 0 0 transparent'
+	background: 'url("/img/icons/carousel-right-arrow.png") no-repeat scroll 0 0 transparent',
+  right: '-10px',
+  float: 'right'
 });
 
 module.exports = carouselStyle;
+
+
+
+
+
+
+
+
+
+
+// const carouselStyle = {
+//  //  arrow: {
+//  //  },
+//  //  carouselImgContainer: {
+//  //  },
+//  // carouselImg: {
+//  //  }
+// };
+
+// // arrowLeft: // background: 'url("/img/icons/carousel-left-arrow.png") no-repeat scroll 0 0 transparent',
+// // arrowRight:  background: 'url("/img/icons/carousel-right-arrow.png") no-repeat scroll 0 0 transparent'
+
+// module.exports = carouselStyle;

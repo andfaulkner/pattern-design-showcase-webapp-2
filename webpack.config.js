@@ -1,7 +1,16 @@
+require('babel-core/register');
+require('babel-polyfill');
+
 var _ = require('lodash');
 const path = require('path');
 const webpack = require('webpack');
 var buildConfig = require('./config/config-build-paths');
+
+var fs = require('fs');
+
+var babelOpts = JSON.parse(fs.readFileSync('./.babelrc', 'utf8').toString());
+
+console.log(babelOpts);
 
 const OUTPUT_DIR = path.resolve(__dirname, '.build');
 const CLIENT_SRC_DIR = path.resolve(__dirname, './client');
@@ -31,17 +40,8 @@ module.exports = {
 				test: /\.jsx?$/,
         include: [CLIENT_SRC_DIR, NODE_MODULES_ABS_DIR],
 				loader: 'babel',
-				query: {
-					plugins: ['transform-decorators-legacy', 'transform-es2015-destructuring'],
-					presets: ['es2015', 'stage-0', 'react'],
-					cacheDirectory: '.cache'
-				}
+				query: _.defaultsDeep({}, babelOpts, { cacheDirectory: '.cache' })
 			},
-			// fonts
-			// {
-   //    	test: /\.((woff)|(ttf)|(eot))$/,
-   //    	loader: 'url?limit=100000'
-			// }
 		]
 	},
 	cache: true,

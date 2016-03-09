@@ -25,12 +25,12 @@ module.exports = {
 	SRC: {
 		root: ['!./node_modules/**', './**'],
 		client: 'client/**',
-		clientRootHtml: 'client/*.html',
+		clientRootHtml: 'client/index.html',
 		clientFonts: ['client/**/*.woff', 'client/**/*.eot', 'client/**/*.ttf'],
 		clientImg: 'client/**/*.svg',
 		clientJS: 'client/**/*.js',
 		clientLibs: 'client/lib/**',
-		styles: 'client/styles/**/*.scss',
+		rootStyle: 'client/styles/main.scss',
 		// TODO - possibly pull these out
 		staticLibs: _.compact(_.map(libs, function(mod) {
 			return (mod.noNode)
@@ -45,13 +45,13 @@ module.exports = {
 		img: '.build/img',
 		fonts: '.build/fonts',
 		styles: '.build/styles',
+		multiStartPages: ['.build/fonts', '.build/img', '.build/lib']
 	},
 	// TODO - possibly pull these out
 	webpackExternalModules: _.reduce(libs, function(allExternals, mod) {
 		var externalPath = path.join('./lib/', mod.file || mod.lib);
 		allExternals[mod.file || mod.lib] = mod.varName;
 		allExternals[externalPath] = mod.varName;
-		console.log(allExternals);
 		return allExternals;
 	}, {})
 };

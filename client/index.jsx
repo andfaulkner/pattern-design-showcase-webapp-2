@@ -21,6 +21,16 @@ var logger = require('./helpers/logger.js')('client/index.js');
 import reducers from './store/reducers/reducers.jsx';
 let store = createStore(reducers);
 
+function loadStory() {
+	console.log('loading...');
+	return 'story!';
+}
+
+(async function() {
+  await loadStory();
+  console.log("Yey, story successfully loaded!");
+}());
+
 /**
  * Routes are rendered in from here
  */

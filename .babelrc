@@ -1,4 +1,8 @@
 {
-  "presets" : ["es2015", "react", "stage-0"],
-  "plugins": ["syntax-decorators", "transform-es2015-destructuring"]
+  "presets" : ["es2015", "stage-0", "react"],
+  "plugins": [
+  	"transform-async-functions",
+  	"transform-decorators-legacy", 
+  	"transform-es2015-destructuring"
+  ]
 }

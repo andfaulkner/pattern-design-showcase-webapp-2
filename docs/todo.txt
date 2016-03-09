@@ -25,6 +25,13 @@
 ! actually get real authentication to occur
 ! some sort of comparison against data in Redis
 ! select auth items from google returns
+! build carousel
+
+- get carousel to resize on some page resizes
+- get carousel to restart when page restarts
+- transform-decorators-legacy linter
+- multi-output gulpfile
+
 - on route change alter selected menu item
 - load navmenu item names in by AJAX
 
