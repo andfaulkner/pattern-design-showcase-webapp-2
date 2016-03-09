@@ -1,4 +1,4 @@
-var React = React || require('react');;
+var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 var Slider = require('react-slick');
@@ -31,13 +31,14 @@ var Carousel = React.createClass({
       lazyLoad: true,
       prevArrow: CarouselArrowButtonLeft,
       nextArrow: CarouselArrowButtonRight,
+      className: 'poo',
       style: {
-      	// position: 'absolute',
-      	// display: 'inline-block',
+      	position: 'absolute',
+      	display: 'inline-block'
       }
     };
     return (
-      <Slider {...settings}>
+      <Slider {...settings} style={{width: '3000px'}}>
         {imgs.map((imgObj) => (
           <div style={style.carouselImgContainer}>
             <img 

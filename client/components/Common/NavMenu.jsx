@@ -21,14 +21,14 @@
 *     -------------------------------------------------------------------------------------------
 */
 
-var React = React || require('react');;
+var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
-var logger = require('../../../helpers/logger.js')('components/Common/NavMenu.jsx')
+var logger = require('../../helpers/logger.js')('components/Common/NavMenu.jsx')
 
 import { styles } from './NavMenu-styles.jsx';
-import routes from '../../../routes/routes.jsx';
+import routes from '../../routes/routes.jsx';
 import TopLogo from './TopLogo.jsx';
 import Radium from 'radium';
 

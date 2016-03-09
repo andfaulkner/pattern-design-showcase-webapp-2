@@ -3,7 +3,7 @@ var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 // TUTORIAL: handling events
-import Common from '../../aRefactor/Common/Common.jsx';
+import Common from '../../Common/Common.jsx';
 
 console.log('LikeButton.jsx:: TOP');
 

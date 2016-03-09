@@ -2,7 +2,7 @@ var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
-import Common from '../../aRefactor/Common/Common.jsx';
+import Common from '../../Common/Common.jsx';
 
 console.log('AffinityButton.jsx:: TOP');
 

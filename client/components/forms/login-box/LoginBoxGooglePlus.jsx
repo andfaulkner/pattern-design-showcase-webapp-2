@@ -7,7 +7,7 @@ var Radium = require('radium');
 import {styles} from './login-box-styles.jsx';
 console.log(styles);
 
-import NavMenu from '../../aRefactor/Common/NavMenu.jsx';
+import NavMenu from '../../Common/NavMenu.jsx';
 
 class LoginGrid extends React.Component {
 	render() {

@@ -18,7 +18,7 @@ import NavMenu from './NavMenu.jsx';
 import TopLogo from './TopLogo.jsx';
 import Radium from 'radium';
 
-var logger = require('../../../helpers/logger.js')('components/Common/Common')
+var logger = require('../../helpers/logger.js')('components/Common/Common')
 
 @Radium
 export default class Common extends React.Component {

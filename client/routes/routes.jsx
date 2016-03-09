@@ -4,7 +4,7 @@
 *
 */
 
-import Home from '../components/aRefactor/Content/Home/Home.jsx';
+import Home from '../components/Content/Home/Home.jsx';
 
 // import Home from '../components/nav/navbar-test/NavbarTest.jsx';
 // import CommentBox from '../components/forms/comment-box/CommentBox.jsx';
@@ -14,8 +14,8 @@ import { AffinityButton } from '../components/forms/like-button/AffinityButton.j
 // import { LoginBox } from '../components/forms/login-box/LoginBoxVanillaClass.jsx';
 // import AdminHome from '../components/admin/AdminHome.jsx';
 // import { GPlusLoginBox } from '../components/forms/login-box/LoginBoxGooglePlus.jsx';
-import TransferringProps from '../components/experiments/TransferringProps.jsx';
-import CompositionExample from '../components/experiments/composition/CompositionExample.jsx';
+// import TransferringProps from '../components/experiments/TransferringProps.jsx';
+// import CompositionExample from '../components/experiments/composition/CompositionExample.jsx';
 // import ChildrenExample from '../components/experiments/composition/ChildrenExample.jsx';
 
 console.log('routes.jsx:: TOP');
@@ -32,15 +32,16 @@ const routes = [
 	{ path: '/affinity',
 		component: AffinityButton,
 		title: 'Affinity', 
-		childRoutes: [{
-			path: '/transprops',
-			component: TransferringProps,
-			title: 'TransferringProps',
-		}, {
-			path: '/compositionex',
-			component: CompositionExample,
-			title: 'CompositionExample',
-		}]
+		// childRoutes: [{
+		// 	path: '/transprops',
+		// 	component: TransferringProps,
+		// 	title: 'TransferringProps',
+		// },
+		// {
+		// 	path: '/compositionex',
+		// 	component: CompositionExample,
+		// 	title: 'CompositionExample',
+		// }]
 	},
 
 	// ,

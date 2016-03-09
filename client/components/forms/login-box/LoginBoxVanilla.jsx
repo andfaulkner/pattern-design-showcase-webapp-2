@@ -4,7 +4,7 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 import {styles} from './login-box-styles.jsx';
 
-import NavMenu from '../../aRefactor/Common/NavMenu.jsx';
+import NavMenu from '../../Common/NavMenu.jsx';
 
 var loginGrid = React.createClass({
 	render: function() {
