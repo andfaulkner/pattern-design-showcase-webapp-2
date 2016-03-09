@@ -4,8 +4,32 @@
 		"selected_items":
 		[
 			[
-				"eex",
+				"react_c",
+				"react_cmpcls	Simple class-based react component, with export"
+			],
+			[
+				"react_cl",
+				"react_cmpsimple	Simple css component, no classes, without export"
+			],
+			[
+				"ee",
+				"eexpfn	es6 constant"
+			],
+			[
+				"eexp",
 				"eexpc	es6 constant"
+			],
+			[
+				"eex",
+				"eexpfn	es6 constant"
+			],
+			[
+				"react_st",
+				"react_tss	react--this.setState"
+			],
+			[
+				"lineH",
+				"lineHeight = ''	Style CSS"
 			],
 			[
 				"max",
@@ -40,10 +64,6 @@
 				"borderTopStyle	Style CSS"
 			],
 			[
-				"ee",
-				"eexpc	es6 constant"
-			],
-			[
 				"back",
 				"backgroundColor	Style CSS"
 			],
@@ -70,10 +90,6 @@
 			[
 				"react_l",
 				"react_fullupdatelifecycle	react--component--full-update-lifecycle"
-			],
-			[
-				"react_c",
-				"react_cmpsimple	react-component-simple"
 			],
 			[
 				"react_m",
@@ -340,12 +356,33 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/secret.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/admin/AdminHome.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/CarouselStyle.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/store.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/style-info/colors-fonts.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavMenu.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/gulpfile.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-build-paths.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/Carousel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/switchPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/fonts.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavMenu-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/SiteTitle.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Common.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/TopLogo.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/ContentArea.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/styles/fonts.css",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/fonts/din-light.eot",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/public/patterns/10549746_345127515676491_917848030_n.jpg",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10549746_345127515676491_917848030_n.jpg",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/TopLogo.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/TransferringProps.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/ChildrenExample.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/CompositionExample.jsx",
@@ -368,34 +405,25 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/node_modules/react-slick/dist/react-slick.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/navbar-test-styles.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.babelrc",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavMenu-styles.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Header.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavbarTest.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/ContentArea.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Footer.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Common.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/TopLogo.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/NavbarTest.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/navbar-test-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/admin/AdminHome.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/Children.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/common/Common.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/common/Header.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/todo.txt",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/wire-up.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-build-paths.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/gulpfile.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/passport-setup.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/logger.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-logging.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-database.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/db/init-db.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/comment-route.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/package.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/web.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/api-comment.js",
@@ -455,19 +483,7 @@
 		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/config/default.js",
 		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/index.js",
 		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/middleware/middleware.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/src/app.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/src/server/router/index.js",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/express-testbed-2.sublime-project",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/Side Bar.sublime-settings",
-		"/home/andfaulkner/.config/sublime-text-3/Packages/User/Side Bar Folders.sublime-settings",
-		"/home/andfaulkner/Projects/testbed/express-testbed/config/project-paths.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/proto_data_receiver_route.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/views/dust_obj-lit-ret_view.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed/config/routes.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/template-data/dust_obj-lit-ret_tpldata.json",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/routes/router.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed/src/app.js"
+		"/home/andfaulkner/Projects/testbed/express-testbed-2/src/app.js"
 	],
 	"find":
 	{
@@ -499,6 +515,25 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"1",
+			"  ",
+			"counter",
+			"  ",
+			"../fonts/",
+			"../",
+			"sass",
+			"root",
+			"SRC.*root",
+			"SRC\\.root",
+			"root",
+			"client",
+			"clientRootHtml",
+			"clientImg",
+			"clientJS",
+			"clientStaticNoLib",
+			"clientLibs",
+			"clientStatic",
+			"Roboto",
 			"style",
 			"carouselImgContainer",
 			"carouselImgContainerStyle",
@@ -607,26 +642,7 @@
 			"Title",
 			"#",
 			"color",
-			"(?<=\")\\s(?=[a-z0-9A-Z\\-]+?=)",
-			"><",
-			"data-dropalign",
-			"data-drophposition",
-			"target=\"",
-			"href=\"",
-			"data-listposition=\"",
-			"data-state=\"",
-			"\">",
-			" id=\"",
-			"data-reactid=\"",
-			"data-menubtn-border=",
-			"id=\"",
-			"id",
-			"style",
-			"class",
-			"data-originalgapbetweentextandbtn",
-			">",
-			"data-dropmode",
-			"data-reactid"
+			"(?<=\")\\s(?=[a-z0-9A-Z\\-]+?=)"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -634,6 +650,7 @@
 		"regex": true,
 		"replace_history":
 		[
+			"	",
 			"",
 			"---------------------",
 			">\n",
@@ -713,7 +730,7 @@
 		"cols":
 		[
 			0.0,
-			0.611436247473,
+			0.896402356978,
 			1.0
 		],
 		"rows":
@@ -800,7 +817,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 328.0,
+	"side_bar_width": 210.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

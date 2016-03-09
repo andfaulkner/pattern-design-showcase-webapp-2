@@ -20,28 +20,31 @@ var Carousel = React.createClass({
       infinite: true,
       slidesToShow: 3,
       slidesToScroll: 1,
+      initialSlide: 1,
       draggable: true,
       autoplay: true,
       speed: 500,
       centerMode: true,
       useCSS: true,
-      adaptiveHeight: false,
-      variableWidth: false,
+      adaptiveHeight: true,
       dots: false,
       lazyLoad: true,
       prevArrow: CarouselArrowButtonLeft,
       nextArrow: CarouselArrowButtonRight,
       style: {
-      	position: 'absolute',
-      	display: 'inline-block',
       }
     };
     return (
       <Slider {...settings}>
-        {imgs.map((imgObj) =>
-          (<div style={style.carouselImgContainer}>
-            <img {...this.props} src={imgObj.filename} style={style.carouselImg} />
-          </div>))}
+        {imgs.map((imgObj) => (
+          <div style={style.carouselImgContainer}>
+            <img 
+              {...this.props}
+              src={imgObj.filename}
+              style={style.carouselImg}
+            />
+          </div>
+        ))}
       </Slider>
     );
   }

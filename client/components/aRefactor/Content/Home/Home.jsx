@@ -13,7 +13,7 @@ export default class Home extends React.Component {
 		logger.logRendering('Home').inspect(this.props);
 		return (
 			<Common>
-				<Carousel style={{position: 'absolute', display: 'block', verticalAlign: 'top'}}/>
+				<Carousel/>
 			</Common>
 		);
 	}
