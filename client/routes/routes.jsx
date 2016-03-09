@@ -3,7 +3,8 @@
 *			Associates root notes with paths, and text on topbar
 *
 */
-import Home from '../components/aRefactor/Content/Home.jsx';
+
+import Home from '../components/aRefactor/Content/Home/Home.jsx';
 
 // import Home from '../components/nav/navbar-test/NavbarTest.jsx';
 // import CommentBox from '../components/forms/comment-box/CommentBox.jsx';
@@ -16,7 +17,6 @@ import { AffinityButton } from '../components/forms/like-button/AffinityButton.j
 import TransferringProps from '../components/experiments/TransferringProps.jsx';
 import CompositionExample from '../components/experiments/composition/CompositionExample.jsx';
 // import ChildrenExample from '../components/experiments/composition/ChildrenExample.jsx';
-
 
 const routes = [
 	{ path: '/',

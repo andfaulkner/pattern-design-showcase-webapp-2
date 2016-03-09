@@ -14,11 +14,11 @@ var _ = require('lodash');
 */
 var libs = [
 	{ lib: 'marked', childPath: 'lib', varName: 'marked' },
-	{ lib: 'react', childPath: 'dist', varName: 'React', file: 'react-with-addons'},
-	{ lib: 'react-dom', childPath: 'dist', varName: 'ReactDOM' },
+	// { lib: 'react', childPath: 'dist', varName: 'React', file: 'react-with-addons'},
+	// { lib: 'react-dom', childPath: 'dist', varName: 'ReactDOM' },
 	{ lib: 'jquery', childPath: 'dist', varName: '$' },
-	{ lib: 'lodash', childPath: '', varName: '_' },
-	{ lib: 'react-router', varName: 'ReactRouter', noNode: true }
+	{ lib: 'lodash', childPath: '', varName: '_' }
+	// { lib: 'react-router', varName: 'ReactRouter', noNode: true }
 ];
 
 module.exports = {
@@ -26,17 +26,11 @@ module.exports = {
 		root: ['!./node_modules/**', './**'],
 		client: 'client/**',
 		clientRootHtml: 'client/*.html',
+		clientFonts: ['client/**/*.woff', 'client/**/*.eot', 'client/**/*.ttf'],
 		clientImg: 'client/**/*.svg',
 		clientJS: 'client/**/*.js',
-		clientStaticNoLib: 'index.html',
-		clientStatic: [
-			'client/**', 
-			'!client/lib/*.js',
-			'!client/**/*.dust',
-			'!client/**/*.jsx',
-			'!./**/.eslintrc.js'
-		],
 		clientLibs: 'client/lib/**',
+		styles: 'client/styles/**/*.scss',
 		// TODO - possibly pull these out
 		staticLibs: _.compact(_.map(libs, function(mod) {
 			return (mod.noNode)
@@ -48,7 +42,9 @@ module.exports = {
 		root: '.build',
 		clientLibs: 'client/lib',
 		libs: '.build/lib',
-		img: '.build/img'
+		img: '.build/img',
+		fonts: '.build/fonts',
+		styles: '.build/styles',
 	},
 	// TODO - possibly pull these out
 	webpackExternalModules: _.reduce(libs, function(allExternals, mod) {

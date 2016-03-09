@@ -36,7 +36,12 @@ module.exports = {
 					presets: ['es2015', 'stage-0', 'react'],
 					cacheDirectory: '.cache'
 				}
-			}
+			},
+			// fonts
+			// {
+   //    	test: /\.((woff)|(ttf)|(eot))$/,
+   //    	loader: 'url?limit=100000'
+			// }
 		]
 	},
 	cache: true,

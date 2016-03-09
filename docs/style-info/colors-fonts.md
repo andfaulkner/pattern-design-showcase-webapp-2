@@ -2,6 +2,23 @@ Whole site::			background											rgba(255, 255, 255, 1)
 
 Logo:: 						Main Title (site name)					#28B2A4
 
+Title::						letter-spacing: 								8.4px
+									color:													#28B2A4;
+									line-height: 										1.6em;
+							    font-style: normal;
+							    font-variant: normal;
+							    font-weight: bold;
+							    font-stretch: normal;
+							    font-size: 28px;
+							    line-height: 1.4em;
+
+							    font-family: 										din-next-w01-light, 
+																	    						din-next-w02-light,
+																	    						din-next-w10-light,
+																	    						sans-serif;
+							    OR font:												normal normal bold 28px/1.4em din-next-w01-light,din-next-w02-light,din-next-w10-light,sans-serif
+
+
 Navbar:: 					background 											transparent
 Navbar:: 					Label text 											#000000
 Navbar:: 					curSel menu item: top border 		rgba(0, 0, 0, 1)

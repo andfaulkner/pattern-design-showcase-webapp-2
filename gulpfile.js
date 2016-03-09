@@ -115,6 +115,17 @@ gulp.task('get-tasks', function() {
 /**
  * Copy new libs from node_modules to client/lib. Runs once on re-run.
  */
+gulp.task('sass', function staticLibsTask() {
+	return gulp.src(SRC.styles)
+		.pipe(newerThanRootIfNotProduction())
+		.pipe(consoleTaskReport())
+		.pipe(p.sass())
+		.pipe(gulp.dest(DEST.styles));
+});
+
+/**
+ * Copy new libs from node_modules to client/lib. Runs once on re-run.
+ */
 gulp.task('node-client-libs', function staticLibsTask() {
 	return gulp.src(SRC.staticLibs)
 		.pipe(newerThanRootIfNotProduction())
@@ -131,6 +142,17 @@ gulp.task('webpack', function webpackTask() {
 		.pipe(newerThanRootIfNotProduction())
 		.pipe(p.webpack(require('./webpack.config.js')))
 		.pipe(gulp.dest(DEST.root));
+});
+
+/*
+ * move images into .build (from client)
+ */
+gulp.task('copy-fonts', function copyStaticTask(){
+	return gulp.src(SRC.clientFonts)
+		.pipe(consoleTaskReport())
+		.pipe(newerThanRootIfNotProduction())
+		.pipe(p.flatten())
+		.pipe(gulp.dest(DEST.fonts));
 });
 
 /*
@@ -168,7 +190,7 @@ var rerunOnChange = function rerunOnChange() {
 	gulp.watch(SRC.client, ['build']);
 };
 
-gulp.task('build', ['node-libs', 'webpack', 'copy-img', 'copy-static']);
+gulp.task('build', ['node-libs', 'sass', 'webpack', 'copy-img', 'copy-fonts', 'copy-static']);
 
 /**
  * Build the app

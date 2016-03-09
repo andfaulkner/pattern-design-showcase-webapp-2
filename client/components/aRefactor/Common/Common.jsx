@@ -4,8 +4,14 @@
 *			Wrap other components in this.
 *
 */
+var React = React || require('react');;
+var ReactDOM = ReactDOM || require('react-dom');
+import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+
+// import { Router, Route, hashHistory, Link } from 'react-router';
 
 import TopBar from './TopLogo.jsx';
+import SiteTitle from './SiteTitle.jsx';
 import Footer from './Footer.jsx';
 import ContentArea from './ContentArea.jsx'
 import NavMenu from './NavMenu.jsx';
@@ -22,6 +28,7 @@ export default class Common extends React.Component {
 		return (
 			<div>
 				<TopLogo />
+				<SiteTitle />
 				<NavMenu />
 				{/* CONTENT RENDERED HERE*/}
 				{this.props.children}

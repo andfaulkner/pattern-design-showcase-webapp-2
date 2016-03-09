@@ -20,9 +20,13 @@
 * 		|                                                                                         |
 *     -------------------------------------------------------------------------------------------
 */
+
+var React = React || require('react');;
+var ReactDOM = ReactDOM || require('react-dom');
+import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+
 var logger = require('../../../helpers/logger.js')('components/Common/NavMenu.jsx')
 
-import { Link } from 'react-router';
 import { styles } from './NavMenu-styles.jsx';
 import routes from '../../../routes/routes.jsx';
 import TopLogo from './TopLogo.jsx';
@@ -34,6 +38,11 @@ import Radium from 'radium';
  */
 @Radium
 export default class NavMenu extends React.Component {
+
+  constructor(props) {
+    super(props);
+    console.log('NavMenu props', props);
+  }
 
 	generateMenuItems = () => {
 		console.log('NavMenu:: generateMenuItems: props');

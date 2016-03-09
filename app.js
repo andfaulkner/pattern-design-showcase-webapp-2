@@ -35,6 +35,8 @@ app.use((req, res, next) => {
 app.use('/index',			express.static('./.build/index.html'));
 app.use('/index.js',	express.static('./.build/index.js'));
 app.use('/lib',				express.static('./.build/lib'));
+app.use('/styles',		express.static('./.build/styles'));
+app.use('/fonts',			express.static('./.build/fonts'));
 app.use('/img',				express.static('./.build/img'));
 app.use('/img',				express.static('./data/img/public'));
 

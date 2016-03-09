@@ -1,3 +1,7 @@
+var React = React || require('react');;
+var ReactDOM = ReactDOM || require('react-dom');
+import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+
 export const styles = {
 
 	//**************************** WHOLE NAVBAR HOLDER ****************************//
@@ -7,9 +11,10 @@ export const styles = {
 	},
 	NavMenuContainerOuter: {
 		base: {
-			'display': 'block',
+			display: 'block',
 			textAlign: 'center',
 			alignContent: 'center',
+			marginTop: '15px'
 		}
 	},
 	NavMenuContainer: {
@@ -22,7 +27,8 @@ export const styles = {
 		  display: 'block',
 			cursor: 'auto',
 			textAlign: 'center',
-			alignContent: 'center'
+			alignContent: 'center',
+			'-webkit-padding-start': '0px'
 		}
 	},
 	//*****************************************************************************//
@@ -39,7 +45,7 @@ export const styles = {
 			display: 'inline-block',
 			listStyleType: 'none',
 			backgroundColor: '#FFFFFF',
-			borderTopColor: 'black',
+			borderTopColor: 'white',
 			borderTopStyle: 'solid',
 	    ':hover': {
 				borderTopColor: 'rgba(79, 212, 199, 1)',
