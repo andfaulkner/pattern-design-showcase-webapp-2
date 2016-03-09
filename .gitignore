@@ -1,3 +1,6 @@
 node_modules
 .build
 .cache
+config/config-database.js
+config/config-database.json
+config/config-database.jsx
