@@ -84,7 +84,6 @@ export default class Carousel extends React.Component {
 
 class CarouselImage extends React.Component {
 	render() {
-		console.log('Carousel.jsx:: CarouselImage: this.props:', this.props);
 		return (
 			<img src={this.props.src} style={this.props.style} />
 		);

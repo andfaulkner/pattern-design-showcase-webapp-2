@@ -17,6 +17,7 @@ import ContentArea from './ContentArea.jsx'
 import NavMenu from './NavMenu.jsx';
 import TopLogo from './TopLogo.jsx';
 import Radium from 'radium';
+import routes from '../../routes/routes.jsx';
 
 var logger = require('../../helpers/logger.js')('components/Common/Common')
 
@@ -29,7 +30,7 @@ export default class Common extends React.Component {
 			<div>
 				<TopLogo />
 				<SiteTitle />
-				<NavMenu />
+				<NavMenu routes={routes} />
 				{/* CONTENT RENDERED HERE*/}
 				{this.props.children}
 				<Footer />

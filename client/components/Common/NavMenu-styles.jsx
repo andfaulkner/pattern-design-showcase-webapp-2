@@ -2,6 +2,18 @@ var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
+const TopLevelMenuItemBase = {
+	paddingLeft: '10px',
+	paddingRight: '10px',
+	marginLeft: '10px',
+	marginRight: '10px',
+	boxSizing: 'border-box',
+	display: 'inline-block',
+	listStyleType: 'none',
+	backgroundColor: '#FFFFFF',
+	borderTopStyle: 'solid',
+};
+
 export const styles = {
 
 	//**************************** WHOLE NAVBAR HOLDER ****************************//
@@ -36,22 +48,16 @@ export const styles = {
 
 	//**************************** INDIVIDUAL MENU ITEMS ****************************//
 	TopLevelMenuItem: {
-		base: {
-			paddingLeft: '10px',
-			paddingRight: '10px',
-			marginLeft: '10px',
-			marginRight: '10px',
-			boxSizing: 'border-box',
-			display: 'inline-block',
-			listStyleType: 'none',
-			backgroundColor: '#FFFFFF',
+		base: _.defaultsDeep({}, TopLevelMenuItemBase, {
 			borderTopColor: 'white',
-			borderTopStyle: 'solid',
 	    ':hover': {
 				borderTopColor: 'rgba(79, 212, 199, 1)',
 				borderTopStyle: 'solid',
 			}
-		}
+		}),
+		selected: _.defaultsDeep({}, TopLevelMenuItemBase, {
+			borderTopColor: 'black'
+		})
 	},
 
 	NavMenuLink: {
