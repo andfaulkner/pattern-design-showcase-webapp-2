@@ -91,12 +91,3 @@ class CarouselImage extends React.Component {
 		);
 	}
 };
-
-
-() => (
-
-);
-	
-function() {
-	return ;
-}.bind(this);

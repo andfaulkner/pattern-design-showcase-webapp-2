@@ -67,7 +67,7 @@ module.exports = {
 		'no-dupe-args': 2,
 		'no-empty': 2,
 		'no-extra-boolean-cast': 2,
-		// 'no-extra-parens': 2,
+		'no-extra-parens': 0,
 		'use-isnan': 2,
 		'valid-typeof': 2
 	},

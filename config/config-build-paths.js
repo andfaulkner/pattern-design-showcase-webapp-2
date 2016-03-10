@@ -35,7 +35,7 @@ module.exports = {
 		staticLibs: _.compact(_.map(libs, function(mod) {
 			return (mod.noNode)
 				? ''
-				: path.join('node_modules', mod.lib, mod.childPath, (mod.file || mod.lib));
+				: path.join('node_modules', mod.lib, mod.childPath, mod.file || mod.lib);
 		}))
 	},
 	DEST: {

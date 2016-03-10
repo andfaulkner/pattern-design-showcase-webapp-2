@@ -195,6 +195,9 @@ var rerunOnChange = function rerunOnChange() {
 	gulp.watch(SRC.client, ['build']);
 };
 
+/**
+ * Full build cycle
+ */
 gulp.task('build', [
 	'webpack',			
 	'node-libs',		'copy-img',
