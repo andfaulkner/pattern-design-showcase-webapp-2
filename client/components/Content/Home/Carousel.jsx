@@ -11,6 +11,7 @@ var Slider = require('react-slick');
 
 const style = require('./CarouselStyle.jsx');
 
+// extract, make externally configurable (via UI)
 const imgs = [
 	{ filename: '/img/patterns/aboriginal-fungus.jpg' },
 	{ filename: '/img/patterns/berry-flowers.jpg' },
@@ -23,9 +24,7 @@ const imgs = [
 	{ filename: '/img/patterns/chinese-umbrella-mushrooms.jpg' }
 ];
 
-
-
-var CarouselArrowButtonLeft = class CarouselArrowButtonLeft extends React.Component {
+class CarouselArrowButtonLeft extends React.Component {
  render() {
 	 return (
 		 <button {...this.props} style={style.arrowLeft} />
