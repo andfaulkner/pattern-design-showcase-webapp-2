@@ -27,23 +27,76 @@
 ! select auth items from google returns
 ! build carousel
 
-- get carousel to resize on some page resizes
-- get carousel to restart when page restarts
-- transform-decorators-legacy linter
-- multi-output gulpfile
+! get carousel to resize on some page resizes
+! get carousel to restart when page restarts
+! transform-decorators-legacy linter
+! multi-output gulpfile
+! top logo
+! sane library import
+
+! Install React-Bootstrap
+- get React-Bootstrap to show 1 element (as POC)
+- React-Bootstrap TextContent grid
+
+- require paths relative to client root?
+
+- REACT-LEARN: understand controlled components (vs. not)
+- restructure tag file locations
+
+- REDUX: understand "containers" for elements (Redux / Flux)
+
+- Complete React component structure list
+
+- REACT-TDD: learn how to test React components
+	- test your main react components
+
+- TDD: set up a test suite (mocha?)
+- TDD: set up autorunning tests
+- TDD: write your excellent tests
+
+- Carousel 
+	-	Translucent vertical blocks on L & R, around arrows
+	- proper arrows (nicer images)
+	- fix occasional freezing on resize
+	- image click popup
+		- stop carousel on popup
+		- L & R arrows to shift between imgs
+
+- Nav-menu
+	- get highlighting working properly
+	- Actual titles
+	- Link in new actual page files
+
+- FOOTER: get to stick properly (:after syntax?)
+- FOOTER: properly laid-out
+- FOOTER: add content
+- 
+
+- TextContentBlocks
+		- TextContentBlocks CorporateDesignsBlock static
+		- BannersImgBlock static
+		- LatestUpdatesBlock static
+		- SocialMediaButtons static
+		- Determine "see more" behaviour
+			- modal? content area replace?
+
+- Redux
+	- finish course 
+	- states diagram
+	- learn Provider tag pattern
+	- Get store, provide to all of app
+	- write actions
+	- write reducers
+	- wire into react components
 
 - on route change alter selected menu item
-- load navmenu item names in by AJAX
-
-- prop initializers?
+- load navmenu item names in by AJAX?
+- load text content in by AJAX
 
 - req filter
 - simple place to route to on auth
 - login box, backend
 
-- top logo
-
-- sane library import
 
 
 XXXX material design

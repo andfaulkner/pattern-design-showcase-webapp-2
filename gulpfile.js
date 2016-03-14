@@ -1,3 +1,6 @@
+process.setMaxListeners(0);
+require('events').EventEmitter.prototype._maxListeners = 100;
+
 //Fix root path referenced by require
 require('rootpath')();
 require('trace');
@@ -9,7 +12,7 @@ var inspect = require('util').inspect;
 var es = require('event-stream');
 var gulp = require('gulp');
 
-var buildConfig = require('./config/config-build-paths');
+var pathConfig = require('./config/config-paths');
 var webpackConfig = require('./webpack.config.js');
 
 //NODE MODULES & JS LIBRARIES
@@ -52,8 +55,8 @@ var runSequence = require('run-sequence');
 // var wait = require('gulp-wait');
 
 //------------------------------ CONSTANTS -------------------------------//
-var SRC = buildConfig.SRC;
-var DEST = buildConfig.DEST;
+var SRC = pathConfig.SRC;
+var DEST = pathConfig.DEST;
 //------------------------------------------------------------------------//
 
 //------------------ COMMAND LINE PARAMETER HANDLING ---------------------//
@@ -130,7 +133,7 @@ gulp.task('sass', function staticLibsTask() {
 		.pipe(gulp.dest(DEST.styles));
 });
 
-function copyFiles(gulp, srcFiles, destFiles, shouldFlatten, stepInject) {
+function copyFiles(srcFiles, destFiles, shouldFlatten, stepInject) {
 	return gulp.src(srcFiles)
 		.pipe(newerThanRootIfNotProduction())
 		.pipe(consoleTaskReport())
@@ -142,52 +145,49 @@ function copyFiles(gulp, srcFiles, destFiles, shouldFlatten, stepInject) {
 /**
  * Main frontend build step
  */
-gulp.task('webpack', copyFiles.bind(this, gulp, SRC.clientJS, DEST.root, false,
+gulp.task('webpack', copyFiles.bind(this, SRC.clientJS, DEST.root, false,
 																		_.partial(p.webpack, webpackConfig)));
 
 /**
  * Copy new libs from node_modules to client/lib. Runs once on re-run.
  */
-gulp.task('node-client-libs', copyFiles.bind(this, gulp, SRC.staticLibs, DEST.clientLibs));
+gulp.task('node-client-libs', copyFiles.bind(this, SRC.staticLibs, DEST.clientLibs));
 /*
  * move fonts into .build (from client)
  */
-gulp.task('copy-fonts', copyFiles.bind(this, gulp, SRC.clientFonts, DEST.fonts, true, false));
+gulp.task('copy-fonts', copyFiles.bind(this, SRC.clientFonts, DEST.fonts, true, false));
 /*
  * move images into .build (from client)
  */
-gulp.task('copy-img', copyFiles.bind(this, gulp, SRC.clientImg, DEST.img, true, false));
+gulp.task('copy-img', copyFiles.bind(this, SRC.clientImg, DEST.img, true, false));
 /*
  * copy from client/libs --> ./build/libs [[todo: may be redundant, look into it]]
  */
-gulp.task('node-libs', copyFiles.bind(this, gulp, path.join('./', SRC.clientLibs), DEST.libs));
+gulp.task('node-libs', copyFiles.bind(this, path.join('./', SRC.clientLibs), DEST.libs));
 
 /*
- * grab index.html form client, render to 3 separate index files, output to build
+ * grab index.html from client dir, split into multiple html files, 1 for each item (entryConfig)
+ * in the entryPoints array in config-paths (entryConfigs), where each file:
+ * 		is named entryConfig.basename;
+ * 		imports entryConfig.jsroot + '.js' as its main/root Javascript file
+ * 		receives a page title/header (in the webpage's top bar) of entryConfig.title 
+ *
  */
-gulp.task('create-index-html', function copyStaticTask(){
+gulp.task('create-index-html', function copyStaticTask() {
 	var outStream = gulp.src(SRC.clientRootHtml)
-		.pipe(consoleTaskReport())
-		.pipe(newerThanRootIfNotProduction());
+		.pipe(consoleTaskReport());
 
-	var adminHtmlOut = outStream.pipe(p.clone())
-		.pipe(p.rename(function(path) { path.basename = 'admin'; }))
-		.pipe(p.template({
-			title: 'Admin',
-			jsroot: 'admin.js'
-		}));
-	var todoHtmlOut = outStream.pipe(p.clone())
-		.pipe(p.rename(function(path) { path.basename = 'index-todo'; }))
-		.pipe(p.template({
-			title: 'Todo',
-			jsroot: 'index-todo.js'
-		}));
-	outStream.pipe(p.template({
-		title: 'Home',
-		jsroot: 'index.js'
-	}));
+	// 
+	var entryPointOutputStreams = _.map(pathConfig.entryPoints, function(entryConfig) {
+		return outStream.pipe(p.clone())
+			.pipe(p.rename(function(path) { path.basename = entryConfig.basename; }))
+			.pipe(p.template({
+				title: entryConfig.title,
+				jsroot: entryConfig.jsroot + '.js'
+			}));
+	});
 
-	return es.merge(todoHtmlOut, adminHtmlOut, outStream)
+	return es.merge.apply(this, entryPointOutputStreams)
 		.pipe(gulp.dest(DEST.root));
 });
 

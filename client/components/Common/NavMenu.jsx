@@ -43,14 +43,19 @@ export default class NavMenu extends React.Component {
   constructor(props) {
 		super(props);
 		console.log('NavMenu.jsx:: NavMenu: constructor: props:', props);
-		this.state = { currentPage: 'Home'};
+		this.state = this.state || { currentPage: 'Home'};
 		console.log('NavMenu.jsx:: NavMenu: constructor: this.state:', this.state);
   }
 
-  selectState(menuItem) {
-		console.log('NavMenu: NavMenu.selectState: this:', this);
-  	this.setState({ currentPage: menuItem });
-  	this.render();
+  selectMenuItem = (index, menuItem) => {
+  	console.log('\n\n\n\n\n\n\n\n\n\n\n\nNavMenu.jsx:: selectMenuItem entered!');
+  	this.state = { currentPage: menuItem.title };
+  	this.setState({ currentPage: menuItem.title }, function() {
+			console.log('\n\nNavMenu: NavMenu.selectMenuItem: this:', this);
+			console.log('NavMenu: NavMenu.selectMenuItem: index:', index);
+			console.log('NavMenu: NavMenu.selectMenuItem: menuItem:', menuItem);
+			console.log('\n\n\n\n\n\n\n\n\n\n\n\n')
+  	});
   }
 
   /**
@@ -59,13 +64,14 @@ export default class NavMenu extends React.Component {
    * @return {ReactElement} TopLevelMenuItem, initialized
    */
 	generateMenuItems = () => {
-		var self = this;
+		var clStyle = 'color: white; background: black; font-size: 12px';
 		// TODO TOSS THIS - SHOULD COME FROM PARENTS
 		return _(this.props.routes)
 			.map((navItem, index) => {
-				console.log('NavMenu: NavMenu.generateMenuItems: navItem.title:', navItem.title);
-				console.log('NavMenu: NavMenu.generateMenuItems: this.state:', this.state);
-				console.log('NavMenu: NavMenu.generateMenuItems: this.state.currentPage:', this.state.currentPage);
+				console.log('%cNavMenu: NavMenu.generateMenuItems: navItem.title:', clStyle, navItem.title);
+				console.log('%cNavMenu: NavMenu.generateMenuItems: this:', clStyle, this);
+				console.log('%cNavMenu: NavMenu.generateMenuItems: this.state:', clStyle, this.state);
+				console.log('%cNavMenu: NavMenu.generateMenuItems: this.state.currentPage:', clStyle, this.state.currentPage);
 				// if title property isn't defined, this route isn't for the topbar
 				return (navItem.title)
 					? (<TopLevelMenuItem
@@ -74,7 +80,7 @@ export default class NavMenu extends React.Component {
 							title={navItem.title}
 							styles={styles.TopLevelMenuItem.base}
 							selected={this.state.currentPage === navItem.title}
-							selectState={this.selectState.bind(self, navItem.title)}
+							selectMenuItem={this.selectMenuItem.bind(this, index, navItem)}
 							{...this.props}
 						/>)
 					: null;
@@ -84,10 +90,9 @@ export default class NavMenu extends React.Component {
 
 	render() {
 		// Get components for individual top level items on the navbar
-		var topLevelMenuItems = this.generateMenuItems();
 		return (
 			<NavMenuContainer>
-				{topLevelMenuItems}
+				{this.generateMenuItems()}
 			</NavMenuContainer>
 		);
 	}
@@ -100,7 +105,6 @@ export default class NavMenu extends React.Component {
 @Radium
 class NavMenuContainer extends React.Component {
 	render() {
-		console.log('NavMenu.jsx:: NavMenuContainer: this:', this);
 		return (
 			<div>
 				<div style={styles.NavMenuContainerOuter.base}>
@@ -119,8 +123,6 @@ class NavMenuContainer extends React.Component {
 @Radium
 class TopLevelMenuItem extends React.Component {
 	render() {
-		console.log('TopLevelMenuItem:: this.props: ', this.props);
-		console.log('TopLevelMenuItem:: this.state: ', this.state);
 		var style = (this.props.selected)
 			? styles.TopLevelMenuItem.selected
 			: styles.TopLevelMenuItem.base;
@@ -129,7 +131,7 @@ class TopLevelMenuItem extends React.Component {
 				<Link
 					to={this.props.path}
 					style={styles.NavMenuLink.base}
-					onClick={this.props.selectState}
+					onClick={this.props.selectMenuItem}
 				>
 					{this.props.title}
 				</Link>
