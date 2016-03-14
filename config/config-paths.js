@@ -31,13 +31,16 @@ var libs = [
 module.exports = {
 	SRC: {
 		root: ['!./node_modules/**', './**'],
-		client: 'client/**',
+		client: ['client/**', '!client/styles/**'],
+		clientBuild: ['client/**/*.js', 'client/**/*.jsx', 'client/**/*.json'],
 		clientRootHtml: 'client/index.html',
+		clientHtml: ['client/**/*.html'],
 		clientFonts: ['client/**/*.woff', 'client/**/*.eot', 'client/**/*.ttf'],
-		clientImg: 'client/**/*.svg',
+		clientImg: ['client/**/*.svg', 'client/**/*.png', 'client/**/*.jpg', 'client/**/*.gif'],
 		clientJS: 'client/**/*.js',
 		clientLibs: 'client/lib/**',
 		rootStyle: 'client/styles/main.scss',
+		allStyles: ['client/styles/**/*.css', 'client/styles/**/*.scss', 'client/styles/**/*.sass'],
 		// TODO - possibly pull these out
 		staticLibs: _.compact(_.map(libs, function(mod) {
 			return (mod.noNode)
@@ -69,24 +72,27 @@ module.exports = {
 	 *
 	 * There should only be 1 entry point for most applications.
 	 */
-	entryPoints: [{
+	polyfills: ['babel-polyfill'],
+	entryPoints: [
+		{
 			basename: 'admin',
 			title: 'Admin',
 			jsroot: 'admin'
-		}, {
-			basename: 'redux-experiments',
-			title: 'Redux Experiments',
-			jsroot: 'redux-experiments',
-			folder: 'experiments'
-		}, {
-			basename: 'redux-experiments-2',
-			title: 'Redux Experiments - 2',
-			jsroot: 'redux-experiments-2',
-			folder: 'experiments'
-		}, {
-			basename: 'index-todo',
-			title: 'Todo',
-			jsroot: 'index-todo'
+		// }, 
+		// {
+		// 	basename: 'redux-experiments',
+		// 	title: 'Redux Experiments',
+		// 	jsroot: 'redux-experiments',
+		// 	folder: 'experiments'
+		// }, {
+		// 	basename: 'redux-experiments-2',
+		// 	title: 'Redux Experiments - 2',
+		// 	jsroot: 'redux-experiments-2',
+		// 	folder: 'experiments'
+		// }, {
+		// 	basename: 'index-todo',
+		// 	title: 'Todo',
+		// 	jsroot: 'index-todo'
 		}, {
 			basename: 'index',
 			title: 'Home',

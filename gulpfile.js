@@ -162,6 +162,7 @@ gulp.task('copy-fonts', copyFiles.bind(this, SRC.clientFonts, DEST.fonts, true, 
 gulp.task('copy-img', copyFiles.bind(this, SRC.clientImg, DEST.img, true, false));
 /*
  * copy from client/libs --> ./build/libs [[todo: may be redundant, look into it]]
+ * Runs only once - when gulp first launched
  */
 gulp.task('node-libs', copyFiles.bind(this, path.join('./', SRC.clientLibs), DEST.libs));
 
@@ -179,6 +180,7 @@ gulp.task('create-index-html', function copyStaticTask() {
 
 	// 
 	var entryPointOutputStreams = _.map(pathConfig.entryPoints, function(entryConfig) {
+		// exclude any with a module
 		return outStream.pipe(p.clone())
 			.pipe(p.rename(function(path) { path.basename = entryConfig.basename; }))
 			.pipe(p.template({
@@ -191,23 +193,38 @@ gulp.task('create-index-html', function copyStaticTask() {
 		.pipe(gulp.dest(DEST.root));
 });
 
+/**
+ * Watch specific file types, and only do associated build task
+ */
 var rerunOnChange = function rerunOnChange() {
-	gulp.watch(SRC.client, ['build']);
+	gulp.watch(SRC.clientBuild, ['build']);
+	gulp.watch(SRC.clientImg, ['copy-img']);
+	gulp.watch(SRC.clientFonts, ['copy-fonts']);
+	gulp.watch(SRC.allStyles, ['sass']);
+	gulp.watch(SRC.clientHtml, ['create-index-html']);
 };
 
 /**
  * Full build cycle
  */
 gulp.task('build', [
-	'webpack',			
-	'node-libs',		'copy-img',
-	'copy-fonts',		'create-index-html',
-	'sass'
+	'webpack'
 ]);
+
+gulp.task('init-build', [
+	'node-libs',
+	'node-client-libs',
+	'sass',
+	'copy-img',
+	'copy-fonts',
+	'create-index-html',
+	'build'
+]);
+
 
 /**
  * Build the app
  */
-gulp.task('default', ['node-client-libs', 'build'], function(){
+gulp.task('default', ['init-build'], function(){
 	return rerunOnChange();
 });

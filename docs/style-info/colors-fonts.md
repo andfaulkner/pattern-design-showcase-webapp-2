@@ -33,15 +33,44 @@ Navbar:: FONT:
 						line-height:' 1.4em';
 						font-family: 'courier new';
 
-<!--  -->
+TextContentBox: Total height:					420px
+TextContentBox:	Box Title 
+						Bg 												rgba(64, 64, 64, 1)
+						Box Title Text 						#FFFFFF
+						Total height:							420px
+						Box Title Height:					90px
 
-TextContentBox::	Box Title Bg 										rgba(64, 64, 64, 1)
-TextContentBox::	Box Title Text 									#FFFFFF
-TextContentBox::  Content Area bg  								rgba(230, 230, 230, 1)
-TextContentBox::	Topic Title text								#000000
-TextContentBox::	date text (sub-text)						#818181
-TextContentBox::	'See More' box: bg							rgba(114, 114, 114, 1)
-TextContentBox::	'See More' box: border					solid rgba(0, 0, 0, 1) 0px
+TextContentBox: Content Area 
+						content height incl btn		330px
+						|->Button height:					40px
+						bg 												rgba(230, 230, 230, 1)
+
+TextContentBox: Description
+						height: text itself				58px
+						font-size									14px
+						font: 										normal normal normal 15px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace
+						letter-spacing						-0.7px -0.05em
+						line-height								21px/1.5em
+						padding above:						17px
+						padding left:							27px
+
+TextContentBox: Content Section:
+						top padding:							14px
+TextContentBox: Content Section Title:
+						font-size:								21px
+						font:											normal normal normal 15px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace
+TextContentBox: Content Section Date:
+						font:											normal normal normal 15px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace
+						color: 										#818181
+
+
+
+
+
+TextContentBox:	Topic Title text				#000000
+TextContentBox:	date text (sub-text)		#818181
+TextContentBox:	'See More' box: bg			rgba(114, 114, 114, 1)
+TextContentBox:	See More box: border		solid rgba(0, 0, 0, 1) 0px
 
 Footer:: 					Text 														#E6E6E6
 Footer:: 					Background											rgba(0, 0, 0, 1)

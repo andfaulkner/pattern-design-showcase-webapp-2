@@ -35,16 +35,18 @@ app.use((req, res, next) => {
 
 // serve public portion of site
 _.each(config.get('htmlEntryPoints'), (entryPoint) => {
-	const htmlPath = path.join('/', entryPoint.basename);
-	const jsPath = path.join('/', entryPoint.jsroot) + '.js';
-	const filePathRoot = path.join('.build', entryPoint.basename);
+	if (_.get(entryPoint, 'basename') && _.get(entryPoint, 'jsroot')) {
+		const htmlPath = path.join('/', entryPoint.basename);
+		const jsPath = path.join('/', entryPoint.jsroot) + '.js';
+		const filePathRoot = path.join('.build', entryPoint.basename);
 
-	console.log('\nfilePathRoot: ', filePathRoot)
-	console.log('htmlPath: ', htmlPath)
-	console.log('jsPath: ', jsPath)
+		console.log('\nfilePathRoot: ', filePathRoot)
+		console.log('htmlPath: ', htmlPath)
+		console.log('jsPath: ', jsPath)
 
-	app.use(htmlPath, express.static(filePathRoot  + '.html'));
-	app.use(jsPath, express.static(filePathRoot + '.js'));
+		app.use(htmlPath, express.static(filePathRoot  + '.html'));
+		app.use(jsPath, express.static(filePathRoot + '.js'));
+	}
 });
 // app.use('/index',									express.static('./.build/index.html'));
 // app.use('/index.js',							express.static('./.build/index.js'));

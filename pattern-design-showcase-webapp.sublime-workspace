@@ -4,108 +4,264 @@
 		"selected_items":
 		[
 			[
-				"_red",
-				"_reduceArray	lodash--reduce_array"
+				"comm",
+				"comment_moduleheading	Main module heading - explain what module does etc."
 			],
 			[
-				"eex",
-				"eexpdcl	export es6 class default"
+				"readFileS",
+				"fs.readFileSync(path, options);"
 			],
 			[
-				"react_c",
-				"react_cmpcls	Simple class-based react component, with export"
+				"readFile",
+				"fs.readFileSync(path, options);"
 			],
 			[
-				"react_cl",
-				"react_cmpsimple	Simple css component, no classes, without export"
+				"comment",
+				"comment_notebig	Moderate-size comment (3 line +)"
 			],
 			[
-				"ee",
-				"eexpfn	es6 constant"
+				"log",
+				"log__var_val_in_block	Output var to CLI in big, conspicuous block"
 			],
 			[
-				"eexp",
-				"eexpc	es6 constant"
+				"inspect",
+				"util.inspect(obj, opts);"
 			],
 			[
-				"react_st",
-				"react_tss	react--this.setState"
+				"_sort",
+				"_sortByAll	Sort arr or obj via any # of sorters (both sort vals & fns)"
 			],
 			[
-				"lineH",
-				"lineHeight = ''	Style CSS"
+				"seneca_",
+				"seneca_restapi_plugin	seneca--add-restapi-action-call"
 			],
 			[
-				"max",
-				"maxHeight	Style CSS"
+				"test_entity",
+				"test_entity_1"
 			],
 			[
-				"backgrou",
-				"backgroundImage	Style CSS"
+				"cd",
+				"cd	console.dir"
 			],
 			[
-				"vertica",
-				"verticalAlign = 'top'	Style CSS"
+				"seneca",
+				"seneca_add_action	seneca--add-action"
 			],
 			[
-				"position",
-				"position = 'absolute'	Style CSS"
+				"comment_",
+				"comment_notegigantic	Large comment not directly defining a module, class, fn, or method"
 			],
 			[
-				"react_cmp",
-				"react_cmpsimple	Simple css component, no classes, without export"
+				"er",
+				"error	Event"
 			],
 			[
-				"comment_b",
-				"comment_block_1linebookend	comment--block-1line-bookend"
+				"con",
+				"console.dir"
 			],
 			[
-				"marginLeft",
-				"marginLeft = 'auto'	Style CSS"
+				"random",
+				"Math.random()	Math"
 			],
 			[
-				"borderTop",
-				"borderTopStyle	Style CSS"
-			],
-			[
-				"back",
-				"backgroundColor	Style CSS"
-			],
-			[
-				"i",
-				"impors	import function from module, identically to require, w es6 syntax."
-			],
-			[
-				"map",
-				"map(callback)	Array"
-			],
-			[
-				"_reduce",
-				"_reduceObject	lodash--reduce_object"
+				"comment_m",
+				"comment_block_monster	Monster-size comment block - to divide file into sections"
 			],
 			[
 				"req",
 				"req	nodejs--require"
 			],
 			[
-				"default",
-				"preventDefault()	Event"
+				"Error",
+				"new Error(${0:message})	Error"
 			],
 			[
-				"react_l",
-				"react_fullupdatelifecycle	react--component--full-update-lifecycle"
+				"seneca_new_ms",
+				"seneca_new_ms	seneca--basic-microservice"
 			],
 			[
-				"react_m",
-				"react_mountable	react--component-mountable"
+				"cons",
+				"console.error"
 			],
 			[
-				"scss",
-				"style.left	Style CSS"
+				"inner",
+				"innerHTML	Element"
 			],
 			[
-				"comment_",
-				"comment_moduleheading	Main module heading - explain what module does etc."
+				"onc",
+				"onclick	Attr"
+			],
+			[
+				"g",
+				"get	$.get()"
+			],
+			[
+				"rren",
+				"react_ren	react--React-render--renders_element"
+			],
+			[
+				"cdm",
+				"cdm	React: componentDidMount: fn() { ... }"
+			],
+			[
+				"err",
+				"error	Event"
+			],
+			[
+				"loc_",
+				"loc_href	e.g. \"http://localhost:3002/components/react-1/index.html\". Full URL of current page."
+			],
+			[
+				"react_t",
+				"react_tss	react--this.setState"
+			],
+			[
+				"rc_",
+				"rc_fullupdatelifecycle	react--component--full-update-lifecycle"
+			],
+			[
+				"react_",
+				"react_tsp	react--this.setProps"
+			],
+			[
+				"rc",
+				"rcwm	react--component-lifecycle--mounting--componentWillMount"
+			],
+			[
+				"r",
+				"rcwm	react--component-lifecycle--mounting--componentWillMount"
+			],
+			[
+				"pro",
+				"props	React: this.props"
+			],
+			[
+				"rc_mou",
+				"rc_mounter	react--component-mounter--(mounts_another_component)"
+			],
+			[
+				"rc_mount",
+				"rc_mountable	react--component-mountable"
+			],
+			[
+				"rc_m",
+				"rc_mounter	react--component-mounter--(mounts_another_component)"
+			],
+			[
+				"rc_moun",
+				"rc_mountable	react--component-mountable"
+			],
+			[
+				"ts",
+				"toString()	String"
+			],
+			[
+				"ren",
+				"ren	React: render() {…}"
+			],
+			[
+				"prop",
+				"props	React: this.props."
+			],
+			[
+				"props",
+				"props	React: this.props."
+			],
+			[
+				"gis",
+				"gis	React: getInitialState: fn() { return {...} } "
+			],
+			[
+				"rcc",
+				"rcc	React: class component"
+			],
+			[
+				"livereload",
+				"livereloadSetup"
+			],
+			[
+				"exec",
+				"child_process.exec"
+			],
+			[
+				"re",
+				"req	nodejs--require"
+			],
+			[
+				"c",
+				"cl	console.log"
+			],
+			[
+				"_",
+				"_.each"
+			],
+			[
+				"mo",
+				"module.exports"
+			],
+			[
+				"bv",
+				"bv	Backbone View"
+			],
+			[
+				"b",
+				"bd	Backbone requirejs Module definition"
+			],
+			[
+				"node",
+				"nodeType	Node"
+			],
+			[
+				"console",
+				"console.log"
+			],
+			[
+				"be",
+				"betrigger	Backbone.js events trigger"
+			],
+			[
+				"bu",
+				"buBackbone.$	Backbone.js utility Backbone.$"
+			],
+			[
+				"create",
+				"crypto.createVerify"
+			],
+			[
+				"getElement",
+				"document.getElementById(${0:id})	Document"
+			],
+			[
+				"exit",
+				"process.exit"
+			],
+			[
+				"first",
+				"_.first"
+			],
+			[
+				"nextTi",
+				"process.nextTick"
+			],
+			[
+				"new_",
+				"new_route_module	nodejs--new_route"
+			],
+			[
+				"getM",
+				"getMonth()	Date"
+			],
+			[
+				"sene",
+				"seneca_new_ms	seneca--basic-microservice"
+			],
+			[
+				"senec",
+				"seneca_new_act	seneca--new_action_call"
+			],
+			[
+				"j",
+				"jquery"
 			],
 			[
 				"res",
@@ -120,20 +276,12 @@
 				"stats.isFile"
 			],
 			[
-				"new_",
-				"new_dust_template_view	js--new_dust_template_view"
-			],
-			[
 				"__",
 				"__dirname"
 			],
 			[
 				"forE",
 				"forEach(${0:callback})	Array"
-			],
-			[
-				"console",
-				"console.info"
 			],
 			[
 				"write",
@@ -146,14 +294,6 @@
 			[
 				"iife",
 				"iifelite	nodejs--iife-lite"
-			],
-			[
-				"_",
-				"_.object"
-			],
-			[
-				"cons",
-				"console.log"
 			],
 			[
 				"module",
@@ -192,10 +332,6 @@
 				"http.createServer"
 			],
 			[
-				"create",
-				"http.createServer"
-			],
-			[
 				"argv",
 				"process.argv"
 			],
@@ -206,10 +342,6 @@
 			[
 				"env",
 				"process.env"
-			],
-			[
-				"exec",
-				"child_process.exec"
 			],
 			[
 				"lstat",
@@ -229,6 +361,9 @@
 			]
 		]
 	},
+	"buffers":
+	[
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -236,33 +371,149 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 313.0,
-		"last_filter": "insta",
+		"height": 392.0,
+		"last_filter": "inst",
 		"selected_items":
 		[
 			[
-				"insta",
+				"inst",
 				"Package Control: Install Package"
 			],
 			[
-				"ins",
-				"Package Control: Install Package"
+				"bookmar",
+				"Bookmarks: Toggle"
+			],
+			[
+				"package",
+				"Package Control: Remove Package"
 			],
 			[
 				"install",
 				"Package Control: Install Package"
 			],
 			[
-				"beautif",
-				"HTMLBeautify"
+				"instal",
+				"Package Control: Install Package"
 			],
 			[
-				"console",
-				"Snippet: console.log"
+				"JSON",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"html",
+				"HTMLPrettify"
+			],
+			[
+				"snippet form",
+				"Snippet: html--textFormSubmit"
+			],
+			[
+				"snippet",
+				"Snippet: HTML - Navigation object (inline-block)"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"add",
+				"Favorite Files: Add File(s)"
+			],
+			[
+				"favor",
+				"Favorite Files: Add File(s)"
+			],
+			[
+				"jshint",
+				"JSHint: Set Plugin Options"
+			],
+			[
+				"sublime",
+				"SublimeLinter: Next Error"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"remove pack",
+				"Package Control: Remove Package"
+			],
+			[
+				"Package",
+				"Preferences: Package Control Settings – User"
+			],
+			[
+				"packages",
+				"Preferences: Browse Packages"
+			],
+			[
+				"remov",
+				"Package Control: Remove Package"
+			],
+			[
+				"",
+				"Babel Transform"
+			],
+			[
+				"syntax: JSX",
+				"Set Syntax: JSX"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"pack",
+				"Package Control: Disable Package"
+			],
+			[
+				"remove p",
+				"Package Control: Remove Package"
+			],
+			[
+				"favori",
+				"Favorite Files: Open File(s)"
+			],
+			[
+				"fav",
+				"Favorite Files: Open File(s)"
+			],
+			[
+				"jscs",
+				"JSHint: Set Linting Preferences"
+			],
+			[
+				"Favorite",
+				"Favorite Files: Add File(s)"
+			],
+			[
+				"TodoR",
+				"TodoReview: Project Files"
+			],
+			[
+				"Snippet: re",
+				"Snippet: REGEX--line-containing-item1-not-followed-by-item-2"
 			],
 			[
 				"Snippet: ",
-				"Snippet: htmlboiler"
+				"Snippet: REGEX--line-containing-item1-not-followed-by-item-2"
 			],
 			[
 				"Install",
@@ -271,14 +522,6 @@
 			[
 				"bookmark",
 				"SublimeBookmarks: Add Bookmark"
-			],
-			[
-				"remove",
-				"Package Control: Remove Package"
-			],
-			[
-				"instal",
-				"Package Control: Install Package"
 			],
 			[
 				"syntax: d",
@@ -293,16 +536,8 @@
 				"Package Control: Upgrade/Overwrite All Packages"
 			],
 			[
-				"packa",
-				"Package Control: Install Package"
-			],
-			[
 				"set syntax: sass",
 				"Set Syntax: Sass"
-			],
-			[
-				"inst",
-				"Package Control: Install Package"
 			],
 			[
 				"set syntax: Java",
@@ -313,16 +548,12 @@
 				"Set Syntax: Handlebars"
 			],
 			[
-				"package",
+				"insta",
 				"Package Control: Install Package"
 			],
 			[
 				"terminal",
 				"Preferences: Terminal Key Bindings – Default"
-			],
-			[
-				"pack",
-				"Package Control: Install Package"
 			],
 			[
 				"Snippet",
@@ -341,11 +572,11 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 491.0
+		"width": 794.0
 	},
 	"console":
 	{
-		"height": 146.0,
+		"height": 226.0,
 		"history":
 		[
 			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
@@ -362,147 +593,168 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+	],
 	"file_history":
 	[
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.eslintrc.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/secret.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.eslintignore",
-		"/home/andrew/.config/sublime-text-3/Packages/User/SublimeLinter.sublime-settings",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.babelrc",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/carousel.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/main.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/public/patterns/rock-eyes.jpg",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/carousel.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Common.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Header.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/ContentArea.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/experiments/TransferringProps.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/navbar-test-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/TopLogo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/SiteTitle.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Footer.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanillaClass.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxVanilla.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxGooglePlus.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/LikeButton.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/like-button/AffinityButton.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/Home.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/helpers/logger.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/experiments/js2015-classes.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/ProductCategoryRow.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/FilterableProductTable.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/admin/AdminHome.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/sample-class-components/TestClassBasedComponent.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/layout/Header.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentList.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentBox.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/CommentForm.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/comment-box/Comment.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/TransferringProps.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/CompositionExample.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/composition/ChildrenExample.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/CarouselStyle.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/store.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/style-info/colors-fonts.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavMenu.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/gulpfile.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-build-paths.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home/Carousel.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/switchPage.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/fonts.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavMenu-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/SiteTitle.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Common.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/TopLogo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/ContentArea.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/styles/fonts.css",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/fonts/din-light.eot",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/public/patterns/10549746_345127515676491_917848030_n.jpg",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10549746_345127515676491_917848030_n.jpg",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/login-box-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/text-content/filterable-product-table/ProductRow.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/node_modules/react-slick/dist/react-slick.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/navbar-test-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Content/Home.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Header.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/NavbarTest.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/aRefactor/Common/Footer.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/TopLogo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/NavbarTest.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/nav/navbar-test/navbar-test-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/Children.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/common/Common.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/common/Header.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/todo.txt",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/wire-up.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/passport-setup.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/logger.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-logging.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-database.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/db/init-db.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/comment-route.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/package.json",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/web.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/api-comment.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/api-comment.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.html",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/load-img-from-server/LoadFromServer.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/img-display/carousel-test/CarouselTest.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/forms/login-box/LoginBoxMaterialUi.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/experiments/material-ui-test-1/RaisedButton.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/.eslintrc.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/index.html",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/navbar-test/navbar-test-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/navbar-test/navbar-test-styles.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/image-uploader/ImageUploader.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/login-box-2/LoginBox2.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/routes.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/containers/FilterLink.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/containers/VisibleTodoList.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/containers/AddTodo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/reducers/visibilityFilter.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/configureStore.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/000-DEFINITIONS.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/018-redux.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/020-react-redux-bindings.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/005-proptypes__prop-validation.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/Todo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/TodoListRoot.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/reducers/index.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.html",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/Footer.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/Link.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/components/TodoList.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/actions.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/todo-test-app/controllers/reducers/todos.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/lib/lodash.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/index-todo.html",
-		"/home/andrew/projects/testbeds/TESTBED2--express-dust-seneca-redis-requirejs-gulp/gulpfile.babel.js",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/base.dust",
-		"/home/andfaulkner/Projects/testbed/express-testbed-2/app/components/prelogin.js"
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-func.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-arrow-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-class.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-static-value.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_fns_in_export_block.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/import.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_default_fn.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/redux/redux--subscribe-cb-on-state-change.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/redux/redux--dispatch-action-to-store.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/node-specific/nodejs--readFile.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/clumped/test.sublime-completions",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/node-specific/nodejs--readfile-external-catch-error-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_random-data/elasticsearch-query-samples-hp.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/methods/react--update-component-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-class-export--all-boiler.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/AJAX/jquery--post.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/logging/log--console-file.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/logging/log--console-file-obj.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/css-cheatsheet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/definitions-general.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--method--getInitialState.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mountable.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--define-child-context-on-component.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--update-component-function.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/must-tries.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--comment--component-header.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component--full-update-lifecycle.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-lodash.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/gulp-task.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-util-inspect.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/requires/require-path.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react-component-simple.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react-component-simple-class-export.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--PropTypes-required---rptreq.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--PropTypes.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/SublimeREPL.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/commenting/comment--module-heading.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--get-default-props.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/commenting/comment--block-1line-bookend.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-def-class.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/koa/003--koa--modules.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-constant.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-def-func.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-export-func.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup-node/essential-modules.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/express-js/express-middleware.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/tdd/tdd-it-es6.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-standard.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export-on-fn-def.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.babelrc",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-one-item.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-all.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-two-items.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list-of.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.gitignore",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/redux/001--redux-what-it-is.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/bash_ampersands_double_pipes__flow_operators.md",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/014-regular_expressions.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b005-streaming_into_ruby_from_cli.sh",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b001-filesystem_interaction.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copy-move-del-etc--files.rb",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copying-moving-etc--files",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-dropdown(select-tag).sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mounter--(mounts_another_component).sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--findDOMNode--toGetChildValue.sublime-snippet",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/config/populate-cases-config.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/progress-bar-handler.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/load-configs.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/field-extractor-utils.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/get-merged-user-object.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases-bk.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/run-progress-bar.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-triggers.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/email/test.email.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-email.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/test.email-template.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/elasticsearch-collection.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/settings/picklist-settings-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/header-toolbar-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-grid.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/es-helpers.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/grid-filters-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/templates/common/grid-filters-tmpl.dust",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/case-model.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-attachment.js",
+		"/home/andrew/Downloads/backup-test.attachment.delete.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/helper.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/file/file-details-view.js",
+		"/home/andrew/projects/tracking-file-record-calls.md",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/search/advanced-search-view.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/web.js",
+		"/home/andrew/Documents/wael-test-case-example.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/document/test.document.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/file.txt",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/test.attachment.delete.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/attachment/test.attachment.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/package-backup.json",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/email/attachment.txt",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/file-model.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-model.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/fixture/public/js/views/file/file-details-view-ex.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/config/options.router.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/trigger/test.trigger-matchFn.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/GenericApi.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/case/case-copy.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-case.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/package.json",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/api.js",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/api-case.js",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/api/web.js",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/lib/services/business-logic/case/case-copy.js",
+		"/home/andrew/projects/isight/config_complaints-demo_v5/node_modules/isight/package.json",
+		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases.js",
+		"/home/andrew/projects/isight/isight_main_v5_beta/server.js",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/andrew/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/debug/winston-logger.js",
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/config/default.js",
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server.js",
+		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/launch-seneca.js"
 	],
 	"find":
 	{
-		"height": 35.0
+		"height": 22.0
 	},
 	"find_in_files":
 	{
 		"height": 93.0,
 		"where_history":
 		[
-			"<project>,-**/node_modules/**,-**/.build/**",
+			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
+			"<project>",
+			"<project>,-node_modules/**,-.build/**,*.js,-gulpfile.js",
+			"<project>,-node_modules/**,-.build/**,*.js",
+			"<project>,-node_modules/**,-.build/**",
+			"<project>,-node_modules/**",
+			"<project>",
+			"/home/andfaulkner/Projects/testbed/testbed-seneca--4/",
+			"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/seneca",
+			"<project>",
+			"<project>, ,-node_modules",
+			"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3",
+			"/home/andfaulkner/Projects/testbed/express-backbone-testbed-3/node_modules/material-ui",
+			"<project>,-node_modules/**/*.*",
+			"<project>,-node_modules**",
+			"<project>,-node_modules",
+			"<project>/app",
+			"<project>",
+			"/home/andfaulkner/Projects/testbed/express-testbed-2/app",
 			"<project>",
 			"/home/andfaulkner/Projects/testbed/express-testbed/src",
 			"<project>",
@@ -523,148 +775,174 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"transform-decorators-legacy",
-			"plugins",
-			"ignore",
-			"files",
-			"\"",
-			"consoleTaskReport",
-			"sass",
-			"consoleTaskReport",
-			"sass",
-			"200px",
-			"inner",
-			"carouselImgContainer",
-			"' />",
-			"\"",
-			"arefactor",
-			"refactor",
-			"aaRefactor",
-			"transferring",
-			"Slider",
-			"style",
 			"1",
+			"li",
+			"ul",
+			"div",
+			"h1",
+			"nameOfFnAndComment",
+			"PRE",
+			"path",
+			"NOT_SELECTED",
+			"    ",
+			"        ",
+			"       ",
+			"      ",
+			"     ",
+			"    ",
+			"		",
 			"  ",
-			"counter",
+			"   ",
 			"  ",
-			"../fonts/",
-			"../",
-			"sass",
-			"root",
-			"SRC.*root",
-			"SRC\\.root",
-			"root",
-			"client",
-			"clientRootHtml",
-			"clientImg",
-			"clientJS",
-			"clientStaticNoLib",
-			"clientLibs",
-			"clientStatic",
-			"Roboto",
-			"style",
-			"carouselImgContainer",
-			"carouselImgContainerStyle",
-			"carouselImgStyle",
-			"arrowStyle",
-			".arrowStyle",
-			"arrowStyle",
-			"arrow",
-			"arrowStyle",
-			"carouselImgContainerStyle",
-			"props",
-			"carouselImgStyle",
-			"CarouselImg",
-			"carouselImgContainerStyle",
-			"infinite",
-			"var",
-			", ",
-			"CarouselArrowButton",
-			"<.?h3>",
-			"position",
-			"ReactRouter",
-			"Link",
-			"ReactRouter",
-			"navMenu",
-			"navMenuOuter",
-			"*********************",
-			"****************************************************",
-			"***************************************************",
-			"**************************************************",
-			"*************************************************",
-			"************************************************",
-			"***********************************************",
-			"**********************************************",
-			"*********************************************",
-			"********************************************",
-			"*******************************************",
-			"******************************************",
-			"*****************************************",
-			"****************************************",
-			"***************************************",
-			"**************************************",
-			"*************************************",
-			"************************************",
-			"***********************************",
-			"**********************************",
-			"*********************************",
-			"********************************",
-			"*******************************",
-			"******************************",
-			"*****************************",
-			"****************************",
-			"***************************",
-			"**************************",
-			"*************************",
-			"************************",
-			"***********************",
-			"**********************",
-			"*********************",
-			";",
 			"\"",
-			"border",
-			"TopLevelMenuItem",
-			"style",
-			"styles",
-			"NavMenuContainer",
-			"NavMenuContainerOuter",
-			"bar",
-			"NavBarContainer",
-			"styles",
-			"generateMenuItems",
-			"db",
-			"miscProps",
-			"Common",
-			" ** ",
-			"NavMenu",
-			"data",
-			"NavMenu",
-			"gallery",
-			"submenu",
-			"Submenu",
-			"//",
-			"Item",
-			"navbarItems",
-			"routeObj",
-			"topBarText",
-			"label",
-			"menuLabel",
-			"topbarText",
-			"routeObj"
+			"  ",
+			"..",
+			"      ",
+			"     ",
+			"    ",
+			"   ",
+			"  ",
+			"; ",
+			"sort",
+			"copy",
+			"max-len",
+			"true",
+			"		",
+			"  ",
+			".js",
+			"my-module",
+			"#!/",
+			"mocha",
+			"babel",
+			"SETUP",
+			"		",
+			"  ",
+			"HEAD",
+			">>",
+			"user",
+			"getUserFromApi",
+			"cookieJar1",
+			"user1",
+			"user",
+			"user1",
+			"cookieJar1",
+			"user1",
+			"excludes",
+			"({\n",
+			"excludes",
+			"userConfig",
+			"setupUserInRole",
+			"FieldExtractorUtils",
+			"generateFieldDefData",
+			"getMergedUserObject",
+			"FieldExtractorUtils",
+			"progressBarHandler",
+			"roles:",
+			"role:",
+			"platformCaseGenConfig",
+			"appPath",
+			"configGlobal",
+			"require",
+			"config",
+			"enable mock",
+			"users",
+			"createSomeUsers",
+			"\\.users[^a-zA-Z_]",
+			"\\.users[^a-zA-Z]",
+			"\\.users",
+			"users",
+			"helper",
+			"serverConfig",
+			"setupUser",
+			"globalSeneca",
+			"seneca",
+			"initSenecaForPopulate",
+			"appPath",
+			"initSenecaForPopulate",
+			"cases",
+			"run-progress",
+			"requirer",
+			"uuid",
+			"util",
+			"api.?email",
+			"sort",
+			"[^a-zA-Z0-9]sort:",
+			"sort:",
+			"column",
+			"getSort",
+			"multiSelect",
+			"Function",
+			"getSort",
+			"sort[^:]",
+			"sortColumnIndex",
+			"_sort",
+			"{ ",
+			"title",
+			"{ ",
+			"sortColumn",
+			"sort",
+			"esHelpers",
+			"GridFiltersView",
+			"Grid",
+			"done\\)",
+			"fs",
+			"path",
+			"startServer",
+			"helper",
+			"util",
+			"console",
+			"inspect",
+			"util",
+			"\\.blue",
+			"\\.gree",
+			"\\.red",
+			"inspOpts",
+			"green",
+			"attachedFile1",
+			"fileId",
+			"green",
+			"parsedBody",
+			"attachedFile1"
 		],
 		"highlight": true,
 		"in_selection": false,
 		"preserve_case": false,
-		"regex": true,
+		"regex": false,
 		"replace_history":
 		[
 			"	",
+			"return ",
 			"",
-			"---------------------",
-			">\n",
-			"\n",
-			">\n<",
-			"	",
+			",\\n            at ",
+			",\\n            ",
+			",\\n",
+			"\\nat",
+			"-",
+			"/",
+			"=",
+			"=    ",
+			"    ",
+			"Content1",
+			"ContentExample1",
+			"'",
+			"client",
+			"/ul",
+			"<ul>",
+			"TodoView",
+			"appView",
+			"todoView",
+			"todoListColl",
+			"todoModel",
+			"",
+			"app.coll.todoList",
+			"app.model.todo",
+			"app.",
+			"AppClass",
+			"appClass.",
+			"console.log",
+			"'",
+			"log.info",
+			"console.log",
 			"'",
 			"base_name",
 			"proto-route",
@@ -698,6 +976,14 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -715,36 +1001,16 @@
 				0,
 				1,
 				1
-			],
-			[
-				1,
-				0,
-				2,
-				1
-			],
-			[
-				0,
-				1,
-				1,
-				2
-			],
-			[
-				1,
-				1,
-				2,
-				2
 			]
 		],
 		"cols":
 		[
 			0.0,
-			0.872842147554,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.491696904452,
 			1.0
 		]
 	},
@@ -761,12 +1027,17 @@
 	{
 		"height": 23.0
 	},
-	"pinned_build_system": "Packages/Markdown Preview/Markdown.sublime-build",
+	"output.nodejs":
+	{
+		"height": 88.0
+	},
+	"pinned_build_system": "Packages/User/Scheme.sublime-build",
+	"project": "pattern-design-showcase-webapp.sublime-project",
 	"replace":
 	{
-		"height": 64.0
+		"height": 40.0
 	},
-	"save_all_on_build": true,
+	"save_all_on_build": false,
 	"select_file":
 	{
 		"height": 0.0,
@@ -774,28 +1045,68 @@
 		"selected_items":
 		[
 			[
-				"app",
-				"app.js"
+				"populate-triggers",
+				"script/populate-triggers.js"
 			],
 			[
-				"routes",
-				"client/routes/routes.jsx"
+				"eshel",
+				"public/js/lib/es-helpers.js"
 			],
 			[
-				"todo",
-				"docs/todo.txt"
+				"gridfilterstmpl",
+				"public/templates/common/grid-filters-tmpl.dust"
 			],
 			[
-				"package",
-				"package.json"
+				"gridfiltersview",
+				"public/js/views/common/grid-filters-view.js"
 			],
 			[
-				"pack",
-				"package.json"
+				"elasticsearchcoll",
+				"public/js/lib/elasticsearch-collection.js"
 			],
 			[
-				"packa",
-				"package.json"
+				"backbonegrid",
+				"public/js/lib/backbone-grid.js"
+			],
+			[
+				"settingsview",
+				"public/js/views/settings/picklist-settings-view.js"
+			],
+			[
+				"casemodel",
+				"public/js/models/case-model.js"
+			],
+			[
+				"case-model",
+				"public/js/models/case-model.js"
+			],
+			[
+				"advancedsearch",
+				"public/js/views/search/advanced-search-view.js"
+			],
+			[
+				"backbonemodel",
+				"public/js/lib/backbone-model.js"
+			],
+			[
+				"filemodel",
+				"public/js/models/file-model.js"
+			],
+			[
+				"filedetails",
+				"public/js/views/file/file-details-view.js"
+			],
+			[
+				"web.js",
+				"lib/api/web.js"
+			],
+			[
+				"generica",
+				"lib/api/GenericApi.js"
+			],
+			[
+				"apicase",
+				"lib/api/api-case.js"
 			]
 		],
 		"width": 0.0
@@ -818,6 +1129,7 @@
 		],
 		"width": 570.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -825,7 +1137,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 322.0,
+	"side_bar_width": 248.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

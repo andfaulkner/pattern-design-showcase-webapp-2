@@ -35,8 +35,16 @@
 ! sane library import
 
 ! Install React-Bootstrap
-- get React-Bootstrap to show 1 element (as POC)
-- React-Bootstrap TextContent grid
+! get React-Bootstrap to show 1 element (as POC)
+! React-Bootstrap TextContent grid
+
+! TextContentBlocks: TextContentBlocks CorporateDesignsBlock static
+! TextContentBlocks: BannersImgBlock static
+! accelerate Webpack - cut build time by 1/2 (below 5s)
+
+! set SASS up (don't be using inline, it's mostly a bad idea)
+
+- split your Content Blocks items into specific files
 
 - require paths relative to client root?
 
@@ -73,8 +81,6 @@
 - 
 
 - TextContentBlocks
-		- TextContentBlocks CorporateDesignsBlock static
-		- BannersImgBlock static
 		- LatestUpdatesBlock static
 		- SocialMediaButtons static
 		- Determine "see more" behaviour

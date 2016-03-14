@@ -16,13 +16,21 @@ const OUTPUT_DIR = path.resolve(__dirname, '.build');
 const CLIENT_SRC_DIR = path.resolve(__dirname, './client');
 const NODE_MODULES_ABS_DIR = path.join(__dirname, 'node_modules');
 
+console.log(buildConfig.polyfills);
+
 module.exports = {
 	debug:true,
-	entry: _.reduce(buildConfig.entryPoints, function(allEntries, entryPoint) {
-		allEntries[entryPoint.jsroot] = path.join(CLIENT_SRC_DIR,
-			entryPoint.folder || '', entryPoint.jsroot + '.jsx');
-		return allEntries;
-	}, {}),
+	entry: _.defaultsDeep({},
+		_.reduce(buildConfig.entryPoints, function(allEntries, entryPoint) {
+			allEntries[entryPoint.jsroot] = path.join(CLIENT_SRC_DIR,
+				entryPoint.folder || '', entryPoint.jsroot + '.jsx');
+			return allEntries;
+		}, {}),
+		_.reduce(buildConfig.polyfills, function(allPolyfills, polyfill) {
+			allPolyfills[_.camelCase(polyfill)] = polyfill;
+			return allPolyfills;
+		}, {})
+	),
 	output: {
 		path: OUTPUT_DIR,
 		filename: '[name].js'
@@ -39,9 +47,11 @@ module.exports = {
 			},
 			{
 				test: /\.jsx?$/,
-				include: [CLIENT_SRC_DIR, NODE_MODULES_ABS_DIR],
+				include: [CLIENT_SRC_DIR],
 				loader: 'babel',
-				query: _.defaultsDeep({}, babelOpts, { cacheDirectory: '.cache' })
+				query: _.defaultsDeep({}, babelOpts, { 
+					cacheDirectory: '.cache'
+				})
 			}
 		]
 	},
