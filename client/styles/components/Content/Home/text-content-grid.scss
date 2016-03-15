@@ -20,11 +20,6 @@ $font-color__ctpanel--title:		#FFFFFF;
 	 $bgcolor__ctpanel--content:	rgba(230, 230, 230, 1);
 		$border__ctpanel--content:	none rgba(0, 0, 0, 1) 0px;
 
-
-// themes: 
-// 		cigeraser
-// 		stark
-
 $cigeraser--font-color__ctpanel--title:	#FFFFFF;
 $cigeraser--bgcolor__ctpanel--title: rgba(64, 64, 64, 1);
 $cigeraser--border__ctpanel--content: none rgba(0, 0, 0, 1) 0px;
@@ -33,6 +28,7 @@ $stark--font-color__ctpanel--title:	#000000;
 $stark--bgcolor__ctpanel:	#FFFFFF;
 $stark--border__ctpanel--content: solid #000000 1px;
 
+//********************************* MIXINS *********************************//
 @mixin ctpanel-title__sect-layout($sectionheight) {
 	height: $sectionheight;
 	padding-left: $content-padding;
@@ -60,6 +56,14 @@ $stark--border__ctpanel--content: solid #000000 1px;
   padding-right: $content-padding;
 }
 
+@mixin ensure-cpanel-minimum-width() {
+	min-width: 320px;
+  &> .row {
+    min-width: 320px;
+  }
+}
+//**************************************************************************//
+
 //**************************** GRID ****************************//
 .contentgrid-area {
 	margin-top: 20px;
@@ -77,15 +81,13 @@ $stark--border__ctpanel--content: solid #000000 1px;
 }
 
 .coldivide.left {
+	@include ensure-cpanel-minimum-width();
 	margin-right: 15px;
 }
 
 .coldivide.right {
+	@include ensure-cpanel-minimum-width();
 	margin-left: 15px;
-  min-width: 320px;
-  &> .row {
-    min-width: 320px;
-  }
 }
 
 #content-grid-wrapper {
@@ -103,21 +105,12 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	}
 }
 
-
 .wrap-content-grid {
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
-
-// do this for tiny mode
-// .show-grid .tiny-window {
-// 	display: flex;
-// 	flex-direction: column;
-// 	align-items: center;
-// 	justify-content: center;
-// }
 
 .right-content-col-flex-wrapper {
 	display: flex;
@@ -139,6 +132,7 @@ $stark--border__ctpanel--content: solid #000000 1px;
 //****************************************************************//
 
 //**************************** TITLE SECTION ****************************//
+// Default tjeme is cigeraser
 .ctpanel--title,
 .ctpanel--title__cigeraser,
 .ctpanel--title.cigeraser {
@@ -146,6 +140,7 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	padding-left: 15px;
 }
 
+// stark is 2nd primary theme
 .ctpanel--title__stark,
 .ctpanel--title.stark {
 	@include ctpanel-title__text-style($stark--font-color__ctpanel--title, $stark--bgcolor__ctpanel);
@@ -186,6 +181,13 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	@include block-lr-margin-change();
 	@include ctpanel--pad-text();
   padding-top: $content-padding / 3;
+}
+
+.ctpanel--content-section.stark {
+	@include block-lr-margin-change();
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-top: 18px;
 }
 
 .ctpanel--content-section__title {
@@ -233,10 +235,8 @@ $stark--border__ctpanel--content: solid #000000 1px;
 }
 
 @media (max-width: 767px) and (min-width: 0px) {
-	.col-lg-1 .col-md-1 .hidden-sm .hidden-xs {
-	  display: visible!important;
-	}
+	.col-lg-1 .col-md-1 .hidden-sm .hidden-xs,
 	.col-lg-1 .hidden-md .hidden-sm .hidden-xs {
-		display: visible!important;
+	  display: visible!important;
 	}
 }

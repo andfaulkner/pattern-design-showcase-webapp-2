@@ -95,6 +95,7 @@
     "bootstrap": "^3.3.6",
     "bootstrap-sass": "^3.3.6",
     "clarify": "^1.0.5",
+    "classnames": "2.2.3",
     "colors": "^1.1.2",
     "config": "^1.19.0",
     "connect-redis": "3.0.2",
