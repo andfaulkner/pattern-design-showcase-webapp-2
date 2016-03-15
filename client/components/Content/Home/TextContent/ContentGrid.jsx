@@ -9,18 +9,19 @@ import { TextBlockLatestUpdates } from './TextBlockLatestUpdates.jsx';
 
 // TODO fetch the content from here, set it up to be grabbed via AJAX 
 const contentLeft = {
+	spacer: '&nbsp;| ',
 	description: `Available for hire to make your web, print, ads, or anything
 								at all into a beautiful whirl of color`,
 	designs: [
 		{
-			company: 'backupbrain inc.',
-			project: 'web banners',
+			line1: 'backupbrain inc.',
+			line2: 'web banners',
 			datecomplete: '09/03/2016',
 			link: ''
 		},
 		{
-			company: 'Jaymes White Entertainment',
-			project: 'company logo',
+			line1: 'Jaymes White Entertainment',
+			line2: 'company logo',
 			datecomplete: '01/01/2016',
 			link: ''
 		}
@@ -29,19 +30,24 @@ const contentLeft = {
 
 // TODO fetch the content from here, set it up to be grabbed via AJAX 
 const contentRight = {
+	spacer: '',
 	designs: [
 		{
-			company: 'backupbrain inc.',
-			project: 'web banners',
+			line1: 'new pattern: cornstarch and too much fidgeting',
 			datecomplete: '09/03/2016',
 			link: ''
 		},
 		{
-			company: 'Jaymes White Entertainment',
-			project: 'company logo',
-			datecomplete: '01/01/2016',
+			line1: '"I reach, you flow: The collected works of Tamara Jurchuk" published',
+			datecomplete: '09/03/2016',
+			link: ''
+		},
+		{
+			line1: 'new pattern: spin-out without a windy day',
+			datecomplete: '02/12/2023',
 			link: ''
 		}
+
 	]
 };
 
@@ -55,14 +61,6 @@ const ContentGridWrapper = () => (
 		<Col													lg={1}	md={1} 	sm={1}		xs={1}><Row /></Col>
 	</Grid>
 );
-
-			// className="show-grid" id="entire-grid" style={{
-			// 	width: '100%',
-			//   '@media (max-width: 767px)': {
-			//     width: '100%',
-			// 		display: 'flex!important'
-			//   }
-			// }
 
 @Radium({isRoot: true})
 class ContentGrid extends React.Component {
@@ -92,31 +90,12 @@ class ContentGrid extends React.Component {
 				<Col 											lg={1}		mdHidden	smHidden	xs={2} />		{/* Spacer*/}
 				<Col 											lgHidden	mdHidden	smHidden	xs={3} />		{/* Spacer*/}
 				<RightContentCol					lg={4}		md={5} 		sm={5}		xs={7} />
-				{/*<TextBlockLatestUpdates		lg={4}	md={5} 	sm={6}		xs={5}/>*/}
 				<Col 											lg={1}	md={1} 	smHidden	xsHidden>SM!</Col>
 				<Col 											lg={1}	md={0}	smHidden	xs={2} /> {/* Spacer*/}
 			</Row>
 		);
 	}
 };
-
-// const ContentGrid = () => (
-// 	<Row className="show-grid" id="entire-grid" style={{
-// 		width: '100%',
-// 	  '@media (max-width: 767px)': {
-// 	    width: '100%',
-// 			display: 'flex!important'
-// 	  }
-// 	}}>
-// 		<Col 											lg={1}	md={1} 	smHidden	xsHidden /> {/* Spacer*/}
-// 		<LeftContentCol						lg={4}	md={5} 	sm={6}		xs={2} />
-// 		<Col 											lg={1}	mdHidden	smHidden	xsHidden />		{/* Spacer*/}
-// 		<RightContentCol					lg={4}	md={5} 	sm={6}		xs={2} />
-// 		{/*<TextBlockLatestUpdates		lg={4}	md={5} 	sm={6}		xs={5}/>*/}
-// 		<Col 											lg={1}	md={1} 	smHidden	xsHidden>SM!</Col>
-// 		<Col 											lg={1}	md={0}	smHidden	xsHidden /> {/* Spacer*/}
-// 	</Row>
-// );
 
 const LeftContentCol = ({lg, md, sm, xs}) => (
 	<Col lg={lg}
@@ -155,7 +134,8 @@ const RightContentCol = ({lg, md, sm, xs}) => (
 			style={{
 				theme: 'stark',
 				borderClass: 'ctpanel--title-border__stark',
-				title: 'ctpanel--title stark'
+				title: 'ctpanel--title stark',
+				contentMargin: 'ctpanel--content-margin'
 			}}
 		/>
 	</Col>
