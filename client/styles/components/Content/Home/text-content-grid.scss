@@ -20,14 +20,32 @@ $font-color__ctpanel--title:		#FFFFFF;
 	 $bgcolor__ctpanel--content:	rgba(230, 230, 230, 1);
 		$border__ctpanel--content:	none rgba(0, 0, 0, 1) 0px;
 
-@mixin ctpanel($sectionheight, $fontchosen) {
-	background-color: $bgcolor__ctpanel--title;
-	color: $font-color__ctpanel--title;
-	font: $fontchosen;
+
+// themes: 
+// 		cigeraser
+// 		stark
+
+$cigeraser--font-color__ctpanel--title:	#FFFFFF;
+$cigeraser--bgcolor__ctpanel--title: rgba(64, 64, 64, 1);
+$cigeraser--border__ctpanel--content: none rgba(0, 0, 0, 1) 0px;
+
+$stark--font-color__ctpanel--title:	#000000;
+$stark--bgcolor__ctpanel:	#FFFFFF;
+$stark--border__ctpanel--content: solid #000000 1px;
+
+@mixin ctpanel-title__sect-layout($sectionheight) {
 	height: $sectionheight;
 	padding-left: $content-padding;
 	padding-right: $content-padding;
 	vertical-align: middle;
+}
+
+@mixin ctpanel-title__text-style($titlefontcolor, $titlebgcolor) {
+	background-color: $titlebgcolor;
+	color: $titlefontcolor;
+	font: $font-type__ctpanel--title;
+	padding-top: $padding__ctpanel--title-around;
+	padding-bottom: $padding__ctpanel--title-around;
 }
 
 @mixin block-lr-margin-change() {
@@ -42,17 +60,55 @@ $font-color__ctpanel--title:		#FFFFFF;
   padding-right: $content-padding;
 }
 
+//**************************** GRID ****************************//
 .contentgrid-area {
 	margin-top: 20px;
 }
 
 .show-grid {
 	display: flex;
+	flex-direction: row;
 }
 
 .right-column-wrapper {
 	display: flex;
 	flex-direction: column;
+	align-content: center;
+}
+
+.coldivide.left {
+	margin-right: 15px;
+}
+
+.coldivide.right {
+	margin-left: 15px;
+  min-width: 320px;
+  &> .row {
+    min-width: 320px;
+  }
+}
+
+#content-grid-wrapper {
+	flex-direction: row;
+	display: flex;
+	height: 100%;
+}
+
+@media (max-width: 767px) {
+	#content-grid-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+.wrap-content-grid {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 // do this for tiny mode
@@ -67,18 +123,50 @@ $font-color__ctpanel--title:		#FFFFFF;
 	display: flex;
 	flex-direction: column;
 	justify-content: center;
+	align-items: center;
 }
 
+//**************************************************************//
+
+//**************************** BORDER ****************************//
+.ctpanel--title-border__cigeraser {
+	border: $cigeraser--border__ctpanel--content;
+}
+
+.ctpanel--title-border__stark {
+	border: $stark--border__ctpanel--content;
+}
+//****************************************************************//
+
 //**************************** TITLE SECTION ****************************//
-.ctpanel--title {
-	@include ctpanel($height__ctpanel--title, $font-type__ctpanel--title);
-	padding-top: $padding__ctpanel--title-around;
-	padding-bottom: $padding__ctpanel--title-around;
+.ctpanel--title,
+.ctpanel--title__cigeraser,
+.ctpanel--title.cigeraser {
+	@include ctpanel-title__text-style($cigeraser--font-color__ctpanel--title, $cigeraser--bgcolor__ctpanel--title);
+	padding-left: 15px;
+}
+
+.ctpanel--title__stark,
+.ctpanel--title.stark {
+	@include ctpanel-title__text-style($stark--font-color__ctpanel--title, $stark--bgcolor__ctpanel);
+}
+.ctpanel--content.stark {
+    background-color: #FFFFFF;
+}
+
+.ctpanel--title-one-row-only.row {
+	@include ctpanel-title__sect-layout($height__ctpanel--title / 2.1);
+  &> span {
+	  padding-left: 5px;
+  }
+}
+
+.ctpanel--title-multirow {
+	@include ctpanel-title__sect-layout($height__ctpanel--title-row);
 }
 
 .ctpanel--title-row {
 	@include block-lr-margin-change();
-	@include ctpanel($height__ctpanel--title-row, $font-type__ctpanel--title);
 	padding-bottom: 1px;
 }
 //***********************************************************************//
@@ -119,6 +207,7 @@ $font-color__ctpanel--title:		#FFFFFF;
 	@include block-lr-margin-change();
 	@include ctpanel--pad-text();
 	padding-top: $content-padding / 3;
+	margin-right: -18px; // align see more button with right edge of box
 }
 
 .ctpanel--see-more-button {
@@ -141,4 +230,13 @@ $font-color__ctpanel--title:		#FFFFFF;
 #three-banners-img {
 	max-width:100%;
 	max-height:100%;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+	.col-lg-1 .col-md-1 .hidden-sm .hidden-xs {
+	  display: visible!important;
+	}
+	.col-lg-1 .hidden-md .hidden-sm .hidden-xs {
+		display: visible!important;
+	}
 }

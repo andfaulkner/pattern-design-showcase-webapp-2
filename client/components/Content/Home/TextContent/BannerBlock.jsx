@@ -2,7 +2,7 @@ var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
-import { Row } from 'react-bootstrap'; 
+import { Row, Col } from 'react-bootstrap'; 
 
 export class BannerBlock extends React.Component {
 
@@ -24,11 +24,13 @@ export class BannerBlock extends React.Component {
 	render() {
 		return (
 			<Row id='banner-block-container' className='contentblock-left'>
-				<img
-					className='three-banners-img-block'
-					id='three-banners-img'
-					src='/img/three-banners.jpg'
-				/>
+				<Col xsHidden>
+					<img
+						className='three-banners-img-block'
+						id='three-banners-img'
+						src='/img/three-banners.jpg'
+					/>
+				</Col>
 			</Row>
 		);
 	}

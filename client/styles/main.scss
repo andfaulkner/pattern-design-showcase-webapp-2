@@ -3,6 +3,7 @@ html, body {
 }
 
 @import "normalize.css/normalize";
-@import "components/content.scss";
-@import "components/common.scss";
 @import "fonts.scss";
+
+@import "components/common.scss";
+@import "components/content.scss";

@@ -595,9 +595,14 @@
 	},
 	"expanded_folders":
 	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp"
 	],
 	"file_history":
 	[
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--full-update-lifecycle.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--complete-lifecycle.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple-class-export.sublime-snippet",
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple-class.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-func.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-arrow-function.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-class.sublime-snippet",
@@ -721,11 +726,7 @@
 		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/server.js",
 		"/home/andrew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
-		"/home/andrew/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/debug/winston-logger.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/config/default.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server.js",
-		"/home/andfaulkner/Projects/testbed/testbed-seneca--4/server/microservices/launch-seneca.js"
+		"/home/andrew/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
 	],
 	"find":
 	{
@@ -775,6 +776,7 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"componentWillReceiveProps",
 			"1",
 			"li",
 			"ul",
@@ -901,8 +903,7 @@
 			"attachedFile1",
 			"fileId",
 			"green",
-			"parsedBody",
-			"attachedFile1"
+			"parsedBody"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1137,7 +1138,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 248.0,
+	"side_bar_width": 415.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

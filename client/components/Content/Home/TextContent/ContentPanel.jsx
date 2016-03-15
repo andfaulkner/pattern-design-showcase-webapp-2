@@ -10,26 +10,36 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 import { Row } from 'react-bootstrap'; 
 
-export const ContentPanel = ({content, title='', ...props}) => (
-	<Row className={['ctpanel', className].join(' ')}>
-		<ContentPanelTitle title={title} />
-		<ContentPanelContent content={content}/>
+export const ContentPanel = ({content, title, style, ...props}) => (
+	<Row id='content-panel'>
+		<ContentPanelTitle {...props}
+			title={title}
+			titleStyle={style.title}
+		/>
+		<ContentPanelContent {...props}
+			style={style}
+			content={content}
+		/>
 	</Row>
 );
 
-const ContentPanelTitle = ({title}) => (
-	<div className='ctpanel--title' id='contentpanel-left-title'>
-
-		<Row className='ctpanel--title-row'> corporate </Row>
-		<Row className='ctpanel--title-row'> designs </Row>
+const ContentPanelTitle = ({title = '', titleStyle='ctpanel--title', ...props}) => (
+	<div className={titleStyle}>
+		{_.isArray(title)
+			? title.map(titlePart => <Row className='ctpanel--title-multirow'> {titlePart} </Row>)
+			: <Row className='ctpanel--title-one-row-only'> {title} </Row>
+		}
 	</div>
 );
 
-const ContentPanelContent = ({content}) => (
-	<div className='ctpanel--content'>
-		<ContentPanelContentDescription description={content.description} />
+const ContentPanelContent = ({content, style, ...props}) => (
+	<div className={'ctpanel--content ' + style.borderClass + ' ' + style.theme}>
+		{
+			(content.description)
+			? <ContentPanelDescription description={content.description} /> : ''
+		}
 		{content.designs.map((design) => (
-			<ContentPanelContentSection 
+			<ContentPanelContentSection
 				company={design.company}
 				project={design.project}
 				datecomplete={design.datecomplete}
@@ -47,7 +57,7 @@ const ContentPanelSeeMoreButton = () => (
 	</Row>
 );
 
-const ContentPanelContentDescription = ({description}) => (
+const ContentPanelDescription = ({description}) => (
 	<div className='ctpanel--content-description'>
 		{description}
 	</div>
