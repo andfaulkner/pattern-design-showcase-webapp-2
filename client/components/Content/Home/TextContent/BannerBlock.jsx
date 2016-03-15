@@ -11,16 +11,6 @@ export class BannerBlock extends React.Component {
 		this.container = container;
 	}
 
-	resizeBanners = (e) => {
-  //   this.setState({windowWidth: window.innerWidth});
-  //   let bannersImg = document.getElementById('three-banners-img');
-  //   let bannerContainer = document.getElementById('banner-block-container');
-		// bannersImg.width = $('#banner-block-container').width();
-		// bannersImg.height = $('#banner-block-container').width();
-		// bannerContainer.height = $('#banner-block-container').width();
-		// bannerContainer.style.height = $('#banner-block-container').width() + 'px';
-	}
-
 	render() {
 		return (
 			<Row id='banner-block-container' className='contentblock-left'>
