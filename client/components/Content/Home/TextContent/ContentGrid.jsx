@@ -54,11 +54,15 @@ const contentRight = {
 
 const ContentGridWrapper = () => (
 	<Grid fluid={true} className="contentgrid-area" id='content-grid'>
-		<Col								lg={1}	md={1}	sm={1}		xs={1}><Row /></Col>
-		<Col 								lg={10}	md={10}	sm={10}		xs={10}>
-			<ContentGrid />
+		<Col								lg={1}	md={1}	sm={1}		xs={1}>
+			<Row/>
 		</Col>
-		<Col								lg={1}	md={1} 	sm={1}		xs={1}><Row /></Col>
+		<Col 								lg={10}	md={10}	sm={10}		xs={10}>
+			<ContentGrid/>
+		</Col>
+		<Col								lg={1}	md={1} 	sm={1}		xs={1}>
+			<Row/>
+		</Col>
 	</Grid>
 );
 
@@ -86,12 +90,12 @@ class ContentGrid extends React.Component {
 		return (
 			<Row xs={12} style={this.xsStyle()} id='content-grid-wrapper'>
 				<Col 								lg={1}		md={1} 		smHidden				xs={2} />			 		{/* Spacer*/}
-				<LeftContentCol			lg={4}		md={5} 		sm={5}					xs={8} />
+				<LeftContentCol			lg={5}		md={5} 		sm={5}					xs={8} />
 				<Col 								lg={1}		mdHidden	smHidden				xs={2} />			 		{/* Spacer*/}
 				<Col 								lgHidden	mdHidden	smHidden				xs={3} />			 		{/* Spacer*/}
-				<RightContentCol		lg={4}		md={5} 		sm={5}					xs={7} />
-				<SocialMediaIcons		lg={1}		md={1} 		smHidden={true}	xsHidden={true}/>
-				<Col 								lg={1}		md={0}		smHidden				xs={2} />			 		{/* Spacer*/}
+				<RightContentCol		lg={5}		md={5} 		sm={5}					xs={7} />
+				<SocialMediaIcons		lg={1}		md={1} 		sm={1}					xsHidden={true}/>
+				<Col 								lgHidden		mdHidden		smHidden				xs={2} />			 		{/* Spacer*/}
 			</Row>
 		);
 	}
@@ -99,32 +103,32 @@ class ContentGrid extends React.Component {
 
 var SocialMediaIcons = React.createClass({
 	render: function() {
-		let {smHidden, xsHidden, ...other} = this.props;
+		let {xsHidden, smHidden, mdHidden, lgHidden, ...other} = this.props;
 		return (
-			<Col
-			 	smHidden={!!smHidden}
-			 	xsHidden={!!xsHidden}
-				lg={1}
-				md={1}
+			<Col sm={1} lg={1} md={1}
+				xsHidden={!!xsHidden} smHidden={!!smHidden}
+				mdHidden={!!mdHidden} lgHidden={!!lgHidden}
+				className='social-media-icons-container'
 			>
-				Icons here!
+				<img src='img/icons/social-media/instagram-icon-bright.png'></img>
+				<img src='img/icons/social-media/facebook-icon-dark.png'></img>
+				<img src='img/icons/social-media/twitter-icon-dark.png'></img>
+				<img src='img/icons/social-media/linkedin-icon-bright.png'></img>
 			</Col>
 		);
 	}
 });
 
-
-const LeftContentCol = ({lg, md, sm, xs}) => (
-	<Col lg={lg}
-			 md={md}
-			 sm={sm}
-			 xs={xs}
-			 xsHidden={false}
-			 className='coldivide left'
-			 id='left-content-col'
+const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}) => (
+	<Col lg={lg} md={md} sm={sm} xs={xs}
+	 xsHidden={!!xsHidden} smHidden={!!smHidden}
+	 mdHidden={!!mdHidden} lgHidden={!!lgHidden}
+	 className='coldivide left'
+	 id='left-content-col'
 	>
 		<ContentPanel
 			content={contentLeft}
+			id='corporate-designs'
 			title={['corporate', 'designs']}
 			style={{
 				theme: 'cigeraser',
@@ -136,15 +140,15 @@ const LeftContentCol = ({lg, md, sm, xs}) => (
 	</Col>
 );
 
-const RightContentCol = ({lg, md, sm, xs}) => (
-	<Col lg={lg}
-			 md={md}
-			 sm={sm}
-			 xs={xs}
-			 className='right-content-col-flex-wrapper coldivide right'
-			 id='right-content-col'
+const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}) => (
+	<Col lg={lg} md={md} sm={sm} xs={xs}
+		xsHidden={!!xsHidden} smHidden={!!smHidden}
+		mdHidden={!!mdHidden} lgHidden={!!lgHidden}
+		className='right-content-col-flex-wrapper coldivide right'
+		id='right-content-col'
 	>
 		<ContentPanel
+			id='latest-updates'
 			className=''
 			content={contentRight}
 			title={'latest updates'}
@@ -154,6 +158,7 @@ const RightContentCol = ({lg, md, sm, xs}) => (
 				title: 'ctpanel--title stark',
 				contentMargin: 'ctpanel--content-margin'
 			}}
+			matchWidthById='corporate-designs'
 		/>
 	</Col>
 );

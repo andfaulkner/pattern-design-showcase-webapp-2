@@ -11,19 +11,64 @@ import Radium from 'radium';
 import { Row } from 'react-bootstrap'; 
 var classNames = require('classnames');
 
+export class ContentPanel extends React.Component {
+	constructor(props) {
+		super(props);
+	}
 
-export const ContentPanel = ({content, title, style, ...props}) => (
-	<Row id='content-panel'>
-		<CPanelTitle
-			title={title}
-			titleStyle={style.title}
-		/>
-		<CPanelContent
-			style={style}
-			content={content}
-		/>
-	</Row>
-);
+	/**
+	 * Set the width of this component to always be equal to the width of another specified
+	 * component, based on the value of matchWidthById, which should receive an id with which
+	 * to grab the component to match. Note that this is currently set up to turn on when
+	 * the window is 'small' (below 768px on either height or width) - but could be retooled
+	 * to work more generally.
+	 */
+	matchWidthWhenSmall = () => {
+  	this.setState({windowWidth: window.innerWidth});
+		if (!this.props.matchWidthById) { return; }
+
+		if (window.innerHeight < 768 && window.innerWidth < 768) {
+			this.hasRunReset = false;
+			this.el.style.width = this.elToMatch.getBoundingClientRect().width + 'px';
+
+		// reset the width value, but don't reset again until the size drops below 768 again
+		} else if (!this.hasRunReset) {
+			this.hasRunReset = true;
+			this.el.style.width = '';
+		}
+	}
+
+	/**
+	 * Set the width
+	 *
+	 * @return {[type]} [description]
+	 */
+	componentDidMount = () => {
+		if (this.props.matchWidthById && this.props.id) {
+			this.hasRunReset = true;
+			this.el = document.getElementById(this.props.id);
+			this.elToMatch = document.getElementById(this.props.matchWidthById);
+			window.addEventListener('resize', this.matchWidthWhenSmall);
+			this.matchWidthWhenSmall();
+		}
+	}
+
+	render() {
+		return (
+			<Row className={'content-panel'} id={this.props.id}>
+				<CPanelTitle
+					title={this.props.title}
+					titleStyle={this.props.style.title}
+					matchWidthById={this.props.matchWidthById}
+				/>
+				<CPanelContent
+					style={this.props.style}
+					content={this.props.content}
+				/>
+			</Row>
+		);
+	}
+};
 
 /**
  * Title section - block above actual content.
