@@ -1,15 +1,20 @@
 /**************************************************************************************************
 *
-*			"Corporate designs" content block - initially on left side of page
-*
+*			Renders content blocks - e.g. corporate designs, latest updates
+*			Below nav menu, & carousel in home page
+*			
 */
 
+// REACT
 var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
+
+// REACT HELPERS - ROUTING, STYLES, COMPONENTS
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
-import { Row } from 'react-bootstrap'; 
+import { Row } from 'react-bootstrap';
 var classNames = require('classnames');
+
 
 export class ContentPanel extends React.Component {
 	constructor(props) {
@@ -110,7 +115,6 @@ const CPanelContent = ({content, style}) => (
 		<CPanelSeeMoreButton />
 	</div>
 );
-
 
 const CPanelSeeMoreButton = () => (
 	<Row className='ctpanel--see-more-button-row'>
