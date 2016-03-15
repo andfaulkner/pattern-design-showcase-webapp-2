@@ -112,6 +112,7 @@
     "marked": "^0.3.5",
     "material-ui": "git+https://github.com/callemall/material-ui.git#master",
     "multer": "^1.1.0",
+    "normalize.css": "3.0.3",
     "npm": "^3.7.2",
     "passport": "0.3.2",
     "passport-google-oauth2": "0.1.6",

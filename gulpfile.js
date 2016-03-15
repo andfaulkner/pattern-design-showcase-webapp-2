@@ -128,7 +128,9 @@ gulp.task('get-tasks', function() {
 gulp.task('sass', function staticLibsTask() {
 	return gulp.src(SRC.rootStyle)
 		.pipe(newerThanRootIfNotProduction())
-		.pipe(p.sass().on('error', p.sass.logError))
+		.pipe(p.sass({
+			includePaths: './node_modules'
+		}).on('error', p.sass.logError))
 		.pipe(consoleTaskReport())
 		.pipe(gulp.dest(DEST.styles));
 });

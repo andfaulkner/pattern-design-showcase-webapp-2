@@ -44,6 +44,7 @@
 
 ! set SASS up (don't be using inline, it's mostly a bad idea)
 
+- css normalize
 - split your Content Blocks items into specific files
 
 - require paths relative to client root?

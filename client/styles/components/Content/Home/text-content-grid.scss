@@ -1,24 +1,28 @@
-//contentblock-left
+//ctpanel
 //	--> text-
 
-$font-type__contentblock-left--title:  normal normal normal 30px/1.4em 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
-$font-type__contentblock-left--info:  normal normal normal 14px/1.4em 'courier new', monospace;
+$font-type__ctpanel--title:  normal normal normal 30px/1.4em 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
+$font-type__ctpanel--info:  normal normal normal 14px/1.4em 'courier new', monospace;
 
-$font-type__contentblock-left--section-title:	normal normal bold 19px/1.4em din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
-$font-type__contentblock-left--section-date: normal normal normal 15px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace;
-$font-type__contentblock-left--see-more-button: normal normal normal 17px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace;
+$font-type__ctpanel--section-title:	normal normal bold 19px/1.4em din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
+$font-type__ctpanel--section-date: normal normal normal 15px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace;
+$font-type__ctpanel--see-more-button: normal normal normal 17px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace;
 
-$height--contentblock-left--title: 90px;
-$height--contentblock-left--title-row: 35px;
+$height__ctpanel--title: 90px;
+$height__ctpanel--title-row: 35px;
 
 $content-padding: 18px;
-$padding__contentblock-left--title-around: 7px;
+$padding__ctpanel--title-around: 7px;
 
-$bgcolor__contentblock-left--content: rgba(230, 230, 230, 1);
+// configurable
+$font-color__ctpanel--title:		#FFFFFF;
+	 $bgcolor__ctpanel--title:		rgba(64, 64, 64, 1);
+	 $bgcolor__ctpanel--content:	rgba(230, 230, 230, 1);
+		$border__ctpanel--content:	none rgba(0, 0, 0, 1) 0px;
 
-@mixin contentblock-left($sectionheight, $fontchosen) {
-	background-color: rgba(64, 64, 64, 1);
-	color: #FFFFFF;
+@mixin ctpanel($sectionheight, $fontchosen) {
+	background-color: $bgcolor__ctpanel--title;
+	color: $font-color__ctpanel--title;
 	font: $fontchosen;
 	height: $sectionheight;
 	padding-left: $content-padding;
@@ -33,82 +37,102 @@ $bgcolor__contentblock-left--content: rgba(230, 230, 230, 1);
 	}
 }
 
-@mixin contentblock-left--pad-text() {
+@mixin ctpanel--pad-text() {
   padding-left: $content-padding;
   padding-right: $content-padding;
 }
 
-
-.contentblock-area {
+.contentgrid-area {
 	margin-top: 20px;
 }
 
-.contentblock-left {
-	height: 330px;
-	padding-right: $content-padding;
+.show-grid {
+	display: flex;
 }
 
-.contentblock-left--title {
-	@include contentblock-left($height--contentblock-left--title, $font-type__contentblock-left--title);
-	padding-top: $padding__contentblock-left--title-around;
-	padding-bottom: $padding__contentblock-left--title-around;
+.right-column-wrapper {
+	display: flex;
+	flex-direction: column;
 }
 
-.contentblock-left--content {
-	background-color: $bgcolor__contentblock-left--content;
+// do this for tiny mode
+// .show-grid .tiny-window {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+
+.right-content-col-flex-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 }
 
-.contentblock-left--title-row {
+//**************************** TITLE SECTION ****************************//
+.ctpanel--title {
+	@include ctpanel($height__ctpanel--title, $font-type__ctpanel--title);
+	padding-top: $padding__ctpanel--title-around;
+	padding-bottom: $padding__ctpanel--title-around;
+}
+
+.ctpanel--title-row {
 	@include block-lr-margin-change();
-	@include contentblock-left($height--contentblock-left--title-row, $font-type__contentblock-left--title);
+	@include ctpanel($height__ctpanel--title-row, $font-type__ctpanel--title);
 	padding-bottom: 1px;
 }
+//***********************************************************************//
 
-.contentblock-left--content-description {
-	@include contentblock-left--pad-text();
+//**************************** CONTENT SECTION ****************************//
+.ctpanel--content {
+	background-color: $bgcolor__ctpanel--content;
+}
+
+.ctpanel--content-description {
+	@include ctpanel--pad-text();
   padding-top: $content-padding;
-	font: $font-type__contentblock-left--info;
+	font: $font-type__ctpanel--info;
 }
 
-.contentblock-left--content-title {
+.ctpanel--content-section {
 	@include block-lr-margin-change();
-}
-
-.contentblock-left--content-section {
-	@include block-lr-margin-change();
-	@include contentblock-left--pad-text();
+	@include ctpanel--pad-text();
   padding-top: $content-padding / 3;
 }
 
-.contentblock-left--content-section__title {
+.ctpanel--content-section__title {
 	@include block-lr-margin-change();
-	@include contentblock-left--pad-text();
-}
-.contentblock-left--content-section__title-row {
-	font: $font-type__contentblock-left--section-title;
+	@include ctpanel--pad-text();
 }
 
-.contentblock-left--content-section__date {
-	font: $font-type__contentblock-left--section-date;
+.ctpanel--content-section__title-row {
+	font: $font-type__ctpanel--section-title;
 }
 
-.contentblock-left--see-more-button-row.row {
+.ctpanel--content-section__date {
+	font: $font-type__ctpanel--section-date;
+}
+//*************************************************************************//
+
+//**************************** SEE MORE BUTTON SECTION ****************************//
+.ctpanel--see-more-button-row.row {
 	@include block-lr-margin-change();
-	@include contentblock-left--pad-text();
+	@include ctpanel--pad-text();
 	padding-top: $content-padding / 3;
 }
 
-.contentblock-left--see-more-button {
+.ctpanel--see-more-button {
 	@include block-lr-margin-change();
-	@include contentblock-left--pad-text();
+	@include ctpanel--pad-text();
 	padding-top: 10px;
 	padding-bottom: 10px;
 	float: right;
 	background-color: rgba(114, 114, 114, 1);
 	border: solid rgba(0, 0, 0, 1) 0px;
 	color: #FFFFFF;
-	font: $font-type__contentblock-left--see-more-button;
+	font: $font-type__ctpanel--see-more-button;
 }
+//*********************************************************************************//
 
 .three-banners-img-block {
 	margin-top: 20px;
