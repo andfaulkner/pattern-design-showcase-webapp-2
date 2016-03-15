@@ -239,4 +239,40 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	.col-lg-1 .hidden-md .hidden-sm .hidden-xs {
 	  display: visible!important;
 	}
+	.coldivide {
+		@include ensure-cpanel-minimum-width();
+		.left { margin-right: 0px; }
+		.right { margin-left: 0px; }
+	}
 }
+
+
+
+@media (max-width: 970px) and (min-width: 768px) {
+	.social-media-icons-container {
+		min-width: 120px;
+		margin-left: -100px;
+		margin-top: -5px;
+	}
+	.coldivide {
+		@include ensure-cpanel-minimum-width();
+		.left { margin-right: 15px; }
+		.right { margin-left: 15px; }
+	}
+}
+
+//**************************** SOCIAL MEDIA ICONS STRIP ****************************//
+@media (min-width: 970px) {
+	.social-media-icons-container {
+		min-width: 120px;
+		margin-left: -10px;
+		margin-top: -5px;
+	}
+	.coldivide {
+		@include ensure-cpanel-minimum-width();
+		.left { margin-right: 15px; }
+		.right { margin-left: 15px; }
+	}
+}
+//**********************************************************************************//
+
