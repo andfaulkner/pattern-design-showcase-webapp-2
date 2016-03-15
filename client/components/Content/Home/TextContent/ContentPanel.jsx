@@ -27,25 +27,16 @@ const ContentPanelTitle = ({title = '', titleStyle='ctpanel--title', ...props}) 
 	<div className={titleStyle}>
 		{_.isArray(title)
 			? title.map(titlePart => <Row className='ctpanel--title-multirow'> {titlePart} </Row>)
-			: <Row className='ctpanel--title-one-row-only'> {title} </Row>
-		}
+			: <Row className='ctpanel--title-one-row-only'> {title} </Row>}
 	</div>
 );
 
 const ContentPanelContent = ({content, style, ...props}) => (
-	<div className={'ctpanel--content ' + style.borderClass + ' ' + style.theme}>
-		{
-			(content.description)
-			? <ContentPanelDescription description={content.description} /> : ''
-		}
-		{content.designs.map((design) => (
-			<ContentPanelContentSection
-				company={design.company}
-				project={design.project}
-				datecomplete={design.datecomplete}
-				link={design.link}
-			/>
-		))}
+	<div className={ 'ctpanel--content ' +	style.borderClass +	' ' + style.theme }>
+		{ content.description ? <ContentPanelDescription description={content.description} /> : '' }
+		{ content.designs.map(
+			design => (<ContentPanelContentSection design={design} />)
+		)}
 		<ContentPanelSeeMoreButton />
 	</div>
 );
@@ -69,13 +60,13 @@ var ContentPanelContentSection = React.createClass({
 			<Row className='ctpanel--content-section'>
 				<Row className='ctpanel--content-section__title'>
 					<Row className='ctpanel--content-section__title-row'>
-						{this.props.company}
+						{this.props.design.company}
 					</Row>
 					<Row className='ctpanel--content-section__title-row'>
-						&nbsp;| {this.props.project}
+						&nbsp;| {this.props.design.project}
 					</Row>
 					<Row className='ctpanel--content-section__date'>
-						{this.props.datecomplete}
+						{this.props.design.datecomplete}
 					</Row>
 				</Row>
 			</Row>
