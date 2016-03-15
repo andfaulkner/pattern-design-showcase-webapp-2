@@ -54,11 +54,11 @@ const contentRight = {
 
 const ContentGridWrapper = () => (
 	<Grid fluid={true} className="contentgrid-area" id='content-grid'>
-		<Col													lg={1}	md={1}	sm={1}		xs={1}><Row /></Col>
-		<Col 													lg={10}	md={10}	sm={10}		xs={10}>
+		<Col								lg={1}	md={1}	sm={1}		xs={1}><Row /></Col>
+		<Col 								lg={10}	md={10}	sm={10}		xs={10}>
 			<ContentGrid />
 		</Col>
-		<Col													lg={1}	md={1} 	sm={1}		xs={1}><Row /></Col>
+		<Col								lg={1}	md={1} 	sm={1}		xs={1}><Row /></Col>
 	</Grid>
 );
 
@@ -85,17 +85,34 @@ class ContentGrid extends React.Component {
 		console.log('ContentGrid.jsx:: ContentGridthis.xsStyle():', this.xsStyle());
 		return (
 			<Row xs={12} style={this.xsStyle()} id='content-grid-wrapper'>
-				<Col 											lg={1}		md={1} 		smHidden	xs={2} /> {/* Spacer*/}
-				<LeftContentCol						lg={4}		md={5} 		sm={5}		xs={8} />
-				<Col 											lg={1}		mdHidden	smHidden	xs={2} />		{/* Spacer*/}
-				<Col 											lgHidden	mdHidden	smHidden	xs={3} />		{/* Spacer*/}
-				<RightContentCol					lg={4}		md={5} 		sm={5}		xs={7} />
-				<Col 											lg={1}	md={1} 	smHidden	xsHidden>SM!</Col>
-				<Col 											lg={1}	md={0}	smHidden	xs={2} /> {/* Spacer*/}
+				<Col 								lg={1}		md={1} 		smHidden				xs={2} />			 		{/* Spacer*/}
+				<LeftContentCol			lg={4}		md={5} 		sm={5}					xs={8} />
+				<Col 								lg={1}		mdHidden	smHidden				xs={2} />			 		{/* Spacer*/}
+				<Col 								lgHidden	mdHidden	smHidden				xs={3} />			 		{/* Spacer*/}
+				<RightContentCol		lg={4}		md={5} 		sm={5}					xs={7} />
+				<SocialMediaIcons		lg={1}		md={1} 		smHidden={true}	xsHidden={true}/>
+				<Col 								lg={1}		md={0}		smHidden				xs={2} />			 		{/* Spacer*/}
 			</Row>
 		);
 	}
 };
+
+var SocialMediaIcons = React.createClass({
+	render: function() {
+		let {smHidden, xsHidden, ...other} = this.props;
+		return (
+			<Col
+			 	smHidden={!!smHidden}
+			 	xsHidden={!!xsHidden}
+				lg={1}
+				md={1}
+			>
+				Icons here!
+			</Col>
+		);
+	}
+});
+
 
 const LeftContentCol = ({lg, md, sm, xs}) => (
 	<Col lg={lg}

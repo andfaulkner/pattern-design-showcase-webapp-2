@@ -24,9 +24,4 @@ export class BannerBlock extends React.Component {
 			</Row>
 		);
 	}
-
-	componentDidMount() {
-		window.addEventListener('resize', this.resizeBanners);
-		this.resizeBanners();
-	}
 };
