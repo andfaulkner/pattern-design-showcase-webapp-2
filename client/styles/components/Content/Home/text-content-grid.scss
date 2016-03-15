@@ -1,0 +1,242 @@
+//ctpanel
+//	--> text-
+
+$font-type__ctpanel--title:  normal normal normal 30px/1.4em 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
+$font-type__ctpanel--info:  normal normal normal 14px/1.4em 'courier new', monospace;
+
+$font-type__ctpanel--section-title:	normal normal bold 19px/1.4em din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
+$font-type__ctpanel--section-date: normal normal normal 15px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace;
+$font-type__ctpanel--see-more-button: normal normal normal 17px/1.4em 'courier new',courier-ps-w01,courier-ps-w02,courier-ps-w10,monospace;
+
+$height__ctpanel--title: 90px;
+$height__ctpanel--title-row: 35px;
+
+$content-padding: 18px;
+$padding__ctpanel--title-around: 7px;
+
+// configurable
+$font-color__ctpanel--title:		#FFFFFF;
+	 $bgcolor__ctpanel--title:		rgba(64, 64, 64, 1);
+	 $bgcolor__ctpanel--content:	rgba(230, 230, 230, 1);
+		$border__ctpanel--content:	none rgba(0, 0, 0, 1) 0px;
+
+
+// themes: 
+// 		cigeraser
+// 		stark
+
+$cigeraser--font-color__ctpanel--title:	#FFFFFF;
+$cigeraser--bgcolor__ctpanel--title: rgba(64, 64, 64, 1);
+$cigeraser--border__ctpanel--content: none rgba(0, 0, 0, 1) 0px;
+
+$stark--font-color__ctpanel--title:	#000000;
+$stark--bgcolor__ctpanel:	#FFFFFF;
+$stark--border__ctpanel--content: solid #000000 1px;
+
+@mixin ctpanel-title__sect-layout($sectionheight) {
+	height: $sectionheight;
+	padding-left: $content-padding;
+	padding-right: $content-padding;
+	vertical-align: middle;
+}
+
+@mixin ctpanel-title__text-style($titlefontcolor, $titlebgcolor) {
+	background-color: $titlebgcolor;
+	color: $titlefontcolor;
+	font: $font-type__ctpanel--title;
+	padding-top: $padding__ctpanel--title-around;
+	padding-bottom: $padding__ctpanel--title-around;
+}
+
+@mixin block-lr-margin-change() {
+	.row {
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+}
+
+@mixin ctpanel--pad-text() {
+  padding-left: $content-padding;
+  padding-right: $content-padding;
+}
+
+//**************************** GRID ****************************//
+.contentgrid-area {
+	margin-top: 20px;
+}
+
+.show-grid {
+	display: flex;
+	flex-direction: row;
+}
+
+.right-column-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-content: center;
+}
+
+.coldivide.left {
+	margin-right: 15px;
+}
+
+.coldivide.right {
+	margin-left: 15px;
+  min-width: 320px;
+  &> .row {
+    min-width: 320px;
+  }
+}
+
+#content-grid-wrapper {
+	flex-direction: row;
+	display: flex;
+	height: 100%;
+}
+
+@media (max-width: 767px) {
+	#content-grid-wrapper {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+}
+
+
+.wrap-content-grid {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+// do this for tiny mode
+// .show-grid .tiny-window {
+// 	display: flex;
+// 	flex-direction: column;
+// 	align-items: center;
+// 	justify-content: center;
+// }
+
+.right-content-col-flex-wrapper {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+//**************************************************************//
+
+//**************************** BORDER ****************************//
+.ctpanel--title-border__cigeraser {
+	border: $cigeraser--border__ctpanel--content;
+}
+
+.ctpanel--title-border__stark {
+	border: $stark--border__ctpanel--content;
+}
+//****************************************************************//
+
+//**************************** TITLE SECTION ****************************//
+.ctpanel--title,
+.ctpanel--title__cigeraser,
+.ctpanel--title.cigeraser {
+	@include ctpanel-title__text-style($cigeraser--font-color__ctpanel--title, $cigeraser--bgcolor__ctpanel--title);
+	padding-left: 15px;
+}
+
+.ctpanel--title__stark,
+.ctpanel--title.stark {
+	@include ctpanel-title__text-style($stark--font-color__ctpanel--title, $stark--bgcolor__ctpanel);
+}
+.ctpanel--content.stark {
+    background-color: #FFFFFF;
+}
+
+.ctpanel--title-one-row-only.row {
+	@include ctpanel-title__sect-layout($height__ctpanel--title / 2.1);
+  &> span {
+	  padding-left: 5px;
+  }
+}
+
+.ctpanel--title-multirow {
+	@include ctpanel-title__sect-layout($height__ctpanel--title-row);
+}
+
+.ctpanel--title-row {
+	@include block-lr-margin-change();
+	padding-bottom: 1px;
+}
+//***********************************************************************//
+
+//**************************** CONTENT SECTION ****************************//
+.ctpanel--content {
+	background-color: $bgcolor__ctpanel--content;
+}
+
+.ctpanel--content-description {
+	@include ctpanel--pad-text();
+  padding-top: $content-padding;
+	font: $font-type__ctpanel--info;
+}
+
+.ctpanel--content-section {
+	@include block-lr-margin-change();
+	@include ctpanel--pad-text();
+  padding-top: $content-padding / 3;
+}
+
+.ctpanel--content-section__title {
+	@include block-lr-margin-change();
+	@include ctpanel--pad-text();
+}
+
+.ctpanel--content-section__title-row {
+	font: $font-type__ctpanel--section-title;
+}
+
+.ctpanel--content-section__date {
+	font: $font-type__ctpanel--section-date;
+}
+//*************************************************************************//
+
+//**************************** SEE MORE BUTTON SECTION ****************************//
+.ctpanel--see-more-button-row.row {
+	@include block-lr-margin-change();
+	@include ctpanel--pad-text();
+	padding-top: $content-padding / 3;
+	margin-right: -18px; // align see more button with right edge of box
+}
+
+.ctpanel--see-more-button {
+	@include block-lr-margin-change();
+	@include ctpanel--pad-text();
+	padding-top: 10px;
+	padding-bottom: 10px;
+	float: right;
+	background-color: rgba(114, 114, 114, 1);
+	border: solid rgba(0, 0, 0, 1) 0px;
+	color: #FFFFFF;
+	font: $font-type__ctpanel--see-more-button;
+}
+//*********************************************************************************//
+
+.three-banners-img-block {
+	margin-top: 20px;
+}
+
+#three-banners-img {
+	max-width:100%;
+	max-height:100%;
+}
+
+@media (max-width: 767px) and (min-width: 0px) {
+	.col-lg-1 .col-md-1 .hidden-sm .hidden-xs {
+	  display: visible!important;
+	}
+	.col-lg-1 .hidden-md .hidden-sm .hidden-xs {
+		display: visible!important;
+	}
+}

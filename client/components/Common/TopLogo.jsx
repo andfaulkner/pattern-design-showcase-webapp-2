@@ -4,21 +4,10 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
 var logger = require('../../helpers/logger.js')('components/Common/TopLogo.jsx');
 
-var styles = {
-	topLogo: {
-		textAlign: 'center',
-		marginBottom: '5px',
-		backgroundColor: 'white'
-	}
-};
+const TopLogo = () => (
+	<div id='top-logo'>
+		<img src="./img/logo.png" />
+	</div>
+);
 
-export default class TopLogo extends React.Component {
-	render() {
-		logger.logRendering('TopLogo').inspect(this.props);
-		return (
-			<div style={styles.topLogo}>
-				<img src="./img/logo.png" />
-			</div>
-		);
-	}
-};
+export default TopLogo;

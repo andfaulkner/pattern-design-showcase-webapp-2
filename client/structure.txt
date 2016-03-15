@@ -1,0 +1,42 @@
+Provider
+	Routes
+		Common
+			-	Logo
+			-	Title
+			-	Nav menu
+						[MenuItem {{ A }}]													<< many. Exact number is dynamic.
+								DropDownList
+										[ListItem]													<< many.
+			-	ContentArea
+						* HomeContent
+								Carousel
+										[CarouselImage {{ B }}]							<< many.
+								TextContentGrid
+										LeftCol
+												CorporateDesignsBlock
+												BannersImg
+										RightCol
+												LatestUpdatesBlock
+										FarRightCol
+												SocialMediaButtons
+						* GalleryContent
+						* AboutContent
+						* ShopContent
+						* ContactContent
+			-	Footer
+
+----------------------------------------------
+MenuItem {{ A }}
+	Home
+	Gallery
+	About
+	Contact
+----------------------------------------------
+Carousel {{ B }}
+		
+
+
+
+
+
+┃┗━

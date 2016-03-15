@@ -1,2 +1,9 @@
-@import "components/carousel.scss";
+html, body {
+	 height: 100%;
+}
+
+@import "normalize.css/normalize";
 @import "fonts.scss";
+
+@import "components/common.scss";
+@import "components/content.scss";
