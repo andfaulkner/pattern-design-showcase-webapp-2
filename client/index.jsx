@@ -3,23 +3,26 @@
 *			Renders root node. All routes rendered in from here. 
 *
 */
-
+// REACT
 var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
+
+// HELPER LIBS (ROUTING, STYLING)
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
-// var Router = ReactRouter.Router;
-// var Route = ReactRouter.Route;
-// var hashHistory = ReactRouter.hashHistory
-// import { Router, Route, hashHistory, Link } from 'react-router';
-import Radium from 'radium';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-
 import routes from './routes/routes.jsx';
-var logger = require('./helpers/logger.js')('client/index.js');
+import Radium from 'radium';
 
+// COMPONENTS
+import Common from './components/Common/Common.jsx';
+
+// REDUX
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import reducers from './store/reducers/reducers.jsx';
 let store = createStore(reducers);
+
+// LOGGING
+var logger = require('./helpers/logger.js')('client/index.js');
 
 /**
  * Routes are rendered in from here
@@ -31,12 +34,13 @@ class RootNode extends React.Component{
 		var allRoutes = _.map(routes, function(route, index) {
 			let {path, component, ...miscProps} = route;
 			return (
-				<Route
-					{...miscProps}
-					path={path}
-					key={index} 
-					component={component}
-				/>
+				<Route component={Common}>
+					<Route {...miscProps}
+						path={path}
+						key={index} 
+						component={component}
+					/>
+				</Route>
 			);
 		});
 

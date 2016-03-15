@@ -8,12 +8,8 @@ var React = React || require('react');;
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 
-// import { Router, Route, hashHistory, Link } from 'react-router';
-
-import TopBar from './TopLogo.jsx';
 import SiteTitle from './SiteTitle.jsx';
 import Footer from './Footer.jsx';
-import ContentArea from '../Content/ContentArea.jsx';
 import NavMenu from './NavMenu.jsx';
 import TopLogo from './TopLogo.jsx';
 import Radium from 'radium';
@@ -30,8 +26,7 @@ export default class Common extends React.Component {
 				<TopLogo />
 				<SiteTitle />
 				<NavMenu routes={routes} />
-				{/* CONTENT RENDERED HERE*/}
-				{this.props.children}
+				{this.props.children}					{/* actual content rendered here */}
 				<Footer />
 			</div>
 		);

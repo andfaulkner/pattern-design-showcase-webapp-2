@@ -45,7 +45,7 @@ export const AffinityButton = React.createClass({
 	render: function() {
 		var currentAffinity = _.find(data.affinities, (v, k) => (+k === this.state.affinity));
 		return (
-			<Common>
+			<div>
 				You {currentAffinity} this.
 				<div style={{display: 'block'}}>
 					<img
@@ -59,7 +59,7 @@ export const AffinityButton = React.createClass({
 						onClick={this.handleLoveClick}
 					/>
 				</div>
-			</Common>
+			</div>
 		);
 	}
 });

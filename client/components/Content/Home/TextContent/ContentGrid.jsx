@@ -1,11 +1,22 @@
+/**************************************************************************************************
+*
+*			Layout and rendering of the home content grid, below the carousel.
+*			Includes alignment of columns, and placement of various content
+*			components in relation to one another.
+*
+*/
+
+// REACT LIBRARIES & HELPERS
 var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
+
+// REACT COMPONENTS
 import { Grid, Row, Col } from 'react-bootstrap'; 
 import { ContentPanel } from './ContentPanel.jsx';
 import { BannerBlock } from './BannerBlock.jsx';
-import { TextBlockLatestUpdates } from './TextBlockLatestUpdates.jsx';
+import { SocialMediaIcons } from './SocialMediaIcons.jsx';
 
 // TODO fetch the content from here, set it up to be grabbed via AJAX 
 const contentLeft = {
@@ -47,11 +58,13 @@ const contentRight = {
 			datecomplete: '02/12/2023',
 			link: ''
 		}
-
 	]
 };
 
 
+/**
+ * Grid itself - encompasses all other ContentGrid components
+ */
 const ContentGridWrapper = () => (
 	<Grid fluid={true} className="contentgrid-area" id='content-grid'>
 		<Col								lg={1}	md={1}	sm={1}		xs={1}>
@@ -101,24 +114,9 @@ class ContentGrid extends React.Component {
 	}
 };
 
-var SocialMediaIcons = React.createClass({
-	render: function() {
-		let {xsHidden, smHidden, mdHidden, lgHidden, ...other} = this.props;
-		return (
-			<Col sm={1} lg={1} md={1}
-				xsHidden={!!xsHidden} smHidden={!!smHidden}
-				mdHidden={!!mdHidden} lgHidden={!!lgHidden}
-				className='social-media-icons-container'
-			>
-				<img src='img/icons/social-media/instagram-icon-bright.png'></img>
-				<img src='img/icons/social-media/facebook-icon-dark.png'></img>
-				<img src='img/icons/social-media/twitter-icon-dark.png'></img>
-				<img src='img/icons/social-media/linkedin-icon-bright.png'></img>
-			</Col>
-		);
-	}
-});
-
+/**
+ * Left column of grid
+ */
 const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}) => (
 	<Col lg={lg} md={md} sm={sm} xs={xs}
 	 xsHidden={!!xsHidden} smHidden={!!smHidden}
@@ -140,6 +138,9 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
 	</Col>
 );
 
+/**
+ * Right column of grid
+ */
 const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}) => (
 	<Col lg={lg} md={md} sm={sm} xs={xs}
 		xsHidden={!!xsHidden} smHidden={!!smHidden}

@@ -20,11 +20,9 @@ const LikeButton = React.createClass({
 			? 'like'
 			: 'haven\'t liked';
 		return (
-			<Common>
 				<p onClick={this.handleClick}>
 					You {text} this. Click to toggle.
 				</p>
-			</Common>
 		)
 	}
 });
