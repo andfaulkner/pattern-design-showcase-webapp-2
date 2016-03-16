@@ -9,12 +9,12 @@ export function setCurrentGalleryImage(state, action) {
 		case 'SET_CURRENT_GALLERY_IMAGE':
 			return {
 				...state,
-				currentImage: action.currentImage || 0
+				currentImage: action.currentImage || _.get(state, 'currentImage')
 			}
 		default:
 			return {
 				...state,
-				currentImage: _.get(state, 'currentImage') || 0
+				currentImage: _.get(state, 'currentImage')
 			}
 	}
 }
@@ -38,31 +38,39 @@ export function setCurrentPage(state, action) {
 			}
 	}
 }
+
+// if the lightbox is currently closed:
+// store the number of the item that was clicked
+// 
+// 
+
 /**
  * Display and hide the modal gallery triggered by clicking a carousel image
  */
 export function setLightboxIsOpen(state, action) {
 	switch (action.type) {
 		case 'SET_LIGHTBOX_IS_OPEN':
-			var curImg = (action.currentImage)
-				? setCurrentGalleryImage(state, {
-					type: SET_CURRENT_GALLERY_IMAGE,
-					currentImage: action.currentImage
-				}) : {};
+			var postNumSetChange = (action.currentImage)
+				? setCurrentGalleryImage(state, 
+					{
+						type: SET_CURRENT_GALLERY_IMAGE,
+						currentImage: action.currentImage
+					}
+				)
+				: state;
 			console.info('setLightboxIsOpen received action type SET_LIGHTBOX_IS_OPEN');
-			console.log('reducers.jsx:: reducers.setLightboxIsOpen:: state:', state);
+			console.log('reducers.jsx:: reducers.setLightboxIsOpen:: postNumSetChange:', postNumSetChange);
 			console.log('reducers.jsx:: reducers.setLightboxIsOpen:: action:', action);
-			console.log('reducers.jsx:: reducers.setLightboxIsOpen:: curImg:', curImg);
-			return Object.assign({}, curImg, {
-				...state,
-				lightboxIsOpen: action.lightboxIsOpen
-			});
+			console.log('reducers.jsx:: reducers.setLightboxIsOpen:: state:', state);
+			return Object.assign({},
+				{
+					...postNumSetChange,
+					lightboxIsOpen: action.lightboxIsOpen
+				}
+			);
 		default:
 			console.warn('setLightboxIsOpen received unknown action type');
-			return {
-				...state,
-				lightboxIsOpen: _.get(state, 'lightboxIsOpen') || false
-			}
+			return state || { }
 	}
 }
 
