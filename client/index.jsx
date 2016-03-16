@@ -17,6 +17,8 @@ import Common from './components/Common/Common.jsx';
 
 // REDUX
 import { Provider } from 'react-redux';
+
+// REDUX: CREATE APPLICATION STORE, MAKE AVAILABLE TO THE WHOLE APP
 import { createStore } from 'redux';
 import reducers from './store/reducers/reducers.jsx';
 let store = createStore(reducers);

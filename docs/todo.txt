@@ -1,4 +1,6 @@
-
+**************************************************************************************
+**************************************** DONE ****************************************
+**************************************************************************************
 ! express running - static
 ! eslint running
 ! basic webpack build & gulp with targeted watch
@@ -34,77 +36,202 @@
 ! top logo
 ! sane library import
 
+
+################## DONE: March 15th ##################
 ! Install React-Bootstrap
 ! get React-Bootstrap to show 1 element (as POC)
 ! React-Bootstrap TextContent grid
-
 ! TextContentBlocks: TextContentBlocks CorporateDesignsBlock static
 ! TextContentBlocks: BannersImgBlock static
 ! accelerate Webpack - cut build time by 1/2 (below 5s)
-
 ! set SASS up (don't be using inline, it's mostly a bad idea)
+! config module setup
+! logging setup (winston)
 
-- css normalize
-- split your Content Blocks items into specific files
+################## DONE: March 16th ##################
+! css normalize
+! split your Content Blocks items into specific files
+! LatestUpdatesBlock static
+! SocialMediaButtons static
+! FOOTER: get to stick properly (:after syntax?)
+! try react standard css. <<< it fucking sucks
+! 1/2 Radium [it's OK]
+! wire in redux
+! L & R arrows to shift between imgs
+! dry up gulpfile, webpack, *.html
+! webpack splitting
+! split auth page
+! auth page - basic form
+! organize to-do into types, complete it
 
-- require paths relative to client root?
+! make data store available to whole app
+! write reducers
+! write actions
+! 
 
-- REACT-LEARN: understand controlled components (vs. not)
-- restructure tag file locations
+- Data store::: learn react-redux
+- Data store::: make initial data request to redux from a react component (POC)
+- REDUX:: learn Provider tag pattern
+**************************************************************************************
 
-- REDUX: understand "containers" for elements (Redux / Flux)
+**************************************************************************************
+**************************************** TODO ****************************************
+**************************************************************************************
+Database
+- determine what types of data to put in the db
+- script to bootstrap the original set in
+- Set up BookshelfJS to act as abstraction over your db (models etc.)
+- Set up method of requesting db for needed data
+- request first bit of data successfully
+- employ Redis cache
 
-- Complete React component structure list
+Routing
+- set up Express routes that return each piece of frontend-required data
 
-- REACT-TDD: learn how to test React components
-	- test your main react components
+AJAX
+- set up AJAX calls to get data in DB from frontend (once present)
+- learn 'containers' to separate data concerns from UI concerns among React components
+- split your components into containers and presenters
+- set up 'initial' AJAX calls on first load
+- corporate designs dynamic content - AJAX
+	- only show 1st 2
+- recently updated dynamic content - AJAX
+	- only show 1st 3
 
-- TDD: set up a test suite (mocha?)
-- TDD: set up autorunning tests
-- TDD: write your excellent tests
+Data store
+- outline all state redux will store
+- outline all app state changes required (diagram)
+- write actions
+- write reducers
+- set all state changes to occur in redux
 
-- Carousel 
-	-	Translucent vertical blocks on L & R, around arrows
-	- proper arrows (nicer images)
-	- fix occasional freezing on resize
-	- image click popup
+HOME::: Carousel 
+- wire modal gallery to carousel images (via Redux)
+-	Translucent vertical blocks on L & R, around arrows
+- proper arrows (nicer images)
+- fix occasional freezing on resize
+		- image click popup
 		- stop carousel on popup
-		- L & R arrows to shift between imgs
 
-- Nav-menu
-	- get highlighting working properly
-	- Actual titles
-	- Link in new actual page files
+COMMON::: Nav-menu
+- on route change alter selected menu item -- get highlighting working properly
+- Actual titles
+- make titles configurable
+- load navmenu item names in by AJAX?
+- required dropdowns?
+- Link in new actual page files
 
-- FOOTER: get to stick properly (:after syntax?)
-- FOOTER: properly laid-out
-- FOOTER: add content
+COMMON::: Footer
+- properly laid-out
+- add content
+
+Social Media
+- determine social media links' behaviour
+- links from social media component buttons
+- links from footer social media component buttons
+- 'share' functionality
+
+Deployment
+- determine deployment method <<< WIP todo
+- learn Docker
+- deploy to Heroku
+- wire Heroku site to Tamara's FlowReach domain
+
+PAGE: Gallery
+- Wireframe gallery page
+- create dynamic 'grid' for page
+- make thumbnails from images to display 
+- set dynamic grid to produce modal popup
+- wire dynamic grid to gallery images
+- paginate if >50 img?
+
+PAGE: About
+- subscribe for updates box
+- Tamara image in RS image section
+- UI component for display of RS image section
+- determine what to put in the 'quote box' as seen in the wireframe
+- about title
+- write random left side content
+- get left-side content (paragraph) displaying properly
+
+PAGE: Shop <<< TODO: this todo section is WIP
+- wireframe it
+- figure out WTF to put in there (consult with Tamara)
+
+PAGE: Contact <<<< WIP: possibly concat with about
+- CONSIDER CONCAT WITH ABOUT
+- contact title
+- 'email us' box
+- decide what to put in top-right block w/ map (either a pattern or a vague map aimed at Ottawa)
+- phone number
+- contact title
+
+PAGE: 'See more' corporate designs
+- image on RS, text on LS, alternating
+- get Tamara to do a few low-hanging fruit items to fill the section
 - 
 
-- TextContentBlocks
-		- LatestUpdatesBlock static
-		- SocialMediaButtons static
-		- Determine "see more" behaviour
-			- modal? content area replace?
+PAGE: 'See more' latest updates
+- create React list component
+	- dynamic collection of list-items 
+- create React list-item component
+	- title
+	- date
+	- image
+	- description
+	- POSSIBLY read more
+	- social media buttons (to share the item)
 
-- Redux
-	- finish course 
-	- states diagram
-	- learn Provider tag pattern
+PAGE: Hire Tamara
+- decide whether or not you want one (discuss w/ Tamara)
+	- if you do, wireframe it (steal an example from somewhere)
+- consider concating with About, Contact (etc.)
+
+Subscription
+- set up subscription service
+- collect emails in db
+- allow server to email
+- in admin page: ability to send email messages
+
+PAGE:: Admin
+- login form (frontend)
+- login functionality (backend)
+- simple place to route to on auth
+- make submit new recent updates box
+- make submit new 'corporate designs' box
+- login box, backend
+- hook rest API up to login box
+
+Build environment
+- require paths relative to client root?
+- accelerate Babel again
+
+Testing
+- set up a test suite (mocha?)
+- set up autorunning tests
+- write your excellent tests
+- learn how to test React components
+- test your main react components
+
+React learning
+- understand controlled components (vs. not)
+- REDUX: understand "containers" for elements (Redux / Flux)
+- Redux - finish course 
+- react forms
+**************************************************************************************
+
+
+**************************************************************************************
+************************************** UNSORTED **************************************
+**************************************************************************************
+- restructure tag file locations
+- Complete React component structure list
+
+Redux
 	- Get store, provide to all of app
 	- write actions
 	- write reducers
 	- wire into react components
-
-- on route change alter selected menu item
-- load navmenu item names in by AJAX?
-- load text content in by AJAX
-
-- req filter
-- simple place to route to on auth
-- login box, backend
-
-
 
 XXXX material design
 	XXX install
@@ -112,34 +239,25 @@ XXXX material design
 
 ?X react grids
 
-- react css
-	! react standard css? <<< it fucking sucks
+!X react css
 	- react decorator-based non-inline styles
 	- webpack css ?
-- Radium
-- react forms
-- react-router-redux - replace react-router with it
 - wire in a cool component (POC)
 
-- wire in redux
+- react-router-redux - replace react-router with it
 - DRY your paths again (e.g. to the html entries)
 
 - split auth page out
 - react decorators
 - react routes
-- login box (auth page)
-- webpack splitting
-	- split auth page
-- hook rest API up to login box
+
 
 - auth with redis etc.
-		! auth page - basic form
 		- style auth page
 		- post-login page - basic image
 		- redis config
 		- passport?
 		- 
-- dry up gulpfile, webpack, *.html
 
 
 Advanced (later)
@@ -154,19 +272,16 @@ Advanced (later)
 ________________________________________________________
 ! favicon
 ! base route
-- get koa serving a static asset
-- login package - with Koa
-- admin page - with login
+X get koa serving a static asset
+X login package - with Koa
+X admin page - with login
 - frontend templating? (react starter?)
-- logging setup (winston)
 - folder structure
 - state management (redux)
 - build each web-component (React)
 - form handling (body parser)
-- react starter
-- koa starter
-- config module setup
-- config setup
+X react starter
+X koa starter
 
 routing
 - Koa routing
