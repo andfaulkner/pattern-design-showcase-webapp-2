@@ -50,6 +50,7 @@ export const styles = {
 	TopLevelMenuItem: {
 		base: _.defaultsDeep({}, TopLevelMenuItemBase, {
 			borderTopColor: 'white',
+			borderTopStyle: 'hidden',
 	    ':hover': {
 				borderTopColor: 'rgba(79, 212, 199, 1)',
 				borderTopStyle: 'solid',

@@ -42,19 +42,13 @@ export default class NavMenu extends React.Component {
 
   constructor(props) {
 		super(props);
-		console.log('NavMenu.jsx:: NavMenu: constructor: props:', props);
 		this.state = this.state || { currentPage: 'Home'};
-		console.log('NavMenu.jsx:: NavMenu: constructor: this.state:', this.state);
   }
 
   selectMenuItem = (index, menuItem) => {
-  	console.log('\n\n\n\n\n\n\n\n\n\n\n\nNavMenu.jsx:: selectMenuItem entered!');
   	this.state = { currentPage: menuItem.title };
   	this.setState({ currentPage: menuItem.title }, function() {
 			console.log('\n\nNavMenu: NavMenu.selectMenuItem: this:', this);
-			console.log('NavMenu: NavMenu.selectMenuItem: index:', index);
-			console.log('NavMenu: NavMenu.selectMenuItem: menuItem:', menuItem);
-			console.log('\n\n\n\n\n\n\n\n\n\n\n\n')
   	});
   }
 
@@ -68,10 +62,6 @@ export default class NavMenu extends React.Component {
 		// TODO TOSS THIS - SHOULD COME FROM PARENTS
 		return _(this.props.routes)
 			.map((navItem, index) => {
-				console.log('%cNavMenu: NavMenu.generateMenuItems: navItem.title:', clStyle, navItem.title);
-				console.log('%cNavMenu: NavMenu.generateMenuItems: this:', clStyle, this);
-				console.log('%cNavMenu: NavMenu.generateMenuItems: this.state:', clStyle, this.state);
-				console.log('%cNavMenu: NavMenu.generateMenuItems: this.state.currentPage:', clStyle, this.state.currentPage);
 				// if title property isn't defined, this route isn't for the topbar
 				return (navItem.title)
 					? (<TopLevelMenuItem

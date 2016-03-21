@@ -99,7 +99,6 @@ class ContentGrid extends React.Component {
 	}
 
 	render() {
-		console.log('ContentGrid.jsx:: ContentGridthis.xsStyle():', this.xsStyle());
 		return (
 			<Row xs={12} style={this.xsStyle()} id='content-grid-wrapper'>
 				<Col 								lg={1}		md={1} 		smHidden				xs={2} />			 		{/* Spacer*/}

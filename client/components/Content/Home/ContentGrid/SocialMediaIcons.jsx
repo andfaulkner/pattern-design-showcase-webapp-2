@@ -1,3 +1,8 @@
+/**************************************************************************************************
+*
+*			Small panel of social media buttons (left to right row, 4 icons)
+*
+*/
 var React = React || require('react');
 import { Grid, Row, Col } from 'react-bootstrap'; 
 

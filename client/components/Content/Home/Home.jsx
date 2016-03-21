@@ -11,7 +11,6 @@ import { ContentGrid } from './ContentGrid/ContentGrid';
 
 export default class Home extends React.Component {
 	render() {
-		logger.logRendering('Home').inspect(this.props);
 		return (
 			<div>
 				<Carousel/>
