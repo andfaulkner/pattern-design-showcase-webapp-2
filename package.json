@@ -134,6 +134,7 @@
     "react-forms-ui": "0.3.2",
     "react-grid-layout": "0.10.8",
     "react-images": "0.3.2",
+    "react-photo-gallery": "4.0.3",
     "react-redux": "4.4.0",
     "react-router": "^2.0.0",
     "react-router-redux": "3.0.0",

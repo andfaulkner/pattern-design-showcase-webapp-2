@@ -53,7 +53,6 @@ export default class ModalPhotoGallery extends React.Component {
 	}
 };
 
-
 ModalPhotoGallery.displayName = 'ModalPhotoGallery';
 ModalPhotoGallery.propTypes = {
 	images: React.PropTypes.array,

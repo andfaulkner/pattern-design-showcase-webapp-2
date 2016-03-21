@@ -35,7 +35,14 @@ const contentLeft = {
 			line2: 'company logo',
 			datecomplete: '01/01/2016',
 			link: ''
-		}
+		},
+		{
+			line1: 'things.',
+			line2: 'stuff',
+			datecomplete: '01/02/2015',
+			link: ''
+		},
+
 	]
 };
 

@@ -116,6 +116,7 @@ class TopLevelMenuItem extends React.Component {
 		var style = (this.props.selected)
 			? styles.TopLevelMenuItem.selected
 			: styles.TopLevelMenuItem.base;
+		console.log('NavMenu.jsx:: TopLevelMenuItem: render::: this.props.selected:', this.props.selected);
 		return (
 			<li style={style} key={this.props.index}>
 				<Link
