@@ -11,48 +11,41 @@ import { SET_LIGHTBOX_IS_OPEN, SET_CURRENT_GALLERY_IMAGE,
 				 START_STOP_CAROUSEL, SET_CURRENT_PAGE, SHIFT_GALLERY_IMAGE,
 				 SET_IS_UPDATES_LOADED, SET_IS_DESIGNS_LOADED	} from '../actions/actions.jsx';
 
-/****************************** MIDDLEWARES ******************************/
-/**
- * @param  {Object} newState - state being returned. Log it first.
- * @param  {String} actionType - action passed through before state returned. Log it.
- * @return {[type]} [description]
- */
-function unknownType(state, reducer) {
-	console.warn(reducer + ' received unknown action type');
-	return state;
-}
+import { setCurrentGalleryImage, shiftGalleryImage,
+				 setLightboxIsOpen, startStopCarousel } from './carousel-reducers'
 
-function alteredState(newState, actionType) {
-	console.info('\n\nAction type received by reducers: ' + actionType);
-	console.log('%cSTATE ::', 'color: blue; font-size: 25px;', '\n', newState, '\n\n\n');
-	return newState;	
-}
-/*************************************************************************/
+import * as helpers from './reducer-helpers.jsx';
 
-function increment(number) {
-	return ++number;
-}
-
-function decrement(number) {
-	return --number;
-}
-
-/**
- *	Set the current image to display in the modal gallery 
- */
-export function setCurrentGalleryImage(state = {}, action) {
+const carousel = (state={}, action) => {
 	switch (action.type) {
-		case 'SET_CURRENT_GALLERY_IMAGE':
-			return alteredState({
-				...state,
-				currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
-					? action.currentImage
-					: state.currentImage,
-			}, SET_CURRENT_GALLERY_IMAGE)
+		case SET_CURRENT_GALLERY_IMAGE:
+			return setCurrentGalleryImage(state, action);
+		case SET_LIGHTBOX_IS_OPEN:
+			return setLightboxIsOpen(state, action);
+		case SHIFT_GALLERY_IMAGE:
+			return shiftGalleryImage(state, action);
+		case START_STOP_CAROUSEL:
+			return startStopCarousel(state, action);
 		default:
-			return unknownType(state, 'setCurrentGalleryImage');
-	}
+			return helpers.unknownType(state, 'carousel');
+	}	
 }
+// /**
+//  *	Set the current image to display in the modal gallery 
+//  */
+// export function setCurrentGalleryImage(state = {}, action) {
+// 	switch (action.type) {
+// 		case 'SET_CURRENT_GALLERY_IMAGE':
+// 			return alteredState({
+// 				...state,
+// 				currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
+// 					? action.currentImage
+// 					: state.currentImage,
+// 			}, SET_CURRENT_GALLERY_IMAGE)
+// 		default:
+// 			return unknownType(state, 'setCurrentGalleryImage');
+// 	}
+// }
 
 /**
  * Set the current page - e.g. Home, About
@@ -60,86 +53,37 @@ export function setCurrentGalleryImage(state = {}, action) {
 export function setCurrentPage(state = {}, action) {
 	switch (action.type) {
 		case 'SET_CURRENT_PAGE':
-			return alteredState({
+			return helpers.alteredState({
 				...state,
 				currentPage: action.currentPage || _.get(state, 'currentPage') || 'HOME'
 			}, SET_CURRENT_PAGE);
 		default:
-			return unknownType(state, 'setCurrentPage');
+			return helpers.unknownType(state, 'setCurrentPage');
 	}
 }
 
-/**
- * Display and hide the modal gallery triggered by clicking a carousel image
- * Also sets the current image value to whatever was clicked
- */
-export function setLightboxIsOpen(state = {}, action) {
-	console.log('reducers.jsx:: setLightboxIsOpen:: state:', state);
-	console.log('reducers.jsx:: setLightboxIsOpen:: action:', action);
-	switch (action.type) {
-		case 'SET_LIGHTBOX_IS_OPEN':
-			// weird logic here because false & 0 both act like undefined in a regular
-			// check; also, more than just opening the lightbox alters currentImage.
-			return alteredState({
-				...state,
-				currentImage: setCurrentGalleryImage(state, {
-						...action,
-						type: SET_CURRENT_GALLERY_IMAGE
-					}).currentImage,
-				lightboxIsOpen: !_.isUndefined(action.lightboxIsOpen)
-					? action.lightboxIsOpen
-					: state.lightboxIsOpen
-			}, SET_LIGHTBOX_IS_OPEN);
-		default:
-			return unknownType(state, 'setLightboxIsOpen');
-	}
-}
-
-export function setStartStopCarousel(state = {}, action) {
-	switch (action.type) {
-		case 'START_STOP_CAROUSEL':
-			return alteredState({
-				...state,
-				isCarouselRunning: !_.isUndefined(action.isCarouselRunning)
-					? action.isCarouselRunning
-					: _.get(state, 'isCarouselRunning')
-			}, START_STOP_CAROUSEL);
-		default:
-			return unknownType(state, 'setStartStopCarousel');
-	}
-}
-
-/**
- *	Set the current image to display in the modal gallery 
- */
-export function shiftGalleryImage(state = {}, action) {
-	switch (action.type) {
-		case 'SHIFT_GALLERY_IMAGE':
-			console.log('&&&& shiftGalleryImage::: state: ', state);
-			console.log('&&&& shiftGalleryImage::: action: ', action);
-			const shift = (action.incrementOrDecrement === 'increment')
-				? increment
-				: (action.incrementOrDecrement === 'decrement')
-					? decrement
-					: console.error('INVALID incrementOrDecrement VALUE SENT TO shiftGalleryImage reducer');
-			return alteredState({
-				...state,
-				currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
-					? shift(action.currentImage)
-					: shift(state.currentImage),
-				}, SHIFT_GALLERY_IMAGE)
-		default:
-			return unknownType(state, 'setCurrentGalleryImage');
-	}
-}
+// export function setStartStopCarousel(state = {}, action) {
+// 	switch (action.type) {
+// 		case 'START_STOP_CAROUSEL':
+// 			return alteredState({
+// 				...state,
+// 				isCarouselRunning: !_.isUndefined(action.isCarouselRunning)
+// 					? action.isCarouselRunning
+// 					: _.get(state, 'isCarouselRunning')
+// 			}, START_STOP_CAROUSEL);
+// 		default:
+// 			return unknownType(state, 'setStartStopCarousel');
+// 	}
+// }
 
 // require('./test-reducers');
 
 const reducers = combineReducers({
-	setLightboxIsOpen,
-	setCurrentGalleryImage,
+	carousel,
+	// setLightboxIsOpen,
+	// setCurrentGalleryImage,
 	setCurrentPage,
-	setStartStopCarousel
+	// setStartStopCarousel
 });
 
 export default reducers;

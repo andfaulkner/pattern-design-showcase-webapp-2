@@ -1,12 +1,13 @@
 var React = React || require('react');
 import {connect} from 'react-redux';
 import Lightbox from 'react-images';
-import { setLightboxIsOpenCreator } from '../../../../store/actions/actions.jsx';
+import { setLightboxIsOpenCreator,
+				 shiftGalleryImageCreator } from '../../../../store/actions/actions.jsx';
 
 const mapStateToProps = (state) => {
 	return { 
-		lightboxIsOpen: state.setLightboxIsOpen.lightboxIsOpen,
-		currentImage: state.setLightboxIsOpen.currentImage
+		lightboxIsOpen: state.carousel.lightboxIsOpen,
+		currentImage: state.carousel.currentImage
 	}
 }
 
@@ -14,80 +15,39 @@ const mapStateToProps = (state) => {
 @connect(mapStateToProps)
 export default class ModalPhotoGallery extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.state = {
-			lightboxIsOpen: false,
-			currentImage: props.currentImage || 0,
-		};
-	}
-
-	componentWillReceiveProps = (nextProps) => {
-		let {lightboxIsOpen, currentImage, ...props} = nextProps;
-		this.setState({
-			currentImage,
-			lightboxIsOpen
-		});
-	}
-
-	/**
-	 * change the state to have the lightbox open, and set current
-	 * image to the one clicked. Index: number of images clicked
-	 */
-	openLightbox = (imageToOpen, event) => {
-		event.preventDefault();
-		this.setState({
-			currentImage: imageToOpen,
-			lightboxIsOpen: true,
-		});
-	}
-
-	setLightboxIsOpenCreator = () => setLightboxIsOpenCreator
-
 	/**
 	 * set lightbox open state to false, and reset
 	 * 'current image' to the 1st in the array
 	 */
-	closeLightbox = (setLightboxIsOpenCreator) => {
-		this.setState({
-			currentImage: 0,
-			lightboxIsOpen: false,
-		});
-		const { dispatch } = this.props;
-		dispatch(setLightboxIsOpenCreator(false));
-	}
+	closeLightbox = (setLightboxIsOpenCreator) =>
+		this.props.dispatch(setLightboxIsOpenCreator(false));
 
 	/**
 	 * Run when left arrow clicked in gallery.
 	 * Decrements sets the index of 'currentImage'.
 	 */
-	gotoPrevious = () => {
-		const { dispatch } = this.props;
-		this.setState({
-			currentImage: this.state.currentImage - 1,
-		});
+	gotoPrevious = (shiftGalleryImageCreator) => {
+		this.props.dispatch(shiftGalleryImageCreator('decrement'));
 	}
 
 	/**
 	 * Run when right arrow clicked in gallery.
 	 * Increments sets the index of 'currentImage'
 	 */
-	gotoNext = () => {
-		this.setState({
-			currentImage: this.state.currentImage + 1,
-		});
+	gotoNext = (shiftGalleryImageCreator) => {
+		this.props.dispatch(shiftGalleryImageCreator('increment'));
 	}
 
 	render() {
 		return (
 			<Lightbox 
-				currentImage={this.state.currentImage}
+				currentImage={this.props.currentImage}
 				backdropClosesModal={true}
 				enableKeyboardInput={true}
 				isOpen={this.props.lightboxIsOpen}
-				onClickPrev={this.gotoPrevious}
-				onClickNext={this.gotoNext}
-				onClose={_.partial(this.closeLightbox, setLightboxIsOpenCreator)}
+				onClickPrev={_.partial(this.gotoPrevious, shiftGalleryImageCreator)}
+				onClickNext={_.partial(this.gotoNext, shiftGalleryImageCreator)}
+				onClose={_.partial(this.closeLightbox, setLightboxIsOpenCreator)} // essential
 				images={this.props.images} />
 		);
 	}

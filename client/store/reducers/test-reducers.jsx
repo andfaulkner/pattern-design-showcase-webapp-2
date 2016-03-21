@@ -19,7 +19,7 @@ var deepFreeze = require('deep-freeze');
 		currentImage: 6		
 	};
 	expect(
-		reducers.shiftGalleryImage(prevState, action)
+		reducers(prevState, action)
 	).toEqual(postState);
 	console.log('******************** testShiftGalleryImage successful! ********************' );
 }());
