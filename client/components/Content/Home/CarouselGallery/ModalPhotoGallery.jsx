@@ -4,9 +4,6 @@ import Lightbox from 'react-images';
 import { setLightboxIsOpenCreator } from '../../../../store/actions/actions.jsx';
 
 const mapStateToProps = (state) => {
-	console.log('ModalPhotoGallery.jsx:: mapStateToProps::: state:', state);
-	console.log('ModalPhotoGallery.jsx:: mapStateToProps::: state.setLightboxIsOpen:', state.setLightboxIsOpen);
-	console.log('ModalPhotoGallery.jsx:: mapStateToProps::: state.setLightboxIsOpen.lightboxIsOpen:', state.setLightboxIsOpen.lightboxIsOpen);
 	return { 
 		lightboxIsOpen: state.setLightboxIsOpen.lightboxIsOpen,
 		currentImage: state.setLightboxIsOpen.currentImage
@@ -19,27 +16,18 @@ export default class ModalPhotoGallery extends React.Component {
 
 	constructor(props) {
 		super(props);
-		console.log('*** ModalPhotoGallery.jsx:: ModalPhotoGallery.constructor::: props:', props);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.constructor::: this.props:', this.props);
 		this.state = {
 			lightboxIsOpen: false,
 			currentImage: props.currentImage || 0,
 		};
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.constructor::: this.state on exit:', this.state);
 	}
 
 	componentWillReceiveProps = (nextProps) => {
-		console.log('ModalPhotoGallery.jsx:: componentWillReceiveProps:: nextProps:', nextProps);
-		console.log('ModalPhotoGallery.jsx:: componentWillReceiveProps:: this.props:', this.props);
-		console.log('ModalPhotoGallery.jsx:: componentWillReceiveProps:: this.state:', this.state);
 		let {lightboxIsOpen, currentImage, ...props} = nextProps;
 		this.setState({
 			currentImage,
 			lightboxIsOpen
 		});
-		console.log('ModalPhotoGallery.jsx:: componentWillReceiveProps:: currentImage:', currentImage);
-		console.log('ModalPhotoGallery.jsx:: componentWillReceiveProps:: lightboxIsOpen:', lightboxIsOpen);
-		console.log('ModalPhotoGallery.jsx:: componentWillReceiveProps:: this.state on exit:', this.state);
 	}
 
 	/**
@@ -48,10 +36,6 @@ export default class ModalPhotoGallery extends React.Component {
 	 */
 	openLightbox = (index, event) => {
 		event.preventDefault();
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.openLightbox::: index:', index);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.openLightbox::: event:', event);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.openLightbox:: this.props:', this.props);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.openLightbox:: this.state:', this.state);
 		this.setState({
 			currentImage: index,
 			lightboxIsOpen: true,
@@ -65,9 +49,6 @@ export default class ModalPhotoGallery extends React.Component {
 	 * 'current image' to the 1st in the array
 	 */
 	closeLightbox = (setLightboxIsOpenCreator) => {
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.closeLightbox::: this:', this);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.closeLightbox::: this.state:', this.state);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.closeLightbox::: this.props:', this.props);
 		this.setState({
 			currentImage: 0,
 			lightboxIsOpen: false,
@@ -82,7 +63,6 @@ export default class ModalPhotoGallery extends React.Component {
 	 */
 	gotoPrevious = () => {
 		const { dispatch } = this.props;
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery: gotoPrevious: dispatch:', dispatch);
 		this.setState({
 			currentImage: this.state.currentImage - 1,
 		});
@@ -99,10 +79,6 @@ export default class ModalPhotoGallery extends React.Component {
 	}
 
 	render() {
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.render::: this.props:', this.props);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.render::: this.props.images:', this.props.images);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.render::: this.state:', this.state);
-		console.log('ModalPhotoGallery.jsx:: ModalPhotoGallery.render::: this.props.lightboxIsOpen:', this.props.lightboxIsOpen);
 		return (
 			<Lightbox 
 				currentImage={this.state.currentImage}

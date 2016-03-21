@@ -50,16 +50,18 @@ export default class Carousel extends React.Component {
 
 	render() {
 		console.log('Carousel.jsx:: CAROUSEL::: carouselSettings:', carouselSettings);
-		var settings = carouselSettings;
-		console.log('Carousel.jsx:: Carousel: settings:', settings);
+		console.log('Carousel.jsx:: Carousel: settings:', carouselSettings);
 		var imgStyle = { height: '220px' };
 		return (
 			<div className='carousel'>
 				<ModalPhotoGallery images={images} />
-				<Slider {...settings}>
-					{images.map((imgObj, currentImage) => 
-						(<CarouselImage src={imgObj.src} style={imgStyle} currentImage={currentImage} /> )
-					)}
+				<Slider {...carouselSettings}>
+					{images.map((imgObj, currentImage) => (
+						<CarouselImage src={imgObj.src}
+													 style={imgStyle}
+													 currentImage={currentImage}
+						/>
+					))}
 				</Slider>
 			</div>
 		);

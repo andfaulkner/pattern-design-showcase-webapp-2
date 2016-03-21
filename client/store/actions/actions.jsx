@@ -3,13 +3,13 @@ export const SET_CURRENT_GALLERY_IMAGE = 'SET_CURRENT_GALLERY_IMAGE';
 export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 export const SET_IS_UPDATES_LOADED = 'SET_IS_UPDATES_LOADED';
 export const SET_IS_DESIGNS_LOADED = 'SET_IS_DESIGNS_LOADED';
+export const START_STOP_CAROUSEL = 'START_STOP_CAROUSEL';
 
 /**
  * Display & hide the Gallery modal
  * @param {Boolean} visibility - modal visible if true, hidden if false
  */
 export function setLightboxIsOpenCreator(lightboxIsOpen, currentImage) {
-	console.log('!! actions.jsx:: ACTIONS.JSX:::: lightboxIsOpen:', lightboxIsOpen);
 	return {
 		type: SET_LIGHTBOX_IS_OPEN,
 		lightboxIsOpen,
@@ -36,5 +36,16 @@ export function setCurrentPageCreator(currentPage) {
 	return {
 		type: SET_CURRENT_PAGE,
 		currentPage
+	}
+}
+
+/**
+ * Pause or unpause the carousel on the home page
+ * @param {Boolean} running - spin if true, stop if false
+ */
+export function startStopCarousel(running) {
+	return {
+		type: START_STOP_CAROUSEL,
+		running
 	}
 }

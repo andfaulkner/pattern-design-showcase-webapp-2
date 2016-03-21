@@ -5,9 +5,15 @@ import {connect} from 'react-redux';
 
 import { setLightboxIsOpenCreator } from '../../../../store/actions/actions.jsx';
 
+/**
+ * Gets the back from 
+ *
+ * @param  {[type]} state [description]
+ * @return {[type]} [description]
+ */
 const mapStateToProps = (state) => {
 	return {
-		displayGallery: state.displayGallery
+		lightboxIsOpen: state.lightboxIsOpen
 	}
 }
 
@@ -18,8 +24,9 @@ export default class CarouselImage extends React.Component {
 		this.props.setLightboxIsOpenCreator = setLightboxIsOpenCreator;
 	}
 
-	displayGallery = (setLightboxIsOpenCreator, currentImage) => {
-		console.log('CarouselImage.jsx:: CarouselImage.displayGallery:: currentImage:', currentImage);
+	// Display the modal gallery popover - runs on clicking an item on the carousel
+	lightboxIsOpen = (setLightboxIsOpenCreator, currentImage) => {
+		console.log('CarouselImage.jsx:: CarouselImage.lightboxIsOpen:: currentImage:', currentImage);
 		this.props.dispatch(setLightboxIsOpenCreator(true, currentImage));
 	}
 	render() {
@@ -28,7 +35,7 @@ export default class CarouselImage extends React.Component {
 					 style={this.props.style}
 					 currentImage={this.props.currentImage}
 					 onClick={
-					 	_.partial(this.displayGallery, setLightboxIsOpenCreator, this.props.currentImage)
+					 	_.partial(this.lightboxIsOpen, setLightboxIsOpenCreator, this.props.currentImage)
 					 }
 			/>
 		);
