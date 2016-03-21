@@ -1,5 +1,41 @@
 var React = React || require('react');
 
+const arrowStyle = {
+  arrow: {
+    height: '45px',
+    width: '45px',
+    border: '0px',
+    position: 'relative',
+    top: '-133px',
+    zIndex: '2'
+  },
+};
+
+arrowStyle.arrowLeft = _.defaultsDeep({}, arrowStyle.arrow, {
+	background: 'url("/img/icons/carousel-left-arrow.png") no-repeat scroll 0 0 transparent',
+  float: 'left'
+  // left: '-10px'
+});
+
+arrowStyle.arrowRight = _.defaultsDeep({}, arrowStyle.arrow, {
+	background: 'url("/img/icons/carousel-right-arrow.png") no-repeat scroll 0 0 transparent',
+  right: '-10px',
+  float: 'right'
+});
+
+class CarouselArrowButtonLeft extends React.Component {
+  render() {
+		return <button {...this.props} style={arrowStyle.arrowLeft} />
+  }
+}
+
+class CarouselArrowButtonRight extends React.Component {
+  render() {
+		return <button {...this.props} style={arrowStyle.arrowRight} />
+  }
+}
+
+
 const carouselSettings = {
 	infinite: true,
 	slidesToShow: 3,
@@ -8,12 +44,12 @@ const carouselSettings = {
 	draggable: true,
 	autoplay: true,
 	speed: 500,
-	centerMode: true,
-	useCSS: true,
-	adaptiveHeight: false,
-	dots: false,
 	lazyLoad: false,
+	centerMode: true,
+	adaptiveHeight: false,
 	arrows: true,
+	fade: false,
+	useCSS: true,
 	prevArrow: CarouselArrowButtonLeft,
 	nextArrow: CarouselArrowButtonRight,
 	// adjust number of images shown based on screen size
@@ -25,20 +61,6 @@ const carouselSettings = {
 		{ breakpoint: 580, settings: { slidesToShow: 2 }},
 		{ breakpoint: 390, settings: { slidesToShow: 1 }}
 	]
-};
-
-class CarouselArrowButtonLeft extends React.Component {
- render() {
-	 return (
-		 <button {...this.props} style={style.arrowLeft} />
-	 );
- }
-};
-
-class CarouselArrowButtonRight extends React.Component {
- render() {
-	 return <button {...this.props} style={style.arrowRight} />
- }
 };
 
 const THUMBNAIL_SIZE = 72;

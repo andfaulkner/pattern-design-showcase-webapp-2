@@ -7,10 +7,11 @@
 var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
+import {connect} from 'react-redux';
+
 var Slider = require('react-slick');
 import Lightbox from 'react-images';
-
-const {carouselSettings, galleryStyles} = require('./carousel-settings');
+const {carouselSettings, galleryStyles, carouselStyle} = require('./carousel-settings');
 import CarouselImage from './CarouselImage.jsx';
 import ModalPhotoGallery from './ModalPhotoGallery.jsx';
 
@@ -41,30 +42,55 @@ const images = [
 
 const imgArr = _.map(images, imgObj => imgObj.src);
 
+/**
+ * Gets state returned from reducers (dispatch --> action --> reducers --> mapStateToProps).
+ * Called regardless of where reducer is activated from
+ *
+ * @param  {Object} state
+ * @return {Object} required state properties: lightboxIsOpen. currentImage, isCarouselRunning
+ * DEFUNCT - FOR NOW
+ */
+const mapStateToProps = (state) => {
+	return {
+		lightboxIsOpen: state.carousel.lightboxIsOpen,
+		currentImage: state.carousel.currentImage,
+		carouselSettings: {
+			...carouselSettings,
+			speed: (state.carousel.isCarouselRunning) ? 500 : 0,
+			autoplay: !!state.carousel.isCarouselRunning
+			// initialSlide: state.carousel.currentImage 
+		}
+	}
+}
+
+@connect()
 export default class Carousel extends React.Component {
+	getDefaultProps = {
+		isCarouselRunning: true,
+		carouselSettings
+	}
+
 	constructor(props) {
 		super(props);
-		console.log('Carousel.jsx:: Carousel: constructor:: this:', this);
-		console.log('Carousel.jsx:: Carousel: constructor:: carouselSettings:', carouselSettings);
+		Object.assign(this.props, props, this.getDefaultProps);
 	}
 
 	render() {
-		console.log('Carousel.jsx:: CAROUSEL::: carouselSettings:', carouselSettings);
-		var settings = carouselSettings;
-		console.log('Carousel.jsx:: Carousel: settings:', settings);
 		var imgStyle = { height: '220px' };
 		return (
 			<div className='carousel'>
 				<ModalPhotoGallery images={images} />
-				<Slider {...settings}>
-					{images.map((imgObj, currentImage) => 
-						(<CarouselImage src={imgObj.src} style={imgStyle} currentImage={currentImage} /> )
-					)}
+				<Slider {...this.props.carouselSettings}>
+					{
+						images.map((imgObj, currentImage) => (
+							<CarouselImage src={imgObj.src}
+														 style={imgStyle}
+														 currentImage={currentImage}
+							/>
+						))
+					}
 				</Slider>
 			</div>
 		);
-	}
-	componentDidMount() {
-		console.log('componentDidMount!');
 	}
 };
