@@ -8,6 +8,7 @@ import Home from '../components/Content/Home/Home.jsx';
 
 import { LikeButton } from '../components/forms/like-button/LikeButton.jsx';
 import { AffinityButton } from '../components/forms/like-button/AffinityButton.jsx';
+import { GalleryPage } from '../components/Content/GalleryPage/GalleryPage.jsx';
 
 console.log('routes.jsx:: TOP');
 
@@ -17,7 +18,7 @@ const routes = [
 		title: 'Home', 
 	},
 	{ path: '/gallery',
-		component: LikeButton,
+		component: GalleryPage,
 		title: 'Gallery', 
 	},
 	{ path: '/about',
