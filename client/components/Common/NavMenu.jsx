@@ -33,11 +33,22 @@ import routes from '../../routes/routes.jsx';
 import TopLogo from './TopLogo.jsx';
 import Radium from 'radium';
 
+import {connect} from 'react-redux';
+import Lightbox from 'react-images';
+import { setCurrentPageCreator } from '../../store/actions/actions.jsx';
+
+const mapStateToProps = (state) => {
+	return {
+		...state,
+		currentPage: state.setCurrentPage.currentPage
+	}
+}
 
 /**
  * root NavBar rendering commponent
  */
 @Radium
+@connect(mapStateToProps)
 export default class NavMenu extends React.Component {
 
   constructor(props) {
@@ -45,11 +56,8 @@ export default class NavMenu extends React.Component {
 		this.state = this.state || { currentPage: 'Home'};
   }
 
-  selectMenuItem = (index, menuItem) => {
-  	this.state = { currentPage: menuItem.title };
-  	this.setState({ currentPage: menuItem.title }, function() {
-			console.log('\n\nNavMenu: NavMenu.selectMenuItem: this:', this);
-  	});
+  selectMenuItem = (setCurrentPageCreator, index, menuItem) => {
+  	this.props.dispatch(setCurrentPageCreator(menuItem.title));
   }
 
   /**
@@ -69,8 +77,8 @@ export default class NavMenu extends React.Component {
 							path={navItem.path}
 							title={navItem.title}
 							styles={styles.TopLevelMenuItem.base}
-							selected={this.state.currentPage === navItem.title}
-							selectMenuItem={this.selectMenuItem.bind(this, index, navItem)}
+							selected={this.props.currentPage === navItem.title}
+							selectMenuItem={this.selectMenuItem.bind(this, setCurrentPageCreator, index, navItem)}
 							{...this.props}
 						/>)
 					: null;
@@ -86,22 +94,20 @@ export default class NavMenu extends React.Component {
 			</NavMenuContainer>
 		);
 	}
+
 };
 
 
 /**
  * Renders block containing the entire navigation bar
+ * TODO: does this do fuck all?
  */
 @Radium
 class NavMenuContainer extends React.Component {
 	render() {
 		return (
-			<div>
-				<div style={styles.NavMenuContainerOuter.base}>
-					<ul style={styles.NavMenuContainer.base}>
-						{this.props.children}
-					</ul>
-				</div>
+			<div style={styles.NavMenuContainerOuter.base}>
+				{this.props.children}
 			</div>
 		);
 	}
@@ -112,16 +118,17 @@ class NavMenuContainer extends React.Component {
  */
 @Radium
 class TopLevelMenuItem extends React.Component {
+
 	render() {
-		var style = (this.props.selected)
-			? styles.TopLevelMenuItem.selected
-			: styles.TopLevelMenuItem.base;
-		console.log('NavMenu.jsx:: TopLevelMenuItem: render::: this.props.selected:', this.props.selected);
+		var status = Radium.getState(this.state, this.key, ':hover');
 		return (
-			<li style={style} key={this.props.index}>
+			<li
+				className={(this.props.selected) ? 'top-level-menu-item-selected' : 'top-level-menu-item'}
+				key={this.props.index}
+			>
 				<Link
 					to={this.props.path}
-					style={styles.NavMenuLink.base}
+					className='top-level-menu-link'
 					onClick={this.props.selectMenuItem}
 				>
 					{this.props.title}

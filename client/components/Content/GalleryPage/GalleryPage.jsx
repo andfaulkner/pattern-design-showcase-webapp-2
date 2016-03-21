@@ -4,6 +4,9 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 import Gallery from 'react-photo-gallery';
 
+import {connect} from 'react-redux';
+import { setCurrentPageCreator } from '../../../store/actions/actions.jsx';
+
 // extract, make externally configurable (via UI)
 const imgpath = '/img/patterns/';
 
@@ -45,7 +48,13 @@ const PHOTOS = _.reduce(images, (imgSettings, image) => {
 	return imgSettings;
 }, []);
 
+@connect()
 export class GalleryPage extends React.Component {
+	constructor(props) {
+		super(props);
+  	this.props.dispatch(setCurrentPageCreator('Gallery'));
+	}
+
 	render() {
 		return (
 			<div>

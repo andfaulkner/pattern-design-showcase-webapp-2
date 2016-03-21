@@ -30,29 +30,15 @@ const carousel = (state={}, action) => {
 			return helpers.unknownType(state, 'carousel');
 	}	
 }
-// /**
-//  *	Set the current image to display in the modal gallery 
-//  */
-// export function setCurrentGalleryImage(state = {}, action) {
-// 	switch (action.type) {
-// 		case 'SET_CURRENT_GALLERY_IMAGE':
-// 			return alteredState({
-// 				...state,
-// 				currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
-// 					? action.currentImage
-// 					: state.currentImage,
-// 			}, SET_CURRENT_GALLERY_IMAGE)
-// 		default:
-// 			return unknownType(state, 'setCurrentGalleryImage');
-// 	}
-// }
 
 /**
  * Set the current page - e.g. Home, About
  */
 export function setCurrentPage(state = {}, action) {
+	console.log('reducers.jsx:: setCurrentPage:: state:', state);
+	console.log('reducers.jsx:: setCurrentPage:: action:', action);
 	switch (action.type) {
-		case 'SET_CURRENT_PAGE':
+		case SET_CURRENT_PAGE:
 			return helpers.alteredState({
 				...state,
 				currentPage: action.currentPage || _.get(state, 'currentPage') || 'HOME'
@@ -62,28 +48,11 @@ export function setCurrentPage(state = {}, action) {
 	}
 }
 
-// export function setStartStopCarousel(state = {}, action) {
-// 	switch (action.type) {
-// 		case 'START_STOP_CAROUSEL':
-// 			return alteredState({
-// 				...state,
-// 				isCarouselRunning: !_.isUndefined(action.isCarouselRunning)
-// 					? action.isCarouselRunning
-// 					: _.get(state, 'isCarouselRunning')
-// 			}, START_STOP_CAROUSEL);
-// 		default:
-// 			return unknownType(state, 'setStartStopCarousel');
-// 	}
-// }
-
-// require('./test-reducers');
-
 const reducers = combineReducers({
 	carousel,
-	// setLightboxIsOpen,
-	// setCurrentGalleryImage,
-	setCurrentPage,
-	// setStartStopCarousel
+	setCurrentPage
 });
 
 export default reducers;
+
+// require('./test-reducers');

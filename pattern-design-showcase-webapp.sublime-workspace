@@ -648,6 +648,12 @@
 	},
 	"file_history":
 	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu-styles.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/nav-menu.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/CarouselImage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10666193_837013629696484_249744198_n.jpg",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/ModalPhotoGallery.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/common.scss",
@@ -659,7 +665,6 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/social-media-buttons.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/carousel-settings.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Common.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/text-content-grid.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/footer.scss",
@@ -667,7 +672,6 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/configure-store.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/switchPage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/action-creators.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/redux/single-file-redux-example",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/TextContent/ContentPanel.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/TextContent/TextBlockLatestUpdates.jsx",
@@ -771,11 +775,7 @@
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js",
 		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/grid-filters-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/templates/common/grid-filters-tmpl.dust",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/models/case-model.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-attachment.js",
-		"/home/andrew/Downloads/backup-test.attachment.delete.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/helper.js"
+		"/home/andrew/projects/isight/isight_main_v5_beta/public/templates/common/grid-filters-tmpl.dust"
 	],
 	"find":
 	{
@@ -826,6 +826,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"browserHistory",
+			"historyRedux",
+			"hashHistory",
 			"contentLeft",
 			"Link",
 			"styles",
@@ -950,10 +953,7 @@
 			"setLightboxIsOpenCreator",
 			"currentImage",
 			"openLightbox",
-			"state",
-			"this",
-			"openLightbox",
-			"this.props"
+			"state"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1067,13 +1067,13 @@
 		"cols":
 		[
 			0.0,
-			0.721344504162,
+			0.733539626113,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.478912800728,
+			0.440886079248,
 			1.0
 		]
 	},

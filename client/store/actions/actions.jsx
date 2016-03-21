@@ -34,6 +34,8 @@ export function setCurrentGalleryImageCreator(currentImage) {
  * @param {String} currentPage - name of the current page to display
  */
 export function setCurrentPageCreator(currentPage) {
+	console.log('actions.jsx:: setCurrentPageCreator:: currentPage:', currentPage);
+	console.log('actions.jsx:: setCurrentPageCreator:: SET_CURRENT_PAGE:', SET_CURRENT_PAGE);
 	return {
 		type: SET_CURRENT_PAGE,
 		currentPage

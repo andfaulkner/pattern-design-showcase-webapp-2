@@ -1,0 +1,44 @@
+@mixin topLevelMenu($borderTopColor) {
+	border-top-color: $borderTopColor;
+	background-color: #FFFFFF;
+	border-top-style: solid;
+	box-sizing: border-box;
+	display: inline-block;
+	list-style-type: none;
+	margin-left: 10px;
+	margin-right: 10px;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.top-level-menu-item {
+	@include topLevelMenu(white);
+	&:hover {
+		border-top-color: rgba(79, 212, 199, 1);
+		border-top-style: solid;
+	}
+}
+
+.top-level-menu-item-selected {
+	@include topLevelMenu(black);
+}
+
+.top-level-menu-link {
+	display: inline-block;
+	color: black;
+	text-align: center;
+	padding: 10px 10px;
+	text-decoration: none;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-size: 16px;
+	line-height: 1.4em;
+	font-family: 'Courier New';
+  &:hover, &:focus {
+		border-top-style: hidden;
+		text-decoration: none;
+		color: black;
+	}
+}

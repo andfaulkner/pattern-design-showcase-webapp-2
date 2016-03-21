@@ -17,44 +17,8 @@ import Common from './components/Common/Common.jsx';
 
 // REDUX
 import { Provider } from 'react-redux';
-
-// REDUX: CREATE APPLICATION STORE, MAKE AVAILABLE TO THE WHOLE APP
-import { createStore } from 'redux';
-import reducers from './store/reducers/reducers.jsx';
-let store = createStore(reducers);
-
-// LOGGING
-var logger = require('./helpers/logger.js')('client/index.js');
-
-/**
- * Routes are rendered in from here
- */
-@Radium
-class RootNode extends React.Component{
-
-	render() {
-		var allRoutes = _.map(routes, function(route, index) {
-			let {path, component, ...miscProps} = route;
-			return (
-				<Route component={Common}>
-					<Route {...miscProps}
-						path={path}
-						key={index} 
-						component={component}
-					/>
-				</Route>
-			);
-		});
-
-		var fnLog = logger.logRendering('RootNode').inspect(this.props);
-		fnLog.inspect(allRoutes);
-		return (
-			<Router history={hashHistory}>
-				{allRoutes}
-			</Router>
-		);
-	}
-};
+import { store } from './store/configure-store';
+import { RootNode } from './components/RootNode';
 
 // Outermost class - wraps UI in redux store
 class App extends React.Component {

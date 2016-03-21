@@ -76,9 +76,9 @@ export const styles = {
 			lineHeight:' 1.4em',
 			fontFamily: 'courier new',
 	    ':hover': {
-				borderTopColor: 'rgba(79, 212, 199, 1)',
+				// borderTopColor: 'rgba(79, 212, 199, 1)',
 				borderTopStyle: 'hidden',
-				color: 'rgba(79, 212, 199, 1)'
+				// color: 'rgba(79, 212, 199, 1)'
 			}
 		}
 	},

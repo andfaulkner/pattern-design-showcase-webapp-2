@@ -116,11 +116,20 @@ const CPanelContent = ({content, style}) => (
 	</div>
 );
 
-const CPanelSeeMoreButton = () => (
-	<Row className='ctpanel--see-more-button-row'>
-		<button className='ctpanel--see-more-button'>see more >></button>
-	</Row>
-);
+/**
+ * 'See More >>' button
+ * TODO load the relevant section
+ * TODO get the required link passed in
+ */
+class CPanelSeeMoreButton extends React.Component {
+	render() {
+		return (
+			<Row className='ctpanel--see-more-button-row'>
+				<button className='ctpanel--see-more-button'>see more >></button>
+			</Row>
+		);
+	}
+};
 
 /**
  * Description at top of content section. Optional.
