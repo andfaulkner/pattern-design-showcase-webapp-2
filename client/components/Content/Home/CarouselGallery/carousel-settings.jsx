@@ -23,14 +23,17 @@ arrowStyle.arrowRight = _.defaultsDeep({}, arrowStyle.arrow, {
   float: 'right'
 });
 
+class CarouselArrowButtonLeft extends React.Component {
+  render() {
+		return <button {...this.props} style={arrowStyle.arrowLeft} />
+  }
+}
 
-const CarouselArrowButtonLeft = () => (
- <button style={arrowStyle.arrowLeft} />
-);
-
-const CarouselArrowButtonRight = () => (
- <button style={arrowStyle.arrowRight} />
-);
+class CarouselArrowButtonRight extends React.Component {
+  render() {
+		return <button {...this.props} style={arrowStyle.arrowRight} />
+  }
+}
 
 
 const carouselSettings = {

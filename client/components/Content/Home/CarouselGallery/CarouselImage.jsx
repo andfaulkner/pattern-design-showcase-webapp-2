@@ -12,6 +12,7 @@ import { setLightboxIsOpenCreator } from '../../../../store/actions/actions.jsx'
  *
  * @param  {Object} state
  * @return {Object} important components of state - lightboxIsOpen
+ * DEFUNCT - FOR NOW
  */
 const mapStateToProps = (state) => {
 	return {
@@ -23,7 +24,7 @@ const mapStateToProps = (state) => {
  * Generate a single Carousel image.
  * Listens to state for changes in lightboxIsOpen, opens & closes lightbox in response
  */
-@connect(mapStateToProps)
+@connect()
 export default class CarouselImage extends React.Component {
 
 	constructor(props) {
@@ -38,7 +39,6 @@ export default class CarouselImage extends React.Component {
 	 * @param  {Number} currentImage - image selected (to be opened in the lightbox)
 	 */
 	lightboxIsOpen = (setLightboxIsOpenCreator, currentImage) => {
-		console.log('CarouselImage.jsx:: CarouselImage.lightboxIsOpen:: currentImage:', currentImage);
 		this.props.dispatch(setLightboxIsOpenCreator(true, currentImage));
 	}
 
@@ -48,7 +48,7 @@ export default class CarouselImage extends React.Component {
 					 style={this.props.style}
 					 currentImage={this.props.currentImage}
 					 onClick={
-					 	_.partial(this.lightboxIsOpen, setLightboxIsOpenCreator, this.props.currentImage)
+							_.partial(this.lightboxIsOpen, setLightboxIsOpenCreator, this.props.currentImage)
 					 }
 			/>
 		);

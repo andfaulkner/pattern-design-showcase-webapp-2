@@ -48,9 +48,9 @@ const imgArr = _.map(images, imgObj => imgObj.src);
  *
  * @param  {Object} state
  * @return {Object} required state properties: lightboxIsOpen. currentImage, isCarouselRunning
+ * DEFUNCT - FOR NOW
  */
 const mapStateToProps = (state) => {
-	console.log('&&&&&&&&&&&&&&&&&&& Carousel.jsx:: mapStateToProps: state:', state);
 	return {
 		lightboxIsOpen: state.carousel.lightboxIsOpen,
 		currentImage: state.carousel.currentImage,
@@ -63,7 +63,7 @@ const mapStateToProps = (state) => {
 	}
 }
 
-@connect(mapStateToProps)
+@connect()
 export default class Carousel extends React.Component {
 	getDefaultProps = {
 		isCarouselRunning: true,
@@ -71,24 +71,12 @@ export default class Carousel extends React.Component {
 	}
 
 	constructor(props) {
-		console.log('Carousel.jsx:: Carousel: constructor --- RAN! - props: ', props);
 		super(props);
-		console.log('Carousel.jsx:: Carousel: constructor --- RAN! - props after super: ', props);
-		console.log('&&&&&&&& Carousel.jsx:: Carousel: constructor --- RAN! - this.getDefaultProps: ', this.getDefaultProps);
 		Object.assign(this.props, props, this.getDefaultProps);
-		console.log('&&&&&&&& Carousel.jsx:: Carousel: constructor --- RAN! - this.props: ', this.props);
 	}
-
-	componentWillReceiveProps = (nextProps) => {
-		console.log('&&&&&&&&&&&&&&&&&&& Carousel.jsx:: Carousel: componentWillReceiveProps nextProps:', nextProps);
-	}
-
 
 	render() {
-		console.log('&&&&&&&&&&&&&&&&&&& Carousel.jsx:: render:: props:', this.props);
-		console.log('&&&&&&&&&&&&&&&&&&& Carousel.jsx:: render:: state:', this.state);
 		var imgStyle = { height: '220px' };
-		console.log('&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&& Carousel.jsx:: Carousel:render:: carouselSettings:', carouselSettings);
 		return (
 			<div className='carousel'>
 				<ModalPhotoGallery images={images} />
@@ -104,8 +92,5 @@ export default class Carousel extends React.Component {
 				</Slider>
 			</div>
 		);
-	}
-	componentDidMount() {
-		console.log('componentDidMount!');
 	}
 };
