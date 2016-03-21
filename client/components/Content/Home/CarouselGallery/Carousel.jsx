@@ -44,24 +44,22 @@ const imgArr = _.map(images, imgObj => imgObj.src);
 export default class Carousel extends React.Component {
 	constructor(props) {
 		super(props);
-		console.log('Carousel.jsx:: Carousel: constructor:: this:', this);
-		console.log('Carousel.jsx:: Carousel: constructor:: carouselSettings:', carouselSettings);
 	}
 
 	render() {
-		console.log('Carousel.jsx:: CAROUSEL::: carouselSettings:', carouselSettings);
-		console.log('Carousel.jsx:: Carousel: settings:', carouselSettings);
 		var imgStyle = { height: '220px' };
 		return (
 			<div className='carousel'>
 				<ModalPhotoGallery images={images} />
 				<Slider {...carouselSettings}>
-					{images.map((imgObj, currentImage) => (
-						<CarouselImage src={imgObj.src}
-													 style={imgStyle}
-													 currentImage={currentImage}
-						/>
-					))}
+					{
+						images.map((imgObj, currentImage) => (
+							<CarouselImage src={imgObj.src}
+														 style={imgStyle}
+														 currentImage={currentImage}
+							/>
+						))
+					}
 				</Slider>
 			</div>
 		);

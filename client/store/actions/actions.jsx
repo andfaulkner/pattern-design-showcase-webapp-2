@@ -4,6 +4,7 @@ export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
 export const SET_IS_UPDATES_LOADED = 'SET_IS_UPDATES_LOADED';
 export const SET_IS_DESIGNS_LOADED = 'SET_IS_DESIGNS_LOADED';
 export const START_STOP_CAROUSEL = 'START_STOP_CAROUSEL';
+export const SHIFT_GALLERY_IMAGE = 'SHIFT_GALLERY_IMAGE';
 
 /**
  * Display & hide the Gallery modal
@@ -21,10 +22,10 @@ export function setLightboxIsOpenCreator(lightboxIsOpen, currentImage) {
  * Set which gallery image to display, by specifying the index of the image
  * @param {Number} index - location in the image array of the image to set as current
  */
-export function setCurrentGalleryImageCreator(index) {
+export function setCurrentGalleryImageCreator(currentImage) {
 	return {
 		type: SET_CURRENT_GALLERY_IMAGE,
-		index
+		currentImage
 	}
 }
 
@@ -36,6 +37,14 @@ export function setCurrentPageCreator(currentPage) {
 	return {
 		type: SET_CURRENT_PAGE,
 		currentPage
+	}
+}
+
+export function shiftGalleryImageCreator(incrementOrDecrement, currentImage) {
+	return {
+		type: SHIFT_GALLERY_IMAGE,
+		incrementOrDecrement,
+		currentImage
 	}
 }
 

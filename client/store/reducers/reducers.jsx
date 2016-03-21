@@ -8,9 +8,8 @@
 
 import { combineReducers } from 'redux';
 import { SET_LIGHTBOX_IS_OPEN, SET_CURRENT_GALLERY_IMAGE,
-				 START_STOP_CAROUSEL, SET_CURRENT_PAGE,
+				 START_STOP_CAROUSEL, SET_CURRENT_PAGE, SHIFT_GALLERY_IMAGE,
 				 SET_IS_UPDATES_LOADED, SET_IS_DESIGNS_LOADED	} from '../actions/actions.jsx';
-
 
 /****************************** MIDDLEWARES ******************************/
 /**
@@ -29,6 +28,14 @@ function alteredState(newState, actionType) {
 	return newState;	
 }
 /*************************************************************************/
+
+function increment(number) {
+	return ++number;
+}
+
+function decrement(number) {
+	return --number;
+}
 
 /**
  *	Set the current image to display in the modal gallery 
@@ -101,6 +108,32 @@ export function setStartStopCarousel(state = {}, action) {
 			return unknownType(state, 'setStartStopCarousel');
 	}
 }
+
+/**
+ *	Set the current image to display in the modal gallery 
+ */
+export function shiftGalleryImage(state = {}, action) {
+	switch (action.type) {
+		case 'SHIFT_GALLERY_IMAGE':
+			console.log('&&&& shiftGalleryImage::: state: ', state);
+			console.log('&&&& shiftGalleryImage::: action: ', action);
+			const shift = (action.incrementOrDecrement === 'increment')
+				? increment
+				: (action.incrementOrDecrement === 'decrement')
+					? decrement
+					: console.error('INVALID incrementOrDecrement VALUE SENT TO shiftGalleryImage reducer');
+			return alteredState({
+				...state,
+				currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
+					? shift(action.currentImage)
+					: shift(state.currentImage),
+				}, SHIFT_GALLERY_IMAGE)
+		default:
+			return unknownType(state, 'setCurrentGalleryImage');
+	}
+}
+
+// require('./test-reducers');
 
 const reducers = combineReducers({
 	setLightboxIsOpen,

@@ -34,10 +34,10 @@ export default class ModalPhotoGallery extends React.Component {
 	 * change the state to have the lightbox open, and set current
 	 * image to the one clicked. Index: number of images clicked
 	 */
-	openLightbox = (index, event) => {
+	openLightbox = (imageToOpen, event) => {
 		event.preventDefault();
 		this.setState({
-			currentImage: index,
+			currentImage: imageToOpen,
 			lightboxIsOpen: true,
 		});
 	}
