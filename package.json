@@ -6,7 +6,8 @@
   "scripts": {
     "build-db": "createdb pattern_design || true; node ./scripts/generate-db-tables.js || true",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js"
+    "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
+    "preinstall": "npm i -g pm2 && pm2 install pm2-logrotate"
   },
   "author": "",
   "license": "ISC",
@@ -70,6 +71,8 @@
     "lazypipe": "^1.0.1",
     "lodash": "^4.3.0",
     "node-sass": "^3.4.2",
+    "nodemon": "1.9.1",
+    "pm2": "1.0.2",
     "redux-devtools": "^3.1.1",
     "resolve-url-loader": "^1.4.3",
     "run-sequence": "^1.1.5",
@@ -81,6 +84,7 @@
     "webpack": "2.0.7-beta"
   },
   "dependencies": {
+    "actionhero": "13.2.3",
     "babel-plugin-syntax-decorators": "^6.5.0",
     "babel-plugin-transform-async-functions": "6.5.0",
     "babel-plugin-transform-async-to-generator": "6.7.0",

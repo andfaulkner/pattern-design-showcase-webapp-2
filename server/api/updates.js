@@ -9,4 +9,9 @@ router.get('/', function(req, res) {
 	res.send('updates: rest-api: default');
 });
 
+router.get('/asdf', function(req, res) {
+	console.log('updates:: default - asdf!')
+	res.send('updates: rest-api: default - asdf');
+});
+
 module.exports = router;
