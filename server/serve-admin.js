@@ -1,6 +1,7 @@
 var _ = require('lodash');
 var auth = require('server/core/passport-setup');
 var { passport, appSession: session } = auth;
+var logger = require('server/core/logger').file('server/serve-admin');
 
 module.exports = (app) => {
 
@@ -25,10 +26,9 @@ module.exports = (app) => {
 	//   in Google authentication involves redirecting the user to google.com. After authorization,
 	//   Google redirects the user back to this app at /auth/google/callback
 	app.get('/auth/google',
-		passport.authenticate('google', 
-		{ 
-			scope: ['https://www.googleapis.com/auth/plus.login'] 
-		}
+		passport.authenticate('google', {
+				scope: ['https://www.googleapis.com/auth/plus.login'] 
+			}
 	));
 
 	// GET /auth/google/callback

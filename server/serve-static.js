@@ -8,7 +8,7 @@ module.exports = (app) => {
 	app.use('/api/image', 		require('server/img-route'));
 
 	//
-	// serve public portion of site. Determine files of interest from config file.
+	// serve each html & js entry file, based on values in the app config.
 	//
 	app.locals.config.get('htmlEntryPoints').forEach(
 		(entry) => {
