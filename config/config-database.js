@@ -2,7 +2,8 @@
 
 var dbClient = 'postgres';
 var cacheClient = 'redis';
-var secret = require('./secret') || {};
+var secret = {};
+// var secret = require('./secret') || {};
 var _ = require('lodash');
 
 module.exports = {
