@@ -27,8 +27,9 @@ app.use(bodyParser.json());
 
 // consume the subcomponents of the app
 app = _.flow(
-	require('server/serve-static'),
-	require('server/serve-admin') // serve-admin must always go last
+	require('server/serve-static')
+	// ,
+	// require('server/serve-admin') // serve-admin must always go last
 )(app);
 
 // listen for requests on port 3000
