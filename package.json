@@ -105,6 +105,7 @@
     "connect-redis": "3.0.2",
     "deep-freeze": "0.0.1",
     "eslint-plugin-react": "^3.16.1",
+    "event-stream": "3.3.2",
     "express-session": "1.13.0",
     "formsy-react": "0.17.0",
     "gulp": "3.9.1",
