@@ -12,4 +12,137 @@
 	border: 1px solid red;
 	text-align: center;
 	background-color: black;
+	padding-top: 20px;
+	font-size: 10px;
+  line-height: 1.4em;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-family: 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
+	color: white;
+	letter-spacing: 0.2em;
+}
+
+.footer-text-col {
+	border-right-width: 1px;
+	border-right-style: solid;
+	border-right-color: white;
+}
+
+.footer-social-media-icons-container {
+	padding-left: 1px;
+	margin-top: -3px;
+	min-width: 160px;
+	margin-left: 20px;
+}
+
+// MAKING A FOOTER RESPONSIVE IS A NIGHTMARE. SEE BELOW FOR CASE IN POINT:
+@media (max-width: 5000px) {
+	#footer {
+		padding-top: 19px;
+		font-size: 13px;
+		letter-spacing: 0.3em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 40px;
+		min-width: 180px;
+	}
+	.footer-social-media-icon {
+		padding-left: 8px;
+		padding-right: 8px;
+	}
+}
+@media (max-width: 1400px) {
+	#footer {
+		padding-top: 19px;
+		font-size: 12px;
+		letter-spacing: 0.3em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 25px;
+		min-width: 160px;
+	}
+	.footer-social-media-icon {
+		padding-left: 7px;
+		padding-right: 7px;
+	}
+}
+
+@media (max-width: 1230px) {
+	#footer {
+		padding-top: 19px;
+		font-size: 12px;
+		letter-spacing: 0.2em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 15px;
+		min-width: 150px;
+	}
+	.footer-social-media-icon {
+		padding-left: 6px;
+		padding-right: 6px;
+	}
+}
+
+@media (max-width: 1021px) {
+	#footer {
+		padding-top: 19px;
+		font-size: 11px;
+		letter-spacing: 0.2em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 10px;
+		min-width: 150px;
+	}
+	.footer-social-media-icon {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+}
+
+@media (max-width: 850px) {
+	#footer {
+		padding-top: 20px;
+		font-size: 10px;
+		letter-spacing: 0.2em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 6px;
+		min-width: 141px;
+	}
+	.footer-social-media-icon {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
+
+@media (max-width: 767px) {
+	#footer {
+		font-size: 10px;
+		letter-spacing: 0.1em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 6px;
+		min-width: 124px;
+	}
+	.footer-social-media-icon {
+		padding-left: 2px;
+		padding-right: 2px;
+	}
+}
+
+@media (max-width: 660px) {
+	#footer {
+		font-size: 9px;
+		letter-spacing: 0.1em;
+	}
+	.footer-social-media-icons-container {
+		margin-left: 10px;
+		min-width: 120px;
+	}
+	.footer-social-media-icon {
+		padding-left: 1px;
+		padding-right: 1px;
+	}
 }

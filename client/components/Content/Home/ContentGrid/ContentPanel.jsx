@@ -17,9 +17,6 @@ var classNames = require('classnames');
 
 
 export class ContentPanel extends React.Component {
-	constructor(props) {
-		super(props);
-	}
 
 	/**
 	 * Set the width of this component to always be equal to the width of another specified
@@ -31,11 +28,9 @@ export class ContentPanel extends React.Component {
 	matchWidthWhenSmall = () => {
   	this.setState({windowWidth: window.innerWidth});
 		if (!this.props.matchWidthById) { return; }
-
 		if (window.innerHeight < 768 && window.innerWidth < 768) {
 			this.hasRunReset = false;
 			this.el.style.width = this.elToMatch.getBoundingClientRect().width + 'px';
-
 		// reset the width value, but don't reset again until the size drops below 768 again
 		} else if (!this.hasRunReset) {
 			this.hasRunReset = true;
@@ -44,9 +39,7 @@ export class ContentPanel extends React.Component {
 	}
 
 	/**
-	 * Set the width
-	 *
-	 * @return {[type]} [description]
+	 * Set the width after rendering. This is important to ensure it matches its sibling panels.
 	 */
 	componentDidMount = () => {
 		if (this.props.matchWidthById && this.props.id) {

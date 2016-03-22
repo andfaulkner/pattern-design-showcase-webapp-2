@@ -6,29 +6,27 @@ import Radium from 'radium';
 import {connect} from 'react-redux';
 import { setCurrentPageCreator } from '../../../store/actions/actions.jsx';
 
-@connect()
-export class DesignsPage extends React.Component {
-	getDefaultProps = {
-		asdf: 'asdfasdf'
+function lifecycleDefaults(target) {
+	target.prototype.componentWillMount = function() {
+		console.log('componentWillMount ran from decorator!');
+		console.log('this.props is still accessible', this.props);
 	}
-	getInitialState = {
-		asdfSTATE: 'asdfasdfasdfasdf'
+	target.prototype.componentWillUnmount = function() {
+		console.log('componentWillUnmount ran from decorator!');
+		console.log('this.props is still accessible', this.props);
 	}
-	constructor(props) {
-		super(props);
-		console.log('&&&&&&&&&&&&&&&& DesignsPage.jsx:: DesignsPage:constructor:::: this.state:', this.state);
-		console.log('&&&&&&&&&&&&&&&& DesignsPage.jsx:: DesignsPage:constructor:::: this.props:', this.props);
-		console.log('&&&&&&&&&&&&&&&& DesignsPage.jsx:: DesignsPage:constructor:::: props:', props);
-  	this.props.dispatch(setCurrentPageCreator('Designs'));
+	target.prototype.componentDidMount = function() {
+		console.log('componentDidMount ran from decorator!');
+		console.log('this.props is still accessible', this.props);
 	}
+}
 
-	componentWillMount = () => {
-		console.log('%%%%%%%%%%%%%%%% DesignsPage.jsx:: componentWillMount::: this.props:', this.props);
-	}
+@lifecycleDefaults
+export class DesignsPage extends React.Component {
 
 	render() {
 		return (
-			<div>Yo</div>
+			<div>Hello decorators!</div>
 		);
 	}
 };

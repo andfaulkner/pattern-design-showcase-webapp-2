@@ -16,7 +16,7 @@ import Radium from 'radium';
 import { Grid, Row, Col } from 'react-bootstrap'; 
 import { ContentPanel } from './ContentPanel.jsx';
 import { BannerBlock } from './BannerBlock.jsx';
-import { SocialMediaIcons } from './SocialMediaIcons.jsx';
+import { SocialMediaIcons } from '../../../lib/SocialMediaIcons.jsx';
 
 // TODO fetch the content from here, set it up to be grabbed via AJAX 
 const contentLeft = {
@@ -108,13 +108,13 @@ class ContentGrid extends React.Component {
 	render() {
 		return (
 			<Row xs={12} style={this.xsStyle()} id='content-grid-wrapper'>
-				<Col 								lg={1}		md={1} 		smHidden				xs={2} />			 		{/* Spacer*/}
-				<LeftContentCol			lg={5}		md={5} 		sm={5}					xs={8} />
-				<Col 								lg={1}		mdHidden	smHidden				xs={2} />			 		{/* Spacer*/}
-				<Col 								lgHidden	mdHidden	smHidden				xs={3} />			 		{/* Spacer*/}
-				<RightContentCol		lg={5}		md={5} 		sm={5}					xs={7} />
-				<SocialMediaIcons		lg={1}		md={1} 		sm={1}					xsHidden={true}/>
-				<Col 								lgHidden		mdHidden		smHidden				xs={2} />			 		{/* Spacer*/}
+				<Col 							lg={1}		md={1} 		smHidden	xs={2} />			 		{/* Spacer*/}
+				<LeftContentCol		lg={5}		md={5} 		sm={5}		xs={8} />
+				<Col 							lg={1}		mdHidden	smHidden	xs={2} />			 		{/* Spacer*/}
+				<Col 							lgHidden	mdHidden	smHidden	xs={3} />			 		{/* Spacer*/}
+				<RightContentCol	lg={5}		md={5} 		sm={5}		xs={7} />
+				<SocialMediaIcons	lg={1}		md={1} 		sm={1}		xsHidden={true} theme={'alternateDark'}/>
+				<Col 							lgHidden	mdHidden	smHidden	xs={2} />			 		{/* Spacer*/}
 			</Row>
 		);
 	}
