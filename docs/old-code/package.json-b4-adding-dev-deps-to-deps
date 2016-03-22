@@ -82,6 +82,7 @@
     "run-sequence": "^1.1.5",
     "sass": "^0.5.0",
     "sass-loader": "^3.1.2",
+    "shelljs": "^0.6.0",
     "style-loader": "^0.13.0",
     "url-loader": "0.5.7",
     "webpack": "2.0.7-beta"
@@ -152,7 +153,6 @@
     "redux": "^3.3.1",
     "redux-devtools": "3.1.1",
     "rootpath": "^0.1.2",
-    "shelljs": "^0.6.0",
     "superagent": "1.7.2",
     "trace": "^2.0.2",
     "webpack": "2.0.7-beta",
