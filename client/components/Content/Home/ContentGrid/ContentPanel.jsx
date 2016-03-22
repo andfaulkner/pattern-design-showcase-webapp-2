@@ -27,7 +27,9 @@ export class ContentPanel extends React.Component {
 	 */
 	matchWidthWhenSmall = () => {
   	this.setState({windowWidth: window.innerWidth});
-		if (!this.props.matchWidthById) { return; }
+		if (!this.props.matchWidthById) {
+			return;
+		}
 		if (window.innerHeight < 768 && window.innerWidth < 768) {
 			this.hasRunReset = false;
 			this.el.style.width = this.elToMatch.getBoundingClientRect().width + 'px';

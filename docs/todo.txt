@@ -64,20 +64,50 @@
 ! auth page - basic form
 ! organize to-do into types, complete it
 
-! make data store available to whole app
-! write reducers
-! write actions
-! 
-
-- Data store::: learn react-redux
-- Data store::: make initial data request to redux from a react component (POC)
-- REDUX:: learn Provider tag pattern
+################## DONE: March 22nd-23rd ##################
+! REDUX:: make initial data request to redux from a react component (POC)
+! REDUX: set all state changes to occur in redux
+! REDUX: outline all state redux will store
+! REDUX:: learn Provider tag pattern
+! REDUX: outline all app state changes required (diagram)
+! REDUX: write actions
+! REDUX: write reducers
+! REDUX:: Get store, provide to all of app - make data store available to whole app
+! REDUX:: wire redux store into react components
+! REDUX:: learn react-redux
+! HOME:: CAROUSEL: wire modal gallery to carousel images (via Redux)
+! COMMON: NAV-MENU:: on route change alter selected menu item -- get highlighting working properly
+! COMMON: NAV-MENU:: Actual titles
+! COMMON: NAV-MENU:: make titles configurable
+! COMMON: NAV-MENU:: Link in new actual page files
+! COMMON::: FOOTER: properly laid-out
+! COMMON::: FOOTER:  add content
+XX COMMON: NAV-MENU:: load navmenu item names in by AJAX?
+XX COMMON: NAV-MENU:: required dropdowns?
+! BUILD ENVIRONMENT:: require paths relative to server root?
+! REACT:: learn react decorators
+! REACT:: install and learn react routes
 **************************************************************************************
+- kill postgres
+- launch mongo
+- interface with mongo
+- sample deployment on Heroku
+- figure out a "forever" type app for Heroku (pm2?)
+- docker?
+- Procfile - work out if the log is needed: web: NODE_PATH=$NODE_PATH:./; node --harmony_default_parameters --harmony_destructuring --es_staging ./node_modules/pm2/bin/pm2 start app.js && pm2 logs all
 
 **************************************************************************************
 **************************************** TODO ****************************************
 **************************************************************************************
+Heroku
+- setup
+	- install toolkit
+	- first login
+	- sample app
+
 Database
+- swap in mongoDB
+- mongo basics
 - determine what types of data to put in the db
 - script to bootstrap the original set in
 - Set up BookshelfJS to act as abstraction over your db (models etc.)
@@ -98,32 +128,14 @@ AJAX
 - recently updated dynamic content - AJAX
 	- only show 1st 3
 
-Data store
-- outline all state redux will store
-- outline all app state changes required (diagram)
-- write actions
-- write reducers
-- set all state changes to occur in redux
+! Data store
 
 HOME::: Carousel 
-- wire modal gallery to carousel images (via Redux)
 -	Translucent vertical blocks on L & R, around arrows
 - proper arrows (nicer images)
 - fix occasional freezing on resize
 		- image click popup
 		- stop carousel on popup
-
-COMMON::: Nav-menu
-- on route change alter selected menu item -- get highlighting working properly
-- Actual titles
-- make titles configurable
-- load navmenu item names in by AJAX?
-- required dropdowns?
-- Link in new actual page files
-
-COMMON::: Footer
-- properly laid-out
-- add content
 
 Social Media
 - determine social media links' behaviour
@@ -169,7 +181,6 @@ PAGE: Contact <<<< WIP: possibly concat with about
 PAGE: 'See more' corporate designs
 - image on RS, text on LS, alternating
 - get Tamara to do a few low-hanging fruit items to fill the section
-- 
 
 PAGE: 'See more' latest updates
 - create React list component
@@ -182,7 +193,7 @@ PAGE: 'See more' latest updates
 	- POSSIBLY read more
 	- social media buttons (to share the item)
 
-PAGE: Hire Tamara
+PAGE: 'Hire Tamara'
 - decide whether or not you want one (discuss w/ Tamara)
 	- if you do, wireframe it (steal an example from somewhere)
 - consider concating with About, Contact (etc.)
@@ -228,10 +239,8 @@ React learning
 - Complete React component structure list
 
 Redux
-	- Get store, provide to all of app
 	- write actions
 	- write reducers
-	- wire into react components
 
 XXXX material design
 	XXX install
@@ -248,17 +257,12 @@ XXXX material design
 - DRY your paths again (e.g. to the html entries)
 
 - split auth page out
-- react decorators
-- react routes
-
 
 - auth with redis etc.
 		- style auth page
 		- post-login page - basic image
 		- redis config
 		- passport?
-		- 
-
 
 Advanced (later)
 - browser livereload
