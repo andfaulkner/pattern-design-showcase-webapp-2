@@ -1,1 +1,1 @@
-web: node node_modules/gulp/bin/gulp init-build && export NODE_PATH=$NODE_PATH:./; node_modules/pm2/bin/pm2 start app.js --node-args="--harmony_default_parameters --harmony_destructuring --es_staging"; node_modules/pm2/bin/pm2 logs app
+web: export NODE_PATH=$NODE_PATH:./; gulp init-build && pm2 start app.js --node-args="--harmony_default_parameters --harmony_destructuring --es_staging"; pm2 logs app
