@@ -88,13 +88,29 @@ XX COMMON: NAV-MENU:: required dropdowns?
 ! REACT:: learn react decorators
 ! REACT:: install and learn react routes
 **************************************************************************************
-- kill postgres
-- launch mongo
+! insecure world writable error
+X!X activate postgres in app
+! launch mongo
+! figure out a "forever" type app for Heroku (pm2)
+! implement "forever" type app for Heroku (pm2)
+! Procfile - work out if the log is needed [ANS: IT IS] - web: NODE_PATH=$NODE_PATH:./; node --harmony_default_parameters --harmony_destructuring --es_staging ./node_modules/pm2/bin/pm2 start app.js && pm2 logs all
 - interface with mongo
+- P4L
+	- bubble bath :)
+- send money to Lisa
+- store a bit of data in mongo
+- retrieve data from mongo
+- kill postgres
+- activate redis in app
 - sample deployment on Heroku
-- figure out a "forever" type app for Heroku (pm2?)
 - docker?
-- Procfile - work out if the log is needed: web: NODE_PATH=$NODE_PATH:./; node --harmony_default_parameters --harmony_destructuring --es_staging ./node_modules/pm2/bin/pm2 start app.js && pm2 logs all
+- handle devDependencies needing to be mixed in with regular deps for Heroku
+- make only 2 most recent corporate designs or updates on home page
+**************************************************************************************
+ASIDE: Clojure
+- install leningen
+
+**************************************************************************************
 
 **************************************************************************************
 **************************************** TODO ****************************************

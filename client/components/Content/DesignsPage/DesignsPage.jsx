@@ -26,7 +26,7 @@ export class DesignsPage extends React.Component {
 
 	render() {
 		return (
-			<div>Hello decorators!</div>
+			<div>Wow, these are really great designs!</div>
 		);
 	}
 };

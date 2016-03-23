@@ -1,0 +1,11 @@
+systemLog:
+  verbosity: 3
+  quiet: false
+  timeStampFormat: "ctime"
+
+net:
+  port: 27017
+  http:
+    enabled: false
+    JSONPEnabled: false
+    RESTInterfaceEnabled: false

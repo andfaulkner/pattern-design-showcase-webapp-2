@@ -4,6 +4,50 @@
 		"selected_items":
 		[
 			[
+				"req",
+				"req	require"
+			],
+			[
+				"fn",
+				"fn	function"
+			],
+			[
+				"padding-",
+				"padding-right"
+			],
+			[
+				"border-right",
+				"border-right-color"
+			],
+			[
+				"border-righ",
+				"border-right-style"
+			],
+			[
+				"clf",
+				"clf	Console log with current filename."
+			],
+			[
+				"cl",
+				"cl	console.log"
+			],
+			[
+				"rct_life",
+				"rct_life_cdm_class	React: componentDidMount - class"
+			],
+			[
+				"rct_new",
+				"rct_new_class_simple	Simple class-based react component, no export"
+			],
+			[
+				"incl",
+				"include	@include"
+			],
+			[
+				"mixin",
+				"mixin	@mixin"
+			],
+			[
 				"rct_",
 				"rct_newcmpsim	Simple class-free react component, no export"
 			],
@@ -20,20 +64,12 @@
 				"export"
 			],
 			[
-				"clf",
-				"clfo	Log object w/ file & object name, "
-			],
-			[
 				"rct",
 				"rct_cmpcls	Simple class-based react component, with default export"
 			],
 			[
 				"rctnew",
 				"rct_new_lifecycle_summary	React component with all standard lifecycle stages, no export"
-			],
-			[
-				"rct_new",
-				"rct_newcabf	Simple class-based react component, with export; includes all imports"
 			],
 			[
 				"exp",
@@ -122,10 +158,6 @@
 			[
 				"comment_m",
 				"comment_block_monster	Monster-size comment block - to divide file into sections"
-			],
-			[
-				"req",
-				"req	nodejs--require"
 			],
 			[
 				"Error",
@@ -417,6 +449,121 @@
 			]
 		]
 	},
+	"buffers":
+	[
+		{
+			"file": "config/config-database.js",
+			"settings":
+			{
+				"buffer_size": 1265,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/components/Content/Home/CarouselGallery/Carousel.jsx",
+			"settings":
+			{
+				"buffer_size": 2530,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/generate-db-tables.js",
+			"settings":
+			{
+				"buffer_size": 4179,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/HEROKU/deployment.md",
+			"settings":
+			{
+				"buffer_size": 687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/mongo-db/mongo-db.md",
+			"settings":
+			{
+				"buffer_size": 4879,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 4755,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/bootstrap-mongo.sh",
+			"settings":
+			{
+				"buffer_size": 472,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/mongo.yaml",
+			"settings":
+			{
+				"buffer_size": 171,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/mongo-bootstrap-data/designs.json",
+			"settings":
+			{
+				"buffer_size": 746,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/mongo-bootstrap-data/images.json",
+			"settings":
+			{
+				"buffer_size": 1712,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/mongo-bootstrap-data/bio.json",
+			"settings":
+			{
+				"buffer_size": 276,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "scripts/mongo-bootstrap-data/updates.json",
+			"settings":
+			{
+				"buffer_size": 1771,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "client/components/Content/GalleryPage/GalleryPage.jsx",
+			"settings":
+			{
+				"buffer_size": 1460,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "docs/todo.txt",
+			"settings":
+			{
+				"buffer_size": 10103,
+				"line_ending": "Unix"
+			}
+		}
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -646,30 +793,86 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/HEROKU",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server"
+	],
 	"file_history":
 	[
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/primer-dataset.json",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/bootstrap-mongo.sh",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/generate-db-tables.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentGrid.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/BannerBlock.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage/UpdatesPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/package.json",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/bootstrap-mongodb.json",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/updates.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/designs.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/AboutPage/AboutPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-database.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/default.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/passport-setup.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/config-database-preferred.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/DesignsPage/DesignsPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/actions.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/Procfile",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/secret.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/index-todo.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentPanel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/images.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-rest-api.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-admin.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-static.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/models/init-db.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/routes/comment-route.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/SocialMediaIcons.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Footer.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/HEROKU/deployment.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/text-content-grid.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/configure-store.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/footer.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/social-media-buttons.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentPanelContainer.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/carousel-reducers.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Common.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/web.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/lib/SocialMediaIcons.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/lib/Page.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/ModalPhotoGallery.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu-styles.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/nav-menu.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/common.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/test-reducers.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage/GalleryPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/Carousel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/ContentArea.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/content.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/RootNode.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Updates/Designs.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/CarouselImage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10666193_837013629696484_249744198_n.jpg",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/ModalPhotoGallery.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/common.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/layout/Header.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/SocialMediaIcons.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/node_modules/react-images/dist/react-images.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/social-media-buttons.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/carousel-settings.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Common.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/text-content-grid.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/footer.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/redux/redux-info.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/configure-store.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/switchPage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/action-creators.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/redux/single-file-redux-example",
@@ -678,8 +881,6 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/carousel-settings.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselStyle.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/TextContent/BannerBlock.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Carousel.jsx",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--full-update-lifecycle.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--complete-lifecycle.sublime-snippet",
@@ -733,49 +934,7 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/scripts/setup-node/essential-modules.sh",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/express-js/express-middleware.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/tdd/tdd-it-es6.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-standard.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export-on-fn-def.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.babelrc",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-one-item.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-all.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-two-items.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list-of.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/Immutable/immutable-list.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/.gitignore",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/redux/001--redux-what-it-is.md",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/unix/bash_ampersands_double_pipes__flow_operators.md",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/strings/014-regular_expressions.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b005-streaming_into_ruby_from_cli.sh",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/b001-filesystem_interaction.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copy-move-del-etc--files.rb",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/ruby/system_scripting/file-handling/013-copying-moving-etc--files",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-dropdown(select-tag).sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--component-mounter--(mounts_another_component).sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/react--findDOMNode--toGetChildValue.sublime-snippet",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/create-final-form-data-objects.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/generate-field-definition-data.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/handle-users.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/config/populate-cases-config.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/progress-bar-handler.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/load-configs.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/field-extractor-utils.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/get-merged-user-object.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-cases-bk.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/case-generation-utils/run-progress-bar.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/script/populate-triggers.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/email/test.email.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/api/api-email.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/test/api/test.email-template.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/elasticsearch-collection.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/settings/picklist-settings-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/header-toolbar-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/profile-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/backbone-grid.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/lib/es-helpers.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/collections/event-collection.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/lib/services/business-logic/search/filters.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/js/views/common/grid-filters-view.js",
-		"/home/andrew/projects/isight/isight_main_v5_beta/public/templates/common/grid-filters-tmpl.dust"
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/es6-import-standard.sublime-snippet"
 	],
 	"find":
 	{
@@ -826,6 +985,117 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"##",
+			"}\n{\n",
+			"}\n{",
+			"./",
+			"mongo-bootstrap-data",
+			"bio",
+			"Docs",
+			"} ",
+			"	\"isThumb\": true",
+			"\n}\n",
+			"	\"isThumb\": true\n",
+			"\"isCarousel\": true",
+			"\"src\"",
+			"src",
+			"\\}, \\{",
+			"`",
+			"`\\$\\{imgpath\\}",
+			"/img/patterns/",
+			"${imgpath}",
+			"	",
+			"    *",
+			"		*",
+			"secret",
+			"UpdatesPage",
+			"designs",
+			"all",
+			"get",
+			"designs",
+			"filePathRoot",
+			"entryPoint",
+			"config",
+			"comment-route",
+			"comment",
+			"./",
+			"footer-social-media-icons-container",
+			"7px",
+			"6px",
+			"2px",
+			"20px",
+			"margin-top: -5px;",
+			"container",
+			"footer-social-media-icons",
+			"icon-",
+			"SocialMedia",
+			"-50",
+			"sm={1}",
+			"className",
+			"2",
+			"5",
+			"10",
+			"6",
+			"5",
+			"3",
+			"2",
+			"3",
+			"1",
+			"constructor.",
+			"this.prototype.constructor.super",
+			"super",
+			".constructor",
+			"doThings",
+			"Mo",
+			"Mount",
+			"target.prototype",
+			"componentWillMount",
+			"target",
+			"matchWidth",
+			"this.props",
+			"props.aloha",
+			"this",
+			"props",
+			"borderTopColor",
+			"createClass",
+			"this.props",
+			"props",
+			"getDefault",
+			"setInitial",
+			";",
+			",",
+			"hover",
+			"'",
+			"\"",
+			"rgba",
+			"TopLevelMenuItem",
+			"status",
+			"willReceiveProps",
+			"nextProps",
+			"props",
+			"currentPage",
+			"mapStateToProps",
+			"props",
+			"state",
+			"Radium.getState(this.state, this.props.key, :hover)",
+			"keyForButton",
+			"index",
+			"keyForButton",
+			"NavMenuLink",
+			"setCurrentPage",
+			"props",
+			"menuItem",
+			"state",
+			"currentPage",
+			"menuItem",
+			"setCurrentPage",
+			"selectMenuItem",
+			"state",
+			"reducers",
+			"Designs",
+			"DesignsPage",
+			"ContentArea",
+			"Counter",
 			"browserHistory",
 			"historyRedux",
 			"hashHistory",
@@ -842,118 +1112,7 @@
 			"style",
 			"getDefaultProps",
 			"setLightboxIsOpenCreator",
-			"openLightbox",
-			"carouselSettings",
-			"props",
-			"'",
-			"setLightboxIsOpenCreator",
-			"lightboxIsOpen",
-			"currentImage",
-			"openLightbox",
-			"SET_LIGHTBOX_IS_OPEN",
-			"mapStateToProps",
-			"state",
-			"act",
-			"+",
-			"GALLERY_ARROW_ACTION",
-			"GALLERY_ARROWS",
-			"START_STOP_CAROUSEL",
-			"index",
-			"displayGallery",
-			"SET_LIGHTBOX_IS_OPEN",
-			"setLightboxIsOpenCreator",
-			"SET_LIGHTBOX_IS_OPEN",
-			"setCurrentGalleryImage",
-			"action",
-			"setLightboxIsOpenCreator",
-			"displayGallery",
-			"(state, action)",
-			"state",
-			"setCurrentGalleryImage",
-			"			return state || { };\n",
-			"START_STOP_CAROUSEL",
-			"pauseUnpauseCarousel",
-			"PAUSE_UNPAUSE_CAROUSEL",
-			"pauseOrUnpause",
-			"PAUSE_UNPAUSE_SLIDER",
-			"pauseUnpauseSlider",
-			"SET_IS_DESIGNS_LOADED",
-			"settings",
-			"Carousel",
-			"carousel",
-			"Carousel",
-			"carousel",
-			"Carousel",
-			"CarouselArrowButtonLeft",
-			"pause",
-			"onInnerSliderEnter",
-			"pause",
-			"this.props.autoplay",
-			"self",
-			"settings.autoplay",
-			"props",
-			"autoplay",
-			"log",
-			"self",
-			"settings",
-			"carouselSettings",
-			"clickHandler",
-			"onclick",
-			"pause",
-			"Object.keys",
-			"InnerSlider",
-			"handleSliderRef",
-			"self.ref",
-			"ref",
-			"self.ref",
-			"ref",
-			"ref.pause",
-			"ref",
-			"!this.state.autoplay",
-			"clickHandlerFn",
-			"ref",
-			" self.slider",
-			"self.slider",
-			"slider",
-			"Slider",
-			"slider",
-			".ref",
-			"handleSliderRef",
-			"Slider",
-			"handleSliderRef",
-			"[^\\.]log",
-			"self.slider",
-			"slider)",
-			"slider",
-			"handleSliderRef",
-			"logStateProps",
-			"ModalPhotoGallery",
-			"handlerSliderRef",
-			"ModalPhotoGallery.jsx",
-			"openLightbox",
-			"${",
-			"logStateProps",
-			"this",
-			"constructor",
-			"props",
-			"ref",
-			"Slider",
-			"CarouselImage",
-			"state",
-			"!this.state.autoplay",
-			"this.settings",
-			"settings",
-			"Right",
-			"carouselSettings",
-			"style",
-			"curImg",
-			"this.state",
-			"lightboxIsOpen",
-			"setLightboxIsOpen",
-			"setLightboxIsOpenCreator",
-			"currentImage",
-			"openLightbox",
-			"state"
+			"openLightbox"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -961,6 +1120,10 @@
 		"regex": true,
 		"replace_history":
 		[
+			"}\n{",
+			"\"/img/patterns/",
+			"  /img/patterns/",
+			"  ",
 			"	",
 			"return ",
 			"",
@@ -1027,6 +1190,1329 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "config/config-database.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1265,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1038,
+								1038
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tabs_extra_last_activated": 1458695578.15,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 390.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 12,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "client/components/Content/Home/CarouselGallery/Carousel.jsx",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2530,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								691,
+								691
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tabs_extra_last_activated": 1458695733.01,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"tabs_extra_moving":
+							[
+								3,
+								0
+							],
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 892.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 11,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "scripts/generate-db-tables.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4179,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JavaScriptNext.tmLanguage",
+							"tabs_extra_last_activated": 1458695928.75,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1521.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "docs/HEROKU/deployment.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 687,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								687,
+								687
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tabs_extra_last_activated": 1458693824.15,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 13,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "docs/mongo-db/mongo-db.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4879,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1824,
+								1824
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"open_with_edit": true,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax",
+							"tabs_extra_last_activated": 1458705526.02,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1202.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4755,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								236,
+								236
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tab_size": 4,
+							"tabs_extra_last_activated": 1458700050.04,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "scripts/bootstrap-mongo.sh",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 472,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								25,
+								25
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/ShellScript/Shell-Unix-Generic.sublime-syntax",
+							"tabs_extra_last_activated": 1458700334.26,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 13.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 4,
+			"sheets":
+			[
+				{
+					"buffer": 7,
+					"file": "config/mongo.yaml",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 171,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								68,
+								68
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"open_with_edit": true,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/YAML/YAML.sublime-syntax",
+							"tabs_extra_last_activated": 1458700336.23,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_moving":
+							[
+								3,
+								2
+							],
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "scripts/mongo-bootstrap-data/designs.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 746,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								344,
+								344
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tabs_extra_last_activated": 1458700336.95,
+							"tabs_extra_last_activated_sheet_index": 1,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "scripts/mongo-bootstrap-data/images.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1712,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1592,
+								1592
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"open_with_edit": true,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tabs_extra_last_activated": 1458700338.13,
+							"tabs_extra_last_activated_sheet_index": 2,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": -0.0,
+						"translation.y": 587.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "scripts/mongo-bootstrap-data/bio.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 276,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								276,
+								276
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"open_with_edit": true,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tabs_extra_last_activated": 1458700339.29,
+							"tabs_extra_last_activated_sheet_index": 3,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 11,
+					"file": "scripts/mongo-bootstrap-data/updates.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1771,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								327,
+								327
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"open_with_edit": true,
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/JavaScriptNext - ES6 Syntax/JSON (JavaScriptNext).tmLanguage",
+							"tabs_extra_last_activated": 1458705724.34,
+							"tabs_extra_last_activated_sheet_index": 4,
+							"tabs_extra_spawned": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 12,
+					"file": "client/components/Content/GalleryPage/GalleryPage.jsx",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 1460,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								506,
+								506
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Babel/JavaScript (Babel).sublime-syntax",
+							"tabs_extra_last_activated": 1458700286.51,
+							"tabs_extra_last_activated_sheet_index": 5,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 13,
+					"file": "docs/todo.txt",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 10103,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4371,
+								4371
+							]
+						],
+						"settings":
+						{
+							"BracketHighlighterBusy": false,
+							"bh_regions":
+							[
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content"
+							],
+							"side_bar_folders_auto_load_folder": 1,
+							"syntax": "Packages/Text/Plain text.tmLanguage",
+							"tabs_extra_last_activated": 1458705724.35,
+							"tabs_extra_last_activated_sheet_index": 0,
+							"tabs_extra_spawned": true,
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1014.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -1067,13 +2553,13 @@
 		"cols":
 		[
 			0.0,
-			0.733539626113,
+			0.5,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.440886079248,
+			0.433660340796,
 			1.0
 		]
 	},
@@ -1094,10 +2580,15 @@
 	{
 		"height": 88.0
 	},
+	"output.unicode_preview":
+	{
+		"height": 688.0
+	},
 	"pinned_build_system": "Packages/User/Scheme.sublime-build",
+	"project": "pattern-design-showcase-webapp.sublime-project",
 	"replace":
 	{
-		"height": 40.0
+		"height": 78.0
 	},
 	"save_all_on_build": false,
 	"select_file":
@@ -1106,6 +2597,14 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"primer",
+				"docs/mongo-db/primer-dataset.json"
+			],
+			[
+				"updates",
+				"client/components/Content/UpdatesPage/UpdatesPage.jsx"
+			],
 			[
 				"populate-triggers",
 				"script/populate-triggers.js"
@@ -1191,6 +2690,7 @@
 		],
 		"width": 570.0
 	},
+	"selected_group": 3,
 	"settings":
 	{
 	},
@@ -1198,7 +2698,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 256.0,
+	"side_bar_width": 260.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

@@ -28,7 +28,7 @@ export class UpdatesPage extends React.Component {
 
 	render() {
 		return (
-			<div>Yo</div>
+			<div>Too many things happening to list them!</div>
 		);
 	}
 };
