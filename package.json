@@ -13,7 +13,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
     "preinstall": "npm i -g pm2 gulp && pm2 install pm2-logrotate",
-    "postinstall": "echo '\n\nENVIRONMENT:::\n' && env && echo '\n----------------\n\n' && npm run build-mongodb",
+    "heroku-postbuild": "echo '\n\nENVIRONMENT:::\n' && env && echo '\n----------------\n\n' && npm run build-mongodb",
     "launch-mongo": "mongod"
   },
   "author": "",
