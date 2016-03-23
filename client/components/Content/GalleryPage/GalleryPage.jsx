@@ -5,7 +5,7 @@ import Radium from 'radium';
 import Gallery from 'react-photo-gallery';
 
 import {connect} from 'react-redux';
-import { setCurrentPageCreator } from '../../../store/actions/actions.jsx';
+import { setCurrentPage } from '../../../store/actions/actions.jsx';
 
 // extract, make externally configurable (via UI)
 const imgpath = '/img/patterns/';
@@ -25,13 +25,14 @@ const images = [
 		src: `${imgpath}red-zygote-flowers.jpg`
 	}, {
 		src: `${imgpath}mayan-hexhexhexium-decay-sponge-tea.jpg`
-	}, {
-		src: `${imgpath}orchid-eating-phoenix-army.jpg`
+	// }, {
+		// src: `${imgpath}orchid-eating-phoenix-army.jpg`
 	}, {
 		src: `${imgpath}ermagerd-a-big-rock.jpg`
-	}, {
-		src: `${imgpath}chinese-umbrella-mushrooms.jpg`
-	}
+	}, 
+	// {
+	// 	src: `${imgpath}chinese-umbrella-mushrooms.jpg`
+	// }
 ];
 
 const PHOTOS = _.reduce(images, (imgSettings, image) => {
@@ -52,7 +53,7 @@ const PHOTOS = _.reduce(images, (imgSettings, image) => {
 export class GalleryPage extends React.Component {
 	constructor(props) {
 		super(props);
-  	this.props.dispatch(setCurrentPageCreator('Gallery'));
+  	this.props.dispatch(setCurrentPage('Gallery'));
 	}
 
 	render() {

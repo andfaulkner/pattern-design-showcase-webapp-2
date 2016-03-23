@@ -104,6 +104,15 @@ X!X activate postgres in app
 ! get machine to stop fucking crashing
 ! get a static version to deploy
 ! fix site path - ban bad requests (for non-existent paths)
+- fix "see more" links
+- sticky footer
+- gallery cursor
+- see more cursor
+
+- mongodb bootstrapping working on Heroku
+- mongodb bootstrapping without unique
+- at least 1 AJAX request
+
 - fix logger to show objects properly. Rests, spreads handy here.
 - See more links
 - deal with 'secret' issue

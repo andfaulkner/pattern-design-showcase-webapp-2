@@ -3,7 +3,7 @@ var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import { setCurrentPageCreator } from '../../../store/actions/actions.jsx';
+import { setCurrentPage } from '../../../store/actions/actions.jsx';
 
 const mapStateToProps = (state) => {
 	return {
@@ -19,7 +19,7 @@ export class AboutPage extends React.Component {
 	constructor(props) {
 		super(props);
 		console.log('AboutPage.jsx:: AboutPage: constructor loaded!');
-		this.props.dispatch(setCurrentPageCreator('About'));
+		this.props.dispatch(setCurrentPage('About'));
 	}
 
 	render() {

@@ -1,5 +1,6 @@
 //ctpanel
 //	--> text-
+$teal: rgba(40, 178, 164, 1);
 
 $font-type__ctpanel--title:  normal normal normal 30px/1.4em 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
 $font-type__ctpanel--info:  normal normal normal 14px/1.4em 'courier new', monospace;
@@ -11,7 +12,7 @@ $font-type__ctpanel--see-more-button: normal normal normal 17px/1.4em 'courier n
 $height__ctpanel--title: 90px;
 $height__ctpanel--title-row: 35px;
 
-$content-padding: 18px;
+$content-hpadding: 18px;
 $padding__ctpanel--title-around: 7px;
 
 // configurable
@@ -31,8 +32,8 @@ $stark--border__ctpanel--content: solid #000000 1px;
 //********************************* MIXINS *********************************//
 @mixin ctpanel-title__sect-layout($sectionheight) {
 	height: $sectionheight;
-	padding-left: $content-padding;
-	padding-right: $content-padding;
+	padding-left: $content-hpadding;
+	padding-right: $content-hpadding;
 	vertical-align: middle;
 }
 
@@ -44,16 +45,16 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	padding-bottom: $padding__ctpanel--title-around;
 }
 
-@mixin block-lr-margin-change() {
+%block-lr-margin-change {
 	.row {
 		margin-left: 0px;
 		margin-right: 0px;
 	}
 }
 
-@mixin ctpanel--pad-text() {
-  padding-left: $content-padding;
-  padding-right: $content-padding;
+%ctpanel--pad-text {
+  padding-left: $content-hpadding;
+  padding-right: $content-hpadding;
 }
 
 @mixin ensure-cpanel-minimum-width() {
@@ -105,13 +106,7 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	}
 }
 
-.wrap-content-grid {
-	display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
-}
-
+.wrap-content-grid,
 .right-content-col-flex-wrapper {
 	display: flex;
 	flex-direction: column;
@@ -161,7 +156,7 @@ $stark--border__ctpanel--content: solid #000000 1px;
 }
 
 .ctpanel--title-row {
-	@include block-lr-margin-change();
+	@extend %block-lr-margin-change;
 	padding-bottom: 1px;
 }
 //***********************************************************************//
@@ -172,27 +167,27 @@ $stark--border__ctpanel--content: solid #000000 1px;
 }
 
 .ctpanel--content-description {
-	@include ctpanel--pad-text();
-  padding-top: $content-padding;
+	@extend %ctpanel--pad-text;
+  padding-top: $content-hpadding;
 	font: $font-type__ctpanel--info;
 }
 
 .ctpanel--content-section {
-	@include block-lr-margin-change();
-	@include ctpanel--pad-text();
-  padding-top: $content-padding / 3;
+	@extend %block-lr-margin-change;
+	@extend %ctpanel--pad-text;
+  padding-top: $content-hpadding / 3;
 }
 
 .ctpanel--content-section.stark {
-	@include block-lr-margin-change();
+	@extend %block-lr-margin-change;
 	padding-left: 20px;
 	padding-right: 20px;
 	padding-top: 18px;
 }
 
 .ctpanel--content-section__title {
-	@include block-lr-margin-change();
-	@include ctpanel--pad-text();
+	@extend %block-lr-margin-change;
+	@extend %ctpanel--pad-text;
 }
 
 .ctpanel--content-section__title-row {
@@ -205,23 +200,52 @@ $stark--border__ctpanel--content: solid #000000 1px;
 //*************************************************************************//
 
 //**************************** SEE MORE BUTTON SECTION ****************************//
+$see-more-button--vpadding: 10px;
+
 .ctpanel--see-more-button-row.row {
-	@include block-lr-margin-change();
-	@include ctpanel--pad-text();
-	padding-top: $content-padding / 3;
+	@extend %block-lr-margin-change;
+	@extend %ctpanel--pad-text;
+	padding-top: $content-hpadding / 3;
 	margin-right: -18px; // align see more button with right edge of box
 }
 
 .ctpanel--see-more-button {
-	@include block-lr-margin-change();
-	@include ctpanel--pad-text();
-	padding-top: 10px;
-	padding-bottom: 10px;
+	@extend %block-lr-margin-change;
+	@extend %ctpanel--pad-text;
+  transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+  transition-property: border-color, background-color;
+  transition-duration: 0.4s, 0.4s;
+  transition-timing-function: ease, ease;
+  transition-delay: 0s, 0s;
+	padding-top: $see-more-button--vpadding;
+	padding-bottom: $see-more-button--vpadding;
 	float: right;
 	background-color: rgba(114, 114, 114, 1);
 	border: solid rgba(0, 0, 0, 1) 0px;
 	color: #FFFFFF;
 	font: $font-type__ctpanel--see-more-button;
+	&:hover {
+		text-decoration: none;
+		color: #FFFFFF;
+		background-color: $teal;
+		// border-width: 1px;
+  //   border-color: rgba(0, 0, 0, 1);
+		// &.cigeraser {
+		//   box-sizing: content-box;
+		// 	padding-left: $content-hpadding - 1;
+	 //    margin-right: -1px;
+	 //    padding-bottom: $see-more-button--vpadding - 1;
+	 //    margin-top: -1px;
+	 //    padding-top: $see-more-button--vpadding - 1;
+	 //    margin-bottom: -1px;
+	 //  }
+		// &.stark {
+		// 	padding-left: $content-hpadding - 1px;;
+	 //    margin-right: -1px;
+		// 	padding-top: $see-more-button--vpadding - 1;
+	 //    margin-bottom: -1px;			
+	 //  }
+  }
 }
 //*********************************************************************************//
 
@@ -276,3 +300,28 @@ $stark--border__ctpanel--content: solid #000000 1px;
 }
 //**********************************************************************************//
 
+#content-grid--content-region {
+	z-index: 0;
+}
+
+.social-media-icons-container-col {
+	@extend .social-media-icons-container;
+	z-index: 1;
+}
+
+div.social-media-icons-container-col > img {
+	cursor: pointer;
+	z-index: 2;
+}
+
+div.right-content-col-flex-wrapper.coldivide.right {
+	z-index: 2;
+}
+
+div.footer-social-media-icons-container > img {
+	cursor: pointer;
+}
+
+div.slick-list > div.slick-track > img {
+	cursor: pointer;
+}

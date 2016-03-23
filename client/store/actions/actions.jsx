@@ -33,9 +33,9 @@ export function setCurrentGalleryImageCreator(currentImage) {
  * change the page currently shown in the content area, update nav-menu highlights & route
  * @param {String} currentPage - name of the current page to display
  */
-export function setCurrentPageCreator(currentPage) {
-	console.log('actions.jsx:: setCurrentPageCreator:: currentPage:', currentPage);
-	console.log('actions.jsx:: setCurrentPageCreator:: SET_CURRENT_PAGE:', SET_CURRENT_PAGE);
+export function setCurrentPage(currentPage) {
+	console.log('actions.jsx:: setCurrentPage:: currentPage:', currentPage);
+	console.log('actions.jsx:: setCurrentPage:: SET_CURRENT_PAGE:', SET_CURRENT_PAGE);
 	return {
 		type: SET_CURRENT_PAGE,
 		currentPage

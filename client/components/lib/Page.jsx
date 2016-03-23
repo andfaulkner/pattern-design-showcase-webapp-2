@@ -3,14 +3,14 @@ var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 import {connect} from 'react-redux';
-import { setCurrentPageCreator } from '../../../store/actions/actions.jsx';
+import { setCurrentPage } from '../../../store/actions/actions.jsx';
 
 @connect()
 export class Page extends React.Component {
 
 	constructor(props) {
 		super(props);
-		this.props.dispatch(setCurrentPageCreator('Updates'));
+		this.props.dispatch(setCurrentPage('Updates'));
 	}
 
 	render() {

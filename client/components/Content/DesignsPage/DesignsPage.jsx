@@ -4,7 +4,7 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 
 import {connect} from 'react-redux';
-import { setCurrentPageCreator } from '../../../store/actions/actions.jsx';
+import { setCurrentPage } from '../../../store/actions/actions.jsx';
 
 function lifecycleDefaults(target) {
 	target.prototype.componentWillMount = function() {

@@ -41,7 +41,7 @@ const contentLeft = {
 			line2: 'stuff',
 			datecomplete: '01/02/2015',
 			link: ''
-		},
+		}
 
 	]
 };
@@ -77,7 +77,7 @@ const ContentGridWrapper = () => (
 		<Col								lg={1}	md={1}	sm={1}		xs={1}>
 			<Row/>
 		</Col>
-		<Col 								lg={10}	md={10}	sm={10}		xs={10}>
+		<Col 								lg={10}	md={10}	sm={10}		xs={10} id='content-grid--content-region'>
 			<ContentGrid/>
 		</Col>
 		<Col								lg={1}	md={1} 	sm={1}		xs={1}>
@@ -113,7 +113,9 @@ class ContentGrid extends React.Component {
 				<Col 							lg={1}		mdHidden	smHidden	xs={2} />			 		{/* Spacer*/}
 				<Col 							lgHidden	mdHidden	smHidden	xs={3} />			 		{/* Spacer*/}
 				<RightContentCol	lg={5}		md={5} 		sm={5}		xs={7} />
-				<SocialMediaIcons	lg={1}		md={1} 		sm={1}		xsHidden={true} theme={'alternateDark'}/>
+				<SocialMediaIcons	lg={1}		md={1} 		sm={1}		xsHidden={true}
+													theme={'alternateDark'}
+													className='social-media-icons-container-col'/>
 				<Col 							lgHidden	mdHidden	smHidden	xs={2} />			 		{/* Spacer*/}
 			</Row>
 		);
@@ -134,8 +136,10 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
 			content={contentLeft}
 			id='corporate-designs'
 			title={['corporate', 'designs']}
+			parentPage='Designs'
+			parentPath='/designs'
+			theme='cigeraser'
 			style={{
-				theme: 'cigeraser',
 				borderClass: 'ctpanel--title-border__cigeraser',
 				title: 'ctpanel--title cigeraser',
 			}}
@@ -148,7 +152,8 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
  * Right column of grid
  */
 const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}) => (
-	<Col lg={lg} md={md} sm={sm} xs={xs}
+	<Col
+		lg={lg} md={md} sm={sm} xs={xs}
 		xsHidden={!!xsHidden} smHidden={!!smHidden}
 		mdHidden={!!mdHidden} lgHidden={!!lgHidden}
 		className='right-content-col-flex-wrapper coldivide right'
@@ -159,11 +164,13 @@ const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs
 			className=''
 			content={contentRight}
 			title={'latest updates'}
+			parentPage='Updates'
+			parentPath='/updates'
+			theme='stark'
 			style={{
-				theme: 'stark',
 				borderClass: 'ctpanel--title-border__stark',
 				title: 'ctpanel--title stark',
-				contentMargin: 'ctpanel--content-margin'
+				contentMargin: 'ctpanel--content-margin',
 			}}
 			matchWidthById='corporate-designs'
 		/>

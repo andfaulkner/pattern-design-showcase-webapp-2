@@ -14,7 +14,8 @@ import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 import { Row } from 'react-bootstrap';
 var classNames = require('classnames');
-
+import { setCurrentPage } from '../../../../store/actions/actions.jsx';
+import {connect} from 'react-redux';
 
 export class ContentPanel extends React.Component {
 
@@ -54,16 +55,20 @@ export class ContentPanel extends React.Component {
 	}
 
 	render() {
+		const { title, style, matchWidthById, content, ...otherProps} = this.props;
 		return (
-			<Row className={'content-panel'} id={this.props.id}>
+			<Row id={this.props.id}
+					 className={classNames('content-panel', otherProps.theme)}
+			>
 				<CPanelTitle
-					title={this.props.title}
-					titleStyle={this.props.style.title}
-					matchWidthById={this.props.matchWidthById}
+					title={title}
+					titleStyle={style.title}
+					matchWidthById={matchWidthById}
 				/>
 				<CPanelContent
-					style={this.props.style}
-					content={this.props.content}
+					style={style}
+					content={content}
+					{...otherProps}
 				/>
 			</Row>
 		);
@@ -96,9 +101,9 @@ const CPanelTitle = ({ title, titleStyle='ctpanel--title' }) => (
  * @param  {Object} style - required to render styles in this component & children
  * @return {ReactComponent} A react component object
  */
-const CPanelContent = ({content, style}) => (
+const CPanelContent = ({content, style, ...otherProps}) => (
 	<div className={ 
-		classNames('ctpanel--content', style.borderClass, style.theme)
+		classNames('ctpanel--content', style.borderClass, otherProps.theme)
 	}>
 		{content.description
 			? <CPanelDescription description={content.description} />
@@ -107,7 +112,7 @@ const CPanelContent = ({content, style}) => (
 		{content.designs.map(design => (
 				<CPanelContentItem design={design} spacer={content.spacer} style={style} />
 		))}
-		<CPanelSeeMoreButton />
+		<CPanelSeeMoreButton {...otherProps} />
 	</div>
 );
 
@@ -116,11 +121,29 @@ const CPanelContent = ({content, style}) => (
  * TODO load the relevant section
  * TODO get the required link passed in
  */
+@connect()
 class CPanelSeeMoreButton extends React.Component {
+
+	navToParentPage = (setCurrentPage, parentPage) => {
+		this.props.dispatch(setCurrentPage(parentPage));
+	}
+
 	render() {
 		return (
-			<Row className='ctpanel--see-more-button-row'>
-				<button className='ctpanel--see-more-button'>see more >></button>
+			<Row className={classNames('ctpanel--see-more-button-row', this.props.theme)}>
+				<Link
+					to={this.props.parentPath}
+					className={classNames('ctpanel--see-more-button', this.props.theme)}
+					onClick={this.navToParentPage.bind(this, setCurrentPage, this.props.parentPage)}
+				>
+{/*			
+				<button
+					className='ctpanel--see-more-button'
+					onClick={this.navToParentPage.bind(this, setCurrentPage, this.props.parentPage)}
+				>
+*/}
+					see more >>
+				</Link>
 			</Row>
 		);
 	}
@@ -187,7 +210,9 @@ const CPanelLine2 = ({line2, spacer}) => (
 		line2
 			?	(<Row
 					className='ctpanel--content-section__title-row'
-					dangerouslySetInnerHTML={{ __html: spacer + line2 }}
+					dangerouslySetInnerHTML={{
+						__html: spacer + line2
+					}}
 				/>)
 			: ''
 	}</div>

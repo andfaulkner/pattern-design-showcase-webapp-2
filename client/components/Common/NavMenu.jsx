@@ -35,7 +35,7 @@ import Radium from 'radium';
 
 import {connect} from 'react-redux';
 import Lightbox from 'react-images';
-import { setCurrentPageCreator } from '../../store/actions/actions.jsx';
+import { setCurrentPage } from '../../store/actions/actions.jsx';
 
 const mapStateToProps = (state) => {
 	return {
@@ -56,8 +56,8 @@ export default class NavMenu extends React.Component {
 		this.state = this.state || { currentPage: 'Home'};
   }
 
-  selectMenuItem = (setCurrentPageCreator, index, menuItem) => {
-  	this.props.dispatch(setCurrentPageCreator(menuItem.title));
+  selectMenuItem = (setCurrentPage, index, menuItem) => {
+  	this.props.dispatch(setCurrentPage(menuItem.title));
   }
 
   /**
@@ -78,7 +78,7 @@ export default class NavMenu extends React.Component {
 							title={navItem.title}
 							styles={styles.TopLevelMenuItem.base}
 							selected={this.props.currentPage === navItem.title}
-							selectMenuItem={this.selectMenuItem.bind(this, setCurrentPageCreator, index, navItem)}
+							selectMenuItem={this.selectMenuItem.bind(this, setCurrentPage, index, navItem)}
 							{...this.props}
 						/>)
 					: null;

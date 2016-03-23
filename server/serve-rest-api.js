@@ -14,9 +14,8 @@ const methodOverride = require('method-override');
 // router.use('/images', require('server/api/images'));
 
 module.exports = (app) => {
-	const configDb = app.locals.config.get('database').mongo;
-
-	const mongoURI = configDb.url + '/' + configDb.dbName;
+	const dbConfig = app.locals.config.get('database').mongo;
+	const mongoURI = dbConfig.url + '/' + dbConfig.dbName;
 
 	logger.info('mongoURI:: ', mongoURI);
 
