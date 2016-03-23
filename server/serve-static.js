@@ -29,5 +29,14 @@ module.exports = (app) => {
 	app.use('/img',		 express.static('.build/img'));
 	app.use('/img',		 express.static('data/img/public'));
 
+	//
+	// Set default route
+	//
+	app.use('/', function(req, res, next) {
+		res.sendFile('index.html', {root: path.join(__dirname, '..', '.build')}, function(err) { 
+			console.log('serve-static.js:: index.html served at root path!');
+		});
+	});
+
 	return app;
 };
