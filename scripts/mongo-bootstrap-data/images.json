@@ -1,69 +1,69 @@
 {
 	"src": "/img/patterns/aboriginal-fungus.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/aboriginal-fungus.jpg"
 }
 {
 	"src": "/img/patterns/berry-flowers.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/berry-flowers.jpg"
 }
 {
 	"src": "/img/patterns/diamond-mine.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/diamond-mine.jpg"
 }
 {
 	"src": "/img/patterns/lsd-butterflies.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/lsd-butterflies.jpg"
 }
 {
 	"src": "/img/patterns/red-zygote-flowers.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/red-zygote-flowers.jpg"
 }
 {
 	"src": "/img/patterns/mayan-hexhexhexium-decay-sponge-tea.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/mayan-hexhexhexium-decay-sponge-tea.jpg"
 }
 {
 	"src": "/img/patterns/orchid-eating-phoenix-army.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/orchid-eating-phoenix-army.jpg"
 }
 {
 	"src": "/img/patterns/ermagerd-a-big-rock.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/ermagerd-a-big-rock.jpg"
 }
 {
 	"src": "/img/patterns/chinese-umbrella-mushrooms.jpg",
-	"isCarousel": true,
+	"inCarousel": true,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/patterns/chinese-umbrella-mushrooms.jpg"
 }
 {
 	"src": "/img/example-full/native-leaf-bark.jpg",
-	"isCarousel": false,
+	"inCarousel": false,
 	"inGallery": true,
 	"isThumb": true,
 	"linkedParent": "/img/example-full/native-leaf-bark.jpg"

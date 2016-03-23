@@ -137,6 +137,12 @@ Creating & modifying
 ### Remove Collection
 		db.collectionName.drop()
 
+### Remove ALL collections in the db except the system indexes
+db.getCollectionNames().forEach(function(coll) {
+		if(!coll.match("^system.indexes")) { 
+				db.getCollection(coll).drop();
+		}
+});
 
 Queries
 =======

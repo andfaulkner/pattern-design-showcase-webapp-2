@@ -1,6 +1,7 @@
 var path = require('path');
 var _ = require('lodash');
 var express = require('express');
+var jsonStringify = require('json-stringify-safe');
 
 module.exports = (app) => {
 
@@ -30,10 +31,28 @@ module.exports = (app) => {
 	app.use('/img',		 express.static('data/img/public'));
 
 	//
-	// Set default route
+	// MUST RUN 2ND LAST!!
+	// 
+	// Handle requests to nonexistent paths.
+	//
+	// If this is reached without another route catching the
+	// request, user is requesting an undefined path; return error.
+	//
+	app.use('/:undefinedPath', function(req, res, next) {
+		if (req.params.undefinedPath === 'index') {
+			next();
+		} else {
+			res.status(404).send('Cannot GET ' + req.originalUrl);
+		}
+	});
+
+	//
+	// MUST RUN LAST!!
+	// 
+	// Handle default requests
 	//
 	app.use('/', function(req, res, next) {
-		res.sendFile('index.html', {root: path.join(__dirname, '..', '.build')}, function(err) { 
+		res.sendFile('index.html', {root: path.join(__dirname, '..', '.build')}, function(err) {
 			console.log('serve-static.js:: index.html served at root path!');
 		});
 	});

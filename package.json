@@ -103,6 +103,7 @@
     "lodash-aliases": "1.1.0",
     "marked": "^0.3.5",
     "material-ui": "git+https://github.com/callemall/material-ui.git#master",
+    "method-override": "2.3.5",
     "mongodb": "2.1.10",
     "mongoose": "4.4.9",
     "multer": "^1.1.0",

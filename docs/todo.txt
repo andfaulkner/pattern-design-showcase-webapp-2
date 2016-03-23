@@ -102,6 +102,10 @@ X!X activate postgres in app
 ! P4L
 	! bubble bath :)
 ! get machine to stop fucking crashing
+! get a static version to deploy
+! fix site path - ban bad requests (for non-existent paths)
+- fix logger to show objects properly. Rests, spreads handy here.
+- See more links
 - deal with 'secret' issue
 		- read heroku docs for this
 - interface with mongo

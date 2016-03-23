@@ -20,18 +20,16 @@ var app = require('express')();
 app.locals.config = require('config');
 logger.debug(app.locals.config);
 
-app.use('/api', require('server/serve-rest-api')),
+// app.use('/api', require('server/serve-rest-api')),
 
 // consume & initialize basic middleware
 app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-var mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost';
-console.log('\n\nmongoURI::\n', mongoURI);
-
 // consume the subcomponents of the app
 app = _.flow(
+	require('server/serve-rest-api'),
 	require('server/serve-static')
 	// ,
 	// require('server/serve-admin') // serve-admin must always go last

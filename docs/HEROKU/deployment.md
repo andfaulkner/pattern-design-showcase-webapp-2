@@ -57,6 +57,11 @@ Build
 
 		heroku buildpacks:add --index 1 https://github.com/PunchTab/heroku-buildpack-mongodb.git
 
+Deploy
+======
+*   ensure you have at least 1 dyno set up:
+				heroku ps:scale web=1
+
 ------------------------------------------------------
 Procfile drafts
 ---------------

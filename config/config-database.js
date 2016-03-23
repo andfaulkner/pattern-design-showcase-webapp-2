@@ -1,24 +1,23 @@
 'use strict';
 
-var dbClient = 'postgres';
+var primaryDb = 'mongo';
 var cacheClient = 'redis';
 var secret = {};
 // var secret = require('./secret') || {};
 var _ = require('lodash');
 
+ //TODO separate production & dev db settings
 module.exports = {
-	development: {
-		client: dbClient,
-		connection: {
-			host: 'localhost',
-			port: 5432,
-			user: 'postgres',
-			database: 'pattern_design',
-			// user: secret.development.connection.user || 'NOUSER',
-			// database: secret.development.connection.database || 'NODATABASE',
-			charset: 'utf8'
-		}
+	mongo: {
+		type: primaryDb,
+		url: process.env.MONGOLAB_URI || 'mongodb://localhost',
+		dbName: 'PATTERN_SHOWCASE',
+		port: '28017',
+		// 	// user: secret.development.connection.user || 'NOUSER',
+		// 	// database: secret.development.connection.database || 'NODATABASE',
+		// 	charset: 'utf8'
 	},
+
 	// current data
 	cache: {
 		client: cacheClient,
