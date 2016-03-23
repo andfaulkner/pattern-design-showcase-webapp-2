@@ -51,7 +51,11 @@ RUN LOCALLY
 
 		heroku local web
 
+Build
+=====
+*   get buildpack for mongodb to start:
 
+		heroku buildpacks:add --index 1 https://github.com/PunchTab/heroku-buildpack-mongodb.git
 
 ------------------------------------------------------
 Procfile drafts
