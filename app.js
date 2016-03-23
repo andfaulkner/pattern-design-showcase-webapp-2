@@ -27,6 +27,8 @@ app.use(bodyParser.raw());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
+var mongoURI = process.env.MONGOLAB_URI || 'mongodb://localhost';
+console.log('\n\nmongoURI::\n', mongoURI);
 
 // consume the subcomponents of the app
 app = _.flow(
@@ -36,4 +38,4 @@ app = _.flow(
 )(app);
 
 // listen for requests on port 3000
-app.listen(3000);
+app.listen(process.env.PORT || _.get(app.locals.config.get('server'), 'port') || 3000);
