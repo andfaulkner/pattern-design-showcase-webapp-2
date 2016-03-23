@@ -101,7 +101,9 @@ X!X activate postgres in app
 ! kill postgres
 ! P4L
 	! bubble bath :)
+! get machine to stop fucking crashing
 - deal with 'secret' issue
+		- read heroku docs for this
 - interface with mongo
 - send money to Lisa
 - store a bit of data in mongo

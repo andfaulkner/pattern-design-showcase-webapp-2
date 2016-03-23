@@ -1,5 +1,8 @@
 'use strict';
 
+console.log('\n\nEnvironment variables:\n', process.env);
+console.log('\n\n');
+
 // node modules
 var util = require('util');
 var logger = require('server/core/logger').file('./app.js');
