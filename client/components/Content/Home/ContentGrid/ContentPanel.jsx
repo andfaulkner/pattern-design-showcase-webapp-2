@@ -136,12 +136,6 @@ class CPanelSeeMoreButton extends React.Component {
 					className={classNames('ctpanel--see-more-button', this.props.theme)}
 					onClick={this.navToParentPage.bind(this, setCurrentPage, this.props.parentPage)}
 				>
-{/*			
-				<button
-					className='ctpanel--see-more-button'
-					onClick={this.navToParentPage.bind(this, setCurrentPage, this.props.parentPage)}
-				>
-*/}
 					see more >>
 				</Link>
 			</Row>
