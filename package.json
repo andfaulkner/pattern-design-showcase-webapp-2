@@ -12,7 +12,8 @@
     "build-postgresql-db": "createdb pattern_design || true; node ./scripts/generate-db-tables.js || true",
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
-    "preinstall": "npm i -g pm2 gulp && pm2 install pm2-logrotate"
+    "preinstall": "npm i -g pm2 gulp && pm2 install pm2-logrotate",
+    "launch-mongo": "mongod"
   },
   "author": "",
   "license": "ISC",
@@ -88,6 +89,7 @@
     "gulp-template": "3.1.0",
     "gulp-util": "^3.0.7",
     "gulp-webpack": "^1.5.0",
+    "happypack": "1.1.4",
     "html-loader": "^0.4.3",
     "install": "^0.4.4",
     "jquery": "^2.2.0",
@@ -100,6 +102,7 @@
     "lodash-aliases": "1.1.0",
     "marked": "^0.3.5",
     "material-ui": "git+https://github.com/callemall/material-ui.git#master",
+    "mongodb": "2.1.10",
     "mongoose": "4.4.9",
     "multer": "^1.1.0",
     "node-sass": "^3.4.2",

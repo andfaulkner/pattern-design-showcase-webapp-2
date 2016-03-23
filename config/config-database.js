@@ -39,10 +39,10 @@ module.exports = {
 	},
 	// current login session config
 	session: {
-		name:   _.get(secret, 'session.name') || 'NONAME',
+		name:	_.get(secret, 'session.name') || 'NONAME',
 		secret: _.get(secret, 'session.secret') || 'NOSECRET',
 		resave: true,
 		saveUninitialized: true
 	},
 	users: _.get(secret, 'usernamesArray') || ['NOUSER1'] 
-};
+}

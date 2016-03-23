@@ -1,5 +1,5 @@
 var _ = require('lodash');
-var auth = require('server/core/passport-setup');
+// var auth = require('server/core/passport-setup'); <<< TODO - put this back in, handle login etc
 var { passport, appSession: session } = auth;
 var logger = require('server/core/logger').file('server/serve-admin');
 

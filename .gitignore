@@ -3,3 +3,4 @@ node_modules
 .cache
 config/secret.js
 .mongo
+.happypack

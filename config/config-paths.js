@@ -21,11 +21,8 @@ var _ = require('lodash');
 */
 var libs = [
 	{ lib: 'marked', childPath: 'lib', varName: 'marked' },
-	// { lib: 'react', childPath: 'dist', varName: 'React', file: 'react-with-addons'},
-	// { lib: 'react-dom', childPath: 'dist', varName: 'ReactDOM' },
 	{ lib: 'jquery', childPath: 'dist', varName: '$' },
 	{ lib: 'lodash', childPath: '', varName: '_' }
-	// { lib: 'react-router', varName: 'ReactRouter', noNode: true }
 ];
 
 module.exports = {
@@ -72,28 +69,13 @@ module.exports = {
 	 *
 	 * There should only be 1 entry point for most applications.
 	 */
-	polyfills: ['babel-polyfill'],
 	entryPoints: [
 		{
 			basename: 'admin',
 			title: 'Admin',
 			jsroot: 'admin'
-		// }, 
-		// {
-		// 	basename: 'redux-experiments',
-		// 	title: 'Redux Experiments',
-		// 	jsroot: 'redux-experiments',
-		// 	folder: 'experiments'
-		// }, {
-		// 	basename: 'redux-experiments-2',
-		// 	title: 'Redux Experiments - 2',
-		// 	jsroot: 'redux-experiments-2',
-		// 	folder: 'experiments'
-		// }, {
-		// 	basename: 'index-todo',
-		// 	title: 'Todo',
-		// 	jsroot: 'index-todo'
-		}, {
+		},
+		{
 			basename: 'index',
 			title: 'Home',
 			jsroot: 'index'

@@ -1,7 +1,12 @@
 #Setup
-*   sudo apt-get install mongodb
-*   sudo apt-get install mongodb-server
-*   sudo apt-get install mongodb-dev
+		sudo apt-get install mongodb
+		sudo apt-get install mongodb-server
+		sudo apt-get install mongodb-dev
+		sudo mkdir -p /data/db/
+		sudo chown `id -u` /data/db
+		mongod
+
+*  boom. running mongo instance.
 
 # Documents
 *   A single record in MongoDB is called a document.

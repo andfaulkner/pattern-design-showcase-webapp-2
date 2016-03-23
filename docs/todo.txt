@@ -93,14 +93,19 @@ X!X activate postgres in app
 ! launch mongo
 ! figure out a "forever" type app for Heroku (pm2)
 ! implement "forever" type app for Heroku (pm2)
+! exclude mongo dir
+! try to take mongo out of main dir
+! store entire app data in mongo
 ! Procfile - work out if the log is needed [ANS: IT IS] - web: NODE_PATH=$NODE_PATH:./; node --harmony_default_parameters --harmony_destructuring --es_staging ./node_modules/pm2/bin/pm2 start app.js && pm2 logs all
+! accelerate Webpack even more - cut build time by 1/3 (below 4s)
+! kill postgres
+! P4L
+	! bubble bath :)
+- deal with 'secret' issue
 - interface with mongo
-- P4L
-	- bubble bath :)
 - send money to Lisa
 - store a bit of data in mongo
 - retrieve data from mongo
-- kill postgres
 - activate redis in app
 - sample deployment on Heroku
 - docker?

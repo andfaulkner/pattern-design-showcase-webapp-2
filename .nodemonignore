@@ -1,7 +1,11 @@
 .build
+.mongo
+.cache
+.happypack
 scripts
 test
 docs
+node_modules
 
 .npmrc
 .nvmrc
