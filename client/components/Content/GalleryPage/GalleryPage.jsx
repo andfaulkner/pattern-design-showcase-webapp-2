@@ -59,6 +59,7 @@ export class GalleryPage extends React.Component {
 	render() {
 		return (
 			<div>
+				WIP - requires styling, pagination, etc.
 				<Gallery photos={PHOTOS} />
 			</div>
 		);
