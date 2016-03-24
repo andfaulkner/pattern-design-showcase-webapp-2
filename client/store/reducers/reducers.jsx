@@ -7,12 +7,16 @@
 */
 
 import { combineReducers } from 'redux';
+
 import { SET_LIGHTBOX_IS_OPEN, SET_CURRENT_GALLERY_IMAGE,
 				 START_STOP_CAROUSEL, SET_CURRENT_PAGE, SHIFT_GALLERY_IMAGE,
 				 SET_IS_UPDATES_LOADED, SET_IS_DESIGNS_LOADED	} from '../actions/actions.jsx';
 
 import { setCurrentGalleryImage, shiftGalleryImage,
 				 setLightboxIsOpen, startStopCarousel } from './carousel-reducers'
+
+import ajaxReducers from './ajax-reducers';
+const content = ajaxReducers.contentByType;
 
 import * as helpers from './reducer-helpers.jsx';
 
@@ -50,7 +54,8 @@ export function setCurrentPage(state = {}, action) {
 
 const reducers = combineReducers({
 	carousel,
-	setCurrentPage
+	setCurrentPage,
+	content
 });
 
 export default reducers;
