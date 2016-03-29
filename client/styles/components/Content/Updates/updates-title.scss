@@ -1,0 +1,21 @@
+.updates__title-container {
+	display: block;
+}
+
+.updates__title {
+	margin-top: $main-margin;
+	margin-bottom: $main-margin;	
+	background-color: #303030;
+	color: white;
+	margin-left: 20px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: normal;
+	font-stretch: normal;
+	font-size: 25px;
+	line-height: 1.4em;
+	display:inline-block;
+	font-family: din-next-w01-light, din-next-w02-light, din-next-w10-light, sans-serif;
+	padding-left: 6px;
+	padding-right: 6px;
+}

@@ -7,7 +7,7 @@
 var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
-import {connect} from 'react-redux';
+import { getContent } from '../../../lib/decorators.jsx';
 
 var Slider = require('react-slick');
 import Lightbox from 'react-images';
@@ -58,12 +58,11 @@ const mapStateToProps = (state) => {
 			...carouselSettings,
 			speed: (state.carousel.isCarouselRunning) ? 500 : 0,
 			autoplay: !!state.carousel.isCarouselRunning
-			// initialSlide: state.carousel.currentImage 
 		}
 	}
 }
 
-@connect()
+@getContent(mapStateToProps)
 export default class Carousel extends React.Component {
 	getDefaultProps = {
 		isCarouselRunning: true,

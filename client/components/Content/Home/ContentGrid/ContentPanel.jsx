@@ -17,18 +17,11 @@ var classNames = require('classnames');
 import { setCurrentPage } from '../../../../store/actions/actions.jsx';
 import { connect } from 'react-redux';
 import { selectContentType, fetchContentIfNeeded } from '../../../../store/actions/actions';
+import { getContent } from '../../../lib/decorators.jsx';
 
 const spacer = '&nbsp;| ';
 
-
-const mapStateToProps = (state) => {
-	return {
-		...state,
-		content: state.content
-	}
-}
-
-@connect(mapStateToProps)
+@getContent()
 export class ContentPanel extends React.Component {
 
 	/**
@@ -64,10 +57,7 @@ export class ContentPanel extends React.Component {
 			window.addEventListener('resize', this.matchWidthWhenSmall);
 			this.matchWidthWhenSmall();
 		}
-		this.props.dispatch(selectContentType(this.props.contentType));
-		this.props.dispatch(fetchContentIfNeeded(this.props.contentType)).then(() => {
-			console.info('configure-store.jsx:: fetchContentIfNeeded sucessful!');
-		});
+		this.props.getContent(this.props.contentType);
 	}
 
 	render() {
@@ -145,7 +135,7 @@ const CPanelContent = ({content, style, contentType, introData, ...otherProps}) 
  * TODO load the relevant section
  * TODO get the required link passed in
  */
-@connect()
+@getContent()
 class CPanelSeeMoreButton extends React.Component {
 
 	navToParentPage = (setCurrentPage, parentPage) => {

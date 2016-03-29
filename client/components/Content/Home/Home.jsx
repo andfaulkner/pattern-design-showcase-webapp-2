@@ -9,9 +9,9 @@ var logger = require('../../../helpers/logger.js')('components/Content/Home.jsx'
 import Carousel from './CarouselGallery/Carousel.jsx';
 import { ContentGrid } from './ContentGrid/ContentGrid';
 import { setCurrentPage } from '../../../store/actions/actions.jsx';
-import {connect} from 'react-redux';
+import { getContent } from '../../lib/decorators.jsx';
 
-@connect()
+@getContent()
 export class Home extends React.Component {
 
 	constructor(props) {
