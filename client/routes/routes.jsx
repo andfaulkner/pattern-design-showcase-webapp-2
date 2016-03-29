@@ -4,16 +4,11 @@
 *
 */
 
-import Home from '../components/Content/Home/Home.jsx';
-
-import { LikeButton } from '../components/forms/like-button/LikeButton.jsx';
-import { AffinityButton } from '../components/forms/like-button/AffinityButton.jsx';
+import { Home } from '../components/Content/Home/Home.jsx';
 import { GalleryPage } from '../components/Content/GalleryPage/GalleryPage.jsx';
 import { DesignsPage } from '../components/Content/DesignsPage/DesignsPage.jsx';
 import { UpdatesPage } from '../components/Content/UpdatesPage/UpdatesPage.jsx';
 import { AboutPage } from '../components/Content/AboutPage/AboutPage.jsx';
-
-console.log('routes.jsx:: TOP');
 
 const routes = [
 	{ path: '/',

@@ -16,12 +16,12 @@ import { SET_LIGHTBOX_IS_OPEN, SET_CURRENT_GALLERY_IMAGE,
  *	Set the current image to display in the modal gallery 
  */
 export const setCurrentGalleryImage = (state = {}, action) => {
-	return helpers.alteredState({
+	return {
 		...state,
 		currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
 			? action.currentImage
 			: state.currentImage,
-	}, SET_CURRENT_GALLERY_IMAGE)
+	}
 };
 
 /**
@@ -33,12 +33,12 @@ export const shiftGalleryImage = (state = {}, action) => {
 		: (action.incrementOrDecrement === 'decrement')
 			? helpers.decrement
 			: console.error('INVALID incrementOrDecrement VALUE SENT TO shiftGalleryImage reducer');
-	return helpers.alteredState({
+	return {
 		...state,
 		currentImage: !_.isUndefined(action.currentImage) && _.isNumber(action.currentImage)
 			? shift(action.currentImage)
 			: shift(state.currentImage)
-		}, SHIFT_GALLERY_IMAGE);
+		};
 }
 
 /**
@@ -48,7 +48,7 @@ export const shiftGalleryImage = (state = {}, action) => {
 export const setLightboxIsOpen = (state = {}, action) => {
 	// weird logic here because false & 0 both act like undefined in a regular
 	// check; also, more than just opening the lightbox alters currentImage.
-	return helpers.alteredState({
+	return {
 		...state,
 		currentImage: setCurrentGalleryImage(state, action).currentImage,
 		isCarouselRunning: startStopCarousel(state, {
@@ -57,14 +57,14 @@ export const setLightboxIsOpen = (state = {}, action) => {
 		lightboxIsOpen: !_.isUndefined(action.lightboxIsOpen)
 			? action.lightboxIsOpen
 			: state.lightboxIsOpen
-	}, SET_LIGHTBOX_IS_OPEN);
+	};
 };
 
 export const startStopCarousel = (state = {}, action) => {
-	return helpers.alteredState({
+	return {
 		...state,
 		isCarouselRunning: !_.isUndefined(action.isCarouselRunning)
 			? action.isCarouselRunning
 			: _.get(state, 'isCarouselRunning')
-	}, START_STOP_CAROUSEL);
+	};
 };

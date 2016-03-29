@@ -8,7 +8,7 @@
     "npm": "3.6.0"
   },
   "scripts": {
-    "build-mongodb": "./scripts/bootstrap-mongo.sh",
+    "build-mongodb": "node ./scripts/bootstrap-mongo.js",
     "build-postgresql-db": "createdb pattern_design || true; node ./scripts/generate-db-tables.js || true",
     "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",

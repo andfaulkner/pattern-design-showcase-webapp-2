@@ -12,7 +12,7 @@ import { setCurrentPage } from '../../../store/actions/actions.jsx';
 import {connect} from 'react-redux';
 
 @connect()
-export default class Home extends React.Component {
+export class Home extends React.Component {
 
 	constructor(props) {
 		super(props);

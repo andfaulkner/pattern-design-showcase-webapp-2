@@ -11,8 +11,8 @@ module.exports = {
 	mongo: {
 		type: primaryDb,
 		url: process.env.MONGOLAB_URI || 'mongodb://localhost',
-		dbName: 'PATTERN_SHOWCASE',
-		port: '28017',
+		dbName: 'PATTERN_MAIN',
+		port: '27017',
 		// 	// user: secret.development.connection.user || 'NOUSER',
 		// 	// database: secret.development.connection.database || 'NODATABASE',
 		// 	charset: 'utf8'

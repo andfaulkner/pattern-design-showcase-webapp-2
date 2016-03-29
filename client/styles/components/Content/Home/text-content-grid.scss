@@ -112,6 +112,7 @@ $stark--border__ctpanel--content: solid #000000 1px;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
+	margin-top: 40px;
 }
 
 //**************************************************************//
@@ -316,10 +317,12 @@ div.social-media-icons-container-col > img {
 
 div.right-content-col-flex-wrapper.coldivide.right {
 	z-index: 2;
+	margin-top: 20px;
 }
 
 div.footer-social-media-icons-container > img {
 	cursor: pointer;
+	z-index: 3;
 }
 
 div.slick-list > div.slick-track > img {

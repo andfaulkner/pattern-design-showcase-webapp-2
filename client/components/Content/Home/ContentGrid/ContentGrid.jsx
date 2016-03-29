@@ -18,6 +18,9 @@ import { ContentPanel } from './ContentPanel.jsx';
 import { BannerBlock } from './BannerBlock.jsx';
 import { SocialMediaIcons } from '../../../lib/SocialMediaIcons.jsx';
 
+import { connect } from 'react-redux';
+import { selectContentType } from '../../../../store/actions/actions';
+
 // TODO fetch the content from here, set it up to be grabbed via AJAX 
 const contentLeft = {
 	spacer: '&nbsp;| ',
@@ -137,6 +140,8 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
 			id='corporate-designs'
 			title={['corporate', 'designs']}
 			parentPage='Designs'
+			contentType='designs'
+			introData='designsIntro'
 			parentPath='/designs'
 			theme='cigeraser'
 			style={{
@@ -151,7 +156,7 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
 /**
  * Right column of grid
  */
-const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}) => (
+const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs, fetcher}) => (
 	<Col
 		lg={lg} md={md} sm={sm} xs={xs}
 		xsHidden={!!xsHidden} smHidden={!!smHidden}
@@ -165,6 +170,7 @@ const RightContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs
 			content={contentRight}
 			title={'latest updates'}
 			parentPage='Updates'
+			contentType='updates'
 			parentPath='/updates'
 			theme='stark'
 			style={{

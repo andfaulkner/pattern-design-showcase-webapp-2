@@ -128,43 +128,51 @@ X!X activate postgres in app
 - make only 2 most recent corporate designs or updates on home page
 **************************************************************************************
 ASIDE: Clojure
-- install leningen
+! install leningen
+! get basic repl working in sublime
+! a few basic Clojure commands refresher; get back to end of self-created guide
+**************************************************************************************
+Mar 24
+=======
+
+! Data store
+! Heroku: initial setup
+	! Heroku: install toolkit
+	! Heroku: first login
+	! Heroku: sample app
+	! Heroku: first deploy of webapp
+! swap in mongoDB
+! mongoDB basics
+! determine what types of data to put in the db
+! script to bootstrap the original set in
+! Set up method of requesting mongoDB for needed data
+! request first bit of mongoDB data successfully
+X Set up BookshelfJS to act as abstraction over your db (models etc.)
+X employ Redis cache
+! set up AJAX calls to get data in DB from frontend (once present)
+! set up 'initial' AJAX calls on first load
+! corporate designs dynamic content - AJAX
+! recently updated dynamic content - AJAX
+
+
+*   one more web component?
+*   get initial data into MongoDB in Heroku-friendly way
+*
 
 **************************************************************************************
 
 **************************************************************************************
 **************************************** TODO ****************************************
 **************************************************************************************
-Heroku
-- setup
-	- install toolkit
-	- first login
-	- sample app
-
-Database
-- swap in mongoDB
-- mongo basics
-- determine what types of data to put in the db
-- script to bootstrap the original set in
-- Set up BookshelfJS to act as abstraction over your db (models etc.)
-- Set up method of requesting db for needed data
-- request first bit of data successfully
-- employ Redis cache
 
 Routing
-- set up Express routes that return each piece of frontend-required data
 
 AJAX
-- set up AJAX calls to get data in DB from frontend (once present)
 - learn 'containers' to separate data concerns from UI concerns among React components
 - split your components into containers and presenters
-- set up 'initial' AJAX calls on first load
-- corporate designs dynamic content - AJAX
-	- only show 1st 2
-- recently updated dynamic content - AJAX
-	- only show 1st 3
+	- corporate designs dynamic content - AJAX only show 1st 2
+	- recently updated dynamic content - AJAX only show 1st 3
 
-! Data store
 
 HOME::: Carousel 
 -	Translucent vertical blocks on L & R, around arrows
@@ -310,7 +318,7 @@ Advanced (later)
 
 
 ________________________________________________________
-! favicon
+- favicon
 ! base route
 X get koa serving a static asset
 X login package - with Koa
@@ -324,17 +332,17 @@ X react starter
 X koa starter
 
 routing
-- Koa routing
-	! get route module to work
-	! work out routes
-	- create route for each ?
+X Koa routing
+X get route module to work
+X work out routes
+X create route for each ?
 
 db
 ! work out table schema
 ! postgres setup (including scripts)
-- ORM setup - bookshelf
-	- initialize bookshelf
-	- koa bookshelf?
+X ORM setup - bookshelf
+X initialize bookshelf
+X koa bookshelf?
 
 testing
 ! install unit testing modules (mocha, request)

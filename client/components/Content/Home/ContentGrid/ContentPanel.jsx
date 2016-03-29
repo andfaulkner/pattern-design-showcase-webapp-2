@@ -15,8 +15,20 @@ import Radium from 'radium';
 import { Row } from 'react-bootstrap';
 var classNames = require('classnames');
 import { setCurrentPage } from '../../../../store/actions/actions.jsx';
-import {connect} from 'react-redux';
+import { connect } from 'react-redux';
+import { selectContentType, fetchContentIfNeeded } from '../../../../store/actions/actions';
 
+const spacer = '&nbsp;| ';
+
+
+const mapStateToProps = (state) => {
+	return {
+		...state,
+		content: state.content
+	}
+}
+
+@connect(mapStateToProps)
 export class ContentPanel extends React.Component {
 
 	/**
@@ -52,22 +64,30 @@ export class ContentPanel extends React.Component {
 			window.addEventListener('resize', this.matchWidthWhenSmall);
 			this.matchWidthWhenSmall();
 		}
+		this.props.dispatch(selectContentType(this.props.contentType));
+		this.props.dispatch(fetchContentIfNeeded(this.props.contentType)).then(() => {
+			console.info('configure-store.jsx:: fetchContentIfNeeded sucessful!');
+		});
 	}
 
 	render() {
-		const { title, style, matchWidthById, content, ...otherProps} = this.props;
+		const { id, title, style, matchWidthById, content, introData, ...otherProps} = this.props;
 		return (
-			<Row id={this.props.id}
-					 className={classNames('content-panel', otherProps.theme)}
+			<Row id={id} className={classNames('content-panel', otherProps.theme)}
 			>
 				<CPanelTitle
 					title={title}
 					titleStyle={style.title}
 					matchWidthById={matchWidthById}
+					content={content}
+					contentType={this.props.contentType}
+					{...otherProps}
 				/>
 				<CPanelContent
 					style={style}
 					content={content}
+					introData={introData}
+					contentType={this.props.contentType}
 					{...otherProps}
 				/>
 			</Row>
@@ -81,15 +101,14 @@ export class ContentPanel extends React.Component {
  * @param  {String} title - displayed at the very top of the content panel
  * @param  {String} titleStyle - required to render styles in this component & children
  */
-const CPanelTitle = ({ title, titleStyle='ctpanel--title' }) => (
+const CPanelTitle = ({ title, titleStyle='ctpanel--title', content, contentType }) => (
 	<div className={ titleStyle }>
-		{_.isArray(title)
-			? title.map(
-					titlePart => (
-						<Row className='ctpanel--title-multirow'> {titlePart} </Row>
-					)
-				)
-			: <Row className='ctpanel--title-one-row-only'> {title} </Row>}
+		{(_.get(content[contentType], 'items') && _.isArray(content[contentType].items) && _.isArray(title))
+			? title.map(titlePart => (
+					<Row className='ctpanel--title-multirow'>{titlePart}</Row>
+				))
+			: <Row className='ctpanel--title-one-row-only'>{title}</Row>
+		}
 	</div>
 );
 
@@ -101,17 +120,22 @@ const CPanelTitle = ({ title, titleStyle='ctpanel--title' }) => (
  * @param  {Object} style - required to render styles in this component & children
  * @return {ReactComponent} A react component object
  */
-const CPanelContent = ({content, style, ...otherProps}) => (
-	<div className={ 
+const CPanelContent = ({content, style, contentType, introData, ...otherProps}) => (
+	<div className={
 		classNames('ctpanel--content', style.borderClass, otherProps.theme)
 	}>
-		{content.description
-			? <CPanelDescription description={content.description} />
+		{introData
+				? <CPanelDescription content = {content} introData={introData} />
+				: ''}
+		{(_.get(content[contentType], 'items') && _.isArray(content[contentType].items)) ?
+				content[contentType].items.map(data => (
+					<CPanelContentItem 
+						data={data}
+						style={style}
+					/>
+				))
 			: ''
 		}
-		{content.designs.map(design => (
-				<CPanelContentItem design={design} spacer={content.spacer} style={style} />
-		))}
 		<CPanelSeeMoreButton {...otherProps} />
 	</div>
 );
@@ -148,11 +172,11 @@ class CPanelSeeMoreButton extends React.Component {
  *
  * @param  {String} description - description itself
  */
-const CPanelDescription = ({description}) => (
-	<div className='ctpanel--content-description'>
-		{description}
-	</div>
-);
+const CPanelDescription = ({content, introData}) => {
+	const description = _.get(content, 'bios.items[0][' + introData + ']');
+	return (<div className='ctpanel--content-description'>
+		{description ? description : ''}</div>);
+};
 
 /**
  * Data for a single content item. Each CPanel has several, with extras above the limit
@@ -166,19 +190,15 @@ const CPanelDescription = ({description}) => (
  * 
  * @param  {String} tiny string / bullet to show that line 2 is a 'child' of line 1
  */
-const CPanelContentItem = React.createClass({
-	render: function(spacer='', style) {
-		return (
-			<Row className={classNames('ctpanel--content-section', this.props.style)}>
-				<Row className='ctpanel--content-section__title'>
-					<CPanelLine1 line1={this.props.design.line1}/>
-					<CPanelLine2 line2={this.props.design.line2} spacer={this.props.spacer || ''}/>
-					<CPanelDate date={this.props.design.datecomplete}/>
-				</Row>
-			</Row>
-		);
-	}
-});
+const CPanelContentItem = ({data, style}) => (
+	<Row className={classNames('ctpanel--content-section', style)}>
+		<Row className='ctpanel--content-section__title'>
+			<CPanelLine1 line1={data.title[0]}/>
+			<CPanelLine2 line2={data.title[1]} />
+			<CPanelDate date={data.dateCompleted}/>
+		</Row>
+	</Row>
+);
 
 const CPanelDate = ({date}) => (
 	<Row className='ctpanel--content-section__date'>
@@ -199,7 +219,7 @@ const CPanelLine1 = ({line1}) => (
  * @param  {String} line2 - actual text content of the line
  * @param  {String} spacer - set of chars acting as a bullet, to show line 2 is a child of line 1
  */
-const CPanelLine2 = ({line2, spacer}) => (
+const CPanelLine2 = ({line2}) => (
 	<div>{
 		line2
 			?	(<Row

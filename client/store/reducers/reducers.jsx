@@ -39,8 +39,6 @@ const carousel = (state={}, action) => {
  * Set the current page - e.g. Home, About
  */
 export function setCurrentPage(state = {}, action) {
-	console.log('reducers.jsx:: setCurrentPage:: state:', state);
-	console.log('reducers.jsx:: setCurrentPage:: action:', action);
 	switch (action.type) {
 		case SET_CURRENT_PAGE:
 			return helpers.alteredState({
