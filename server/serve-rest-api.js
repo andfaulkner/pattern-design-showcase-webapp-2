@@ -20,7 +20,7 @@ module.exports = (app) => {
 	const mongoURI = dbConfig.dbURL + '/' + dbConfig.dbName;
 	logger.info('mongoURI:: ', mongoURI);
 
-	app.use(methodOverride())
+	app.use(methodOverride());
 
 	// TODO remove, just here for dev.
 	console.log('connecting to mongoURI: ' + inspect(mongoURI, { depth: 5, colors: true, showHidden: true }));

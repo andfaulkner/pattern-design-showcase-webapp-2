@@ -122,7 +122,8 @@ export const fetchContent = (contentType) => {
     console.log('actions.jsx:: fetchContent:: configDb.mongo.clientURL:', configDb.mongo.restAPIOrigin);
 
     // determine the url to make db requests to
-    const restAPIUrl = configDb.mongo.restAPIOrigin + configDb.mongo.restAPIRoute + contentType;
+    const restAPIUrl = location.origin + configDb.mongo.restAPIRoute + contentType;
+    console.log('actions.jsx:: fetchContent:: configDb.mongo.clientURL:', restAPIUrl);
 
     // The function called by the thunk middleware can return a value, that is passed on
     // as the return value of the dispatch method. In this case, we return a promise to wait
