@@ -39,10 +39,11 @@ module.exports = (app) => {
 	// request, user is requesting an undefined path; return error.
 	//
 	app.use('/:undefinedPath', function(req, res, next) {
-		if (req.params.undefinedPath === 'index') {
+		if (req.params.undefinedPath === 'index' || req.params.undefinedPath === 'index.html') {
 			next();
 		} else {
-			res.status(404).send('Cannot GET ' + req.originalUrl);
+			console.log('Cannot GET ' + req.originalUrl)
+			res.status(404).sendFile(path.join(__dirname, '..', '.build/404.html'));
 		}
 	});
 

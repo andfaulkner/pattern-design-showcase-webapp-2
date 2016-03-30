@@ -135,6 +135,7 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
 			content={contentLeft}
 			id='corporate-designs'
 			title={['corporate', 'designs']}
+			useSpacer={true}
 			parentPage='Designs'
 			contentType='designs'
 			introData='designsIntro'

@@ -1,3 +1,7 @@
+var configDb = require('../../../config/config-database.js');
+
+console.log(configDb);
+
 import fetch from 'isomorphic-fetch';
 
 export const SET_CURRENT_PAGE = 'SET_CURRENT_PAGE';
@@ -114,6 +118,8 @@ export const fetchContent = (contentType) => {
     // that the API call is starting.
     dispatch(requestContent(contentType));
 
+    const restAPIUrl = _.trimEnd(configDb.mongo.clientURL, '/') + '/api/v1/' + contentType;
+
     // The function called by the thunk middleware can return a value,
     // that is passed on as the return value of the dispatch method.
 
@@ -121,14 +127,13 @@ export const fetchContent = (contentType) => {
     // This is not required by thunk middleware, but it is convenient for us.
 
     // TODO switch localhost with a dynamic location?
-    return fetch(`http://localhost:3000/api/v1/${contentType}`)
+    return fetch(restAPIUrl)
       .then(response => response.json())
 			// We can dispatch many times!
 			// Here, we update the app state with the results of the API call.
       .then(json => dispatch(receiveContent(contentType, json)))
       .catch(error => {
-      	console.error(`fetch request to http://localhost:3000/api/v1/${contentType} failed
-      								 with error:`, error);
+      	console.error(`fetch request to ${restAPIUrl} failed with error: `, error);
       	return error;
       });
   })

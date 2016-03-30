@@ -1,0 +1,75 @@
+.error-404--wrapper {
+	margin: $main-margin;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.error-404--content-container {
+	margin: $main-margin;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.standalone-404--content-container {
+	@extend .error-404--content-container;
+	margin-left: 0px;	
+	margin-right: 0px;
+}
+
+.error-404--content {
+	display: block;
+}
+
+.error-404--title {
+	text-align: center;
+}
+
+div.standalone-404--title {
+	@extend .error-404--title;
+	width: 100%;
+	max-width: 8000px
+}
+
+
+.standalone-404--content-container {
+	@extend .error-404--content-container;
+	width: 100%;
+	height: 90%;
+}
+
+.standalone-404--img {
+	margin-top: $main-margin;
+	margin-bottom: $main-margin;
+	height: 84%;
+	width: 84%;
+	right: -50%;
+	text-align: center;
+}
+
+$inner-content-width: 90%;
+
+.standalone-404--content-box--row {
+	width: $inner-content-width;
+	height: 90%;
+	text-align: center;
+	left: (100% - $inner-content-width) / 2;
+	right: 50%;
+	position: relative;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	border-style: solid;
+	border-width: 2px;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.standalone-404--content-box--inner-width {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-left: 20px;
+	margin-right: 20px;
+}

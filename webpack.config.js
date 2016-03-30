@@ -22,8 +22,11 @@ module.exports = {
 	debug:true,
 	entry: _.defaultsDeep({},
 		_.reduce(buildConfig.entryPoints, function(allEntries, entryPoint) {
-			allEntries[entryPoint.jsroot] = path.join(CLIENT_SRC_DIR,
-				entryPoint.folder || '', entryPoint.jsroot + '.jsx');
+			console.log('webpack file, in reducer - for entryPoint: ', entryPoint);
+			if (_.get(entryPoint, 'jsroot')) {
+				allEntries[entryPoint.jsroot] = path.join(CLIENT_SRC_DIR,
+					entryPoint.folder || '', entryPoint.jsroot + '.jsx');				
+			}
 			return allEntries;
 		}, {})
 	),

@@ -25,7 +25,17 @@ var libs = [
 	{ lib: 'lodash', childPath: '', varName: '_' }
 ];
 
+const libTags = 
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.6.1/polyfill.min.js"></script>
+		<script src="./lib/jquery.js"></script>
+		<script src="./lib/lodash.js"></script>
+		<script src="./lib/marked.js"></script>
+		<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700" rel="stylesheet" type="text/css">
+		<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">`
+
+
 module.exports = {
+	libTags,
 	SRC: {
 		root: ['!./node_modules/**', './**'],
 		client: ['client/**', '!client/styles/**'],
@@ -79,6 +89,12 @@ module.exports = {
 			basename: 'index',
 			title: 'Home',
 			jsroot: 'index'
+		},
+		{
+			basename: '404',
+			title: '404',
+			minimal: true,
+			htmlComponent: 'client/components/basic-html/404.html'
 		}
 	],
 	/**

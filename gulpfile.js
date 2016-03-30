@@ -7,6 +7,7 @@ require('trace');
 require('clarify');
 require('colors');
 var path = require('path');
+var fs = require('fs');
 var _ = require('lodash');
 var inspect = require('util').inspect;
 var es = require('event-stream');
@@ -180,15 +181,22 @@ gulp.task('create-index-html', function copyStaticTask() {
 	var outStream = gulp.src(SRC.clientRootHtml)
 		.pipe(consoleTaskReport());
 
-	// 
 	var entryPointOutputStreams = _.map(pathConfig.entryPoints, function(entryConfig) {
+
+		// not all have a main js file (e.g. 404 error page)
+		var template = { 
+			title: entryConfig.title,
+			jsroot: entryConfig.jsroot ? `<script src="./${entryConfig.jsroot}.js"></script>` : '',
+			libraries: (entryConfig.minimal !== true) ? pathConfig.libTags : '',
+			htmlComponent: (entryConfig.htmlComponent)
+				? (fs.readFileSync(entryConfig.htmlComponent)).toString()
+				: `<div id="content"></div>`
+		};
+
 		// exclude any with a module
 		return outStream.pipe(p.clone())
 			.pipe(p.rename(function(path) { path.basename = entryConfig.basename; }))
-			.pipe(p.template({
-				title: entryConfig.title,
-				jsroot: entryConfig.jsroot + '.js'
-			}));
+			.pipe(p.template(template));
 	});
 
 	return es.merge.apply(this, entryPointOutputStreams)

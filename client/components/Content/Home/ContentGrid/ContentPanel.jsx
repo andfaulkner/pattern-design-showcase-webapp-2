@@ -6,7 +6,7 @@
 */
 
 // REACT
-var React = React || require('react');
+import React, { PropTypes } from 'react';
 var ReactDOM = ReactDOM || require('react-dom');
 
 // REACT HELPERS - ROUTING, STYLES, COMPONENTS
@@ -23,6 +23,31 @@ const spacer = '&nbsp;| ';
 
 @getContent()()
 export class ContentPanel extends React.Component {
+
+	static propTypes = {
+		id: PropTypes.string.isRequired,
+		title: PropTypes.oneOfType([
+			PropTypes.string,
+			PropTypes.arrayOf(PropTypes.string)
+		]).isRequired,
+		style: PropTypes.object.isRequired,
+		//DOM id. Match width of this ContentPanel with IDed node 
+		matchWidthById: PropTypes.string,
+		// preferably has bios, designs, or updates as a key(s)
+		content: PropTypes.object.isRequired,
+		// descriptive paragraph under title & above content items
+		introData: PropTypes.string,
+		// content[contentType] points to component's data
+		contentType: PropTypes.string.isRequired,
+		// url w/ more details on the data; linked to 'see more' button 
+		parentPath: PropTypes.string,
+		// top menu item to highlight when user navs via the content panel
+		parentPage: PropTypes.string,
+		// magically applies various styles
+		theme: PropTypes.oneOf(['cigeraser', 'stark']).isRequired,
+		// if a content item's title is an array, if true, put pt 2 on a separate line, preceded by '|'
+		useSpacer: PropTypes.bool,
+	}
 
 	/**
 	 * Set the width of this component to always be equal to the width of another specified
@@ -62,6 +87,7 @@ export class ContentPanel extends React.Component {
 
 	render() {
 		const { id, title, style, matchWidthById, content, introData, ...otherProps} = this.props;
+		console.log('ContentPanel content', content);
 		return (
 			<Row id={id} className={classNames('content-panel', otherProps.theme)}
 			>
@@ -70,14 +96,14 @@ export class ContentPanel extends React.Component {
 					titleStyle={style.title}
 					matchWidthById={matchWidthById}
 					content={content}
-					contentType={this.props.contentType}
+					contentType={otherProps.contentType}
 					{...otherProps}
 				/>
 				<CPanelContent
 					style={style}
 					content={content}
 					introData={introData}
-					contentType={this.props.contentType}
+					contentType={otherProps.contentType}
 					{...otherProps}
 				/>
 			</Row>
@@ -93,11 +119,16 @@ export class ContentPanel extends React.Component {
  */
 const CPanelTitle = ({ title, titleStyle='ctpanel--title', content, contentType }) => (
 	<div className={ titleStyle }>
-		{(_.get(content[contentType], 'items') && _.isArray(content[contentType].items) && _.isArray(title))
-			? title.map((titlePart, index) => (
-					<Row className='ctpanel--title-multirow' key={titlePart + '_' + index}>{titlePart}</Row>
-				))
-			: <Row className='ctpanel--title-one-row-only'>{title}</Row>
+		{
+			(_.isArray(_.get(content[contentType], 'items')) && _.isArray(title))
+				? title.map((titlePart, index) => (
+						<Row className='ctpanel--title-multirow' key={titlePart + '_' + index}>
+							{titlePart}
+						</Row>
+					))
+				: <Row className='ctpanel--title-one-row-only'>
+						{title}
+					</Row>
 		}
 	</div>
 );
@@ -123,6 +154,8 @@ const CPanelContent = ({content, style, contentType, introData, ...otherProps}) 
 						data={data}
 						style={style}
 						key={'CPanelContentItem_' + index}
+						useSpacer={otherProps.useSpacer}
+						{...otherProps}
 					/>
 				))
 			: ''
@@ -181,11 +214,20 @@ const CPanelDescription = ({content, introData}) => {
  * 
  * @param  {String} tiny string / bullet to show that line 2 is a 'child' of line 1
  */
-const CPanelContentItem = ({data, style}) => (
+const CPanelContentItem = ({data, style, useSpacer, ...otherProps}) => (
 	<Row className={classNames('ctpanel--content-section', style)}>
 		<Row className='ctpanel--content-section__title'>
-			<CPanelLine1 line1={data.title[0]}/>
-			<CPanelLine2 line2={data.title[1]} />
+			{
+				(!useSpacer)
+					? <CPanelLine1 line1={ _.isArray(data.title)
+																	? (data.title[0] + ' ' + _.get(data, 'title[1]')) 
+																	: data.title }
+						/>
+					: <div>
+								<CPanelLine1 line1={data.title[0]}/>
+								<CPanelLine2 line2={data.title[1]}/>
+						 	</div>
+			}
 			<CPanelDate date={data.dateCompleted}/>
 		</Row>
 	</Row>

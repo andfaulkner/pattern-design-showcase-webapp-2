@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <title><%= title %></title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-polyfill/6.6.1/polyfill.min.js"></script>
-    <script src="./lib/jquery.js"></script>
-    <script src="./lib/lodash.js"></script>
-    <script src="./lib/marked.js"></script>
-    <link href='https://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link href='styles/main.css' rel='stylesheet' type='text/css'>
-  </head>
-  <body>
-    <div id="content"></div>
-    <script src="./<%= jsroot %>"></script>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <title><%= title %></title>
+  <%= libraries %>
+  <link href='styles/main.css' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+<%= htmlComponent %>
+<%= jsroot %>
+</body>
 </html>

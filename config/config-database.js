@@ -11,6 +11,7 @@ module.exports = {
 	mongo: {
 		type: primaryDb,
 		url: process.env.MONGOLAB_URI || 'mongodb://localhost',
+		clientURL: process.env.MONGOLAB_URI || 'http://localhost:3000/',
 		dbName: 'PATTERN_MAIN',
 		port: '27017',
 		// 	// user: secret.development.connection.user || 'NOUSER',
