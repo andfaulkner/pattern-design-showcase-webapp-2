@@ -35,8 +35,10 @@ export class AboutPage extends React.Component {
 				<div className={classNames('about__content-section')}>
 					{
 						_.get(content, 'bios.items[0]')
-							? <AboutLeftCol content={content}/> 
-							: '' 
+							? <AboutLeftCol children={this.props.children}>
+									<AboutTextWrapper content={content} />
+								</AboutLeftCol> 
+							: ''
 					}
 					<div className={classNames('about__right-col')}>
 						<div className={classNames('about__right-col--inner')}>
@@ -63,25 +65,27 @@ const AboutUnderImage = () => (
 
 const AboutImage = () => (
 	<div className={classNames('about__right-col--image')}>
-		<img src='/img/other/owl.jpg' />
+		<img src='/img/other/owl.jpg' className={classNames('about--image-size')}/>
 	</div>
 );
 
-const AboutLeftCol = ({content}) => {
-	console.log('AboutPage.jsx:: AboutLeftCol:: content:', content);
-	return (
-		<div className={classNames('about__left-col')}>
-			<div className={classNames('about__left-col--inner')}>
-				<div className={classNames('about__left-col--text-wrapper')}>
-					{
-						content.bios.items[0].aboutParagraph.map((paragraph, index) => (
-							<div className={classNames('about__left-col--text')} key={'aboutPara_' + index}>
-								{paragraph}
-							</div>
-						)) 
-					}
-				</div>
-			</div>
+const AboutLeftCol = ({children}) => (
+	<div className={classNames('about__left-col')}>
+		<div className={classNames('about__left-col--inner')}>
+			{children}
 		</div>
-	)
+	</div>
+);
+
+const AboutTextWrapper = ({content}) => {
+	console.log('AboutPage.jsx:: AboutTextWrapper:: content:', content);
+	return (<div className={classNames('about__left-col--text-wrapper')}>
+		{
+			content.bios.items[0].aboutParagraph.map((paragraph, index) => (
+				<div className={classNames('about__left-col--text')} key={'aboutPara_' + index}>
+					{paragraph}
+				</div>
+			)) 
+		}
+	</div>)
 };

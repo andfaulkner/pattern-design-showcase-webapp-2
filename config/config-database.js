@@ -1,5 +1,7 @@
 'use strict';
 
+const isLocal = ((process ? (process.env ? !!process.env.LOCAL_DEV : false) : false));
+
 var primaryDb = 'mongo';
 var cacheClient = 'redis';
 var secret = {};
@@ -10,8 +12,12 @@ var _ = require('lodash');
 module.exports = {
 	mongo: {
 		type: primaryDb,
-		url: process.env.MONGOLAB_URI || 'mongodb://localhost',
-		clientURL: process.env.MONGOLAB_URI || 'http://localhost:3000/',
+		url: (!isLocal)
+			? (process.env.MONGOLAB_URI || 'mongodb://heroku_n9rdt9vj:pjdpfkgu26tejn595s9dcpids5@ds021689.mlab.com:21689/heroku_n9rdt9vj')
+			: 'mongodb://localhost',
+		clientURL: (!isLocal)
+			? (process.env.MONGOLAB_URI || 'mongodb://heroku_n9rdt9vj:pjdpfkgu26tejn595s9dcpids5@ds021689.mlab.com:21689/heroku_n9rdt9vj')
+			: 'http://localhost:3000/',
 		dbName: 'PATTERN_MAIN',
 		port: '27017',
 		// 	// user: secret.development.connection.user || 'NOUSER',

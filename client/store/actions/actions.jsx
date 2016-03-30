@@ -117,7 +117,9 @@ export const fetchContent = (contentType) => {
     // First dispatch: the app state is updated to inform
     // that the API call is starting.
     dispatch(requestContent(contentType));
-
+    console.log('actions.jsx:: fetchContent:: configDb:', configDb);
+    console.log('actions.jsx:: fetchContent:: configDb.mongo:', configDb.mongo);    
+    console.log('actions.jsx:: fetchContent:: configDb.mongo.clientURL:', configDb.mongo.clientURL);
     const restAPIUrl = _.trimEnd(configDb.mongo.clientURL, '/') + '/api/v1/' + contentType;
 
     // The function called by the thunk middleware can return a value,

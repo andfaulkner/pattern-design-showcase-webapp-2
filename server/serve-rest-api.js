@@ -7,6 +7,7 @@ var _ = require('lodash');
 var logger = require('server/core/logger').file('./serve-rest-api.js');
 var express = require('express');
 var router = express.Router();
+var inspect = require('util').inspect;
 
 // DATABASE
 const mongoose = require('mongoose')
@@ -21,6 +22,7 @@ module.exports = (app) => {
 
 	app.use(methodOverride())
 
+	console.log('connecting to mongoURI: ' + inspect(mongoURI, { depth: 5, colors: true, showHidden: true }));
 	mongoose.connect(mongoURI);
 	restify.serve(app, mongoose.model('designs', new mongoose.Schema(schema.designs)));
 	restify.serve(app, mongoose.model('updates', new mongoose.Schema(schema.updates)));

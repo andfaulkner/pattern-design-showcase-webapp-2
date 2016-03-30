@@ -42,3 +42,9 @@
 		color: black;
 	}
 }
+
+@media (max-width: 590px) and (min-width: 550px) {
+	.top-level-menu-link {
+		padding: 7px 7px;
+	}
+}

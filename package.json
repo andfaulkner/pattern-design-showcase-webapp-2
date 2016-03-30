@@ -12,6 +12,7 @@
     "populate-mongodb:overwrite": "OVERWRITE_MONGO_BOOTSTRAP_DATA=true node ./scripts/bootstrap-mongo.js",
     "build-postgresql-db": "createdb pattern_design || true; node ./scripts/generate-db-tables.js || true",
     "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
+    "nodemon:local": "export NODE_PATH=$NODE_PATH:./; LOCAL_DEV=true nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
     "preinstall": "npm i -g pm2 gulp && pm2 install pm2-logrotate",
     "heroku-postbuild": "echo '\n\nENVIRONMENT:::\n' && env && echo '\n----------------\n\n' && npm run populate-mongodb:overwrite",
     "launch-mongo": "mongod --rest",
