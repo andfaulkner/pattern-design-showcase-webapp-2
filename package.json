@@ -8,13 +8,14 @@
     "npm": "3.6.0"
   },
   "scripts": {
-    "build-mongodb": "node ./scripts/bootstrap-mongo.js",
+    "populate-mongodb": "OVERWRITE_MONGO_BOOTSTRAP_DATA=false node ./scripts/bootstrap-mongo.js",
+    "populate-mongodb:overwrite": "OVERWRITE_MONGO_BOOTSTRAP_DATA=true node ./scripts/bootstrap-mongo.js",
     "build-postgresql-db": "createdb pattern_design || true; node ./scripts/generate-db-tables.js || true",
-    "test": "echo \"Error: no test specified\" && exit 1",
     "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
     "preinstall": "npm i -g pm2 gulp && pm2 install pm2-logrotate",
-    "heroku-postbuild": "echo '\n\nENVIRONMENT:::\n' && env && echo '\n----------------\n\n' && npm run build-mongodb",
-    "launch-mongo": "mongod --rest"
+    "heroku-postbuild": "echo '\n\nENVIRONMENT:::\n' && env && echo '\n----------------\n\n' && npm run populate-mongodb:overwrite",
+    "launch-mongo": "mongod --rest",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",

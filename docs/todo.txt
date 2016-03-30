@@ -104,28 +104,7 @@ X!X activate postgres in app
 ! get machine to stop fucking crashing
 ! get a static version to deploy
 ! fix site path - ban bad requests (for non-existent paths)
-- fix "see more" links
-- sticky footer
-- gallery cursor
-- see more cursor
 
-- mongodb bootstrapping working on Heroku
-- mongodb bootstrapping without unique
-- at least 1 AJAX request
-
-- fix logger to show objects properly. Rests, spreads handy here.
-- See more links
-- deal with 'secret' issue
-		- read heroku docs for this
-- interface with mongo
-- send money to Lisa
-- store a bit of data in mongo
-- retrieve data from mongo
-- activate redis in app
-- sample deployment on Heroku
-- docker?
-- handle devDependencies needing to be mixed in with regular deps for Heroku
-- make only 2 most recent corporate designs or updates on home page
 **************************************************************************************
 ASIDE: Clojure
 ! install leningen
@@ -155,9 +134,68 @@ X employ Redis cache
 ! recently updated dynamic content - AJAX
 
 
-*   one more web component?
-*   get initial data into MongoDB in Heroku-friendly way
-*
+**************************************************************************************
+March 26th-30th
+===============
+
+! PAGE: HOME:: fix "see more" links
+! PAGE: HOME:: gallery cursor
+! PAGE: HOME:: see more cursor
+! PAGE: HOME:: see more hovers
+! DATABASE:: mongodb bootstrapping without unique
+! DATABASE:: at least 1 AJAX request
+! DATABASE:: get all data from AJAX
+! PAGE: HOME:: See more links
+! DATABASE:: interface with mongo
+! send money to Lisa
+! DATABASE:: store a bit of data in mongo
+! DATABASE:: retrieve data from mongo
+XX DATABASE:: activate redis in app
+! DEPLOYMENT:: sample deployment on Heroku
+! >:( handle devDependencies needing to be mixed in with regular deps for Heroku
+! get initial data into MongoDB in Heroku-friendly way
+! one more web component?
+! PAGE: 'See more' latest updates
+! PAGE: CONTACT:: CONSIDER CONCAT WITH ABOUT
+! PAGE: CONTACT:: contact title
+! DEPLOYMENT:: determine deployment method <<< WIP todo
+X DEPLOYMENT:: learn Docker
+! DEPLOYMENT:: deploy to Heroku
+! PAGE: GALLERY:: create dynamic 'grid' for page
+! PAGE: ABOUT:: about title
+! PAGE: ABOUT:: UI component for display of RS image section
+! PAGE: ABOUT:: write random left side content
+! PAGE: ABOUT:: get left-side content (paragraph) displaying properly
+X contact title
+! PAGE: UPDATES:: create React list component
+! PAGE: UPDATES:: dynamic collection of list-items 
+! PAGE: UPDATES:: create React list-item component
+! PAGE: UPDATES:: title
+! PAGE: UPDATES:: date
+! PAGE: UPDATES:: image
+! PAGE: UPDATES:: description
+! PAGE: UPDATES:: POSSIBLY read more
+! PAGE: UPDATES:: social media buttons (to share the item)
+XX PAGE: HIRE TAMARA:: decide whether or not you want one (discuss w/ Tamara) [[WE DON'T]]
+	 if you do, wireframe it (steal an example from somewhere)
+! DECORATORS:: enable decorators
+! DECORATORS:: learn decorators
+! DECORATORS:: get a class decorator working
+! DECORATORS:: decorators basic example
+! DECORATORS:: apply to make redux loading nicer
+**************************************************************************************
+March 31st
+==========
+- make Mongo overwrite when bootstrapping!
+- put PropTypes on your components
+- email component
+- favicon
+- sticky footer
+- mongodb bootstrapping working on Heroku
+- fix logger to show objects properly. Rests, spreads handy here.
+- deal with 'secret' issue
+		- read heroku docs for this
+- make only 2 most recent corporate designs or updates on home page
 
 **************************************************************************************
 
@@ -188,59 +226,32 @@ Social Media
 - 'share' functionality
 
 Deployment
-- determine deployment method <<< WIP todo
-- learn Docker
-- deploy to Heroku
 - wire Heroku site to Tamara's FlowReach domain
 
 PAGE: Gallery
 - Wireframe gallery page
-- create dynamic 'grid' for page
 - make thumbnails from images to display 
 - set dynamic grid to produce modal popup
 - wire dynamic grid to gallery images
 - paginate if >50 img?
 
 PAGE: About
-- subscribe for updates box
-- Tamara image in RS image section
-- UI component for display of RS image section
-- determine what to put in the 'quote box' as seen in the wireframe
-- about title
-- write random left side content
-- get left-side content (paragraph) displaying properly
+- PAGE: ABOUT:: subscribe for updates box
+- PAGE: ABOUT:: Tamara image in RS image section
+- PAGE: ABOUT:: determine what to put in the 'quote box' as seen in the wireframe
+- PAGE: ABOUT:: Contact us box.
 
 PAGE: Shop <<< TODO: this todo section is WIP
 - wireframe it
 - figure out WTF to put in there (consult with Tamara)
 
 PAGE: Contact <<<< WIP: possibly concat with about
-- CONSIDER CONCAT WITH ABOUT
-- contact title
-- 'email us' box
 - decide what to put in top-right block w/ map (either a pattern or a vague map aimed at Ottawa)
-- phone number
-- contact title
+- PAGE: ABOUT:: phone number
 
 PAGE: 'See more' corporate designs
 - image on RS, text on LS, alternating
 - get Tamara to do a few low-hanging fruit items to fill the section
-
-PAGE: 'See more' latest updates
-- create React list component
-	- dynamic collection of list-items 
-- create React list-item component
-	- title
-	- date
-	- image
-	- description
-	- POSSIBLY read more
-	- social media buttons (to share the item)
-
-PAGE: 'Hire Tamara'
-- decide whether or not you want one (discuss w/ Tamara)
-	- if you do, wireframe it (steal an example from somewhere)
-- consider concating with About, Contact (etc.)
 
 Subscription
 - set up subscription service
@@ -310,15 +321,9 @@ XXXX material design
 
 Advanced (later)
 - browser livereload
-- decorators
-	- enable decorators
-	- learn decorators
-	- get a class working
-	- decorators basic example
 
 
 ________________________________________________________
-- favicon
 ! base route
 X get koa serving a static asset
 X login package - with Koa

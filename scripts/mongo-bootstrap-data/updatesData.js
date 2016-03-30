@@ -1,7 +1,7 @@
 module.exports = [
 	{
 		'_id': '0001',
-		'title': ['New pattern:', 'Cornstarch & too much fidgeting'],
+		'title': ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAANew pattern:', 'Cornstarch & too much fidgeting'],
 		'dateCompleted': '2016/01/29',
 		'textContent': [
 			'That time I discovered winning a cornstarch guzzling contest is excellent for motivation. I would have spontaneously combusted from fidgeting so much if I didn\'t have a pencil and paper nearby.',

@@ -1,3 +1,16 @@
+/**************************************************************************************************
+*
+* 		Populate MongoDB database with initial data.
+*
+*			If environment variable OVERWRITE_MONGO_BOOTSTRAP_DATA is 'true', overwrite db records
+*			with the same IDs as items in the 'initial data' files (e.g. updatesData.js).. e.g.:
+*
+*   		export OVERWRITE_MONGO_BOOTSTRAP_DATA=true; node scripts/bootstrap-mongo.js
+*
+* 				...would overwrite database items sharing IDs with the items in the data files.
+*
+*/
+
 var _ = require('lodash');
 
 var assert = require('assert');
@@ -31,63 +44,49 @@ db.on('error', console.error.bind(console, 'mongodb connection error:'));
 
 // CONNECT TO DB
 db.once('open', () => {
-	console.log(db)
-	console.info('Connected correctly to server');
-	//Runs the following functions in parallel, with the final callback receiving an array containing
-	//the return results of each function in the 1st arg given to async.parallel; and/or errors.
+	console.info('Successfully connected to database');
 	async.parallel([
-		function(next){
-			async.each(updateData, _.partial(saveData, Update), _.partial(saveDone, next, 'Updates'));
-		},
-		function(next){
-			async.each(imageData, _.partial(saveData, Image), _.partial(saveDone, next, 'Images'));
-		},
-		function(next){
-			async.each(designData, _.partial(saveData, Design), _.partial(saveDone, next, 'Designs'));
-		},
-		function(next){
-				async.each(bioData, _.partial(saveData, Bio), _.partial(saveDone, next, 'Bio'));
-		}
-	], function asyncParallelFinal(err, results){
+		(next => async.each(updateData, _.partial(save, Update, 'Update'), next)),
+		(next => async.each(imageData, _.partial(save, Image, 'Image'), next)),
+		(next => async.each(designData, _.partial(save, Design, 'Design'), next)),
+		(next => async.each(bioData, _.partial(save, Bio, 'Bio'), next))
+	], (err, results) => {
+		console.log('final cb!');
 		if (err) {
-			console.error('saving data failed');
-			return;
+			console.error('saving data failed, with error: ', err);
+		} else {
+			console.log('All db items saved!');
 		}
-		console.log('All db items loaded!');
-		process.exit();
-		return;
+		return process.exit();
 	});
 })
 
-function saveData(Schema, item, callback) {
+function save(Schema, typeName, item, cb) {
 	var Data = new Schema(item);
-	Data.save(function(err) {
-		// ignore duplicate key errors
+	Data.save((err) => {
+		// handle all errors unrelated to duplicate keys
 		if (err && err.message.search('E11000 duplicate key error') === -1) {
-			console.error('Error handling data save: ', err)
+			console.error('Error handling data save of ' + typeName + ': ', err);
 			console.error('err name: ', err.name);
 			console.error('err message: ', err.message);
-			console.error('err driver: ', err.driver);
-			console.error('err code: ', err.code);
-			console.error('err index: ', err.index);
-			console.error('err errMsg: ', err.errMsg);
-			console.error('err getOperation: ', err.getOperation);
-			console.error('err toJSON: ', err.toJSON);
-			console.error('err toString: ', err.toString);
-			console.error('\n\n\n');
+			return cb(err);
+		// handle duplicate key errors - erase the record & save again if env var is set.
+		} else if (err && (process.env.OVERWRITE_MONGO_BOOTSTRAP_DATA === 'true')) {
+			Data.remove(item, (err) => {
+				if (err) {
+					console.error('data removal failed with error: ', err);
+					return cb();
+				}
+				return save(Schema, typeName, item, cb);
+			});
+		// handle successful save, or duplicate data that won't be overwritten
+		} else {
+			console.info('record of type ' + typeName + ' successfully saved.');
+			return cb();
 		}
-		callback();
 	});
 }
 
-function saveDone(next, type, err) {
-	if (err) {
-		console.error('Saving data of type ' + type + ' failed: ', err);
-		next(err);
-	}
-	console.log('saved ' + type);
-	next(err);
-}
 // connect
 // check for dupe (use id)
 // insert if no dupe
