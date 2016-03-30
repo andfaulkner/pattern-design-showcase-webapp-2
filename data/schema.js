@@ -24,6 +24,7 @@ const schema = {
 	updates: {
 		_id: { type: String, required: true },
 		title: { type: [String], required: true },
+		miniTitle: { type: String },
 		dateCompleted: { type: String },
 		textContent: { type: [String], required: true },
 		image: { type: String },		
@@ -39,7 +40,8 @@ const schema = {
 			authors: { type: String, required: true },
 			company: { type: String, required: true }
 		},
-		date: { type: Date, default: Date.now }
+		date: { type: Date, default: Date.now },
+		aboutParagraph: { type: [String] }
 	},
 };
 

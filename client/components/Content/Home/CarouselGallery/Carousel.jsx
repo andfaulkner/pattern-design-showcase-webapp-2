@@ -62,7 +62,7 @@ const mapStateToProps = (state) => {
 	}
 }
 
-@getContent(mapStateToProps)
+@getContent(mapStateToProps)()
 export default class Carousel extends React.Component {
 	getDefaultProps = {
 		isCarouselRunning: true,

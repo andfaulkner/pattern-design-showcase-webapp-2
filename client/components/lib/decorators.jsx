@@ -19,7 +19,7 @@ import { connect } from 'react-redux';
  *         to return. A sane default is used automatically if none given. It covers most cases. 
  * @return {Class} Decorated class
  */
-export const getContent = (mapStateToPropsInput) => (Target) => {
+export const getContent = (mapStateToPropsInput) => (type) => (Target) => {
 
 	const mapStateToProps = (mapStateToPropsInput)
 		? mapStateToPropsInput.bind(this)
@@ -43,6 +43,9 @@ export const getContent = (mapStateToPropsInput) => (Target) => {
 				console.info('decorators.jsx:: getContent for ' + route + ' sucessful!');
 			});
 		}
+		// componentDidMount = () => {
+		// 	this.props.getContent(type);
+		// }
 		render() {
 			return <Target {...this.props}/>;
 		}

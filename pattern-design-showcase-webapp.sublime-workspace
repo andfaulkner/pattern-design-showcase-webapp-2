@@ -4,12 +4,32 @@
 		"selected_items":
 		[
 			[
-				"paddin",
-				"padding-left"
+				"rct_new_",
+				"rct_new_slc	Create a React stateless functional component"
+			],
+			[
+				"rct_new",
+				"rct_new_slc	Create a React stateless functional component"
 			],
 			[
 				"margin",
-				"margin-left"
+				"margin-bottom"
+			],
+			[
+				"align",
+				"text-align"
+			],
+			[
+				"padd",
+				"padding"
+			],
+			[
+				"padding",
+				"padding"
+			],
+			[
+				"paddin",
+				"padding-left"
 			],
 			[
 				"backgrou",
@@ -26,10 +46,6 @@
 			[
 				"clf",
 				"clfo	Log object w/ file & object name, "
-			],
-			[
-				"rct_new",
-				"rct_newcabf	Simple class-based react component, with export; includes all imports"
 			],
 			[
 				"border",
@@ -110,10 +126,6 @@
 			[
 				"thumbna",
 				"thumbnailImage"
-			],
-			[
-				"rct_new_",
-				"rct_new_cl_wconst	Class-based react component w/ a constructor"
 			],
 			[
 				"rct_c",
@@ -469,6 +481,9 @@
 			]
 		]
 	},
+	"buffers":
+	[
+	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -476,10 +491,14 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 392.0,
-		"last_filter": "inst",
+		"height": 336.0,
+		"last_filter": "list",
 		"selected_items":
 		[
+			[
+				"list",
+				"Package Control: List Packages"
+			],
 			[
 				"inst",
 				"Package Control: Install Package"
@@ -547,10 +566,6 @@
 			[
 				"sublime",
 				"SublimeLinter: Next Error"
-			],
-			[
-				"list",
-				"Package Control: List Packages"
 			],
 			[
 				"remove pack",
@@ -677,7 +692,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 794.0
+		"width": 533.0
 	},
 	"console":
 	{
@@ -698,12 +713,41 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
+	"expanded_folders":
+	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/AboutPage",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates"
+	],
 	"file_history":
 	[
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/content.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-main.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentGrid.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/AboutPage/AboutPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage/GalleryPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage/UpdatesPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/decorators.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentPanel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-container.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-shared.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/content.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/Carousel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentGrid.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/Page.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-title.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-main.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/configure-store.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/actions.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
@@ -731,14 +775,11 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/default.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/bootstrap.sh",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/ModalPhotoGallery.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/social-media-buttons.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/carousel-reducers.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/SocialMediaIcons.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/RootNode.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage/GalleryPage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/experiments/reducers.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/DesignsPage/DesignsPage.jsx",
@@ -746,9 +787,6 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/text-content-grid.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/todo.txt",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage/UpdatesPage.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/Page.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/AboutPage/AboutPage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/images.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/HEROKU/deployment.md",
@@ -778,7 +816,6 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/express-mongoose-restify.md",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/generate-db-tables.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/Carousel.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/updates.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/primer-dataset.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/BannerBlock.jsx",
@@ -823,11 +860,7 @@
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple-class.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-func.sublime-snippet",
 		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-arrow-function.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-class.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-static-value.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_fns_in_export_block.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/import.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/_docs_guides/js/ES2015/export_default_fn.js"
+		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-class.sublime-snippet"
 	],
 	"find":
 	{
@@ -890,6 +923,36 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"mapStateToProps",
+			"data",
+			"PHOTOS",
+			"PHOTOS\n",
+			"images",
+			"@connect",
+			"setCurrentPage",
+			"fetchContentIfNeeded",
+			"selectContentType",
+			"import { connect } from 'react-redux';\n",
+			"type",
+			"update",
+			"mapStateToProps",
+			"'updates'",
+			"target",
+			"this",
+			"wrappedTarget",
+			"this.props.contentType",
+			"Updates",
+			"otherProps",
+			"UpdatesPage",
+			"fetchContentIfNeeded",
+			"props",
+			"--block",
+			".updates .block",
+			".u",
+			".block__",
+			"updates__",
+			"UpdatesContent",
+			"Content",
 			"--",
 			"15px",
 			"-block",
@@ -987,37 +1050,7 @@
 			"design",
 			"\\.map",
 			"\\.map[",
-			"helpers.alteredState(",
-			"mapStateToProps",
-			"mapPropsToState",
-			"renderData",
-			"content",
-			"renderFn",
-			" = () => {",
-			"() =>",
-			"()",
-			", fetcher",
-			"fetcher={fetcher}",
-			"fetcher=",
-			"fetcher",
-			"store",
-			"fetcher",
-			"store.",
-			"selectContentType",
-			"contentFetcher",
-			"fetchRightColContent",
-			"fetchLeftColContent",
-			"designs",
-			"LeftContentCol",
-			"contentLeft",
-			"this.props.id",
-			"CPanelContentItem",
-			"return {",
-			"export function ",
-			"export function",
-			"import.*Home",
-			"contentByType",
-			"fetchedContent"
+			"helpers.alteredState("
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1096,6 +1129,29 @@
 		"whole_word": false,
 		"wrap": true
 	},
+	"groups":
+	[
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		},
+		{
+			"sheets":
+			[
+			]
+		}
+	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -1168,6 +1224,7 @@
 		"height": 688.0
 	},
 	"pinned_build_system": "Packages/User/Scheme.sublime-build",
+	"project": "pattern-design-showcase-webapp.sublime-project",
 	"replace":
 	{
 		"height": 78.0
@@ -1398,8 +1455,9 @@
 		"selected_items":
 		[
 		],
-		"width": 570.0
+		"width": 533.0
 	},
+	"selected_group": 0,
 	"settings":
 	{
 	},

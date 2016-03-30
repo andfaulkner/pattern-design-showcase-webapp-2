@@ -11,7 +11,7 @@ import { ContentGrid } from './ContentGrid/ContentGrid';
 import { setCurrentPage } from '../../../store/actions/actions.jsx';
 import { getContent } from '../../lib/decorators.jsx';
 
-@getContent()
+@getContent()()
 export class Home extends React.Component {
 
 	constructor(props) {

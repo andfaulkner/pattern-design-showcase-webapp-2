@@ -1,52 +1,79 @@
+.updates {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
 .updates--block {
+	display: flex;
+	margin-left: $main-margin;
+	margin-right: $main-margin;
+	margin-bottom: $main-margin * 2;
+	margin-top: $main-margin * 2;
+	flex-direction: row;
+	justify-content: center;
+	max-height: 550px;
+}
+
+.updates--block--left-col {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 300px;
+	position: relative;
+	margin-right: $main-margin;
+	margin-left: $main-margin;
+}
+
+.updates--block--img {
 	display: block;
+	width: 270px;
+}
+
+.updates--block--right-col {
+	display: flex;
+	flex-direction: column;
+	max-height: 550px;
+	justify-content: center;
 	margin-left: $main-margin;
 	margin-right: $main-margin;
 }
 
-.updates--block--img-left__container {
-	@include vertical-align(relative);
-	display: inline-block;
-	margin-right: $main-margin;
-}
-
-.updates--block--right {
-	display: inline-block;
+.updates--block--left-col-inner,
+.updates--block--right-col-inner {
+	position: absolute;
+	bottom:-100%;
 }
 
 .updates--block--title {
 	display: block;
-	margin-bottom: 10px;
+	margin-bottom: $main-margin/2;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
 	font-stretch: normal;
-	font-size: 30px;
-	line-height: 1.4em;
+	font-size: 20px;
+	line-height: 1em;
 	font-family: 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
+	max-width: 700px;
 }
 
 .updates--block--content__container {
-		display: block;
-		border-color: black;
-		border-style: solid;
-		border-width: 2px;
-		background-color: transparent;
-		border-radius: 0;
-		// border-image-source: initial;
-		// border-image-slice: initial;
-		// border-image-width: initial;
-		// border-image-outset: initial;
-		// border-image-repeat: initial;
+	display: block;
+	border-color: black;
+	border-style: solid;
+	border-width: 2px;
+	background-color: transparent;
+	border-radius: 0;
 }
 
 .updates--block--content {
-	display: block;
+	display: inline-block;
 	font-style: normal;
 	font-variant: normal;
 	font-weight: normal;
 	font-stretch: normal;
-	font-size: 15px;
+	font-size: 13px;
 	line-height: 1.4em;
 	font-family: 'courier new', courier-ps-w01, courier-ps-w02, courier-ps-w10, monospace;
 	color: #333;

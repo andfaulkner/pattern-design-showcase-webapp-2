@@ -48,7 +48,7 @@ const PHOTOS = _.reduce(images, (imgSettings, image) => {
 	return imgSettings;
 }, []);
 
-@getContent()
+@getContent()()
 export class GalleryPage extends React.Component {
 	constructor(props) {
 		super(props);

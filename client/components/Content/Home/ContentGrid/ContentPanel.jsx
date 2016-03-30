@@ -21,7 +21,7 @@ import { getContent } from '../../../lib/decorators.jsx';
 
 const spacer = '&nbsp;| ';
 
-@getContent()
+@getContent()()
 export class ContentPanel extends React.Component {
 
 	/**
@@ -135,7 +135,7 @@ const CPanelContent = ({content, style, contentType, introData, ...otherProps}) 
  * TODO load the relevant section
  * TODO get the required link passed in
  */
-@getContent()
+@getContent()()
 class CPanelSeeMoreButton extends React.Component {
 
 	navToParentPage = (setCurrentPage, parentPage) => {

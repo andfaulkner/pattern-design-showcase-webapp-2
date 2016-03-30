@@ -6,8 +6,9 @@ import Radium from 'radium';
 import { connect } from 'react-redux';
 import { setCurrentPage, selectContentType, fetchContentIfNeeded } from '../../../store/actions/actions.jsx';
 import { getContent } from '../../lib/decorators.jsx';
+import { Title } from '../../lib/UtilityComponents.jsx';
 
-@getContent()
+@getContent()('updates')
 export class UpdatesPage extends React.Component {
 
 	constructor(props) {
@@ -22,25 +23,10 @@ export class UpdatesPage extends React.Component {
 	render() {
 		const { content, ...otherProps } = this.props;
 		return (
-			<div>
-				<Title />
-				<UpdatesContentBox content={content} {...otherProps} />
-			</div>
-		);
-	}
-};
-
-class Title extends React.Component {
-
-	constructor(props) {
-		super(props);
-	}
-
-	render() {
-		return (
-			<div>
-				<div className={classNames('updates__title-container')}>
-					<div className={classNames('updates__title')}>Updates</div>
+			<div className='updates'>
+				<div>
+					<Title title='Updates' />
+					<UpdatesContentBox content={content} {...otherProps} />
 				</div>
 			</div>
 		);
@@ -57,49 +43,56 @@ class UpdatesContentBox extends React.Component {
 		const { content, ...otherProps } = this.props;
 		console.log('UpdatesPage: this.props: ', this.props);
 		const data = _.get(this.props, 'content.updates.items');
-		const updates = _.map(data, (update) => (
-			<div className={classNames('updates--block')}>
-				{
-					update.image
-						?	<UpdateImage src={update.src} />
-						: ''
-				}
-				<div className={classNames('updates--block--img-left__container')}>
-					{
-						update.title
-							?	<UpdateTitle displayData={update.title} />
-							: ''
-					}
-					{
-						update.textContent
-							?	update.textContent.map((textContent) =>
-								<UpdateTextContent textContent={update.textContent} />)
-							: ''
-					}
-				</div>
-			</div>
-			)
-		)
-		return (
-			<div className={classNames('updates--block')}>
-				<div className={classNames('updates--block--img-left__container')}>
-					LEFT CONTAINER!
-				</div>
-				<div className={classNames('updates--block--right')}>
-					<div className={classNames('updates--block--title')}>
-						RIGHT CONTAINER TITLE!
-					</div>
-					<div className={classNames('updates--block--content__container')}>
-						<div className={classNames('updates--block--content')}>
-							RIGHT CONTAINER CONTENT!
-						</div>
-					</div>
-				</div>
-			</div>
-		);
+		console.log(data);
+		var rightToLeft = false;
+		console.log('this.rightToLeft: ', this.rightToLeft);
+
+		// TODO random image if none given
+		const updates = _.map(data, (update) => {
+			rightToLeft = !rightToLeft;
+			return (rightToLeft)
+				? (<div className={classNames('updates--block')}>
+						{update.image ? <UpdateImage src={update.image} /> : ''}
+						<ContentCol updateData={update} />
+					</div>)
+				: (<div className={classNames('updates--block')}>
+						<ContentCol updateData={update} />
+						{update.image ? <UpdateImage src={update.image} /> : ''}
+					</div>)
+		});
+		return (<div>{updates}</div>)
 	}
 
 };
+
+const ContentCol = ({updateData}) => (
+	<div className={classNames('updates--block--right-col')}>
+		<ContentColTitle updateData={updateData} />
+		<ContentContainer content={updateData.textContent} />
+	</div>
+);
+
+const ContentContainer = ({content}) => {
+	return (
+		<div className={classNames('updates--block--content__container')}>
+			<div className={classNames('updates--block--content')}>
+				{content}
+			</div>
+		</div>
+	);
+};
+
+const ContentColTitle = ({updateData}) => (
+	<div>
+		{(updateData.miniTitle || updateData.title)
+			? <div className={classNames('updates--block--title')}>
+					{_.flattenDeep([updateData.title]).map((title) => {
+						return (<div className={classNames('updates--block--title')}>{title}</div>)
+					})}
+				</div>
+			: ''}
+	</div>
+);
 
 const UpdateTitle = ({displayData}) => (
 	<div className={classNames('updates--block--title')}>
@@ -108,13 +101,16 @@ const UpdateTitle = ({displayData}) => (
 );
 
 const UpdateTextContent = ({textContent}) => (
-	<div className={classNames('updates--block--title')}>
+	<div className={classNames('updates--block--content')}>
 		{textContent}
 	</div>
 );
 
 const UpdateImage = ({src}) => (
-	<div className={classNames('updates--block--img-left__container')}>
-		<img src={'/' + src}/>
+	<div className={classNames('updates--block--left-col')}>
+		<img className={classNames('updates--block--img')} src={src} />
 	</div>
 );
+
+
+

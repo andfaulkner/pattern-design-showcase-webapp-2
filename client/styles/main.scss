@@ -4,6 +4,7 @@ html, body {
 
 @import "normalize.css/normalize";
 @import "fonts.scss";
+@import 'components/Common/mixins-and-sizes.scss';
 
 @import "components/common.scss";
 @import "components/content.scss";
