@@ -60,7 +60,7 @@ module.exports = {
 	externals: buildConfig.webpackExternalModules,
 	plugins: [
 		new webpack.DefinePlugin({
-			'process.env.NODE_ENV': '"production"'
+			'process.env.NODE_ENV': '"development"'
 		}),
 		new HappyPack({ 
 			loaders: ['babel?presets[]=es2015,presets[]=stage-0,presets[]=react,plugins[]=transform-runtime,plugins[]=transform-async-functions,plugins[]=transform-decorators-legacy,plugins[]=transform-es2015-destructuring,plugins[]=transform-object-assign,cacheDirectory=.cache'],

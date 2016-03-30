@@ -8,13 +8,8 @@ import { setCurrentPage, selectContentType, fetchContentIfNeeded } from '../../.
 import { getContent } from '../../lib/decorators.jsx';
 import { Title } from '../../lib/UtilityComponents.jsx';
 
-@getContent()('updates')
+@getContent()('Updates')
 export class UpdatesPage extends React.Component {
-
-	constructor(props) {
-		super(props);
-		this.props.dispatch(setCurrentPage('Updates'));
-	}
 
 	componentDidMount = () => {
 		this.props.getContent('updates');
@@ -35,30 +30,37 @@ export class UpdatesPage extends React.Component {
 
 class UpdatesContentBox extends React.Component {
 
-	constructor(props) {
-		super(props);
-	}
-
 	render() {
 		const { content, ...otherProps } = this.props;
-		console.log('UpdatesPage: this.props: ', this.props);
 		const data = _.get(this.props, 'content.updates.items');
-		console.log(data);
 		var rightToLeft = false;
-		console.log('this.rightToLeft: ', this.rightToLeft);
 
 		// TODO random image if none given
-		const updates = _.map(data, (update) => {
+		const updates = _.map(data, (update, index) => {
 			rightToLeft = !rightToLeft;
 			return (rightToLeft)
-				? (<div className={classNames('updates--block')}>
-						{update.image ? <UpdateImage src={update.image} /> : ''}
-						<ContentCol updateData={update} />
-					</div>)
-				: (<div className={classNames('updates--block')}>
-						<ContentCol updateData={update} />
-						{update.image ? <UpdateImage src={update.image} /> : ''}
-					</div>)
+				? (
+						<div 
+							className={classNames('updates--block')}
+							key={_.flattenDeep([update.title]) + index}
+						>
+							{update.image
+								? <UpdateImage src={update.image} />
+								: ''}
+							<ContentCol updateData={update} />
+						</div>
+					)
+				: (
+						<div
+							className={classNames('updates--block')}
+							key={_.flattenDeep([update.title]) + index}
+						>
+							<ContentCol updateData={update} />
+							{update.image
+								? <UpdateImage src={update.image} />
+								: ''}
+						</div>
+					)
 		});
 		return (<div>{updates}</div>)
 	}
@@ -86,9 +88,14 @@ const ContentColTitle = ({updateData}) => (
 	<div>
 		{(updateData.miniTitle || updateData.title)
 			? <div className={classNames('updates--block--title')}>
-					{_.flattenDeep([updateData.title]).map((title) => {
-						return (<div className={classNames('updates--block--title')}>{title}</div>)
-					})}
+					{_.flattenDeep([updateData.title]).map((title, index) => (
+						<div 
+							key={title + '_' + index} 
+							className={classNames('updates--block--title')}
+						>
+							{title}
+						</div>
+					))}
 				</div>
 			: ''}
 	</div>

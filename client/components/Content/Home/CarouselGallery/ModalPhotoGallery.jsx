@@ -15,6 +15,12 @@ const mapStateToProps = (state) => {
 @connect(mapStateToProps)
 export default class ModalPhotoGallery extends React.Component {
 
+	static propTypes = {
+		images: React.PropTypes.array
+	}
+
+	static displayName = 'ModalPhotoGallery'
+
 	/**
 	 * set lightbox open state to false, and reset
 	 * 'current image' to the 1st in the array
@@ -52,9 +58,3 @@ export default class ModalPhotoGallery extends React.Component {
 		);
 	}
 };
-
-ModalPhotoGallery.displayName = 'ModalPhotoGallery';
-ModalPhotoGallery.propTypes = {
-	images: React.PropTypes.array,
-};
-		// store.subscribe(this.render);

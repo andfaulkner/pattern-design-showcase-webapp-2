@@ -73,7 +73,7 @@ export default class NavMenu extends React.Component {
 				// if title property isn't defined, this route isn't for the topbar
 				return (navItem.title)
 					? (<TopLevelMenuItem
-							key={index}
+							key={navItem.title + '_' + index}
 							path={navItem.path}
 							title={navItem.title}
 							styles={styles.TopLevelMenuItem.base}

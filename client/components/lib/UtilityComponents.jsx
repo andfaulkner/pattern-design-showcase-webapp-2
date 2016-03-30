@@ -6,8 +6,8 @@ var classNames = require('classnames');
 
 export class Title extends React.Component {
 
-	constructor(props) {
-		super(props);
+	static propTypes = {
+		title: React.PropTypes.string.isRequired
 	}
 
 	render() {

@@ -91,14 +91,10 @@ const ContentGridWrapper = () => (
 
 @Radium({isRoot: true})
 class ContentGrid extends React.Component {
-	constructor(props) {
-		super(props);
-		this.props = props;
-	}
 
 	xsStyle = () => {
 		let xsstyle = {
-			'@media (max-width: 767px)': {
+			'@media (maxWidth: 767px)': {
 				display: 'flex',
 				flexDirection: 'column',
 				justifyContent: 'center',
@@ -149,7 +145,12 @@ const LeftContentCol = ({xsHidden, smHidden, mdHidden, lgHidden, lg, md, sm, xs}
 				title: 'ctpanel--title cigeraser',
 			}}
 		/>
-		<BannerBlock container={$('#entire-grid')} />
+		<BannerBlock 
+			className='three-banners-img-block'
+			id='three-banners-img'
+			src = '/img/three-banners.jpg'
+		/>
+
 	</Col>
 );
 

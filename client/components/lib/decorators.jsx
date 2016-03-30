@@ -23,31 +23,30 @@ export const getContent = (mapStateToPropsInput) => (type) => (Target) => {
 
 	const mapStateToProps = (mapStateToPropsInput)
 		? mapStateToPropsInput.bind(this)
-		: ((state) => {
-				return {
+		: (state => ({
 					...state,
 					currentPage: state.setCurrentPage.currentPage,
 					content: state.content
-				}
-			});
+				}));
 
 	@connect(mapStateToProps)
 	class getContentDecorated extends React.Component {
-		constructor(props) {
-			super(props);
-			this.props.getContent = this.getContent;
-		}
+
 		getContent = (route = type) => {
 			this.props.dispatch(selectContentType(route));
 			this.props.dispatch(fetchContentIfNeeded(route)).then(() => {
 				console.info('decorators.jsx:: getContent for ' + route + ' sucessful!');
 			});
 		}
-		// componentDidMount = () => {
-		// 	this.props.getContent(type);
-		// }
+
+		componentWillMount = () => {
+			console.log('decorators.jsx:: getContent: componentWillUnmount:: this:', this);
+			console.log(type);
+			this.props.dispatch(setCurrentPage(type));
+		}
+
 		render() {
-			return <Target {...this.props}/>;
+			return <Target getContent={this.getContent} {...this.props}/>;
 		}
 	}
 	return getContentDecorated;

@@ -10,28 +10,14 @@ import { getContent } from '../../lib/decorators.jsx';
 const imgpath = '/img/patterns/';
 
 const images = [
-	{
-		src: `/img/example-full/native-leaf-bark.jpg`
-	}, 	{
-		src: `${imgpath}aboriginal-fungus.jpg`
-	}, {
-		src: `${imgpath}berry-flowers.jpg`
-	}, {
-		src: `${imgpath}diamond-mine.jpg`
-	}, {
-		src: `${imgpath}lsd-butterflies.jpg`
-	}, {
-		src: `${imgpath}red-zygote-flowers.jpg`
-	}, {
-		src: `${imgpath}mayan-hexhexhexium-decay-sponge-tea.jpg`
-	// }, {
-		// src: `${imgpath}orchid-eating-phoenix-army.jpg`
-	}, {
-		src: `${imgpath}ermagerd-a-big-rock.jpg`
-	}, 
-	// {
-	// 	src: `${imgpath}chinese-umbrella-mushrooms.jpg`
-	// }
+	{ src: `/img/example-full/native-leaf-bark.jpg` },
+	{ src: `${imgpath}aboriginal-fungus.jpg` },
+	{ src: `${imgpath}berry-flowers.jpg` },
+	{ src: `${imgpath}diamond-mine.jpg` },
+	{ src: `${imgpath}lsd-butterflies.jpg` },
+	{ src: `${imgpath}red-zygote-flowers.jpg` },
+	{ src: `${imgpath}mayan-hexhexhexium-decay-sponge-tea.jpg` },
+	{ src: `${imgpath}ermagerd-a-big-rock.jpg` }
 ];
 
 const PHOTOS = _.reduce(images, (imgSettings, image) => {
@@ -48,12 +34,8 @@ const PHOTOS = _.reduce(images, (imgSettings, image) => {
 	return imgSettings;
 }, []);
 
-@getContent()()
+@getContent()('Gallery')
 export class GalleryPage extends React.Component {
-	constructor(props) {
-		super(props);
-  	this.props.dispatch(setCurrentPage('Gallery'));
-	}
 
 	render() {
 		return (

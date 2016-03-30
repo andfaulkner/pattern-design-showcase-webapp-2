@@ -1,5 +1,6 @@
-var React = React || require('react');
+// var React = React || require('react');
 var ReactDOM = ReactDOM || require('react-dom');
+import React, { PropTypes } from 'react';
 import { ReactRouter, Link, Router, Route, hashHistory } from 'react-router';
 import Radium from 'radium';
 import { getContent } from '../../lib/decorators.jsx';
@@ -8,12 +9,17 @@ var classNames = require('classnames');
 import { Title } from '../../lib/UtilityComponents.jsx';
 
 
-@getContent()('bio')
+@getContent()('About')
 export class AboutPage extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.props.dispatch(setCurrentPage('About'));
+	static propTypes = {
+		content: PropTypes.shape({
+			bios: PropTypes.shape({
+				didInvalidate: PropTypes.bool.isRequired,
+				isFetching: PropTypes.bool.isRequired,
+				items: PropTypes.array.isRequired,
+			}).isRequired
+		}).isRequired
 	}
 
 	componentDidMount = () => {
@@ -25,7 +31,7 @@ export class AboutPage extends React.Component {
 		console.log('AboutPage.jsx:: AboutPage::render: content:', content);
 		return (
 			<div className={classNames('about')}>
-				<Title title='About'/>
+				<Title title='About' />
 				<div className={classNames('about__content-section')}>
 					{
 						_.get(content, 'bios.items[0]')
@@ -68,8 +74,8 @@ const AboutLeftCol = ({content}) => {
 			<div className={classNames('about__left-col--inner')}>
 				<div className={classNames('about__left-col--text-wrapper')}>
 					{
-						content.bios.items[0].aboutParagraph.map((paragraph) => (
-							<div className={classNames('about__left-col--text')}>
+						content.bios.items[0].aboutParagraph.map((paragraph, index) => (
+							<div className={classNames('about__left-col--text')} key={'aboutPara_' + index}>
 								{paragraph}
 							</div>
 						)) 

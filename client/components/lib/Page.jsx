@@ -8,9 +8,8 @@ import { setCurrentPage } from '../../../store/actions/actions.jsx';
 @connect()
 export class Page extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.props.dispatch(setCurrentPage('Updates'));
+	componentWillMount = () => {
+		this.props.dispatch(setCurrentPage('Updates'));			
 	}
 
 	render() {

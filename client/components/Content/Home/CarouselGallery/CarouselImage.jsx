@@ -14,11 +14,9 @@ import { setLightboxIsOpenCreator } from '../../../../store/actions/actions.jsx'
  * @return {Object} important components of state - lightboxIsOpen
  * DEFUNCT - FOR NOW
  */
-const mapStateToProps = (state) => {
-	return {
-		lightboxIsOpen: state.carousel.lightboxIsOpen
-	}
-}
+const mapStateToProps = (state) => ({
+	lightboxIsOpen: state.carousel.lightboxIsOpen
+});
 
 /**
  * Generate a single Carousel image.
@@ -27,9 +25,14 @@ const mapStateToProps = (state) => {
 @connect()
 export default class CarouselImage extends React.Component {
 
-	constructor(props) {
-		super(props);
-		this.props.setLightboxIsOpenCreator = setLightboxIsOpenCreator;
+	static propTypes = {
+		src: React.PropTypes.string.isRequired,
+		style: React.PropTypes.object.isRequired,
+		currentImage: React.PropTypes.number
+	}
+
+	static getDefaultProps = {
+		setLightboxIsOpenCreator
 	}
 
 	/** 
@@ -44,12 +47,13 @@ export default class CarouselImage extends React.Component {
 
 	render() {
 		return (
-			<img src={this.props.src}
-					 style={this.props.style}
-					 currentImage={this.props.currentImage}
-					 onClick={
-							_.partial(this.lightboxIsOpen, setLightboxIsOpenCreator, this.props.currentImage)
-					 }
+			<img
+				src={this.props.src}
+				style={this.props.style}
+				currentImage={this.props.currentImage}
+				onClick={
+					_.partial(this.lightboxIsOpen, setLightboxIsOpenCreator, this.props.currentImage)
+				}
 			/>
 		);
 	}

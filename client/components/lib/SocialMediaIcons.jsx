@@ -23,8 +23,6 @@ const icons = {
 	]
 }
 
-
-
 export const SocialMediaIcons = React.createClass({
 	render: function() {
 		let {xsHidden, smHidden, mdHidden, lgHidden, ...other} = this.props;
@@ -35,9 +33,11 @@ export const SocialMediaIcons = React.createClass({
 				className={this.props.className || 'social-media-icons-container'}
 			>
 			{
-				icons[this.props.theme].map((iconObj) =>
-					<img src={iconObj.src}
+				icons[this.props.theme].map((iconObj, index) =>
+					<img 
+						src={iconObj.src}
 						className={this.props.imgClassName || ''}
+						key={'socialMediaIcon_' + index}
 					/>)
 			}
 			</Col>

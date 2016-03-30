@@ -14,7 +14,11 @@ export function decrement(number) {
  * @return {[type]} [description]
  */
 export function unknownType(state, reducer) {
-	console.warn(reducer + ' received unknown action type');
+	try {
+		if (!_.isUndefined(__DEBUG__)) {
+			console.warn(reducer + ' received unknown action type');		
+		}		
+	} catch (e) { }
 	return state;
 }
 

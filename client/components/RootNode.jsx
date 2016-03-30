@@ -20,10 +20,10 @@ export class RootNode extends React.Component{
 		var allRoutes = _.map(routes, function(route, index) {
 			let {path, component, ...miscProps} = route;
 			return (
-				<Route component={Common}>
+				<Route component={Common} key={'OuterRoute_' + index}>
 					<Route {...miscProps}
 						path={path}
-						key={index} 
+						key={'route_' + index} 
 						component={component}
 					/>
 				</Route>

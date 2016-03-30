@@ -94,8 +94,8 @@ export class ContentPanel extends React.Component {
 const CPanelTitle = ({ title, titleStyle='ctpanel--title', content, contentType }) => (
 	<div className={ titleStyle }>
 		{(_.get(content[contentType], 'items') && _.isArray(content[contentType].items) && _.isArray(title))
-			? title.map(titlePart => (
-					<Row className='ctpanel--title-multirow'>{titlePart}</Row>
+			? title.map((titlePart, index) => (
+					<Row className='ctpanel--title-multirow' key={titlePart + '_' + index}>{titlePart}</Row>
 				))
 			: <Row className='ctpanel--title-one-row-only'>{title}</Row>
 		}
@@ -118,10 +118,11 @@ const CPanelContent = ({content, style, contentType, introData, ...otherProps}) 
 				? <CPanelDescription content = {content} introData={introData} />
 				: ''}
 		{(_.get(content[contentType], 'items') && _.isArray(content[contentType].items)) ?
-				content[contentType].items.map(data => (
+				content[contentType].items.map((data, index) => (
 					<CPanelContentItem 
 						data={data}
 						style={style}
+						key={'CPanelContentItem_' + index}
 					/>
 				))
 			: ''
