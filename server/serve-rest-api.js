@@ -17,11 +17,12 @@ var schema = require('data/schema');
 
 module.exports = (app) => {
 	const dbConfig = app.locals.config.get('database').mongo;
-	const mongoURI = dbConfig.url + '/' + dbConfig.dbName;
+	const mongoURI = dbConfig.dbURL + '/' + dbConfig.dbName;
 	logger.info('mongoURI:: ', mongoURI);
 
 	app.use(methodOverride())
 
+	// TODO remove, just here for dev.
 	console.log('connecting to mongoURI: ' + inspect(mongoURI, { depth: 5, colors: true, showHidden: true }));
 	mongoose.connect(mongoURI);
 	restify.serve(app, mongoose.model('designs', new mongoose.Schema(schema.designs)));

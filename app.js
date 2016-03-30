@@ -2,6 +2,7 @@
 
 console.log('\n\nEnvironment variables:\n', process.env);
 console.log('\n\n');
+require('rootpath')();
 
 // node modules
 var util = require('util');

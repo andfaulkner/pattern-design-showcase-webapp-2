@@ -15,6 +15,7 @@ console.log(babelOpts);
 const OUTPUT_DIR = path.resolve(__dirname, '.build');
 const CLIENT_SRC_DIR = path.resolve(__dirname, './client');
 const NODE_MODULES_ABS_DIR = path.join(__dirname, 'node_modules');
+const SHARED_MODULES_ABS_DIR = path.join(__dirname, 'lib');
 
 console.log(buildConfig.polyfills);
 
@@ -54,7 +55,7 @@ module.exports = {
 	cache: true,
 	resolve: {
 		extensions: ['', '.js', '.jsx', '.json'],
-		modules: ['node_modules', NODE_MODULES_ABS_DIR],
+		modules: ['node_modules', NODE_MODULES_ABS_DIR, SHARED_MODULES_ABS_DIR],
 		descriptionFiles: ['package.json', 'bower.json'],
 		mainFields: ['dependencies', 'devDependencies']
 		// modulesDirectories: [path.join(__dirname, 'node_modules')],

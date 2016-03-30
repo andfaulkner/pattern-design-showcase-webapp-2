@@ -119,14 +119,14 @@ export const fetchContent = (contentType) => {
     dispatch(requestContent(contentType));
     console.log('actions.jsx:: fetchContent:: configDb:', configDb);
     console.log('actions.jsx:: fetchContent:: configDb.mongo:', configDb.mongo);    
-    console.log('actions.jsx:: fetchContent:: configDb.mongo.clientURL:', configDb.mongo.clientURL);
-    const restAPIUrl = _.trimEnd(configDb.mongo.clientURL, '/') + '/api/v1/' + contentType;
+    console.log('actions.jsx:: fetchContent:: configDb.mongo.clientURL:', configDb.mongo.restAPIOrigin);
 
-    // The function called by the thunk middleware can return a value,
-    // that is passed on as the return value of the dispatch method.
+    // determine the url to make db requests to
+    const restAPIUrl = configDb.mongo.restAPIOrigin + configDb.mongo.restAPIRoute + contentType;
 
-    // In this case, we return a promise to wait for.
-    // This is not required by thunk middleware, but it is convenient for us.
+    // The function called by the thunk middleware can return a value, that is passed on
+    // as the return value of the dispatch method. In this case, we return a promise to wait
+    // for. This is not required by thunk middleware, but it is convenient for us.
 
     // TODO switch localhost with a dynamic location?
     return fetch(restAPIUrl)
