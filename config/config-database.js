@@ -10,6 +10,9 @@ const isLocal = ((process ? (process.env ? (process.env.LOCAL_DEV === 'true') : 
 var primaryDb = 'mongo';
 var secret = {};
 
+var primaryDb = primaryDb || 'woooo';
+
+var location = location || '';
 
 //TODO separate production & dev db settings
 //TODO move the backend db stuff out into a private file, this is bad practice
@@ -23,7 +26,7 @@ module.exports = {
 		restAPIOrigin: isLocal
 			? 'http://localhost:3000/'
 			:	!sharedUtils.isNode()
-					? location.origin
+					? _.get(location, 'origin')
 					: null,
 		dbName: 'PATTERN_MAIN',
 		port: '27017',
