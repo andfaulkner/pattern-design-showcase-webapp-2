@@ -4,16 +4,36 @@
 		"selected_items":
 		[
 			[
-				"rct_new_",
-				"rct_new_slc	Create a React stateless functional component"
-			],
-			[
 				"rct_new",
 				"rct_new_slc	Create a React stateless functional component"
 			],
 			[
+				"tex",
+				"text-align"
+			],
+			[
 				"margin",
-				"margin-bottom"
+				"margin-left"
+			],
+			[
+				"rct_life",
+				"rct_life_cwm_class	React: componentWillMount - class"
+			],
+			[
+				"rct_p",
+				"rct_pts	react--PropTypes-string---rpts"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"max",
+				"max-width"
+			],
+			[
+				"rct_new_",
+				"rct_new_slc	Create a React stateless functional component"
 			],
 			[
 				"align",
@@ -38,10 +58,6 @@
 			[
 				"c",
 				"ce	console.error"
-			],
-			[
-				"rct_life",
-				"rct_life_cwm_class	React: componentWillMount - class"
 			],
 			[
 				"clf",
@@ -481,9 +497,6 @@
 			]
 		]
 	},
-	"buffers":
-	[
-	],
 	"build_system": "",
 	"build_system_choices":
 	[
@@ -491,8 +504,8 @@
 	"build_varint": "",
 	"command_palette":
 	{
-		"height": 336.0,
-		"last_filter": "list",
+		"height": 365.0,
+		"last_filter": "",
 		"selected_items":
 		[
 			[
@@ -692,7 +705,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 533.0
+		"width": 538.0
 	},
 	"console":
 	{
@@ -713,58 +726,85 @@
 		"side_bar_visible": false,
 		"status_bar_visible": false
 	},
-	"expanded_folders":
-	[
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/AboutPage",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates"
-	],
 	"file_history":
 	[
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/gulpfile.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/lib/sharedUtils.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.nvmrc",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/AboutPage/AboutPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/package.json",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/text-content-grid.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/react/react-router/001-react-router.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-database.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/nav-menu.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/About/about-page.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-paths.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/section-title.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/404-error.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-static.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/GalleryPage/GalleryPage.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage/UpdatesPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/todo.txt",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/DesignsPage/DesignsPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/basic-html/404.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/404.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/decorators.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentPanel.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-container.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-shared.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/content.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/Carousel.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/bootstrap-mongo.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/express-mongoose-restify.md",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/404.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/index.html",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentGrid.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/common.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/ContentPanel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/UtilityComponents.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/actions.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/default.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/config-database-preferred.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-server.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/environment-vars.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/eslintrc-base.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/mongo.yaml",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/secret.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-logging.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/updatesData.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.nodemonignore",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/RootNode.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/BannerBlock.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/Carousel.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/CarouselImage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Home.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/ModalPhotoGallery.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-container.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/Page.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/UpdatesPage/UpdatesPage.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/bioData.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducer-helpers.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/SocialMediaIcons.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/schema.js",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/public/other/owl.jpg",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/Default/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/Terminal/Default (Linux).sublime-keymap",
+		"/home/andrew/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/main.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/content.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/mixins-and-sizes.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-title.scss",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10986279_984235058267277_353239984_n.jpg",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/routes/routes.jsx",
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-shared.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Updates/updates-main.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/configure-store.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/actions.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducers.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/reducer-helpers.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/test-reducers.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/secret.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-rest-api.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/package.json",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/schema.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-database.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/updatesData.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/imagesData.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/designsData.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/bootstrap-mongo.sh",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/bootstrap-mongo.js",
-		"/home/andrew/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/bioData.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/schema/imageSchema.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/bio.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/schema/bio.js",
@@ -772,34 +812,18 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/designs.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/models/init-db.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/designs.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/default.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/bootstrap.sh",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/ModalPhotoGallery.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/social-media-buttons.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/carousel-reducers.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/lib/SocialMediaIcons.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/RootNode.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/admin.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/experiments/reducers.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/DesignsPage/DesignsPage.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/Common.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Content/Home/text-content-grid.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/todo.txt",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/app.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/images.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/HEROKU/deployment.md",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/mongo-db.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-static.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/webpack.config.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/logger.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-paths.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/config-server.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/README.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/mongo.yaml",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/.buildpacks",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/config/environment-vars.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/core/passport-setup.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/build-setup--old-items--pre-happypack.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/serve-admin.js",
@@ -807,21 +831,17 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/webpack-old-items---pre-happypack.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.babelrc",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.gitignore",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.nodemonignore",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/pattern-design-showcase-webapp.sublime-project",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.build/.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/stats.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index-todo.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/.eslintignore",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/img-route.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/express-mongoose-restify.md",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/generate-db-tables.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/mongo-bootstrap-data/updates.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/mongo-db/primer-dataset.json",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/BannerBlock.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/scripts/bootstrap-mongodb.json",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/updates.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/config-database-preferred.js",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/Procfile",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/old-code/index-todo.html",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/server/api/images.js",
@@ -833,34 +853,9 @@
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/lib/SocialMediaIcons.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/lib/Page.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Common/NavMenu-styles.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/Common/nav-menu.scss",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/styles/components/common.scss",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/ContentArea.jsx",
 		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Updates/Designs.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/index.html",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/CarouselImage.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10666193_837013629696484_249744198_n.jpg",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/layout/Header.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/ContentGrid/SocialMediaIcons.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/node_modules/react-images/dist/react-images.js",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselGallery/carousel-settings.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/redux/redux-info.md",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/reducers/switchPage.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/store/actions/action-creators.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/docs/redux/single-file-redux-example",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/TextContent/ContentPanel.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/TextContent/TextBlockLatestUpdates.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/carousel-settings.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/CarouselStyle.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/TextContent/BannerBlock.jsx",
-		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/client/components/Content/Home/Carousel.jsx",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--full-update-lifecycle.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react--component--complete-lifecycle.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple-class-export.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/react/new-cmps/react-component-simple-class.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-func.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-arrow-function.sublime-snippet",
-		"/home/andrew/.config/sublime-text-3/Packages/User/snippets/snippets/js/es6/export/es6-export-def-class.sublime-snippet"
+		"/home/andrew/projects/own-projects/pattern-design-showcase-webapp/data/img/10666193_837013629696484_249744198_n.jpg"
 	],
 	"find":
 	{
@@ -871,6 +866,7 @@
 		"height": 93.0,
 		"where_history":
 		[
+			"<project>,-node_modules/**,-.build/**,*.*",
 			"<project>,-node_modules/**,-.build/**,*.jsx,*.js,*.html,-gulpfile.js,-**/scripts/**",
 			"<project>,-node_modules/**,-.build/**,*.jsx,*.js,*.html,-gulpfile.js",
 			"<project>,-node_modules/**,-.build/**,*.jsx, *.js,*.html,-gulpfile.js",
@@ -923,6 +919,124 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"location",
+			"clientUR",
+			"!isLocal",
+			"rootpath",
+			"root",
+			"mongod",
+			"mongo",
+			"configDb",
+			"restAPIUrl",
+			"localhost",
+			"children",
+			"props.children",
+			"props",
+			"arguments",
+			"this",
+			"content",
+			"margin",
+			"left",
+			"/",
+			"404",
+			":(",
+			":( ",
+			"standalone-404--text",
+			"updates--block--title",
+			"10px",
+			"$main-margin",
+			"'",
+			"entryConfig",
+			"jsroot",
+			"')}",
+			"className={classNames(",
+			"classNames",
+			"='",
+			"classNames",
+			"span",
+			"parentPage",
+			"parentPath",
+			"this.props",
+			"otherProps",
+			"titleStyle",
+			"className",
+			"parentPath",
+			"contentType",
+			"introData",
+			"designsIntro",
+			"introData",
+			"matchWidthById",
+			"this.props",
+			"otherProps",
+			"static.*prop",
+			"static g",
+			"url",
+			"require\\('path",
+			"path",
+			"localhost",
+			"mongo",
+			"import",
+			"item",
+			"next, ",
+			"callback",
+			"saveDone",
+			"), _.partial(saveDone, next, ",
+			"saveDone",
+			"saveData",
+			"- ",
+			"!",
+			"currentImage",
+			"}, {",
+			"componentWillMount",
+			"constructor",
+			"UpdatesContent",
+			"CPanelTitle",
+			"SocialMediaIcons",
+			"max-width: 767px",
+			"React.PropTypes",
+			"\\.map",
+			"received unknown",
+			"toArray(this.props.children)",
+			"only(this.props.children)",
+			"this.props.children",
+			"introData",
+			"LeftContentCol",
+			"CPan",
+			"CPanelContent",
+			"contentLeft",
+			"ContentPanel",
+			"AbouttextContent",
+			"AboutTextContent",
+			"`",
+			"ctrl\\+shift\\+t",
+			"ctrl\\+shift",
+			"ctrl\\",
+			"@getContent\\(",
+			"@getContent\\(\\)",
+			"@getContent\\(\\)[^\\(]",
+			"@getContent\\(\\)",
+			"@getContent\\(\\)[^\\(]",
+			"@getContent\\(\\)",
+			"about__left",
+			"inner-container",
+			"content__",
+			"250px",
+			"500px",
+			"height",
+			"300px",
+			"200px",
+			"margin",
+			"max-width",
+			"this.state",
+			"margin-left",
+			"update",
+			"300px",
+			"'img/",
+			"img/patterns",
+			"inline-block",
+			"inline",
+			"block--right",
+			"img-left__container",
 			"mapStateToProps",
 			"data",
 			"PHOTOS",
@@ -932,125 +1046,7 @@
 			"setCurrentPage",
 			"fetchContentIfNeeded",
 			"selectContentType",
-			"import { connect } from 'react-redux';\n",
-			"type",
-			"update",
-			"mapStateToProps",
-			"'updates'",
-			"target",
-			"this",
-			"wrappedTarget",
-			"this.props.contentType",
-			"Updates",
-			"otherProps",
-			"UpdatesPage",
-			"fetchContentIfNeeded",
-			"props",
-			"--block",
-			".updates .block",
-			".u",
-			".block__",
-			"updates__",
-			"UpdatesContent",
-			"Content",
-			"--",
-			"15px",
-			"-block",
-			"10",
-			"4",
-			"classNames",
-			"console",
-			"console.log",
-			"PATTERN",
-			"bio",
-			"content",
-			"contentType",
-			"parentPath",
-			"toJSON",
-			"index",
-			"message",
-			"name",
-			"Schema",
-			"saveTypeDone",
-			"saveTypeComplete",
-			"saveData",
-			"saveDataOfTypeComplete",
-			"		'sticky': false,\n",
-			"\"",
-			"allDataOfTypeSaved",
-			"imageData",
-			"UpdateItem",
-			"images",
-			"Images",
-			"images",
-			"null",
-			"updates",
-			"designs",
-			" = ",
-			"src: ",
-			"Date.now",
-			"{ String,",
-			"Design",
-			"  ",
-			"db",
-			"collection",
-			"insertDocuments",
-			"})",
-			"mongoose.Schema(",
-			"'",
-			"'_id'",
-			"\"",
-			"bio",
-			"true",
-			"mongoURI",
-			"collection",
-			"db",
-			"collName",
-			"Mongo",
-			"dataItem",
-			"function() {",
-			"\"",
-			"  })\n",
-			"	}\n	{\n",
-			"		}\n		{",
-			"&amp;",
-			"RECEIVE",
-			"designs",
-			".contentType",
-			"contentByContentType",
-			"state.contentByContentType[contentType]",
-			"fetchContent",
-			"fetchContent[^i]",
-			"fetchContent",
-			"setLightboxIsOpenCreator",
-			"fetchContent",
-			"fetchContentIfNeeded",
-			"shouldFetchContent",
-			"fetchContentIfNeeded",
-			"shouldFetchContent",
-			"state.contentByContentType",
-			"contentType",
-			"state",
-			"right-content",
-			"z-index",
-			"contentType",
-			"title\\.map",
-			"design",
-			"CPanelDate",
-			"spacer",
-			"data",
-			"date",
-			"\\[content",
-			"content",
-			"\\[content",
-			"content",
-			"\\[content",
-			"dispatch",
-			"title",
-			"design",
-			"\\.map",
-			"\\.map[",
-			"helpers.alteredState("
+			"import { connect } from 'react-redux';\n"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -1129,29 +1125,6 @@
 		"whole_word": false,
 		"wrap": true
 	},
-	"groups":
-	[
-		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"sheets":
-			[
-			]
-		},
-		{
-			"sheets":
-			[
-			]
-		}
-	],
 	"incremental_find":
 	{
 		"height": 21.0
@@ -1192,13 +1165,13 @@
 		"cols":
 		[
 			0.0,
-			0.652628699453,
+			0.682688819693,
 			1.0
 		],
 		"rows":
 		[
 			0.0,
-			0.45671848377,
+			0.479213371296,
 			1.0
 		]
 	},
@@ -1224,7 +1197,6 @@
 		"height": 688.0
 	},
 	"pinned_build_system": "Packages/User/Scheme.sublime-build",
-	"project": "pattern-design-showcase-webapp.sublime-project",
 	"replace":
 	{
 		"height": 78.0
@@ -1236,6 +1208,58 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"biodata",
+				"scripts/mongo-bootstrap-data/bioData.js"
+			],
+			[
+				"restapi",
+				"server/serve-rest-api.js"
+			],
+			[
+				"static",
+				"server/serve-static.js"
+			],
+			[
+				"config-pa",
+				"config/config-paths.js"
+			],
+			[
+				"gulp",
+				"gulpfile.js"
+			],
+			[
+				"bootstrap",
+				"scripts/bootstrap-mongo.js"
+			],
+			[
+				"carous",
+				"client/components/Content/Home/CarouselGallery/Carousel.jsx"
+			],
+			[
+				"home",
+				"client/components/Content/Home/Home.jsx"
+			],
+			[
+				"about",
+				"client/components/Content/AboutPage/AboutPage.jsx"
+			],
+			[
+				"upda",
+				"client/components/Content/UpdatesPage/UpdatesPage.jsx"
+			],
+			[
+				"gall",
+				"client/components/Content/GalleryPage/GalleryPage.jsx"
+			],
+			[
+				"decorat",
+				"client/components/lib/decorators.jsx"
+			],
+			[
+				"galler",
+				"client/components/Content/GalleryPage/GalleryPage.jsx"
+			],
 			[
 				"actions",
 				"client/store/actions/actions.jsx"
@@ -1289,16 +1313,8 @@
 				"client/store/reducers/reducers.jsx"
 			],
 			[
-				"home",
-				"client/components/Content/Home/Home.jsx"
-			],
-			[
 				"scripts",
 				"scripts/bootstrap-mongo.sh"
-			],
-			[
-				"galler",
-				"client/components/Content/GalleryPage/GalleryPage.jsx"
 			],
 			[
 				"contentpanel",
@@ -1457,7 +1473,6 @@
 		],
 		"width": 533.0
 	},
-	"selected_group": 0,
 	"settings":
 	{
 	},
@@ -1465,7 +1480,7 @@
 	"show_open_files": true,
 	"show_tabs": true,
 	"side_bar_visible": true,
-	"side_bar_width": 260.0,
+	"side_bar_width": 207.0,
 	"status_bar_visible": true,
 	"template_settings":
 	{

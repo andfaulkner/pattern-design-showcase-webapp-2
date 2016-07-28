@@ -9,7 +9,7 @@
   },
   "scripts": {
     "populate-mongodb": "OVERWRITE_MONGO_BOOTSTRAP_DATA=false node ./scripts/bootstrap-mongo.js",
-    "populate-mongodb:overwrite": "OVERWRITE_MONGO_BOOTSTRAP_DATA=true node ./scripts/bootstrap-mongo.js",
+    "populate-mongodb:overwrite": "OVERWRITE_MONGO_BOOTSTRAP_DATA=true node --harmony_default_parameters --harmony_destructuring --es_staging ./scripts/bootstrap-mongo.js",
     "build-postgresql-db": "createdb pattern_design || true; node ./scripts/generate-db-tables.js || true",
     "nodemon": "export NODE_PATH=$NODE_PATH:./; nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
     "nodemon:local": "export NODE_PATH=$NODE_PATH:./; LOCAL_DEV=true nodemon --harmony_default_parameters --harmony_destructuring --es_staging app.js",
